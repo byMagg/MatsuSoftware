@@ -1,0 +1,22 @@
+#proyectos {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+#proyectos img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(0, 216, 72);
+    border-radius: 50%;
+}
+
+#proyectos p {
+    text-align: justify;
+}
+
+.item {
+    width: 25vw;
+    margin: 0 20px;
+}
