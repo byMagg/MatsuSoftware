@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 
 <html lang="es">
-
     <head>
-
         <!-- Titulo -->
-
-        <title>Iniciar sesión</title>
-
-        
+        <title>Login - MatsuSoftware</title>
 
         <?php include("includes/head.php"); ?>
 
-
-
         <link href="css/login.css" type="text/css" rel="stylesheet">
-
-
-
     </head>
 
-
-
     <body>
-
         <!--HEADER-->
-
         <?php include("includes/header.php"); ?>
 
-
-
         <!--CONTENT-->
-
         <div id="principal" class="content">
-
             <div id="content" class="content-inside">
-
                 <form id="iniciosesion" action="" method="post">
 
                     <h1>Inicio Sesión</h1>
@@ -50,9 +31,7 @@
 
                 </form>
 
-
                 <div id="separator"></div>
-
 
                 <form id="registro" action="" method="post">
 
@@ -80,18 +59,11 @@
                     <button class="button" type="submit">Enviar</button>
                     <h4><a class="nohover" href="tyc.php">Registrándote aceptas nuestros términos y condiciones</a></h4>
 
-
-
                 </form>
-
             </div>
-
         </div>
 
-
-
         <!-- FOOTER -->
-
         <?php include("includes/footer.php"); ?>
 
     </body>
