@@ -85,10 +85,11 @@ button{
     }
     
     #formulario, #parrafo{
-        width: 98vw;
+        width: 85vw;
     }
 
     #content{
+        text-align: center;
         display: inline-block;
         padding: 50px 0px 100px 0px;
     }
