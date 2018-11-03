@@ -1,0 +1,239 @@
+html, body{
+    background: #1D3147;
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+header{
+    background-color: #343F55;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    position: relative;
+}
+					
+footer {
+    position: relative;
+    background-color: #343F55;
+    height: 100px;
+    z-index: 1000; 
+    margin-top: -100px;
+}   
+
+.content {
+    position: relative;
+    min-height: 100%;
+    margin-top: -50px;
+    z-index: 500;
+}
+
+.content-inside {
+    padding: 50px 50px 100px 50px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    border-bottom: 2px solid rgb(0, 216, 72);
+    transition: 0.3s;
+}
+
+#nav a:hover {
+    border: 0;
+    background: rgb(68, 78, 99);
+}
+
+#logo{
+    position: relative;
+    z-index: 1001;
+}
+
+#nav a{
+    display: inline-block;
+    width: 90px;
+    height: 38px;
+    align-items: center;
+    padding: 12px 15px 0px 15px;
+}
+
+#nav{
+    position: absolute;
+    width: 100%;
+    z-index: 500;
+}
+
+#logoheader{
+    position: absolute;
+    margin-left: 5%;
+    height: 50px;
+    width: 115px;
+}
+
+#logoheader img{
+    height: 100%;
+    width: 100%;
+}
+
+#logofooter{
+    position: absolute;
+    height: 100px;
+    width: 72px;
+    margin-left: 60px;
+}
+
+#logofooter img{
+    position: relative;
+    top: 12px;
+    width: 95%;
+    border: 1px solid rgb(0, 216, 72);
+    border-radius: 50%;
+}
+
+#linksfooter li{
+    display: block;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#linksfooter{
+    position: absolute;
+    margin-left: 120px;
+    height: 100px;
+}
+
+#linksfooter ul ,#rrssfooter ul{
+    margin: 0;
+}
+
+#login{
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    z-index: 1001;
+    text-align: center;
+}
+
+#login img{
+    position: relative;
+    top: 12px;
+}
+
+#rrssfooter{
+    position: absolute;
+    right: 65px;
+    margin-top: 32px;
+}
+
+#rrssfooter li{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#rrssfooter > a{
+    margin-right: 10px;
+}
+
+#rrssfooter img{
+    width: 30px;
+}
+
+#menu{
+    display: none;
+}
+
+.nohover:hover{
+    border: 0;
+}
+
+input, textarea{
+    border-radius: 7px;
+    font-family: 'Open Sans', sans-serif;
+    padding-inline-start: 10px;
+    margin: 10px
+}
+
+.button{
+    color: white;
+    transition: 0.3s;
+    background: #343F55;
+    border-radius: 7px;
+    border: 1px solid rgb(0, 216, 72);
+}
+
+.button:hover{
+    background: #4CAF50;
+    border: 1px solid #CCD7D3; 
+}
+
+/* MOVIL */
+@media only screen and (max-width: 768px){
+    #nav {
+        height: 0px;
+        overflow: hidden;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        z-index: 1001;
+        background: #343F55;
+        opacity: 0.9;
+    }
+    
+    #nav a {
+        display: block;
+        height: 24px;
+        width: 100%;
+        padding: 13px 0px;
+        font-size: 17px;
+    }
+    
+    #nav a:hover {
+        background-color: #4CAF50;
+        border: 0;
+    }
+    
+    #nav a:focus{
+        background: #4CAF50;
+    }
+
+    #menu{
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+
+    #icon:hover{
+        border-bottom: 0;
+    }
+
+    #icon{
+        margin-top: 17px;
+    }
+
+    #rrssfooter{
+        right: 25px;
+        margin-top: 15px;
+    }
+    #rrssfooter li{
+        display: block;
+    }
+
+    #logofooter{
+        margin-left: 25px;
+    }
+
+    #linksfooter{
+        margin-left: 75px;
+    }
+}

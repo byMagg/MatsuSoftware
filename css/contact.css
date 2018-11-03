@@ -1,0 +1,109 @@
+input{
+    height: 3vh;
+    min-height: 17.609px;
+    max-height: 24.109px;
+    width: 278px;
+}
+
+textarea{
+    height: 10vh;
+    min-height: 58.688px;
+    max-height: 269px;
+    width: 278px;
+    max-width: 278px;
+}
+
+#principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+button{
+    position: relative;
+    height: 50px;
+    width: 100px;
+}
+
+#divboton{
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#parrafo{
+    text-align: left;
+}
+
+#formulario label{
+    display: flex;
+    justify-content: left;
+}
+
+#formulario, #parrafo{
+    width: 300px;
+    max-width: 350px;
+}
+
+#parrafo{
+    font-size: 112%;
+}
+
+#lineavertical{
+    border: 1px solid rgb(0, 216, 72);
+    height: 45vh;
+    min-height: 350px;
+    margin: 0px 50px 0px 50px;
+}
+
+#content{
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 70px 50px 115px 50px;
+}
+
+#sent{
+    position: absolute;
+    padding-left: 32px;
+    padding-top: 14px;
+}
+
+/* MOVIL */
+@media only screen and (max-width: 768px){
+    
+    input{
+        width: 62vw;
+        max-width: 312.438px;
+    }
+    
+    textarea{
+        width: 62vw;
+        min-width: none;
+        max-width: 312.438px;
+    }
+
+    #lineavertical{
+        border: 1px solid rgb(0, 216, 72);
+        height: 0px;
+        min-height: 0px;
+        margin: 50px 0px 50px 0px;
+    }
+    
+    #formulario, #parrafo{
+        width: 70vw;
+    }
+
+    #content{
+        display: inline-block;
+        padding: 50px 0px 100px 0px;
+    }
+
+    #sent{
+        padding-left: 5%;
+    }
+
+    #content{
+        padding: 70px 0px 100px 0px;
+    }
+}
