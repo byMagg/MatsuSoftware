@@ -1,13 +1,13 @@
 input{
     height: 3vh;
-    min-height: 17.609px;
-    max-height: 24.109px;
+    min-height: 18px;
+    max-height: 24px;
     width: 278px;
 }
 
 textarea{
     height: 10vh;
-    min-height: 58.688px;
+    min-height: 58px;
     max-height: 269px;
     width: 278px;
     max-width: 278px;
@@ -74,13 +74,13 @@ button{
     
     input{
         width: 62vw;
-        max-width: 312.438px;
+        max-width: 312px;
     }
     
     textarea{
         width: 62vw;
         min-width: none;
-        max-width: 312.438px;
+        max-width: 312px;
     }
 
     #lineavertical{
@@ -91,7 +91,7 @@ button{
     }
     
     #formulario, #parrafo{
-        width: 70vw;
+        width: 98vw;
     }
 
     #content{
