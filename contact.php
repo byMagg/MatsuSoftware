@@ -4,7 +4,7 @@
 
     <head>
         <!-- Titulo -->
-        <title>Contacto</title>
+        <title>Contacto - MatsuSoftware</title>
 
         <?php include("includes/head.php"); ?>
 

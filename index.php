@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>MatsuSoftware</title>
+        <title>Inicio - MatsuSoftware</title>
         <?php include("includes/head.php"); ?>
 
         <link href="css/inicio.css" type="text/css" rel="stylesheet">
