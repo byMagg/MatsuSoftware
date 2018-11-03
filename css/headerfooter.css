@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
     background: #1D3147;
     margin: 0;
     height: 100%;
@@ -6,7 +7,7 @@ html, body{
     color: white;
 }
 
-header{
+header {
     background-color: #343F55;
     height: 50px;
     width: 100%;
@@ -14,14 +15,14 @@ header{
     z-index: 1000;
     position: relative;
 }
-					
+
 footer {
     position: relative;
     background-color: #343F55;
     height: 100px;
-    z-index: 1000; 
+    z-index: 1000;
     margin-top: -100px;
-}   
+}
 
 .content {
     position: relative;
@@ -34,12 +35,12 @@ footer {
     padding: 50px 50px 100px 50px;
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     border-bottom: 2px solid rgb(0, 216, 72);
     transition: 0.3s;
 }
@@ -49,12 +50,12 @@ a:hover{
     background: rgb(68, 78, 99);
 }
 
-.logo{
+.logo {
     position: relative;
     z-index: 1001;
 }
 
-#nav a{
+#nav a {
     display: inline-flex;
     width: 90px;
     height: 50px;
@@ -63,25 +64,25 @@ a:hover{
     padding: 0px 1vw;
 }
 
-#nav{
+#nav {
     position: absolute;
     width: 100%;
     z-index: 500;
 }
 
-#logoheader{
+#logoheader {
     position: absolute;
     left: 5%;
     height: 50px;
     width: 115px;
 }
 
-#logoheader img{
+#logoheader img {
     height: 100%;
     width: 100%;
 }
 
-#logofooter{
+#logofooter {
     position: absolute;
     height: 100px;
     width: 19vw;
@@ -91,29 +92,30 @@ a:hover{
     align-items: center;
 }
 
-#logofooter img{
+#logofooter img {
     width: 95%;
     border: 1px solid rgb(0, 216, 72);
     border-radius: 50%;
 }
 
-#linksfooter li{
+#linksfooter li {
     display: block;
     padding: 5px 0;
 }
 
-#linksfooter{
+#linksfooter {
     position: absolute;
     left: 155px;
     height: 100px;
 }
 
-#linksfooter ul ,#rrssfooter ul{
+#linksfooter ul,
+#rrssfooter ul {
     margin: 0;
     padding: 0;
 }
 
-#login{
+#login {
     position: absolute;
     right: 50px;
     width: 50px;
@@ -122,46 +124,47 @@ a:hover{
     text-align: center;
 }
 
-#login img{
+#login img {
     position: relative;
     top: 12px;
 }
 
-#rrssfooter{
+#rrssfooter {
     position: absolute;
     right: 65px;
     margin-top: 32px;
 }
 
-#rrssfooter li{
+#rrssfooter li {
     display: inline-block;
     margin-left: 5px;
 }
 
-#rrssfooter > a{
+#rrssfooter>a {
     margin-right: 10px;
 }
 
-#rrssfooter img{
+#rrssfooter img {
     width: 30px;
 }
 
-#menu{
+#menu {
     display: none;
 }
 
-.nohover:hover{
+.nohover:hover {
     border: 0;
 }
 
-input, textarea{
+input,
+textarea {
     border-radius: 7px;
     font-family: 'Open Sans', sans-serif;
     padding-inline-start: 10px;
     margin: 10px
 }
 
-.button{
+.button {
     color: white;
     transition: 0.3s;
     background: #343F55;
@@ -169,13 +172,13 @@ input, textarea{
     border: 1px solid rgb(0, 216, 72);
 }
 
-.button:hover{
+.button:hover {
     background: #4CAF50;
-    border: 1px solid #CCD7D3; 
+    border: 1px solid #CCD7D3;
 }
 
 /* MOVIL */
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
     #nav {
         height: 0px;
         overflow: hidden;
@@ -188,7 +191,7 @@ input, textarea{
         background: #343F55;
         opacity: 0.9;
     }
-    
+
     #nav a {
         display: block;
         height: 24px;
@@ -196,17 +199,17 @@ input, textarea{
         padding: 13px 0px;
         font-size: 17px;
     }
-    
+
     #nav a:hover {
         background-color: #4CAF50;
         border: 0;
     }
-    
-    #nav a:focus{
+
+    #nav a:focus {
         background: #4CAF50;
     }
 
-    #menu{
+    #menu {
         position: absolute;
         right: 0;
         display: block;
@@ -215,38 +218,38 @@ input, textarea{
         text-align: center;
     }
 
-    #icon:hover{
+    #icon:hover {
         border-bottom: 0;
     }
 
-    #icon{
+    #icon {
         margin-top: 17px;
     }
 
-    #rrssfooter{
+    #rrssfooter {
         right: 25px;
         margin-top: 15px;
     }
 
-    #rrssfooter li{
+    #rrssfooter li {
         display: block;
     }
 
-    #linksfooter{
+    #linksfooter {
         left: 120px;
     }
 
-    #logofooter{
+    #logofooter {
         left: 30px;
     }
 }
 
-@media only screen and (max-width: 425px){
-    #linksfooter{
+@media only screen and (max-width: 425px) {
+    #linksfooter {
         left: 26vw;
     }
 
-    #logofooter{
+    #logofooter {
         left: 4vw;
     }
 }

@@ -3,13 +3,13 @@ form {
     padding: 50px;
 }
 
-#principal{
+#principal {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-input{
+input {
     height: 3vh;
     min-height: 17.609px;
     max-height: 24.109px;
@@ -28,24 +28,25 @@ h4 {
     font-family: 'Open Sans', sans-serif;
 }
 
-#separator{
+#separator {
     border: 1px solid rgb(0, 216, 72);
     height: 70vh;
     min-height: 350px;
     margin: 0px 50px 0px 50px;
 }
 
-#content{ 
+#content {
     display: inline-flex;
     height: 100%;
 }
 
-#iniciosesion, #registro {
+#iniciosesion,
+#registro {
     width: 300px;
     max-width: 350px;
 }
 
-.button{
+.button {
     margin: 10px;
     padding: 10px 20px 10px 20px;
 }
@@ -53,18 +54,18 @@ h4 {
 
 /* MOVIL */
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
 
     #content {
         display: block;
     }
 
-    input{
+    input {
         width: 62vw;
         max-width: 312.438px;
     }
 
-    #separator{
+    #separator {
         border: 1px solid rgb(0, 216, 72);
         height: 0px;
         min-height: 0px;

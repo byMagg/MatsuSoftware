@@ -1,11 +1,11 @@
-input{
+input {
     height: 3vh;
     min-height: 18px;
     max-height: 24px;
     width: 278px;
 }
 
-textarea{
+textarea {
     height: 10vh;
     min-height: 58px;
     max-height: 269px;
@@ -13,92 +13,95 @@ textarea{
     max-width: 278px;
 }
 
-#principal{
+#principal {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
-button{
+button {
     position: relative;
     height: 50px;
     width: 100px;
 }
 
-#divboton{
+#divboton {
     height: 50px;
     width: 100px;
     margin: 0 auto;
 }
 
-#parrafo{
+#parrafo {
     text-align: left;
 }
 
-#formulario label{
+#formulario label {
     display: flex;
     justify-content: left;
 }
 
-#formulario, #parrafo{
+#formulario,
+#parrafo {
     width: 300px;
     max-width: 350px;
 }
 
-#parrafo{
+#parrafo {
     font-size: 112%;
 }
 
-#lineavertical{
+#lineavertical {
     border: 1px solid rgb(0, 216, 72);
     height: 45vh;
     min-height: 350px;
     margin: 0px 50px 0px 50px;
 }
 
-#content{
+#content {
     display: inline-flex;
     align-items: center;
     height: 100%;
     padding: 70px 50px 115px 50px;
 }
 
-#sent{
+#sent {
     position: absolute;
     padding-left: 32px;
     padding-top: 14px;
 }
 
 /* MOVIL */
-@media only screen and (max-width: 768px){
-    
-    input, textarea{
+@media only screen and (max-width: 768px) {
+
+    input,
+    textarea {
         width: 72vw;
         max-width: 312px;
     }
 
-    #lineavertical{
+    #lineavertical {
         border: 1px solid rgb(0, 216, 72);
         height: 0px;
         min-height: 0px;
         margin: 50px 0px 50px 0px;
     }
-    
-    #formulario, #parrafo{
+
+    #formulario,
+    #parrafo {
         width: 85vw;
     }
 
-    #content{
+    #content {
         text-align: center;
         display: inline-block;
         padding: 50px 0px 100px 0px;
     }
 
-    #sent{
+    #sent {
         padding-left: 5%;
     }
 
-    #content{
+    #content {
         padding: 70px 0px 100px 0px;
     }
 }

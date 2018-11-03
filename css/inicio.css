@@ -1,24 +1,24 @@
-#principal{
+#principal {
     background-image: url(/matsusoftware/images/fondo.jpg);
     background-position: center;
     background-size: cover;
 }
 
-#eslogan{
+#eslogan {
     font-size: x-large;
 }
 
-#eslogan h1{
+#eslogan h1 {
     position: relative;
     left: 10%;
     width: 230px;
 }
 
-#proyecto{
+#proyecto {
     padding: 50px 0px 50px 0px;
 }
 
-.button{
+.button {
     position: relative;
     left: 10%;
     padding: 12px;
@@ -28,8 +28,8 @@
 
 /* MOVIL */
 
-@media only screen and (max-width: 768px){
-    #eslogan{
+@media only screen and (max-width: 768px) {
+    #eslogan {
         font-size: larger;
     }
 }
