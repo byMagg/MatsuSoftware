@@ -55,11 +55,12 @@ a:hover{
 }
 
 #nav a{
-    display: inline-block;
+    display: inline-flex;
     width: 90px;
-    height: 38px;
+    height: 50px;
+    justify-content: center;
     align-items: center;
-    padding: 12px 15px 0px 15px;
+    padding: 0px 1vw;
 }
 
 #nav{
@@ -70,7 +71,7 @@ a:hover{
 
 #logoheader{
     position: absolute;
-    margin-left: 5%;
+    left: 5%;
     height: 50px;
     width: 115px;
 }
@@ -83,13 +84,14 @@ a:hover{
 #logofooter{
     position: absolute;
     height: 100px;
-    width: 72px;
-    margin-left: 60px;
+    width: 19vw;
+    left: 60px;
+    max-width: 75px;
+    display: flex;
+    align-items: center;
 }
 
 #logofooter img{
-    position: relative;
-    top: 12px;
     width: 95%;
     border: 1px solid rgb(0, 216, 72);
     border-radius: 50%;
@@ -97,18 +99,18 @@ a:hover{
 
 #linksfooter li{
     display: block;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding: 5px 0;
 }
 
 #linksfooter{
     position: absolute;
-    margin-left: 120px;
+    left: 155px;
     height: 100px;
 }
 
 #linksfooter ul ,#rrssfooter ul{
     margin: 0;
+    padding: 0;
 }
 
 #login{
@@ -225,15 +227,26 @@ input, textarea{
         right: 25px;
         margin-top: 15px;
     }
+
     #rrssfooter li{
         display: block;
     }
 
-    #logofooter{
-        margin-left: 25px;
+    #linksfooter{
+        left: 120px;
     }
 
+    #logofooter{
+        left: 30px;
+    }
+}
+
+@media only screen and (max-width: 425px){
     #linksfooter{
-        margin-left: 75px;
+        left: 26vw;
+    }
+
+    #logofooter{
+        left: 4vw;
     }
 }
