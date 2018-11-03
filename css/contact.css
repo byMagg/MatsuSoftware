@@ -72,14 +72,8 @@ button{
 /* MOVIL */
 @media only screen and (max-width: 768px){
     
-    input{
-        width: 62vw;
-        max-width: 312px;
-    }
-    
-    textarea{
-        width: 62vw;
-        min-width: none;
+    input, textarea{
+        width: 72vw;
         max-width: 312px;
     }
 
