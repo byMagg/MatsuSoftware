@@ -17,7 +17,7 @@
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <form id="iniciosesion" action="" method="post">
+                <form id="iniciosesion" action="admin.php" method="post">
 
                     <h1>Inicio Sesión</h1>
 
