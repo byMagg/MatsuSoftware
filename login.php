@@ -46,6 +46,8 @@
                     <label class="etiqueta">Contraseña*:<br/></label>
                     <input type="password" placeholder="Contraseña *" name="contraseña" required>
 
+                    <!-- Prueba -->
+
                     <label class="etiqueta">Dirección:<br/></label>
                     <input type="text" placeholder="Dirección" name="direccion">
 
