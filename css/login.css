@@ -9,7 +9,7 @@ form {
     align-items: center;
 }
 
-input {
+input, select {
     height: 3vh;
     min-height: 17.609px;
     max-height: 24.109px;
@@ -64,20 +64,23 @@ p, h4 {
 
     #content {
         display: block;
+        padding: 50px 0 100px 0;
     }
 
     #iniciosesion, #registro {
         height: 630px;
         width: 90vw;
+        padding: 50px 0;
     }
 
     #iniciosesion {
         height: 275px;
     }
 
-    input {
+    input, select {
         width: 62vw;
         max-width: 312.438px;
+        min-width: 260px;
     }
 
     #separator {

@@ -156,8 +156,7 @@ a:hover {
     border: 0;
 }
 
-input,
-textarea {
+input, select, textarea {
     border-radius: 7px;
     font-family: 'Open Sans', sans-serif;
     padding-inline-start: 10px;
