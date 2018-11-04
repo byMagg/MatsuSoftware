@@ -90,6 +90,12 @@ p, h4 {
         min-width: 260px;
     }
 
+    select {
+        width: 62vw;
+        max-width: 325px;
+        min-width: 270px;
+    }
+
     #separator {
         border: 1px solid rgb(0, 216, 72);
         height: 0px;
