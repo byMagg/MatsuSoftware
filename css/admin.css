@@ -39,3 +39,17 @@
 #5 {
     flex-basis: calc(100% / 2);
 }
+
+@media only screen and (max-height: 768px)  {
+    #content{
+        flex-wrap: nowrap;
+    }
+
+    .item{
+        width: 17vw;
+    }
+
+    .button{
+        font-size: 11px;
+    }
+}
