@@ -22,7 +22,7 @@
                     <h1>Añadir Videojuego</h1>
 
                         <div class="cuadroTexto">
-                            <input type = "text" placeholder="Titulo.">
+                            <input type = "text" placeholder="Titulo">
                         </div>
 
                         <div class="cuadroTexto">
