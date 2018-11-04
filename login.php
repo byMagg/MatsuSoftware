@@ -22,10 +22,10 @@
                     <h1>Inicio Sesión</h1>
 
                     <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="text" placeholder="E-mail *" name="email" required>
+                    <input type="text" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" placeholder="Contraseña *" name="contraseña" required>
+                    <input type="password" name="contraseña" required>
 
                     <button class="button" type="submit">Enviar</button>
 
@@ -38,28 +38,29 @@
                     <h1>Registro</h1>
 
                     <label class="etiqueta">Nick*:<br/></label>
-                    <input type="text" placeholder="Nick *" name="nick" required>
+                    <input type="text" name="nick" required>
 
                     <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="text" placeholder="E-mail *" name="email" required>
+                    <input type="text" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" placeholder="Contraseña *" name="contraseña" required>
+                    <input type="password" name="contraseña" required>
 
-                    <!-- Prueba -->
+                    <label class="etiqueta">Dirección*:<br/></label>
+                    <input type="text" name="direccion" required>
 
-                    <label class="etiqueta">Dirección:<br/></label>
-                    <input type="text" placeholder="Dirección" name="direccion">
+                    <label class="etiqueta">Municipio*:<br/></label>
+                    <input type="text" name="municipio" required>
 
-                    <label class="etiqueta">Municipio:<br/></label>
-                    <input type="text" placeholder="Municipio" name="municipio">
-
-                    <label class="etiqueta">Provincia:<br/></label>
-                    <input type="text" placeholder="Provincia" name="provincia">
+                    <label class="etiqueta">Provincia*:<br/></label>
+                    <input type="text" name="provincia" required>
 
 
                     <button class="button" type="submit">Enviar</button>
-                    <h4><a class="nohover" href="tyc.php">Registrándote aceptas nuestros términos y condiciones</a></h4>
+                    <div id="tyc">
+                        <p>Registrándote aceptas nuestros</p>
+                        <h4><a href="tyc.php">términos y condiciones</a></h4>
+                    </div>
 
                 </form>
             </div>
