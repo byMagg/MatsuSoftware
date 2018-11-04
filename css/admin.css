@@ -1,0 +1,41 @@
+.item {
+    display: grid;
+    justify-content: center;
+    width: 29vw;
+}
+
+.item img {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 350px;
+}
+
+.content {
+    display: grid;
+    align-content: center;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 50px 150px 50px;
+}
+
+.button {
+    max-width: 300px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 22px;
+}
+
+#1,
+#2,
+#3 {
+    flex-basis: calc(100% / 3);
+}
+
+#4,
+#5 {
+    flex-basis: calc(100% / 2);
+}
