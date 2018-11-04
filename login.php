@@ -22,10 +22,10 @@
                     <h1>Inicio Sesión</h1>
 
                     <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="text" name="email" required>
+                    <input type="text" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" name="contraseña" required>
+                    <input type="password" placeholder="Introduce tu contraseña" name="contraseña" required>
 
                     <button class="button" type="submit">Enviar</button>
 
@@ -38,24 +38,24 @@
                     <h1>Registro</h1>
 
                     <label class="etiqueta">Nick*:<br/></label>
-                    <input type="text" name="nick" required>
+                    <input type="text" placeholder="Introduce tu nick" name="nick" required>
 
                     <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="text" name="email" required>
+                    <input type="text" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" name="contraseña" required>
+                    <input type="password" placeholder="Introduce tu contraseña" name="contraseña" required>
 
                     <label class="etiqueta">Provincia*:<br/></label>
                     <select name="provincia">
-                        <option value='selecciona'>Selecciona</option>
+                        <option value='selecciona'>Introduce tu provincia</option>
                         <option value='A Coruña' >A Coruña</option>
-                        <option value='álava'>álava</option>
+                        <option value='Álava'>Álava</option>
                         <option value='Albacete' >Albacete</option>
                         <option value='Alicante'>Alicante</option>
                         <option value='Almería' >Almería</option>
                         <option value='Asturias' >Asturias</option>
-                        <option value='ávila' >Ávila</option>
+                        <option value='Ávila' >Ávila</option>
                         <option value='Badajoz' >Badajoz</option>
                         <option value='Barcelona'>Barcelona</option>
                         <option value='Burgos' >Burgos</option>
@@ -105,10 +105,10 @@
                     </select>
                     
                     <label class="etiqueta">Municipio*:<br/></label>
-                    <input type="text" name="municipio" required>
+                    <input type="text" placeholder="Introduce tu municipio" name="municipio" required>
 
                     <label class="etiqueta">Dirección*:<br/></label>
-                    <input type="text" name="direccion" required>
+                    <input type="text" placeholder="Introduce tu dirección" name="direccion" required>
                 
                     <button class="button" type="submit">Enviar</button>
                     <div id="tyc">
