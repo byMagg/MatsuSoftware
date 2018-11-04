@@ -25,9 +25,21 @@
                     <input type="text" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" placeholder="Introduce tu contraseña" name="contraseña" required>
+                    <input type="password" placeholder="Introduce tu contraseña" name="pass" required>
 
                     <button class="button" type="submit">Enviar</button>
+
+                    <?php
+                        if(isset($_GET["errorlogin"])){
+                            $error = $_GET["errorlogin"];
+                                if($error == 1){
+                                    echo "
+                                    <div id='error'>
+                                        <label>Usuario o contraseña incorrecta. Por favor, inténtelo de nuevo.</label>
+                                    </div>";
+                                }
+                        }
+                    ?>
 
                 </form>
 

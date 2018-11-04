@@ -66,6 +66,11 @@ p, h4 {
     width: 100px;
 }
 
+#error {
+    position: absolute;
+    padding-left: 32px;
+    padding-top: 14px;
+}
 
 /* MOVIL */
 
@@ -105,5 +110,9 @@ p, h4 {
         margin: 50px 0px 50px 0px;
         width: 65%;
         margin: 0 auto;
+    }
+
+    #error {
+        padding-left: 5%;
     }
 }
