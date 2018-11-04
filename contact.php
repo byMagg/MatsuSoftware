@@ -8,6 +8,7 @@
 
         <?php include("includes/head.php"); ?>
 
+        <!-- CSS -->
         <link href="css/contact.css" type="text/css" rel="stylesheet">
     </head>
 
