@@ -3,7 +3,7 @@
     $user = $_POST["email"];
     $pswd = $_POST["pass"];
 
-    if($user == "admin" && $pswd == "admin"){
+    if($user == "admin" && $pswd == "juanjonosabeentraraqui"){
 ?>
         <!DOCTYPE html>
         <html lang="es">
