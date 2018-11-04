@@ -24,10 +24,10 @@
                     <input type="text" name="surname" placeholder=" Introduce tus apellidos" required/>
 
                     <label>Correo electrónico*:<br/></label>
-                    <input type="email "name="email" placeholder=" Introduce tu e-mail" required/>
+                    <input type="email" name="email" placeholder=" Introduce tu e-mail" required/>
                     
                     <label>Mensaje*:<br/></label>
-                    <textarea type="msg "name="msg" placeholder=" Introduce tu mensaje" required></textarea>
+                    <textarea type="msg" name="msg" placeholder=" Introduce tu mensaje" required></textarea>
                     
                     <button class="button" type="submit">Enviar</button>
 
