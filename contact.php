@@ -5,18 +5,15 @@
     <head>
         <!-- Titulo -->
         <title>Contacto - MatsuSoftware</title>
-
         <?php include("includes/head.php"); ?>
-
-        <!-- CSS-->
         <link href="css/contact.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
         <!--HEADER-->
         <?php include("includes/header.php"); ?>
-        <!--CONTENT-->
 
+        <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
                 <form id="formulario" action="includes/send.php" method="post">
@@ -32,19 +29,17 @@
                     <label>Mensaje*:<br/></label>
                     <textarea type="msg "name="msg" placeholder=" Introduce tu mensaje" required></textarea>
                     
-                    <div id="divboton">
-                        <button id="button" class="button" type="submit">Enviar</button>
-                    </div>
+                    <button class="button" type="submit">Enviar</button>
 
                     <?php
                         if(isset($_GET["sent"])){
-                        $sent = $_GET["sent"];
-                        if($sent == 1){
-                            echo "
-                            <div id='sent'>
-                                <label>Mensaje enviado correctamente!</label>
-                            </div>";
-                        }
+                            $sent = $_GET["sent"];
+                                if($sent == 1){
+                                    echo "
+                                    <div id='sent'>
+                                        <label>Mensaje enviado correctamente!</label>
+                                    </div>";
+                                }
                         }
                     ?>
                 </form>

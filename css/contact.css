@@ -1,8 +1,21 @@
+#principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 70px 50px 115px 50px;
+}
+
 input {
     height: 3vh;
     min-height: 18px;
     max-height: 24px;
-    width: 278px;
+    width: 90%;
 }
 
 textarea {
@@ -13,42 +26,21 @@ textarea {
     max-width: 278px;
 }
 
-#principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button {
-    position: relative;
-    height: 50px;
-    width: 100px;
-}
-
-#divboton {
-    height: 50px;
-    width: 100px;
-    margin: 0 auto;
-}
-
-#parrafo {
-    text-align: left;
-}
-
-#formulario label {
+label {
     display: flex;
     justify-content: left;
 }
 
-#formulario,
 #parrafo {
+    text-align: left;
+    font-size: 112%;
+}
+
+#formulario, #parrafo {
     width: 300px;
     max-width: 350px;
 }
 
-#parrafo {
-    font-size: 112%;
-}
 
 #lineavertical {
     border: 1px solid rgb(0, 216, 72);
@@ -57,24 +49,29 @@ button {
     margin: 0px 50px 0px 50px;
 }
 
-#content {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    padding: 70px 50px 115px 50px;
-}
-
 #sent {
     position: absolute;
     padding-left: 32px;
     padding-top: 14px;
 }
 
+.button{
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    display: table;
+}
+
 /* MOVIL */
 @media only screen and (max-width: 768px) {
 
-    input,
-    textarea {
+    #content {
+        text-align: center;
+        display: inline-block;
+        padding: 70px 0px 100px 0px;
+    }
+
+    input, textarea {
         width: 72vw;
         max-width: 312px;
     }
@@ -86,22 +83,11 @@ button {
         margin: 50px 0px 50px 0px;
     }
 
-    #formulario,
-    #parrafo {
+    #formulario, #parrafo {
         width: 85vw;
-    }
-
-    #content {
-        text-align: center;
-        display: inline-block;
-        padding: 50px 0px 100px 0px;
     }
 
     #sent {
         padding-left: 5%;
-    }
-
-    #content {
-        padding: 70px 0px 100px 0px;
     }
 }
