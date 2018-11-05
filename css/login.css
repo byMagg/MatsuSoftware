@@ -75,20 +75,27 @@ p, h4 {
 /* MOVIL */
 
 @media only screen and (max-width: 768px) {
-
+   
     #content {
         display: block;
         padding: 50px 0 100px 0;
     }
 
-    #iniciosesion, #registro {
+    #form {
+        text-align: center;
+        padding: 0;
+    }
+
+    #registro {
         height: 630px;
         width: 90vw;
-        padding: 50px 0;
+        padding: 0;
     }
 
     #iniciosesion {
         height: 275px;
+        width: 90vw;
+        padding: 10px 0;
     }
 
     input {
@@ -106,10 +113,10 @@ p, h4 {
     #separator {
         border: 1px solid rgb(0, 216, 72);
         height: 0px;
+        min-width: 260px;
         min-height: 0px;
-        margin: 50px 0px 50px 0px;
-        width: 65%;
-        margin: 0 auto;
+        width: 90%;
+        margin: 35px auto 20px;
     }
 
     #error {
