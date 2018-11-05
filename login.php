@@ -17,12 +17,12 @@
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <form id="iniciosesion" action="admin.php" method="post">
+                <form id="iniciosesion" action="gestionlogin.php" method="post">
 
                     <h1>Inicio Sesión</h1>
 
                     <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="text" placeholder="Introduce tu e-mail" name="email" required>
+                    <input type="email" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
                     <input type="password" placeholder="Introduce tu contraseña" name="pass" required>
