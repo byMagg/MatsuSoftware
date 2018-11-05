@@ -27,6 +27,7 @@
     text-align: center;
     margin: 20px auto;
     padding: 10px 22px;
+    font-size: 14px;
 }
 
 #1,
@@ -40,16 +41,45 @@
     flex-basis: calc(100% / 2);
 }
 
-@media only screen and (max-height: 768px)  {
+@media only screen and (max-width: 435px){
+    #content{
+        display: inline-grid;
+    }
+
+    .button{
+        width: 195px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-height: 768px) and (min-width: 435px) {
     #content{
         flex-wrap: nowrap;
     }
 
     .item{
-        width: 17vw;
+        width: 18vw;
     }
 
     .button{
-        font-size: 11px;
+        font-size: 1vw;
+    }
+
+    @media only screen and (max-width: 1000px){
+        #content{
+            flex-wrap: wrap;
+        }
+    
+        .item{
+            width: 225px;
+        }
+
+        .button{
+            font-size: 12px;
+        }
+
+        .item img{
+            width: 30%;
+        }
     }
 }
