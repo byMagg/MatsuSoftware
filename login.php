@@ -35,7 +35,7 @@
                                 if($error == 1){
                                     echo "
                                     <div id='error'>
-                                        <label>Usuario o contraseña incorrecta. Por favor, inténtelo de nuevo.</label>
+                                        <label>Usuario o contraseña incorrecta.<br>Por favor, inténtelo de nuevo.</label>
                                     </div>";
                                 }
                         }
