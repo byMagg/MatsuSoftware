@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['usuario'])){
+        if($_SESSION['usuario']['rol'] == 1){
+            header("Location: admindash.php");
+        }else if($_SESSION['usuario']['rol'] == 0){
+            header("Location: userdash.php");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -5,32 +17,38 @@
         <!-- Titulo -->
         <title>Login - MatsuSoftware</title>
 
-        <?php include("includes/head.php"); ?>
+        <?php include("footerheader/head.php"); ?>
 
         <link href="css/login.css" type="text/css" rel="stylesheet">
+
+        <script src="login/jquery-3.3.1.min.js"></script>
+        <script src="login/main.js"></script>
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("includes/header.php"); ?>
+        <?php include("footerheader/header.php"); ?>
 
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <form id="iniciosesion" action="" method="post">
+                <div class="error">
+                    <span>Datos de ingreso no válidos, inténtalo de nuevo.</span>
+                </div>
+                <form id="iniciosesion" action="">
 
                     <h1>Inicio Sesión</h1>
 
                     <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="text" placeholder="Introduce tu e-mail" name="email" required>
+                    <input type="email" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" placeholder="Introduce tu contraseña" name="contraseña" required>
+                    <input type="password" pattern="[A-Za-z0-9_-]{4,20}"placeholder="Introduce tu contraseña" name="pass" required>
 
-                    <button class="button" type="submit">Enviar</button>
+                    <button class="button" type="submit">Iniciar Sesión</button>
 
                 </form>
-
+                
                 <div id="separator"></div>
 
                 <form id="registro" action="" method="post">
@@ -110,7 +128,7 @@
                     <label class="etiqueta">Dirección*:<br/></label>
                     <input type="text" placeholder="Introduce tu dirección" name="direccion" required>
                 
-                    <button class="button" type="submit">Enviar</button>
+                    <button class="button" type="submit">Registrar</button>
                     <div id="tyc">
                         <p>Registrándote aceptas nuestros</p>
                         <h4><a href="tyc.php">términos y condiciones</a></h4>
@@ -119,10 +137,7 @@
                 </form>
             </div>
         </div>
-
         <!-- FOOTER -->
-        <?php include("includes/footer.php"); ?>
-
+        <?php include("footerheader/footer.php"); ?>
     </body>
-
 </html>

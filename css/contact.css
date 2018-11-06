@@ -1,8 +1,21 @@
+#principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 70px 50px 115px 50px;
+}
+
 input {
     height: 3vh;
     min-height: 18px;
     max-height: 24px;
-    width: 278px;
+    width: 90%;
 }
 
 textarea {
@@ -13,31 +26,18 @@ textarea {
     max-width: 278px;
 }
 
-#principal {
+label {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
 }
 
-button {
-    position: relative;
-    height: 50px;
-    width: 100px;
-}
-
-#divboton {
-    height: 50px;
-    width: 100px;
-    margin: 0 auto;
+h1 {
+    text-align: center;
 }
 
 #parrafo {
     text-align: left;
-}
-
-#formulario label {
-    display: flex;
-    justify-content: left;
+    font-size: 112%;
 }
 
 #formulario,
@@ -46,32 +46,36 @@ button {
     max-width: 350px;
 }
 
-#parrafo {
-    font-size: 112%;
-}
-
 #lineavertical {
     border: 1px solid rgb(0, 216, 72);
-    height: 45vh;
+    height: 55vh;
     min-height: 350px;
     margin: 0px 50px 0px 50px;
 }
 
-#content {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    padding: 70px 50px 115px 50px;
+#sent {
+    padding: 15px 0;
 }
 
-#sent {
-    position: absolute;
-    padding-left: 32px;
-    padding-top: 14px;
+#sent label {
+    justify-content: center;
+}
+
+.button {
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    display: table;
 }
 
 /* MOVIL */
 @media only screen and (max-width: 768px) {
+
+    #content {
+        text-align: center;
+        display: inline-block;
+        padding: 70px 0px 100px 0px;
+    }
 
     input,
     textarea {
@@ -89,19 +93,5 @@ button {
     #formulario,
     #parrafo {
         width: 85vw;
-    }
-
-    #content {
-        text-align: center;
-        display: inline-block;
-        padding: 50px 0px 100px 0px;
-    }
-
-    #sent {
-        padding-left: 5%;
-    }
-
-    #content {
-        padding: 70px 0px 100px 0px;
     }
 }

@@ -5,21 +5,19 @@
     <head>
         <!-- Titulo -->
         <title>Contacto - MatsuSoftware</title>
-
-        <?php include("includes/head.php"); ?>
-
-        <!-- CSS-->
+        <?php include("footerheader/head.php"); ?>
         <link href="css/contact.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("includes/header.php"); ?>
-        <!--CONTENT-->
+        <?php include("footerheader/header.php"); ?>
 
+        <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <form id="formulario" action="includes/send.php" method="post">
+                <form id="formulario" action="contact/send.php" method="post">
+                    <h1>Contacto</h1>
                     <label>Nombre*:<br/></label>
                     <input type="text" name="name" placeholder=" Introduce tu nombre" required/>
 
@@ -27,24 +25,22 @@
                     <input type="text" name="surname" placeholder=" Introduce tus apellidos" required/>
 
                     <label>Correo electrónico*:<br/></label>
-                    <input type="email "name="email" placeholder=" Introduce tu e-mail" required/>
+                    <input type="email" name="email" placeholder=" Introduce tu e-mail" required/>
                     
                     <label>Mensaje*:<br/></label>
-                    <textarea type="msg "name="msg" placeholder=" Introduce tu mensaje" required></textarea>
+                    <textarea type="msg" name="msg" placeholder=" Introduce tu mensaje" required></textarea>
                     
-                    <div id="divboton">
-                        <button id="button" class="button" type="submit">Enviar</button>
-                    </div>
+                    <button class="button" type="submit">Enviar</button>
 
                     <?php
                         if(isset($_GET["sent"])){
-                        $sent = $_GET["sent"];
-                        if($sent == 1){
-                            echo "
-                            <div id='sent'>
-                                <label>Mensaje enviado correctamente!</label>
-                            </div>";
-                        }
+                            $sent = $_GET["sent"];
+                                if($sent == 1){
+                                    echo "
+                                    <div id='sent'>
+                                        <label>Mensaje enviado correctamente!</label>
+                                    </div>";
+                                }
                         }
                     ?>
                 </form>
@@ -62,6 +58,6 @@
         </div>
 
         <!-- FOOTER -->
-        <?php include("includes/footer.php"); ?>
+        <?php include("footerheader/footer.php"); ?>
     </body>
 </html>

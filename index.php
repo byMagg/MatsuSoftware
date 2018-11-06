@@ -3,14 +3,14 @@
     <head>
         <!-- Titulo -->
         <title>Inicio - MatsuSoftware</title>
-        <?php include("includes/head.php"); ?>
+        <?php include("footerheader/head.php"); ?>
 
         <link href="css/inicio.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("includes/header.php"); ?>
+        <?php include("footerheader/header.php"); ?>
 
         <!--CONTENT-->
         <div id="principal" class="content">
@@ -21,6 +21,6 @@
         </div>
         
         <!-- FOOTER -->
-        <?php include("includes/footer.php"); ?>
+        <?php include("footerheader/footer.php"); ?>
     </body>
 </html>

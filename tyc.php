@@ -5,7 +5,7 @@
         <!-- Titulo -->
         <title>Términos y condiciones - MatsuSoftware</title>
 
-        <?php include("includes/head.php"); ?>
+        <?php include("footerheader/head.php"); ?>
 
         <link href="css/tycandprivacy.css" type="text/css" rel="stylesheet">
 
@@ -13,7 +13,7 @@
 
     <body>
         <!--HEADER-->
-        <?php include("includes/header.php"); ?>
+        <?php include("footerheader/header.php"); ?>
 
         <!--CONTENT-->
         <div class="content content-inside">
@@ -67,7 +67,7 @@
         </div>
 
         <!-- FOOTER -->
-        <?php include("includes/footer.php"); ?>
+        <?php include("footerheader/footer.php"); ?>
 
     </body>
 

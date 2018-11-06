@@ -5,7 +5,7 @@
         <!-- Titulo -->
         <title>Newsletter - MatsuSoftware</title>
 
-        <?php include("includes/head.php"); ?>
+        <?php include("footerheader/head.php"); ?>
 
         <link href="css/newsletter.css" type="text/css" rel="stylesheet">
 
@@ -13,14 +13,14 @@
 
     <body>
         <!--HEADER-->
-        <?php include("includes/header.php"); ?>
+        <?php include("footerheader/header.php"); ?>
 
         <!--CONTENT-->
         <div class="content">
         </div>
 
         <!-- FOOTER -->
-        <?php include("includes/footer.php"); ?>
+        <?php include("footerheader/footer.php"); ?>
 
     </body>
 </html>
