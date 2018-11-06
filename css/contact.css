@@ -15,7 +15,7 @@
 
 #content h1 {
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 40px;
 }
 
@@ -76,23 +76,24 @@ h1 {
     display: table;
 }
 
-.success, .error{
+.success,
+.error {
     position: absolute;
     top: 50px;
     left: 0px;
-    padding: 10px 0 ;
-    border-radius:  0 0 5px 5px;
+    padding: 10px 0;
+    border-radius: 0 0 5px 5px;
     color: #fff;
     width: 100%;
     text-align: center;
     display: none;
 }
 
-.success{
+.success {
     background-color: green;
 }
 
-.error{
+.error {
     background-color: red;
 }
 
