@@ -1,0 +1,19 @@
+.error, .success{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding: 10px 0 ;
+    border-radius:  0 0 5px 5px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.error{
+    background-color: red;
+}
+
+.success{
+    background-color: green;
+}

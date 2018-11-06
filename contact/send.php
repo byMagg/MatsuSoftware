@@ -5,7 +5,7 @@
     $email = $_POST['email'];
     $msg = $_POST['msg'];
     
-    $para='matsusoftware@gmail.com';
+    $para='alexgarohotmailcom@gmail.com';
 
     $asunto = 'Mensaje de '.$name.' '.$surname;
 

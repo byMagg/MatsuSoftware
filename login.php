@@ -46,9 +46,10 @@
                     <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="pass" required>
 
                     <button class="button" type="submit">Iniciar Sesión</button>
-
+                    
+                    <a class="" href="writeemail.php">¿Olvidaste la contraseña?</a>
                 </form>
-                
+
                 <div id="separator"></div>
 
                 <div class="error nick">

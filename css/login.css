@@ -23,6 +23,7 @@ input {
 }
 
 select {
+    color: #757575;
     min-height: 22px;
     max-height: 30px;
     height: 4vh;
