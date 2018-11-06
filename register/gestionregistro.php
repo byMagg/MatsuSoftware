@@ -8,6 +8,7 @@
     $municipio = $_POST['municipio'];
     $direccion = $_POST['direccion'];
     $rol = 0;
+    $request = 0;
 
     $consultanick = $mysqli->query("SELECT * FROM user WHERE nick = '".$nick."'");
 
@@ -27,7 +28,7 @@
         exit();
     }
     
-    $insert = "INSERT INTO user(nick,email,contrasena,provincia,municipio,direccion,rol) VALUES ('".$nick."', '".$email."', '".$contrasena."','".$provincia."','".$municipio."','".$direccion."', '".$rol."')";
+    $insert = "INSERT INTO user(nick,email,contrasena,provincia,municipio,direccion,rol,request) VALUES ('".$nick."', '".$email."', '".$contrasena."','".$provincia."','".$municipio."','".$direccion."', '".$rol."', '".$request."')";
 
     if ($mysqli->query($insert)) {
         echo json_encode(array('error' => false));
