@@ -41,44 +41,50 @@
     flex-basis: calc(100% / 2);
 }
 
-@media only screen and (max-width: 435px){
-    #content{
+#cerrar {
+    position: absolute;
+    top: 75px;
+    left: 50px;
+}
+
+@media only screen and (max-width: 435px) {
+    #content {
         display: inline-grid;
     }
 
-    .button{
+    .button {
         width: 195px;
         font-size: 16px;
     }
 }
 
 @media only screen and (max-height: 768px) and (min-width: 435px) {
-    #content{
+    #content {
         flex-wrap: nowrap;
     }
 
-    .item{
+    .item {
         width: 18vw;
     }
 
-    .button{
+    .button {
         font-size: 1vw;
     }
 
-    @media only screen and (max-width: 1000px){
-        #content{
+    @media only screen and (max-width: 1000px) {
+        #content {
             flex-wrap: wrap;
         }
-    
-        .item{
+
+        .item {
             width: 225px;
         }
 
-        .button{
+        .button {
             font-size: 12px;
         }
 
-        .item img{
+        .item img {
             width: 30%;
         }
     }
