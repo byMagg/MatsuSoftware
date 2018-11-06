@@ -23,6 +23,7 @@
 
         <script src="login/jquery-3.3.1.min.js"></script>
         <script src="login/main.js"></script>
+        <script src="register/main.js"></script>
     </head>
 
     <body>
@@ -50,7 +51,19 @@
                 
                 <div id="separator"></div>
 
-                <form id="registro" action="" method="post">
+                <div class="error nick">
+                    <span>Existe un usuario con este nick, pruebe con otro.</span>
+                </div>
+                <div class="error email">
+                    <span>Existe un usuario con este email, pruebe con otro.</span>
+                </div>
+                <div class="error general">
+                    <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+                </div>
+                <div class="success">
+                    <span>Usuario registrado correctamente, inicie sesión para continuar.</span>
+                </div>
+                <form id="registro" action="">
 
                     <h1>Registro</h1>
 
@@ -58,10 +71,10 @@
                     <input type="text" placeholder="Introduce tu nick" name="nick" required>
 
                     <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="text" placeholder="Introduce tu e-mail" name="email" required>
+                    <input type="email" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" placeholder="Introduce tu contraseña" name="contraseña" required>
+                    <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="contrasena" required>
 
                     <label class="etiqueta">Provincia*:<br/></label>
                     <select name="provincia">
