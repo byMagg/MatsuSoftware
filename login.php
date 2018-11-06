@@ -5,19 +5,25 @@
         <!-- Titulo -->
         <title>Login - MatsuSoftware</title>
 
-        <?php include("includes/head.php"); ?>
+        <?php include("footerheader/head.php"); ?>
 
         <link href="css/login.css" type="text/css" rel="stylesheet">
+
+        <script src="login/jquery-3.3.1.min.js"></script>
+        <script src="login/main.js"></script>
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("includes/header.php"); ?>
+        <?php include("footerheader/header.php"); ?>
 
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <form id="iniciosesion" action="gestionlogin.php" method="post">
+                <div class="error">
+                    <span>Datos de ingreso no válidos, inténtalo de nuevo.</span>
+                </div>
+                <form id="iniciosesion" action="">
 
                     <h1>Inicio Sesión</h1>
 
@@ -27,22 +33,10 @@
                     <label class="etiqueta">Contraseña*:<br/></label>
                     <input type="password" placeholder="Introduce tu contraseña" name="pass" required>
 
-                    <button class="button" type="submit">Enviar</button>
-
-                    <?php
-                        if(isset($_GET["errorlogin"])){
-                            $error = $_GET["errorlogin"];
-                                if($error == 1){
-                                    echo "
-                                    <div id='error'>
-                                        <label>Usuario o contraseña incorrecta.<br>Por favor, inténtelo de nuevo.</label>
-                                    </div>";
-                                }
-                        }
-                    ?>
+                    <button class="button" type="submit">Iniciar Sesión</button>
 
                 </form>
-
+                
                 <div id="separator"></div>
 
                 <form id="registro" action="" method="post">
@@ -122,7 +116,7 @@
                     <label class="etiqueta">Dirección*:<br/></label>
                     <input type="text" placeholder="Introduce tu dirección" name="direccion" required>
                 
-                    <button class="button" type="submit">Enviar</button>
+                    <button class="button" type="submit">Registrar</button>
                     <div id="tyc">
                         <p>Registrándote aceptas nuestros</p>
                         <h4><a href="tyc.php">términos y condiciones</a></h4>
@@ -133,7 +127,7 @@
         </div>
 
         <!-- FOOTER -->
-        <?php include("includes/footer.php"); ?>
+        <?php include("footerheader/footer.php"); ?>
 
     </body>
 

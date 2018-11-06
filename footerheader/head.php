@@ -2,7 +2,7 @@
 
     echo '  
             <!-- Favicon -->
-            <link rel="icon" type="image/png" href="/matsusoftware/images/favicon.png" />    
+            <link rel="icon" type="image/png" href="images/favicon.png" />    
 
             <!-- Meta -->
             <meta name="theme-color" content="#343F55"/>
@@ -16,7 +16,7 @@
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 
             <!-- JavaScript -->
-            <script src="js/menu.js"></script>
+            <script src="menu/menu.js"></script>
 
             <!-- CSS -->
             <link href="css/headerfooter.css" type="text/css" rel="stylesheet">

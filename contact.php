@@ -5,18 +5,18 @@
     <head>
         <!-- Titulo -->
         <title>Contacto - MatsuSoftware</title>
-        <?php include("includes/head.php"); ?>
+        <?php include("footerheader/head.php"); ?>
         <link href="css/contact.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("includes/header.php"); ?>
+        <?php include("footerheader/header.php"); ?>
 
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <form id="formulario" action="includes/send.php" method="post">
+                <form id="formulario" action="contact/send.php" method="post">
                     <h1>Contacto</h1>
                     <label>Nombre*:<br/></label>
                     <input type="text" name="name" placeholder=" Introduce tu nombre" required/>
@@ -58,6 +58,6 @@
         </div>
 
         <!-- FOOTER -->
-        <?php include("includes/footer.php"); ?>
+        <?php include("footerheader/footer.php"); ?>
     </body>
 </html>
