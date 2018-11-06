@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION['usuario'])){
+        if($_SESSION['usuario']['rol'] == 1){
+            header("Location: admindash.php");
+        }else if($_SESSION['usuario']['rol'] == 0){
+            header("Location: userdash.php");
+        }
+    }
+?>
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -31,7 +43,7 @@
                     <input type="email" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" placeholder="Introduce tu contraseña" name="pass" required>
+                    <input type="password" pattern="[A-Za-z0-9_-]{4,20}"placeholder="Introduce tu contraseña" name="pass" required>
 
                     <button class="button" type="submit">Iniciar Sesión</button>
 
@@ -125,10 +137,7 @@
                 </form>
             </div>
         </div>
-
         <!-- FOOTER -->
         <?php include("footerheader/footer.php"); ?>
-
     </body>
-
 </html>

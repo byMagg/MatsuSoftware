@@ -1,3 +1,28 @@
+<?php
+session_start();  
+
+if(isset($_SESSION['tiempo']) ) {
+    $inactivo = 120;
+    $vida_session = time() - $_SESSION['tiempo'];
+
+    if($vida_session > $inactivo)
+    {    
+        header("Location: login/logout.php");
+        exit();
+    }
+}
+$_SESSION['tiempo'] = time();       
+
+
+if(isset($_SESSION['usuario'])){
+    if($_SESSION['usuario']['rol'] == 1){
+        header("Location: admindash.php");
+    }
+}else{
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -13,7 +38,9 @@
                     
         <!--CONTENT-->
         <div class="content">
-        
+            <div id="content" class="content-inside">
+                <a href="login/logout.php">Cerrar sesión</a>
+            </div>
         </div>
                             
         <!-- FOOTER -->
