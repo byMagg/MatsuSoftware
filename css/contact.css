@@ -68,6 +68,26 @@ h1 {
     display: table;
 }
 
+.success, .error{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding: 10px 0 ;
+    border-radius:  0 0 5px 5px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.success{
+    background-color: green;
+}
+
+.error{
+    background-color: red;
+}
+
 /* MOVIL */
 @media only screen and (max-width: 768px) {
 

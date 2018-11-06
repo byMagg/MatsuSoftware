@@ -7,6 +7,8 @@
         <title>Contacto - MatsuSoftware</title>
         <?php include("footerheader/head.php"); ?>
         <link href="css/contact.css" type="text/css" rel="stylesheet">
+        <script src="login/jquery-3.3.1.min.js"></script>
+        <script src="contact/main.js"></script>
     </head>
 
     <body>
@@ -16,7 +18,13 @@
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <form id="formulario" action="contact/send.php" method="post">
+                <div class="success">
+                    <span>Mensaje enviado correctamente.</span>
+                </div>
+                <div class="error">
+                    <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo.</span>
+                </div>
+                <form id="formulario" action="">
                     <h1>Contacto</h1>
                     <label>Nombre*:<br/></label>
                     <input type="text" name="name" placeholder=" Introduce tu nombre" required/>
@@ -31,18 +39,6 @@
                     <textarea type="msg" name="msg" placeholder=" Introduce tu mensaje" required></textarea>
                     
                     <button class="button" type="submit">Enviar</button>
-
-                    <?php
-                        if(isset($_GET["sent"])){
-                            $sent = $_GET["sent"];
-                                if($sent == 1){
-                                    echo "
-                                    <div id='sent'>
-                                        <label>Mensaje enviado correctamente!</label>
-                                    </div>";
-                                }
-                        }
-                    ?>
                 </form>
 
                 <div id="lineavertical"></div>

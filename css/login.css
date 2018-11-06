@@ -73,7 +73,7 @@ h4 {
 }
 
 .error{
-    background-color: #E74F4F;
+    background-color: red;
     position: absolute;
     top: 50px;
     left: 0px;

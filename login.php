@@ -22,7 +22,7 @@
         <link href="css/login.css" type="text/css" rel="stylesheet">
 
         <script src="login/jquery-3.3.1.min.js"></script>
-        <script src="login/main.js"></script>
+        <script src="contact/main.js"></script>
     </head>
 
     <body>
@@ -36,7 +36,6 @@
                     <span>Datos de ingreso no válidos, inténtalo de nuevo.</span>
                 </div>
                 <form id="iniciosesion" action="">
-
                     <h1>Inicio Sesión</h1>
 
                     <label class="etiqueta">E-mail*:<br/></label>

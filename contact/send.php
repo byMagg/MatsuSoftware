@@ -1,5 +1,4 @@
-<?php    
-    header("Location: ../contact.php?sent=1");
+<?php 
 
     $name = $_POST['name'];
     $surname = $_POST['surname'];
@@ -29,10 +28,10 @@
     $cabecera .= 'From: MatsuSoftware <not-reply@matsusoftware.tk>' . "\r\n";
 
     $enviado = mail($para, $asunto, $mensaje, $cabecera);
-
-    if(!$enviado){
-
-        echo "<h1>ERROR!</h1>";
-
+    
+    if($enviado){
+        echo json_encode(array('error' => false));
+    }else{
+        echo json_encode(array('error' => true));
     }
 ?>
