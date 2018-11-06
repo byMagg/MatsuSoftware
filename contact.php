@@ -16,8 +16,8 @@
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
+            <h1>CONTACTO:</h1>
                 <form id="formulario" action="contact/send.php" method="post">
-                    <h1>Contacto</h1>
                     <label>Nombre*:<br/></label>
                     <input type="text" name="name" placeholder=" Introduce tu nombre" required/>
 
