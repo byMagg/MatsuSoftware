@@ -5,6 +5,17 @@
     width: 25%;
 }
 
+.listadoVideojuegos{
+    width:80%;
+    border: 1px solid red;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left;
+    background-color: #fff;
+    color: black;        
+}
+
+
 .cuadroTexto {
     margin-left: 15%;
     margin-top: 1.25%;
