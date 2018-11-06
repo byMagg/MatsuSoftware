@@ -22,7 +22,7 @@
         <link href="css/login.css" type="text/css" rel="stylesheet">
 
         <script src="login/jquery-3.3.1.min.js"></script>
-        <script src="contact/main.js"></script>
+        <script src="login/main.js"></script>
     </head>
 
     <body>
