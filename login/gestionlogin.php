@@ -17,7 +17,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
         $resultado = $consulta->get_result();
 
-        if($resultado->num_rows == 1){
+        if($resultado->num_rows == 1){ 
             $datos = $resultado->fetch_assoc();
             $_SESSION['usuario'] = $datos;
             $_SESSION['tiempo'] = time();

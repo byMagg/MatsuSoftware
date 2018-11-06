@@ -2,7 +2,7 @@
 session_start();  
 
 if(isset($_SESSION['tiempo']) ) {
-    $inactivo = 120;
+    $inactivo = 600;
     $vida_session = time() - $_SESSION['tiempo'];
 
     if($vida_session > $inactivo)
@@ -13,11 +13,12 @@ if(isset($_SESSION['tiempo']) ) {
 }
 $_SESSION['tiempo'] = time();       
 
-
 if(isset($_SESSION['usuario'])){
+
     if($_SESSION['usuario']['rol'] == 1){
         header("Location: admindash.php");
     }
+
 }else{
     header("Location: login.php");
 }

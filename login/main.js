@@ -26,6 +26,10 @@ jQuery(document).on('submit','#iniciosesion',function(event){
     })
     .fail(function(resp){
         console.log(resp.responseText);
+        $('.error').slideDown('slow');
+        setTimeout(function(){
+            $('.error').slideUp('slow');
+        }, 3000);
     })
     .always(function(){
         console.log("Complete");

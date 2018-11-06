@@ -12,9 +12,9 @@ jQuery(document).on('submit','#formulario',function(event){
     .done(function(respuesta){
         console.log(respuesta);
         if(!respuesta.error){
-            $('.sucess').slideDown('slow');
+            $('.success').slideDown('slow');
             setTimeout(function(){
-                $('.sucess').slideUp('slow');
+                $('.success').slideUp('slow');
             }, 3000);
         }else{
             $('.error').slideDown('slow');
