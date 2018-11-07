@@ -7,18 +7,20 @@ body {
     color: white;
 }
 
-header {
-    background-color: #343F55;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    z-index: 1000;
-    position: relative;
-}
-
+header,
 footer {
     position: relative;
     background-color: #343F55;
+    width: 100%;
+    z-index: 1000;
+}
+
+header {
+    height: 50px;
+    text-align: center;
+}
+
+footer {
     height: 100px;
     z-index: 1000;
     margin-top: -100px;
@@ -36,6 +38,11 @@ footer {
     padding: 50px 50px 100px 50px;
 }
 
+.logo {
+    position: relative;
+    z-index: 1001;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -51,18 +58,13 @@ a:hover {
     background: rgb(68, 78, 99);
 }
 
-.logo {
-    position: relative;
-    z-index: 1001;
-}
-
 #nav a {
     display: inline-flex;
     width: 90px;
     height: 50px;
     justify-content: center;
     align-items: center;
-    padding: 0px 1vw;
+    padding: 0 1vw;
 }
 
 #nav {
@@ -157,7 +159,9 @@ a:hover {
     border: 0;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     border-radius: 7px;
     font-family: 'Open Sans', sans-serif;
     padding-inline-start: 10px;
