@@ -45,7 +45,7 @@
                     <label class="etiqueta">Contraseña*:<br/></label>
                     <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="pass" required>
 
-                    <button class="button" type="submit">Iniciar Sesión</button>
+                    <div id="boton"><button class="button" type="submit">Iniciar Sesión</button></div>
                     
                     <a class="" href="writeemail.php">¿Olvidaste la contraseña?</a>
                 </form>
