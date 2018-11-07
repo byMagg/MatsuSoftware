@@ -4,7 +4,7 @@
         <!-- Titulo -->
         <title>Recuperar contraseña - MatsuSoftware</title>
         <?php include("footerheader/head.php"); ?>
-        <link href="css/writeemail.css" type="text/css" rel="stylesheet">
+        <link href="css/recoverypassword.css" type="text/css" rel="stylesheet">
         <script src="login/jquery-3.3.1.min.js"></script>
         <script src="recovery/main.js"></script>
     </head>
@@ -15,7 +15,7 @@
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
-                <h1>RECUPERACIÓN DE CONTRASEÑA:</h1>
+                <h1>Recuperación de contraseña:</h1>
                 <div class="success">
                     <span>Siga los pasos del mensaje que se ha enviado a su correo.</span>
                 </div>
@@ -27,7 +27,7 @@
                 </div>
                 <form id="writeemail" action="">
                     <label>Introduce tu correo electrónico:</label>
-                    <input id="email" type="email" name="email" required/>
+                    <input id="email" type="email" name="email" placeholder="Introduce tu correo" required/>
                     <button class="button" type="submit">Recuperar contraseña</button>
                 </form>
             </div>

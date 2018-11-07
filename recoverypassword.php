@@ -30,6 +30,7 @@
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
+            <h1>Recuperación de contraseña:</h1>
                 <div class="success">
                     <span>Contraseña cambiada correctamente.</span>
                 </div>
@@ -42,9 +43,9 @@
                 <form id="recoverypassword" action="">
                     <input type="hidden" name="id" value= "<?php echo $id ?>" />
                     <label>Introduce tu nueva contraseña:</label>
-                    <input id="password" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password" required/>
+                    <input id="password" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password" placeholder="Introduce tu contraseña" required/>
                     <label>Introduce tu nueva contraseña de nuevo:</label>
-                    <input id="password2" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password2" required/>
+                    <input id="password2" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password2" placeholder="Introduce tu contraseña" required/>
                     <button class="button" type="submit">Recuperar contraseña</button>
                 </form>
             </div>
