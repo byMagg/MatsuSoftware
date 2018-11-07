@@ -47,7 +47,7 @@
 
                     <div id="boton"><button class="button" type="submit">Iniciar Sesión</button></div>
                     
-                    <a class="" href="writeemail.php">¿Olvidaste la contraseña?</a>
+                    <a id="olvidar" href="writeemail.php">¿Olvidaste la contraseña?</a>
                 </form>
 
                 <div id="separator"></div>
