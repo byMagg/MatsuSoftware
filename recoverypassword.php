@@ -1,22 +1,17 @@
 <?php
     require 'conexiondb/conexion.php';
 
-    session_start();
-    $error = 1;
+    $id = $_GET['id'];
+    $token = $_GET['token'];
+    $consulta = $mysqli->query("SELECT request, token FROM user WHERE id = '".$id."'");
+    $resultado = $consulta->fetch_assoc();
 
-    if(isset($_SESSION['recuperar']) && isset($_SESSION['encrypt'])){
-        if($_GET['token'] == $_SESSION['encrypt']){
-            $email = $_SESSION['recuperar']['email'];
-            $consulta = $mysqli->query("SELECT request FROM user WHERE email = '".$email."'");
-            $resultado = $consulta->fetch_assoc();
-
-            if($resultado['request'] == '1'){
-                $mysqli->query("UPDATE user SET request = '0' WHERE email = '".$email."'");  
-                $error = 0;
-            }
-        }
+    if($resultado['request'] == '1' && hash('sha256', $resultado['token']) == $token){
+        $mysqli->query("UPDATE user SET request = '0' WHERE id = '".$id."'");
+        $mysqli->query("UPDATE user SET token = '' WHERE id = '".$id."'");
+    }else{
+        header("Location: writeemail.php");
     }
-    if($error !=0)header("Location: index.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,13 +33,18 @@
                 <div class="success">
                     <span>Contraseña cambiada correctamente.</span>
                 </div>
+                <div class="error password">
+                    <span>Error, las contraseñas no coinciden, inténtelo de nuevo.</span>
+                </div>
                 <div class="error">
                     <span>Error, inténtelo de nuevo.</span>
                 </div>
                 <form id="recoverypassword" action="">
-                    <span>HOLIIIIIIIIIIIII</span>
-                    <input type="hidden" name="email" value= "<?php echo $_SESSION['recuperar']['email'] ?>" />
-                    <input id="password" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password"/>
+                    <input type="hidden" name="id" value= "<?php echo $id ?>" />
+                    <label>Introduce tu nueva contraseña:</label>
+                    <input id="password" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password" required/>
+                    <label>Introduce tu nueva contraseña de nuevo:</label>
+                    <input id="password2" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password2" required/>
                     <button class="button" type="submit">Recuperar contraseña</button>
                 </form>
             </div>
@@ -54,7 +54,3 @@
         <?php include("footerheader/footer.php"); ?>
     </body>
 </html>
-
-<?php 
-    session_destroy();
-?>

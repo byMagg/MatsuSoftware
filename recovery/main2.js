@@ -16,6 +16,11 @@ jQuery(document).on('submit','#recoverypassword',function(event){
             setTimeout(function(){
                 $('.success').slideUp('slow');
             }, 3000);
+        }else if(respuesta.tipo == 'password'){
+            $('.password').slideDown('slow');
+            setTimeout(function(){
+                $('.password').slideUp('slow');
+            }, 3000);
         }else{
             $('.error').slideDown('slow');
             setTimeout(function(){

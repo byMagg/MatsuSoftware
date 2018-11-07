@@ -1,16 +1,11 @@
 <?php 
     require '../conexiondb/conexion.php';
 
-    session_start();
-
     $email = $_POST['email'];
 
     $consultaemail = $mysqli->query("SELECT * FROM user WHERE email = '".$email."'");
-
-    if($consultaemail->num_rows == 1){ 
-        $datos = $consultaemail->fetch_assoc();
-        $_SESSION['recuperar'] = $datos;
-    }else{
+    $datos = $consultaemail->fetch_assoc();
+    if(!$consultaemail->num_rows == 1){
         echo json_encode(array('error' => true, 'tipo' => 'email'));
         exit();
     }
@@ -20,15 +15,15 @@
     $hora = date('H:i');
     $token = $hora.$datos['id'];
     $encrypt = hash('sha256', $token);
-    $_SESSION['encrypt'] = $encrypt;
+    $_SERVER['encrypt'] = $encrypt;
 
     $mensaje = '
                 <html>
                 <head>
                 <title>Recuperar contraseña de MatsuSoftware</title>
                 </head>
-                <body>
-                <p>Para recuperar la contraseña, haga <a href="recoverypassword.php?token="'.$encrypt.'">click aqui</a> en el siguiente enlace:<br><br></p>
+                <h1>RECUPERAR CONTRASEÑA DE MATSUSOFTWARE</h1>
+                <p><br>Para recuperar la contraseña, haga <a href="localhost/matsusoftware/recoverypassword.php?id='.$datos["id"].'&token='.$encrypt.'">click aqui.</a><br></p>
                 </body>
                 </html>
                 ';
@@ -41,6 +36,7 @@
     
     if($enviado){
         $mysqli->query("UPDATE user SET request = '1' WHERE email = '".$email."'");
+        $mysqli->query("UPDATE user SET token = '".$token."' WHERE email = '".$email."'");
         echo json_encode(array('error' => false, 'token' => $encrypt));
     }else{
         echo json_encode(array('error' => true));
