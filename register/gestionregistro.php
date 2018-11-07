@@ -1,5 +1,6 @@
 <?php 
     require '../conexiondb/conexion.php';
+    require '../encrypt/encrypt.php';
 
     $nick = $_POST['nick'];
     $email = $_POST['email'];
@@ -28,6 +29,7 @@
         exit();
     }
     
+    $contrasena = hash('sha256', $contrasena);
     $insert = "INSERT INTO user(nick,email,contrasena,provincia,municipio,direccion,rol,request) VALUES ('".$nick."', '".$email."', '".$contrasena."','".$provincia."','".$municipio."','".$direccion."', '".$rol."', '".$request."')";
 
     $asunto = "Te has registrado correctamente.";

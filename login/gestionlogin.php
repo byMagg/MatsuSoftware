@@ -11,6 +11,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
     if($consulta = $mysqli->prepare("SELECT * FROM user WHERE email = ? AND contrasena = ?")){
         
+        $pass = hash('sha256', $pass);
         $consulta->bind_param('ss', $email, $pass);
 
         $consulta->execute();

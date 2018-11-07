@@ -10,6 +10,7 @@
         exit();
     }
 
+    $password = hash('sha256', $password);
     $actualizar = $mysqli->query("UPDATE user SET contrasena = '".$password."' WHERE id = '".$id."'");
     $consultaemail = $mysqli->query("SELECT email FROM user WHERE id= '".$id."'");
     $resultado = $consultaemail->fetch_assoc();
