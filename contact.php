@@ -25,7 +25,7 @@
                     <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo.</span>
                 </div>
                 <form id="formulario" action="">
-                    <h1>Contacto:</h1>
+                    <h1>CONTACTO:</h1>
                     <label>Nombre*:<br/></label>
                     <input type="text" name="name" placeholder=" Introduce tu nombre" required/>
 

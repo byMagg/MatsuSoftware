@@ -30,7 +30,7 @@
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
-            <h1>Recuperación de contraseña:</h1>
+            <h1>RECUPERACIÓN DE CONTRASEÑA:</h1>
                 <div class="success">
                     <span>Contraseña cambiada correctamente.</span>
                 </div>
