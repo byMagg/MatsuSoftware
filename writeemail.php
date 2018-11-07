@@ -15,6 +15,7 @@
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
+                <h1>RECUPERACIÓN DE CONTRASEÑA:</h1>
                 <div class="success">
                     <span>Siga los pasos del mensaje que se ha enviado a su correo.</span>
                 </div>
