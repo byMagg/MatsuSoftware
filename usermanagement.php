@@ -34,6 +34,13 @@ if(isset($_GET['id']) && isset($_GET['rol'])){
     }else if($rol == 1){
         $mysqli->query("UPDATE user SET rol = '0' WHERE id = '".$id."'");
     }
+}else if(isset($_GET['id'])){
+    if($_SESSION['usuario']['id'] == $_GET['id']){
+        header("Location: usermanagement.php");
+    }
+    $id= $_GET['id'];
+    $consulta = "DELETE FROM user WHERE id='".$id."'";
+    $resultado = $mysqli->query($consulta);
 }
 ?>
 
@@ -41,7 +48,7 @@ if(isset($_GET['id']) && isset($_GET['rol'])){
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Panel de control - MatsuSoftware</title>
+        <title>Gestion de usuario - MatsuSoftware</title>
         <?php include("footerheader/head.php"); ?>
         <link href="css/usermanagement.css" type="text/css" rel="stylesheet">
     </head>
@@ -72,15 +79,19 @@ if(isset($_GET['id']) && isset($_GET['rol'])){
                             }else{
                                 $rol = "Administrador"; 
                             }
+                            if($_SESSION['usuario']['id'] != $user['id']){
+                                $eliminar = '<td><a class="button" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
+                            }else{
+                                $eliminar = "<td></td>";
+                            }
                             echo '<tr>
                                         <td>'.$user["id"].'</td>
                                         <td>'.$user["email"].'</td>
                                         <td>'.$rol.'</td>
                                         <td><a class="button" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'">Cambiar rol</a></td>
-                                        <td><a class="button" href="usermanagement/modify.php?id='.$user['id'].'">Modificar</a></td>
-                                        <td><a class="button" href="usermanagement/delete.php?id='.$user['id'].'">Eliminar</a></td>
-                                    </tr>
-                                    ';
+                                        <td><a class="button" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>
+                                        '.$eliminar.'
+                                  </tr>';
                         }
                     }
                 ?>

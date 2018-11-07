@@ -1,0 +1,69 @@
+.content{
+    display: inline-flex;
+    justify-content: center;
+}
+
+h1{
+    position: absolute;
+    top: 70px;
+    left: 60px;
+}
+
+#content{
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    height: 50px;
+    width: 125px;
+}
+
+input{
+    height: 3vh;
+    min-height: 18px;
+    max-height: 24px;
+    width: 90%;
+}
+
+label {
+    display: flex;
+    justify-content: left;
+}
+
+form{
+    display: inline-block;
+    width: 66vw;
+    max-width: 328px;
+    text-align: center;
+}
+
+.error, .success{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding: 10px 0 ;
+    border-radius:  0 0 5px 5px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.error{
+    background-color: red;
+}
+
+.success{
+    background-color: green;
+}
+
+@media only screen and (max-width: 425px){
+    h1{
+        position: absolute;
+        top: 70px;
+        left: 35px;
+    }
+}

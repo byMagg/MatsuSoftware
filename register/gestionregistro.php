@@ -1,6 +1,5 @@
 <?php 
     require '../conexiondb/conexion.php';
-    require '../encrypt/encrypt.php';
 
     $nick = $_POST['nick'];
     $email = $_POST['email'];

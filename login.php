@@ -78,8 +78,8 @@
                     <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="contrasena" required>
 
                     <label class="etiqueta">Provincia*:<br/></label>
-                    <select name="provincia">
-                        <option value='selecciona'>Introduce tu provincia</option>
+                    <select name="provincia" required>
+                        <option value='' disabled selected>Seleccione una provincia</option>
                         <option value='A Coruna' >A Coruña</option>
                         <option value='Alava'>Álava</option>
                         <option value='Albacete' >Albacete</option>
