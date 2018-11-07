@@ -37,7 +37,7 @@
     if($enviado){
         $mysqli->query("UPDATE user SET request = '1' WHERE email = '".$email."'");
         $mysqli->query("UPDATE user SET token = '".$token."' WHERE email = '".$email."'");
-        echo json_encode(array('error' => false, 'token' => $encrypt));
+        echo json_encode(array('error' => false));
     }else{
         echo json_encode(array('error' => true));
     }
