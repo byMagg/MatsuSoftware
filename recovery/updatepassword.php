@@ -10,9 +10,21 @@
         exit();
     }
 
-    $consultaemail = $mysqli->query("UPDATE user SET contrasena = '".$password."' WHERE id = '".$id."'");
+    $actualizar = $mysqli->query("UPDATE user SET contrasena = '".$password."' WHERE id = '".$id."'");
+    $consultaemail = $mysqli->query("SELECT email FROM user WHERE id= '".$id."'");
+    $resultado = $consultaemail->fetch_assoc();
 
-    if($consultaemail){ 
+    $email = $resultado['email']; 
+    $asunto = "Contraseña actualizada correctamente.";
+
+    $cabecera  = 'MIME-Version: 1.0' . "\r\n";
+    $cabecera .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $cabecera .= 'From: MatsuSoftware <not-reply@matsusoftware.tk>' . "\r\n";
+
+    $mensaje = "La contraseña se ha actualizado exitosamente.";
+
+    if($actualizar){ 
+        mail($email, $asunto, $mensaje, $cabecera);
         echo json_encode(array('error' => false));
     }else{
         echo json_encode(array('error' => true, 'tipo' => 'general'));

@@ -30,7 +30,15 @@
     
     $insert = "INSERT INTO user(nick,email,contrasena,provincia,municipio,direccion,rol,request) VALUES ('".$nick."', '".$email."', '".$contrasena."','".$provincia."','".$municipio."','".$direccion."', '".$rol."', '".$request."')";
 
+    $asunto = "Te has registrado correctamente.";
+
+    $cabecera  = 'MIME-Version: 1.0' . "\r\n";
+    $cabecera .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $cabecera .= 'From: MatsuSoftware <not-reply@matsusoftware.tk>' . "\r\n";
+
+    $mensaje = "Ya puedes acceder a tu cuenta de MatsuSoftware.";
     if ($mysqli->query($insert)) {
+        mail($email, $asunto, $mensaje, $cabecera);
         echo json_encode(array('error' => false));
     } else {
         echo json_encode(array('error' => true, 'tipo' => 'insertar'));
