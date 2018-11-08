@@ -23,8 +23,19 @@ if(isset($_SESSION['usuario'])){
 
     if(isset($_GET['id'])){
         $id=$_GET['id'];
+    }else{
+        header("Location: login.php");
     }
 
+    $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
+    $resultado = $mysqli->query($consulta);
+    $datos = $resultado->fetch_assoc();
+
+    if($_SESSION['usuario']['rol'] == 1 && $datos['rol'] == 1){
+        if($_SESSION['usuario']['id'] != $id){
+            header("Location: login.php");
+        }
+    }
 }else{
     header("Location: login.php");
 }

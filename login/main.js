@@ -16,11 +16,13 @@ jQuery(document).on('submit','#iniciosesion',function(event){
                 location = "admindash.php";
             }else if(respuesta.tipo == 0){
                 location = "userdash.php";
+            }else{
+                location = "admindash.php";
             }
         }else{
-            $('.error').slideDown('slow');
+            $('.inicio').slideDown('slow');
             setTimeout(function(){
-                $('.error').slideUp('slow');
+                $('.inicio').slideUp('slow');
             }, 3000);
         }
     })

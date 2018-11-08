@@ -25,22 +25,36 @@ if(isset($_SESSION['usuario'])){
     header("Location: login.php");
 }
 
-if(isset($_GET['id']) && isset($_GET['rol'])){
-    $id= $_GET['id'];
-    $rol = $_GET['rol'];
+if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
 
-    if($rol == 0){
-        $mysqli->query("UPDATE user SET rol = '1' WHERE id = '".$id."'");
-    }else if($rol == 1){
-        $mysqli->query("UPDATE user SET rol = '0' WHERE id = '".$id."'");
+    if(isset($_GET['rol']) && $_SESSION['usuario']['id'] != $_GET['id']){
+
+        $id= $_GET['id'];
+        $rol = $_GET['rol'];
+    
+        if($rol == 0){
+            $mysqli->query("UPDATE user SET rol = '1' WHERE id = '".$id."'");
+        }else if($rol == 1){
+            $mysqli->query("UPDATE user SET rol = '0' WHERE id = '".$id."'");
+        }
+    }else if($_SESSION['usuario']['id'] != $_GET['id']){
+
+        $id= $_GET['id'];
+        $consulta = "DELETE FROM user WHERE id='".$id."'";
+        $resultado = $mysqli->query($consulta);
     }
-}else if(isset($_GET['id'])){
-    if($_SESSION['usuario']['id'] == $_GET['id']){
-        header("Location: usermanagement.php");
-    }
+
+}else if($_SESSION['usuario']['rol'] == 1 && isset($_GET['id']) && !isset($_GET['rol'])){
+
     $id= $_GET['id'];
-    $consulta = "DELETE FROM user WHERE id='".$id."'";
+    $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
     $resultado = $mysqli->query($consulta);
+    $datos = $resultado->fetch_assoc();
+
+    if($datos['rol'] != 2 && $datos['rol'] != 1){
+        $consulta = "DELETE FROM user WHERE id='".$id."'";
+        $resultado = $mysqli->query($consulta);
+    }
 }
 ?>
 
@@ -77,33 +91,71 @@ if(isset($_GET['id']) && isset($_GET['rol'])){
                 <?php
                     $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");
                     if ($resultado->num_rows != 0) {
-                        while ($user = $resultado->fetch_assoc()) {
-                            if($user["rol"] == 0){
-                                $rol = "Usuario";
-                            }else{
-                                $rol = "Administrador"; 
-                            }
-                            if($_SESSION['usuario']['id'] != $user['id']){
+                        if($_SESSION['usuario']['rol'] == 2){
+                            while ($user = $resultado->fetch_assoc()) {
                                 $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
-                            }else{
-                                $eliminar = "<td></td>";
+                                $modificar = '<td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>';
+                                $rolButton= '<td><a class="button" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'">Cambiar rol</a></td>';
+                                $rolName = "Usuario";
+
+                                if($user["rol"] == 1){
+                                    $rolName = "Administrador"; 
+                                }else if($user["rol"] == 2){
+                                    $rolName = "Master"; 
+                                }
+
+                                if($_SESSION['usuario']['id'] == $user['id']){
+                                    $rolButton = "<td></td>";
+                                    $eliminar = "<td></td>";
+                                }
+
+                                echo '<tr>
+                                            <td>'.$user["id"].'</td>
+                                            <td>'.$user["nick"].'</td>
+                                            <td>'.$user["email"].'</td>
+                                            <td>'.$rolName.'</td>
+                                            '.$rolButton.'
+                                            '.$modificar.'
+                                            '.$eliminar.'
+                                    </tr>';
                             }
-                            echo '<tr>
-                                        <td>'.$user["id"].'</td>
-                                        <td>'.$user["nick"].'</td>
-                                        <td>'.$user["email"].'</td>
-                                        <td>'.$rol.'</td>
-                                        <td><a class="button" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'">Cambiar rol</a></td>
-                                        <td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>
-                                        '.$eliminar.'
-                                  </tr>';
+                        }else if($_SESSION['usuario']['rol'] == 1){
+                            while ($user = $resultado->fetch_assoc()) {
+                                $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
+                                $modificar = '<td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>';
+                                $rolButton= '<td></td>';
+                                $rolName = "Usuario";
+
+                                if($user["rol"] == 1){
+                                    $rolName = "Administrador"; 
+                                }else if($user["rol"] == 2){
+                                    $rolName = "Master"; 
+                                }
+
+                                if($user['rol'] == 2 || $user['rol'] == 1){
+                                    $eliminar = "<td></td>";
+                                }
+
+                                if($user['rol'] == 2 || ($user['rol'] == 1 && $user['id'] != $_SESSION['usuario']['id'])){
+                                    $modificar = "<td></td>";
+                                }
+
+                                echo '<tr>
+                                            <td>'.$user["id"].'</td>
+                                            <td>'.$user["nick"].'</td>
+                                            <td>'.$user["email"].'</td>
+                                            <td>'.$rolName.'</td>
+                                            '.$rolButton.'
+                                            '.$modificar.'
+                                            '.$eliminar.'
+                                    </tr>';
+                            }
                         }
                     }
                 ?>
                 </table>
             </div>
-        </div>
-                            
+        </div>  
         <!-- FOOTER -->
         <?php include("footerheader/footer.php"); ?>
     </body>

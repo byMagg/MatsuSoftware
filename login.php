@@ -6,6 +6,8 @@
             header("Location: admindash.php");
         }else if($_SESSION['usuario']['rol'] == 0){
             header("Location: userdash.php");
+        }else{
+            header("Location: admindash.php");
         }
     }
 ?>
@@ -33,7 +35,7 @@
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <div class="error">
+                <div class="error inicio">
                     <span>Datos de ingreso no válidos, inténtalo de nuevo.</span>
                 </div>
                 <form id="iniciosesion" action="">
