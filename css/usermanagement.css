@@ -1,40 +1,82 @@
-.content{
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#content {
+    display: block;
+}
+
+#tabla {
+    background: white;
+    color: black;
+    border-spacing: 0;
+}
+
+#cabecera {
+    display: inline-flex;
+    position: absolute;
+    top: 70px;
+}
+
+#cabecera img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+#cabecera h1 {
     display: flex;
     align-items: center;
 }
 
-#content{
-    display: grid;
-    width: 100%;
+#volver {
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-#tabla{
-    background: white;
-    color:black;
-    border-spacing: 0;
-}
-
-#botones{
+#botones {
     margin: 10px;
 }
 
-#botones a{
+#botones a {
     margin: 10px;
 }
 
-td{
+td {
     padding-inline-end: 10px;
     padding-inline-start: 10px;
 }
 
-.modify{
+.button {
+    padding: 0 20px;
+    border: 0;
+    transition: 0.1s;
+}
+
+.button:hover {
+    border: 0;
+}
+
+.modify {
     background: deepskyblue;
 }
 
-.delete{
+.delete {
     background: red;
 }
 
-tr:nth-child(even) {background: #FFF}
-tr:nth-child(odd) {background: #CCC}
+tr:nth-child(even) {
+    background: #FFF
+}
+
+tr:nth-child(odd) {
+    background: #CCC
+}
