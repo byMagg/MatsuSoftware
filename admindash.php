@@ -39,7 +39,7 @@ if(isset($_SESSION['usuario'])){
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
-                <a id="cerrar" href="login/logout.php">Cerrar sesión</a>
+                <a id="cerrar" href="login/logout.php"><img src="images/logout.png" alt="">Cerrar sesión</a>
                 <div id="1" class="item"><a class="nohover" href="usermanagement.php"><img src="images/user.png" alt="Gestión de Usuarios"></a><a href="usermanagement.php" class="button">Gestión de Usuarios</a></div>
                 <div id="2" class="item"><a class="nohover" href=""><img src="images/newsletter.png" alt=""></a><a href="Gestión de Newsletter" class="button">Gestión de Newsletter</a></div>
                 <div id="3" class="item"><a class="nohover" href=""><img src="images/stats.png" alt="Gestión de Proyectos"></a><a href="" class="button">Gestión de Proyectos</a></div>
