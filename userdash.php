@@ -15,7 +15,7 @@ $_SESSION['tiempo'] = time();
 
 if(isset($_SESSION['usuario'])){
 
-    if($_SESSION['usuario']['rol'] == 1){
+    if($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2){
         header("Location: admindash.php");
     }
 
