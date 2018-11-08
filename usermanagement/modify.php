@@ -10,16 +10,22 @@
 
     $consultanick = $mysqli->query("SELECT * FROM user WHERE nick = '".$nick."'");
 
-    if($consultanick->num_rows == 1){ 
-        echo json_encode(array('error' => true, 'tipo' => 'nick'));
-        exit();
+    if($consultanick->num_rows == 1){
+        $resultado = $consultanick->fetch_assoc();
+        if($nick != $resultado['nick']){
+            echo json_encode(array('error' => true, 'tipo' => 'nick'));
+            exit();
+        }
     }
 
     $consultaemail = $mysqli->query("SELECT * FROM user WHERE email = '".$email."'");
 
     if($consultaemail->num_rows == 1){ 
-        echo json_encode(array('error' => true, 'tipo' => 'email'));
-        exit();
+        $resultado = $consultaemail->fetch_assoc();
+        if($email != $resultado['email']){
+            echo json_encode(array('error' => true, 'tipo' => 'email'));
+            exit();
+        }
     }
 
     $consulta = "UPDATE user SET nick = '".$nick."', email = '".$email."', provincia = '".$provincia."', municipio= '".$municipio."', direccion = '".$direccion."' WHERE id = '".$id."' ";

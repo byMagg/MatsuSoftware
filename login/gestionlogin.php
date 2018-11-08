@@ -7,9 +7,16 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     $mysqli->set_charset('utf8');
 
     $email = $mysqli->real_escape_string($_POST['email']);
+    $isEmail = strpos($email, '@');
     $pass = $mysqli->real_escape_string($_POST['pass']);
 
-    if($consulta = $mysqli->prepare("SELECT * FROM user WHERE email = ? AND contrasena = ?")){
+    if($isEmail){
+        $consulta = $mysqli->prepare("SELECT * FROM user WHERE email = ? AND contrasena = ?");
+    }else{     
+        $consulta = $mysqli->prepare("SELECT * FROM user WHERE nick = ? AND contrasena = ?");
+    }
+
+    if($consulta){
         
         $pass = hash('sha256', $pass);
         $consulta->bind_param('ss', $email, $pass);

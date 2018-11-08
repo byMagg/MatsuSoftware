@@ -39,8 +39,8 @@
                 <form id="iniciosesion" action="">
                     <h1>Inicio Sesión</h1>
 
-                    <label class="etiqueta">E-mail*:<br/></label>
-                    <input type="email" placeholder="Introduce tu e-mail" name="email" required>
+                    <label class="etiqueta">E-mail/Nick*:<br/></label>
+                    <input type="text" placeholder="Introduce tu e-mail/nick" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
                     <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="pass" required>
