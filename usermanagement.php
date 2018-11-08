@@ -58,10 +58,11 @@ if(isset($_GET['id']) && isset($_GET['rol'])){
                     
         <!--CONTENT-->
         <div class="content">
-            <a id="volver" class="nohover" href="admindash.php"><img src="images/volver.png" alt=""></a>
+            
             <div id="cabecera">
-                    <img src="images/user.png" alt="">
-                    <h1>GESTIÓN DE USUARIOS</h1>
+            <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
+                <img id="user" src="images/user.png" alt="">
+                <h1>GESTIÓN DE USUARIOS</h1>
             </div>
             <div id="content" class="content-inside">
             
