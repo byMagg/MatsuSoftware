@@ -15,6 +15,7 @@
     overflow: auto;
     height: 450px;
     display: table-caption;
+    table-layout: auto
 }
 
 #cabecera {
@@ -32,9 +33,9 @@
 }
 
 #volver {
-    width: 40px;
-    height: 40px;
-    margin: 20px;
+    width: 24px;
+    height: 24px;
+    margin: 13px;
 }
 
 #cabecera h1 {
