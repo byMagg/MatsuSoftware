@@ -1,0 +1,40 @@
+.content{
+    display: flex;
+    align-items: center;
+}
+
+#content{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+}
+
+#tabla{
+    background: white;
+    color:black;
+    border-spacing: 0;
+}
+
+#botones{
+    margin: 10px;
+}
+
+#botones a{
+    margin: 10px;
+}
+
+td{
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+}
+
+.modify{
+    background: deepskyblue;
+}
+
+.delete{
+    background: red;
+}
+
+tr:nth-child(even) {background: #FFF}
+tr:nth-child(odd) {background: #CCC}

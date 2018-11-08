@@ -59,10 +59,14 @@ if(isset($_GET['id']) && isset($_GET['rol'])){
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
+                <div id="botones">
                 <a id="cerrar" href="login/logout.php">Cerrar sesión</a>
                 <a id="volver" href="admindash.php">Volver</a>
+                </div>
+                
                 <table id="tabla">
                     <tr>
+                        <td>#</td>
                         <td>Nick</td>
                         <td>Email</td>
                         <td>Rol</td>
@@ -80,16 +84,17 @@ if(isset($_GET['id']) && isset($_GET['rol'])){
                                 $rol = "Administrador"; 
                             }
                             if($_SESSION['usuario']['id'] != $user['id']){
-                                $eliminar = '<td><a class="button" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
+                                $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
                             }else{
                                 $eliminar = "<td></td>";
                             }
                             echo '<tr>
                                         <td>'.$user["id"].'</td>
+                                        <td>'.$user["nick"].'</td>
                                         <td>'.$user["email"].'</td>
                                         <td>'.$rol.'</td>
                                         <td><a class="button" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'">Cambiar rol</a></td>
-                                        <td><a class="button" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>
+                                        <td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>
                                         '.$eliminar.'
                                   </tr>';
                         }
