@@ -96,7 +96,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
                                     </tr>';
                             while ($user = $resultado->fetch_assoc()) {
                                 $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
-                                $modificar = '<td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>';
+                                $modificar = '<td><a class="button modify" href="modifyuser.php?id='.$user['id'].'">Modificar</a></td>';
                                 $rolButton= '<td><a class="button" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'">Cambiar rol</a></td>';
                                 $rolName = "Usuario";
 
@@ -127,7 +127,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
                                     </tr>';
                             while ($user = $resultado->fetch_assoc()) {
                                 $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
-                                $modificar = '<td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>';
+                                $modificar = '<td><a class="button modify" href="modifyuser.php?id='.$user['id'].'">Modificar</a></td>';
                                 $rolButton= '';
                                 $rolName = "Usuario";
 

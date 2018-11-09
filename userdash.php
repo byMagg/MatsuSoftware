@@ -22,6 +22,19 @@ if(isset($_SESSION['usuario'])){
 }else{
     header("Location: login.php");
 }
+
+if($_SESSION['usuario']['rol'] == 0 && isset($_GET['id'])){
+
+    $id= $_GET['id'];
+    $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
+    $resultado = $mysqli->query($consulta);
+    $datos = $resultado->fetch_assoc();
+
+    if($datos['rol'] != 2 && $datos['rol'] != 1 && $id=$_SESSION['usuario']['id']){
+        $consulta = "DELETE FROM user WHERE id='".$id."'";
+        $resultado = $mysqli->query($consulta);
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -46,12 +59,12 @@ if(isset($_SESSION['usuario'])){
                     <a href="#" class="button">Historial de compras</a>
                 </div>
                 <div class="item">
-                    <a class="nohover" href="#"><img src="images/confuser.png" alt="Modificar perfil"></a>
-                    <a href="#" class="button">Modificar perfil</a>
+                    <a class="nohover" href="usermanagement.php?id=".<?php $_SESSION['usuario']['id'] ?>><img src="images/confuser.png" alt="Modificar perfil"></a>
+                    <a href="usermanagement.php?id=".<?php echo $_SESSION['usuario']['id'] ?> class="button">Modificar perfil</a>
                 </div>
                 <div class="item">
-                    <a class="nohover" href="#"><img src="images/deleteuser.png" alt="Eliminar perfil"></a>
-                    <a href="#" class="button">Eliminar perfil</a>
+                    <a class="nohover" href="userdash.php?id=".<?php echo $_SESSION['usuario']['id'] ?>><img src="images/deleteuser.png" alt="Eliminar perfil"></a>
+                    <a href="userdash.php?id=".<?php echo $_SESSION['usuario']['id'] ?> class="button">Eliminar perfil</a>
                 </div>
             </div>
         </div>
