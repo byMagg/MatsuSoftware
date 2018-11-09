@@ -47,3 +47,29 @@
     justify-content: center;
     padding: 100px 50px 150px 50px;
 }
+
+
+    @media only screen and (max-width: 768px) {
+        #content {
+            display: block;
+        }
+
+        .item {
+            width: 35vw;
+        }
+
+        .item a {
+            margin: 15px auto;
+        }
+
+        .button {
+            font-size: 12px;
+            max-width: 150px;
+            padding: 8px 0px;
+        }
+
+        .item img {
+            width: 35vw;
+            padding-bottom: 0;
+        }
+}
