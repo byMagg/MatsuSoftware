@@ -16,26 +16,35 @@ if(isset($_SESSION['tiempo']) ) {
 $_SESSION['tiempo'] = time();       
 
 if(isset($_SESSION['usuario'])){
-    
-    if($_SESSION['usuario']['rol'] == 0){
-        header("Location: userdash.php");
-    }
 
     if(isset($_GET['id'])){
         $id=$_GET['id'];
     }else{
         header("Location: login.php");
     }
+    
+    if($_SESSION['usuario']['rol'] == 1){
 
-    $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
-    $resultado = $mysqli->query($consulta);
-    $datos = $resultado->fetch_assoc();
+        $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
+        $resultado = $mysqli->query($consulta);
+        $datos = $resultado->fetch_assoc();
 
-    if($_SESSION['usuario']['rol'] == 1 && $datos['rol'] == 1){
-        if($_SESSION['usuario']['id'] != $id){
+        if(($datos['rol'] == 1  && $_SESSION['usuario']['id'] != $id) || $datos['rol'] == 2){
+                header("Location: login.php");
+        }
+    }
+
+    if($_SESSION['usuario']['rol'] == 0){
+
+        $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
+        $resultado = $mysqli->query($consulta);
+        $datos = $resultado->fetch_assoc();
+
+        if(($datos['rol'] == 0  && $_SESSION['usuario']['id'] != $id) || $datos['rol'] == 1 || $datos['rol'] == 2){
             header("Location: login.php");
         }
     }
+
 }else{
     header("Location: login.php");
 }
@@ -44,9 +53,9 @@ if(isset($_SESSION['usuario'])){
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Panel de control - MatsuSoftware</title>
+        <title>Modificar usuario - MatsuSoftware</title>
         <?php include("footerheader/head.php"); ?>
-        <link href="css/modifyuserbyadmin.css" type="text/css" rel="stylesheet">
+        <link href="css/modifyuser.css" type="text/css" rel="stylesheet">
         
         <script src="login/jquery-3.3.1.min.js"></script>
         <script src="usermanagement/main.js"></script>
@@ -59,7 +68,7 @@ if(isset($_SESSION['usuario'])){
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
+                <a class="nohover" href="login.php"><img id="volver"src="images/volver.png" alt=""></a>
                     <img id="user" src="images/user.png" alt="">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
