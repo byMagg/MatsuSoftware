@@ -64,6 +64,7 @@ td {
 
 .button:hover {
     border: 0;
+    background: #283040;
 }
 
 .modify {
