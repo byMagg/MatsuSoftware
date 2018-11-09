@@ -40,7 +40,19 @@ if(isset($_SESSION['usuario'])){
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
-                <a href="login/logout.php">Cerrar sesión</a>
+                <a id="cerrar" class="nohover" href="login/logout.php"><img src="images/logout.png" alt=""></a>
+                <div class="item">
+                    <a class="nohover" href="#"><img src="images/shoppingcart.png" alt="Historial de compras"></a>
+                    <a href="#" class="button">Historial de compras</a>
+                </div>
+                <div class="item">
+                    <a class="nohover" href="#"><img src="images/confuser.png" alt="Modificar perfil"></a>
+                    <a href="#" class="button">Modificar perfil</a>
+                </div>
+                <div class="item">
+                    <a class="nohover" href="#"><img src="images/deleteuser.png" alt="Eliminar perfil"></a>
+                    <a href="#" class="button">Eliminar perfil</a>
+                </div>
             </div>
         </div>
                             
