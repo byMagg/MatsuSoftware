@@ -82,13 +82,13 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
             
                 <table id="tabla">
                     <tr>
-                        <td>#</td>
-                        <td>Nick</td>
-                        <td>Email</td>
-                        <td>Rol</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <th>#</th>
+                        <th>Nick</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th id="rol"></th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 <?php
                     $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");

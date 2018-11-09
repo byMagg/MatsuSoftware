@@ -13,9 +13,9 @@
     color: black;
     border-spacing: 0;
     overflow: auto;
-    height: 450px;
+    /*height: 450px;*/
     display: table-caption;
-    table-layout: auto
+    table-layout: fixed;
 }
 
 #cabecera {
@@ -70,8 +70,16 @@ td {
     background: deepskyblue;
 }
 
+.modify:hover{
+    background: #00a4db;
+}
+
 .delete {
     background: red;
+}
+
+.delete:hover{
+    background: #C70000;
 }
 
 tr:nth-child(even) {
@@ -80,4 +88,8 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background: #CCC
+}
+
+#rol{
+    min-width: 146px;
 }
