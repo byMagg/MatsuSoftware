@@ -3,22 +3,23 @@
     justify-content: center;
 }
 
-h1{
+
+#cabecera h1 {
+    display: flex;
+    align-items: center;
+}
+
+#cabecera {
+    display: inline-flex;
     position: absolute;
+    align-items: center;
     top: 70px;
-    left: 60px;
+    left: 20px;
 }
 
 #content{
     display: flex;
     align-items: center;
-}
-
-.button {
-    margin: 10px;
-    padding: 10px 20px;
-    height: 50px;
-    width: 125px;
 }
 
 input{
@@ -28,9 +29,17 @@ input{
     width: 90%;
 }
 
+select{ 
+    width: 94%
+}
+
 label {
     display: flex;
     justify-content: left;
+}
+
+.button{
+    padding: 10px 20px;
 }
 
 form{
@@ -60,10 +69,14 @@ form{
     background-color: green;
 }
 
-@media only screen and (max-width: 425px){
-    h1{
-        position: absolute;
-        top: 70px;
-        left: 35px;
-    }
+#user {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+#volver {
+    width: 24px;
+    height: 24px;
+    margin: 13px;
 }

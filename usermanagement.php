@@ -86,14 +86,14 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
                         <th>Nick</th>
                         <th>Email</th>
                         <th>Rol</th>
-                        <th id="rol"></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
                 <?php
                     $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");
                     if ($resultado->num_rows != 0) {
                         if($_SESSION['usuario']['rol'] == 2){
+                            echo    '<th id="rol"></th>
+                                    <th></th>
+                                    <th></th>
+                                    </tr>';
                             while ($user = $resultado->fetch_assoc()) {
                                 $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
                                 $modificar = '<td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>';
@@ -122,10 +122,13 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
                                     </tr>';
                             }
                         }else if($_SESSION['usuario']['rol'] == 1){
+                            echo '<th></th>
+                                    <th></th>
+                                    </tr>';
                             while ($user = $resultado->fetch_assoc()) {
                                 $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
                                 $modificar = '<td><a class="button modify" href="modifyuserbyadmin.php?id='.$user['id'].'">Modificar</a></td>';
-                                $rolButton= '<td></td>';
+                                $rolButton= '';
                                 $rolName = "Usuario";
 
                                 if($user["rol"] == 1){

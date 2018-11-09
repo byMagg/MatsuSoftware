@@ -58,8 +58,11 @@ if(isset($_SESSION['usuario'])){
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
-                <a id="cerrar" href="login/logout.php">Cerrar sesión</a>
-                <a id="volver" href="admindash.php">Volver</a>
+                <div id="cabecera">
+                <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
+                    <img id="user" src="images/user.png" alt="">
+                    <h1>GESTIÓN DE USUARIOS</h1>
+                </div>
                 <?php
                     $resultado = $mysqli->query("SELECT id, nick, email, provincia, municipio, direccion FROM user WHERE id = ".$id);
                     if ($resultado->num_rows != 0) {
