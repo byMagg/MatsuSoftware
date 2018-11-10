@@ -56,12 +56,14 @@ td {
     padding-inline-start: 10px;
 }
 
-.eliminar{
+.eliminar {
     display: flex;
     align-items: center;
 }
 
-.icono img{
+.icono img {
+    position: relative;
+    top: 2px;
     width: 20px;
 }
 
@@ -73,6 +75,6 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
-#rol{
+#rol {
     min-width: 126px;
 }

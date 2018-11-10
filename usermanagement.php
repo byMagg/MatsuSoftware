@@ -108,8 +108,8 @@ if($_SESSION['usuario']['rol'] == 1 && isset($_GET['id']) && !isset($_GET['rol']
                                     <th></th>
                                     </tr>';
                             while ($user = $resultado->fetch_assoc()) {
-                                $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
-                                $modificar = '<td><a class="button modify" href="modifyuser.php?id='.$user['id'].'">Modificar</a></td>';
+                                $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
+                                $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
                                 $rolButton= '';
                                 $rolName = "Usuario";
 
