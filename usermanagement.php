@@ -67,19 +67,19 @@ if($_SESSION['usuario']['rol'] == 1 && isset($_GET['id']) && !isset($_GET['rol']
                         <th>#</th>
                         <th>Nick</th>
                         <th>Email</th>
-                        <th>Rol</th>
+                        <th id="rol">Rol</th>
                 <?php
                     $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");
                     if ($resultado->num_rows != 0) {
                         if($_SESSION['usuario']['rol'] == 2){
-                            echo    '<th id="rol"></th>
+                            echo    '<th></th>
                                     <th></th>
                                     <th></th>
                                     </tr>';
                             while ($user = $resultado->fetch_assoc()) {
-                                $eliminar = '<td><a class="button delete" href="usermanagement.php?id='.$user['id'].'">Eliminar</a></td>';
-                                $modificar = '<td><a class="button modify" href="modifyuser.php?id='.$user['id'].'">Modificar</a></td>';
-                                $rolButton= '<td><a class="button" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'">Cambiar rol</a></td>';
+                                $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
+                                $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
+                                $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'"><img src="images/grupo.png"></a></td>';
                                 $rolName = "Usuario";
 
                                 if($user["rol"] == 1){

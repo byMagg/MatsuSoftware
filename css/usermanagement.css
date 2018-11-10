@@ -56,31 +56,13 @@ td {
     padding-inline-start: 10px;
 }
 
-.button {
-    padding: 0 20px;
-    border: 0;
-    transition: 0.1s;
+.eliminar{
+    display: flex;
+    align-items: center;
 }
 
-.button:hover {
-    border: 0;
-    background: #283040;
-}
-
-.modify {
-    background: deepskyblue;
-}
-
-.modify:hover{
-    background: #00a4db;
-}
-
-.delete {
-    background: red;
-}
-
-.delete:hover{
-    background: #C70000;
+.icono img{
+    width: 20px;
 }
 
 tr:nth-child(even) {
@@ -92,5 +74,5 @@ tr:nth-child(odd) {
 }
 
 #rol{
-    min-width: 146px;
+    min-width: 126px;
 }
