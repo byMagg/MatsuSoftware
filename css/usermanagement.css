@@ -78,3 +78,28 @@ tr:nth-child(odd) {
 #rol {
     min-width: 126px;
 }
+
+@media only screen and (max-width: 768px) {
+    #tabla {
+        overflow: auto;
+        width: 80vw;
+        display: table-caption;
+        table-layout: fixed;
+    }
+
+    #cabecera h1 {
+        width: 56vw;
+        margin: auto;
+    }
+
+    #content {
+        padding: 50px 0px 100px 0px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    #cabecera {
+        display: inline-block;
+        width: 90vw;
+    }
+}
