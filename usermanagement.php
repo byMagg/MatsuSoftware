@@ -1,40 +1,29 @@
 <?php
     require 'conexiondb/conexion.php';
     require 'controller/generalfunction.php';
+    require 'controller/userfunction.php';
     session_start();
     timeLogOut();
     security(0);
 
-if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
+if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])){
 
-    if(isset($_GET['rol']) && $_SESSION['usuario']['id'] != $_GET['id']){
+    $id= $_GET['id'];
+    $rol= $_GET['rol'];
+    $idSesion = $_SESSION['usuario']['id'];
+    changerol($mysqli, $rol, $id, $idSesion);
 
-        $id= $_GET['id'];
-        $rol = $_GET['rol'];
-    
-        if($rol == 0){
-            $mysqli->query("UPDATE user SET rol = '1' WHERE id = '".$id."'");
-        }else if($rol == 1){
-            $mysqli->query("UPDATE user SET rol = '0' WHERE id = '".$id."'");
-        }
-    }else if($_SESSION['usuario']['id'] != $_GET['id']){
+}else if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && !isset($_GET['rol'])){
 
-        $id= $_GET['id'];
-        $consulta = "DELETE FROM user WHERE id='".$id."'";
-        $resultado = $mysqli->query($consulta);
-    }
+    $id= $_GET['id'];
+    $idSesion = $_SESSION['usuario']['id'];
+    deleteUser($mysqli, 2, $id, $idSesion);
 
 }else if($_SESSION['usuario']['rol'] == 1 && isset($_GET['id']) && !isset($_GET['rol'])){
 
     $id= $_GET['id'];
-    $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
-    $resultado = $mysqli->query($consulta);
-    $datos = $resultado->fetch_assoc();
-
-    if($datos['rol'] != 2 && $datos['rol'] != 1){
-        $consulta = "DELETE FROM user WHERE id='".$id."'";
-        $resultado = $mysqli->query($consulta);
-    }
+    $idSesion = $_SESSION['usuario']['id'];
+    deleteUser($mysqli, 1, $id, $idSesion);
 }
 ?>
 

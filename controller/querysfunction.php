@@ -16,7 +16,7 @@ function getUsersUsingNick($mysqli, $nick){
 }
 
 function setRequest($mysqli, $request, $id){
-    $resultado = $mysqli->query("UPDATE user SET request = '".$request."' WHERE id = '".$id."'");
+    $resultado = $mysqli->query("UPDATE user SET request = ".$request." WHERE id = '".$id."'");
     return $resultado;
 }
 
@@ -30,6 +30,11 @@ function setPassword($mysqli, $password, $id){
     return $resultado;
 }
 
+function setRol($mysqli, $rol, $id){
+    $resultado = $mysqli->query("UPDATE user SET rol = '".$rol."' WHERE id = '".$id."'");
+    return $resultado;
+}
+
 function setNewInformation($mysqli, $id, $nick, $email, $provincia, $municipio, $direccion){
     $resultado = $mysqli->query("UPDATE user SET nick = '".$nick."', email = '".$email."', provincia = '".$provincia."', municipio= '".$municipio."', direccion = '".$direccion."' WHERE id = '".$id."' ");
     return $resultado;
@@ -40,4 +45,8 @@ function insertToUsers($mysqli, $nick, $email, $contrasena, $provincia, $municip
     return $resultado;
 }
 
+function deleteUsers($mysqli, $id){
+    $resultado = $mysqli->query("DELETE FROM user WHERE id='".$id."'");
+    return $resultado;
+}
 ?>

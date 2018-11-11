@@ -12,7 +12,7 @@
     $datos = getUsersUsingNick($mysqli, $nick);
     $datos = $datos->fetch_assoc();
 
-    if($datos != null){
+    if($datos != null && $nick != $datos['nick']){
         echo json_encode(array('error' => true, 'tipo' => 'nick'));
         exit();
     }
@@ -20,7 +20,7 @@
     $datos = getUsersUsingEmail($mysqli, $email);
     $datos = $datos->fetch_assoc();
 
-    if($datos != null){ 
+    if($datos != null && $email != $datos['email']){ 
         echo json_encode(array('error' => true, 'tipo' => 'email'));
         exit();
     }
