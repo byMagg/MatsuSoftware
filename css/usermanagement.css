@@ -6,24 +6,28 @@
 
 #content {
     display: block;
+    height: 73vh;
+    width: 100%;
 }
 
-#tabla {
+#tabla{
+    display: flex;
+    justify-content: center;
+}
+
+#tabla > table{
+    margin: 20px 0;
     background: white;
     color: black;
     border-spacing: 0;
-    overflow: auto;
-    height: 450px;
-    display: table-caption;
-    table-layout: fixed;
+    overflow: auto;   
+    table-layout: auto;
 }
 
 #cabecera {
     display: inline-flex;
-    position: absolute;
     align-items: center;
-    top: 70px;
-    left: 20px;
+    width: 100%;
 }
 
 #user {
@@ -41,14 +45,6 @@
 #cabecera h1 {
     display: flex;
     align-items: center;
-}
-
-#botones {
-    margin: 10px;
-}
-
-#botones a {
-    margin: 10px;
 }
 
 td {
@@ -75,31 +71,19 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
-#rol {
-    min-width: 126px;
-}
-
 @media only screen and (max-width: 768px) {
-    #tabla {
-        overflow: auto;
-        width: 80vw;
+
+    #tabla > table{
         display: table-caption;
-        table-layout: fixed;
+        width: 80vw;
+    }
+
+    #content{
+        padding: 50px 0 100px 0;
     }
 
     #cabecera h1 {
         width: 56vw;
         margin: auto;
-    }
-
-    #content {
-        padding: 50px 0px 100px 0px;
-    }
-}
-
-@media only screen and (max-width: 325px) {
-    #cabecera {
-        display: inline-block;
-        width: 90vw;
     }
 }

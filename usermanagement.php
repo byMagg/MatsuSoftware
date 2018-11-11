@@ -52,92 +52,94 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id'])){
         <!--CONTENT-->
         <div class="content">
             
-            <div id="cabecera">
-            <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
-                <img id="user" src="images/user.png" alt="">
-                <h1>GESTIÓN DE USUARIOS</h1>
-            </div>
-            <div id="content" class="content-inside">
             
-                <table id="tabla">
-                    <tr>
-                        <th>#</th>
-                        <th>Nick</th>
-                        <th>Email</th>
-                        <th id="rol">Rol</th>
-                <?php
-                    $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");
-                    if ($resultado->num_rows != 0) {
-                        if($_SESSION['usuario']['rol'] == 2){
-                            echo    '<th></th>
-                                    <th></th>
-                                    <th></th>
-                                    </tr>';
-                            while ($user = $resultado->fetch_assoc()) {
-                                $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
-                                $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
-                                $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'"><img src="images/grupo.png"></a></td>';
-                                $rolName = "Usuario";
+            <div id="content" class="content-inside">
+                <div id="cabecera">
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
+                    <img id="user" src="images/user.png" alt="">
+                    <h1>GESTIÓN DE USUARIOS</h1>
+                </div>
+                <div id="tabla">
+                    <table>
+                        <tr>
+                            <th id="id">#</th>
+                            <th>Nick</th>
+                            <th>Email</th>
+                            <th id="rol">Rol</th>
+                    <?php
+                        $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");
+                        if ($resultado->num_rows != 0) {
+                            if($_SESSION['usuario']['rol'] == 2){
+                                echo    '<th></th>
+                                        <th></th>
+                                        <th></th>
+                                        </tr>';
+                                while ($user = $resultado->fetch_assoc()) {
+                                    $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
+                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
+                                    $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'"><img src="images/grupo.png"></a></td>';
+                                    $rolName = "Usuario";
 
-                                if($user["rol"] == 1){
-                                    $rolName = "Administrador"; 
-                                }else if($user["rol"] == 2){
-                                    $rolName = "Master"; 
+                                    if($user["rol"] == 1){
+                                        $rolName = "Administrador"; 
+                                    }else if($user["rol"] == 2){
+                                        $rolName = "Master"; 
+                                    }
+
+                                    if($_SESSION['usuario']['id'] == $user['id']){
+                                        $rolButton = "<td></td>";
+                                        $eliminar = "<td></td>";
+                                    }
+
+                                    echo '<tr>
+                                                <td>'.$user["id"].'</td>
+                                                <td>'.$user["nick"].'</td>
+                                                <td>'.$user["email"].'</td>
+                                                <td>'.$rolName.'</td>
+                                                '.$rolButton.'
+                                                '.$modificar.'
+                                                '.$eliminar.'
+                                        </tr>';
                                 }
+                            }else if($_SESSION['usuario']['rol'] == 1){
+                                echo '<th></th>
+                                        <th></th>
+                                        </tr>';
+                                while ($user = $resultado->fetch_assoc()) {
+                                    $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
+                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
+                                    $rolButton= '';
+                                    $rolName = "Usuario";
 
-                                if($_SESSION['usuario']['id'] == $user['id']){
-                                    $rolButton = "<td></td>";
-                                    $eliminar = "<td></td>";
+                                    if($user["rol"] == 1){
+                                        $rolName = "Administrador"; 
+                                    }else if($user["rol"] == 2){
+                                        continue;
+                                    }
+
+                                    if($user['rol'] == 2 || $user['rol'] == 1){
+                                        $eliminar = "<td></td>";
+                                    }
+
+                                    if($user['rol'] == 2 || ($user['rol'] == 1 && $user['id'] != $_SESSION['usuario']['id'])){
+                                        $modificar = "<td></td>";
+                                    }
+
+                                    echo '<tr>
+                                                <td>'.$user["id"].'</td>
+                                                <td>'.$user["nick"].'</td>
+                                                <td>'.$user["email"].'</td>
+                                                <td>'.$rolName.'</td>
+                                                '.$rolButton.'
+                                                '.$modificar.'
+                                                '.$eliminar.'
+                                        </tr>';
                                 }
-
-                                echo '<tr>
-                                            <td>'.$user["id"].'</td>
-                                            <td>'.$user["nick"].'</td>
-                                            <td>'.$user["email"].'</td>
-                                            <td>'.$rolName.'</td>
-                                            '.$rolButton.'
-                                            '.$modificar.'
-                                            '.$eliminar.'
-                                    </tr>';
-                            }
-                        }else if($_SESSION['usuario']['rol'] == 1){
-                            echo '<th></th>
-                                    <th></th>
-                                    </tr>';
-                            while ($user = $resultado->fetch_assoc()) {
-                                $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
-                                $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
-                                $rolButton= '';
-                                $rolName = "Usuario";
-
-                                if($user["rol"] == 1){
-                                    $rolName = "Administrador"; 
-                                }else if($user["rol"] == 2){
-                                    continue;
-                                }
-
-                                if($user['rol'] == 2 || $user['rol'] == 1){
-                                    $eliminar = "<td></td>";
-                                }
-
-                                if($user['rol'] == 2 || ($user['rol'] == 1 && $user['id'] != $_SESSION['usuario']['id'])){
-                                    $modificar = "<td></td>";
-                                }
-
-                                echo '<tr>
-                                            <td>'.$user["id"].'</td>
-                                            <td>'.$user["nick"].'</td>
-                                            <td>'.$user["email"].'</td>
-                                            <td>'.$rolName.'</td>
-                                            '.$rolButton.'
-                                            '.$modificar.'
-                                            '.$eliminar.'
-                                    </tr>';
                             }
                         }
-                    }
-                ?>
-                </table>
+                    ?>
+                    </table>
+                </div>
             </div>
         </div>  
         <!-- FOOTER -->
