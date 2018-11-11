@@ -1,32 +1,34 @@
 <?php
     require 'conexiondb/conexion.php';
+    require 'controller/querysfunction.php';
 
     $id = $_GET['id'];
     $token = $_GET['token'];
-    $consulta = $mysqli->query("SELECT request, token FROM user WHERE id = '".$id."'");
-    $resultado = $consulta->fetch_assoc();
+    $datos = getUsersUsingId($id);
+    $datos = $datos->fetch_assoc();
 
-    if($resultado['request'] == '1' && hash('sha256', $resultado['token']) == $token){
-        $mysqli->query("UPDATE user SET request = '0' WHERE id = '".$id."'");
-        $mysqli->query("UPDATE user SET token = '' WHERE id = '".$id."'");
+    if($datos['request'] == '1' && hash('sha256', $datos['token']) == $token){
+        setRequest($mysqli, 1, $id);
+        setToken($mysqli, '', $id);
     }else{
         header("Location: writeemail.php");
     }
+
+    $mysqli->close(); 
 ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <!-- Titulo -->
         <title>Recuperar contraseña - MatsuSoftware</title>
-        <?php include("footerheader/head.php"); ?>
+        <?php require "views/head.php"; ?>
         <link href="css/recoverypassword.css" type="text/css" rel="stylesheet">
-        <script src="login/jquery-3.3.1.min.js"></script>
-        <script src="recovery/main2.js"></script>
+        <script src="controller/jquery.js"></script>
+        <script src="recovery/password2.js"></script>
     </head>
     <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
-                    
+        <?php require "views/header.php"; ?>         
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -50,8 +52,7 @@
                 </form>
             </div>
         </div>
-                            
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
+        <?php require "views/footer.php"; ?>
     </body>
 </html>

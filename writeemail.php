@@ -3,15 +3,14 @@
     <head>
         <!-- Titulo -->
         <title>Recuperar contraseña - MatsuSoftware</title>
-        <?php include("footerheader/head.php"); ?>
+        <?php require "views/head.php"; ?>
         <link href="css/recoverypassword.css" type="text/css" rel="stylesheet">
-        <script src="login/jquery-3.3.1.min.js"></script>
-        <script src="recovery/main.js"></script>
+        <script src="controller/jquery.js"></script>
+        <script src="recovery/password.js"></script>
     </head>
     <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
-                    
+        <?php require "views/header.php"; ?>         
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -31,9 +30,8 @@
                     <button class="button" type="submit">Recuperar contraseña</button>
                 </form>
             </div>
-        </div>
-                            
+        </div>                 
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
+        <?php require "views/footer.php"; ?>
     </body>
 </html>

@@ -16,7 +16,7 @@
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 
             <!-- JavaScript -->
-            <script src="menu/menu.js"></script>
+            <script src="controller/menumobile.js"></script>
 
             <!-- CSS -->
             <link href="css/headerfooter.css" type="text/css" rel="stylesheet">

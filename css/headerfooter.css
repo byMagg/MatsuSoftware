@@ -177,7 +177,7 @@ textarea {
 }
 
 .button:hover {
-    background: #4CAF50;
+    background: rgb(52, 139, 55);
     border: 1px solid #CCD7D3;
 }
 

@@ -1,28 +1,10 @@
 <?php
-require "conexiondb/conexion.php";
-session_start();  
-
-if(isset($_SESSION['tiempo']) ) {
-    $inactivo = 600;
-    $vida_session = time() - $_SESSION['tiempo'];
-
-    if($vida_session > $inactivo)
-    {    
-        header("Location: login/logout.php");
-        exit();
-    }
-}
-$_SESSION['tiempo'] = time();       
-
-if(isset($_SESSION['usuario'])){
-
-    if($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2){
-        header("Location: admindash.php");
-    }
-
-}else{
-    header("Location: login.php");
-}
+    require "conexiondb/conexion.php";
+    require 'controller/generalfunction.php';
+    session_start();
+    timeLogOut();
+    security(1);
+    security(2);
 
 if($_SESSION['usuario']['rol'] == 0 && isset($_GET['id'])){
 
@@ -45,14 +27,12 @@ if($_SESSION['usuario']['rol'] == 0 && isset($_GET['id'])){
     <head>
         <!-- Titulo -->
         <title>Panel de control - MatsuSoftware</title>
-        <?php include("footerheader/head.php"); ?>
+        <?php require "views/head.php"; ?>
         <link href="css/userdash.css" type="text/css" rel="stylesheet">
-    </head>
-                    
-        <body>
+    </head>            
+    <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
-                    
+        <?php require "views/header.php"; ?>                
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -70,9 +50,8 @@ if($_SESSION['usuario']['rol'] == 0 && isset($_GET['id'])){
                     <a href="userdash.php?id=<?php echo $_SESSION['usuario']['id'] ?>" class="button">Eliminar perfil</a>
                 </div>
             </div>
-        </div>
-                            
+        </div>    
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
+        <?php require "views/footer.php"; ?>
     </body>
 </html>

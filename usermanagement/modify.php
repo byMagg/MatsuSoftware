@@ -1,4 +1,5 @@
 <?php 
+    require '../controller/querysfunction.php';
     require '../conexiondb/conexion.php';
 
     $id = $_POST['id'];
@@ -8,32 +9,29 @@
     $municipio = $_POST['municipio'];
     $direccion = $_POST['direccion'];
 
-    $consultanick = $mysqli->query("SELECT * FROM user WHERE nick = '".$nick."'");
+    $datos = getUsersUsingNick($mysqli, $nick);
+    $datos = $datos->fetch_assoc();
 
-    if($consultanick->num_rows == 1){
-        $resultado = $consultanick->fetch_assoc();
-        if($nick != $resultado['nick']){
-            echo json_encode(array('error' => true, 'tipo' => 'nick'));
-            exit();
-        }
+    if($datos != null){
+        echo json_encode(array('error' => true, 'tipo' => 'nick'));
+        exit();
     }
 
-    $consultaemail = $mysqli->query("SELECT * FROM user WHERE email = '".$email."'");
+    $datos = getUsersUsingEmail($mysqli, $email);
+    $datos = $datos->fetch_assoc();
 
-    if($consultaemail->num_rows == 1){ 
-        $resultado = $consultaemail->fetch_assoc();
-        if($email != $resultado['email']){
-            echo json_encode(array('error' => true, 'tipo' => 'email'));
-            exit();
-        }
+    if($datos != null){ 
+        echo json_encode(array('error' => true, 'tipo' => 'email'));
+        exit();
     }
 
-    $consulta = "UPDATE user SET nick = '".$nick."', email = '".$email."', provincia = '".$provincia."', municipio= '".$municipio."', direccion = '".$direccion."' WHERE id = '".$id."' ";
-    $resultado = $mysqli->query($consulta);
+    $datos = setNewInformation($mysqli, $id, $nick, $email, $provincia, $municipio, $direccion);
 
-    if($resultado){
+    if($datos){
         echo json_encode(array('error' => false));
     }else{
         echo json_encode(array('error' => true, 'tipo' => 'general'));
     }
+
+    $mysqli->close();
 ?>

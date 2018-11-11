@@ -1,6 +1,6 @@
 h1,
 .titulo {
-    color: rgb(0, 216, 72);
+    color:  rgb(52, 139, 55);
     font-weight: bold;
 }
 
@@ -11,5 +11,5 @@ h1 {
 .content-inside{
     width: 90%;
     margin: 0 auto;
-    padding: 50px 0px 100px 0px;
+    padding: 0px 0px 100px 0px;
 }

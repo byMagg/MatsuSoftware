@@ -8,21 +8,3 @@ function toggleNav() {
         nav.style.height = maxH;
     }
 }
-
-
-
-/*
-
-window.addEventListener("mouseup", function(event){
-
-    if(event.target != nav && event.target.parentNode != nav){
-
-        nav.style.height = "0px";
-
-    }
-
-});
-
-
-
-*/

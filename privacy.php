@@ -4,17 +4,13 @@
     <head>
         <!-- Titulo -->
         <title>Privacidad - MatsuSoftware</title>
-
-        <?php include("footerheader/head.php"); ?>
-
+        <?php require "views/head.php"; ?>
         <link href="css/tycandprivacy.css" type="text/css" rel="stylesheet">
-
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
-
+        <?php require "views/header.php"; ?>
         <!--CONTENT-->
         <div class="content content-inside">
             <h1>AVISO LEGAL Y POLÍTICA DE PRIVACIDAD</h1>
@@ -61,9 +57,7 @@
             <p class="texto">In sollicitudin orci sed finibus vehicula. Cras ornare nunc neque, vel pulvinar urna pellentesque vitae. Integer vehicula sagittis urna vel rhoncus. Quisque dignissim arcu fringilla justo bibendum, a ultrices leo tempus. In eget volutpat augue. Fusce malesuada porttitor cursus. Sed a urna iaculis, molestie elit at, sagittis leo. Duis tempus vel nisl ac pretium. Curabitur dignissim blandit venenatis. Vivamus sed mi euismod, facilisis ex in, accumsan libero. Curabitur ultrices ipsum a erat dictum posuere a ut arcu. Maecenas hendrerit sem et tincidunt ornare. Aenean lacinia venenatis odio, eget lacinia lectus scelerisque non.</p>
 
         </div>
-
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
-
+        <?php require "views/footer.php"; ?>
     </body>
 </html>

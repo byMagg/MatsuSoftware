@@ -1,14 +1,14 @@
 <?php
-if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){
-    require '../conexiondb/conexion.php';
+require '../conexiondb/conexion.php';
 
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest'){
     session_start();
 
     $mysqli->set_charset('utf8');
 
     $email = $mysqli->real_escape_string($_POST['email']);
-    $isEmail = strpos($email, '@');
     $pass = $mysqli->real_escape_string($_POST['pass']);
+    $isEmail = strpos($email, '@');
 
     if($isEmail){
         $consulta = $mysqli->prepare("SELECT * FROM user WHERE email = ? AND contrasena = ?");
@@ -19,6 +19,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     if($consulta){
         
         $pass = hash('sha256', $pass);
+        
         $consulta->bind_param('ss', $email, $pass);
 
         $consulta->execute();

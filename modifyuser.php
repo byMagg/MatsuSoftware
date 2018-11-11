@@ -1,69 +1,35 @@
 <?php
-require 'conexiondb/conexion.php';
+    require 'conexiondb/conexion.php';
+    require 'controller/generalfunction.php';
+    require 'controller/modifyfunction.php';
+    
+    session_start();
+    timeLogOut(); 
 
-session_start();  
+    if(isset($_SESSION['usuario'])|| !isset($_GET['id'])){
 
-if(isset($_SESSION['tiempo']) ) {
-    $inactivo = 600;
-    $vida_session = time() - $_SESSION['tiempo'];
-
-    if($vida_session > $inactivo)
-    {    
-        header("Location: login/logout.php");
-        exit();
-    }
-}
-$_SESSION['tiempo'] = time();       
-
-if(isset($_SESSION['usuario'])){
-
-    if(isset($_GET['id'])){
         $id=$_GET['id'];
+        modifysecurity($mysqli, $id);
+
+        $user = getUsersUsingId($mysqli, $id);
+        $user = $user->fetch_assoc();
     }else{
         header("Location: login.php");
     }
-    
-    if($_SESSION['usuario']['rol'] == 1){
-
-        $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
-        $resultado = $mysqli->query($consulta);
-        $datos = $resultado->fetch_assoc();
-
-        if(($datos['rol'] == 1  && $_SESSION['usuario']['id'] != $id) || $datos['rol'] == 2){
-                header("Location: login.php");
-        }
-    }
-
-    if($_SESSION['usuario']['rol'] == 0){
-
-        $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
-        $resultado = $mysqli->query($consulta);
-        $datos = $resultado->fetch_assoc();
-
-        if(($datos['rol'] == 0  && $_SESSION['usuario']['id'] != $id) || $datos['rol'] == 1 || $datos['rol'] == 2){
-            header("Location: login.php");
-        }
-    }
-
-}else{
-    header("Location: login.php");
-}
 ?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <!-- Titulo -->
         <title>Modificar usuario - MatsuSoftware</title>
-        <?php include("footerheader/head.php"); ?>
+        <?php require "views/head.php"; ?>
         <link href="css/modifyuser.css" type="text/css" rel="stylesheet">
-        
-        <script src="login/jquery-3.3.1.min.js"></script>
-        <script src="usermanagement/main.js"></script>
+        <script src="controller/jquery.js"></script>
+        <script src="usermanagement/modify.js"></script>
     </head>
     <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
-                    
+        <?php require "views/header.php"; ?>        
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -72,12 +38,6 @@ if(isset($_SESSION['usuario'])){
                     <img id="user" src="images/user.png" alt="">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
-                <?php
-                    $resultado = $mysqli->query("SELECT id, nick, email, provincia, municipio, direccion FROM user WHERE id = ".$id);
-                    if ($resultado->num_rows != 0) {
-                        $user = $resultado->fetch_assoc();
-                    }
-                ?>
                 <div class="error nick">
                     <span>Existe un usuario con este nick, pruebe con otro.</span>
                 </div>
@@ -166,9 +126,9 @@ if(isset($_SESSION['usuario'])){
                 </form>
                 
             </div>
-        </div>
-                            
+        </div>                 
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
+        <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>

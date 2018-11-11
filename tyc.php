@@ -4,17 +4,14 @@
     <head>
         <!-- Titulo -->
         <title>Términos y condiciones - MatsuSoftware</title>
-
-        <?php include("footerheader/head.php"); ?>
-
+        <?php require "views/head.php"; ?>
         <link href="css/tycandprivacy.css" type="text/css" rel="stylesheet">
 
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
-
+        <?php require "views/header.php"; ?>
         <!--CONTENT-->
         <div class="content content-inside">
             <h1>TÉRMINOS Y CONDICIONES DE COMPRA</h1>
@@ -65,10 +62,7 @@
             <p class="titulo">Privacidad y protección de datos</p>
             <p class="texto">lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
         </div>
-
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
-
+        <?php require "views/footer.php"; ?>
     </body>
-
 </html>

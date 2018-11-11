@@ -1,15 +1,7 @@
 <?php
+    require 'controller/generalfunction.php';
     session_start();
-
-    if(isset($_SESSION['usuario'])){
-        if($_SESSION['usuario']['rol'] == 1){
-            header("Location: admindash.php");
-        }else if($_SESSION['usuario']['rol'] == 0){
-            header("Location: userdash.php");
-        }else{
-            header("Location: admindash.php");
-        }
-    }
+    login();
 ?>
 
 <!DOCTYPE html>
@@ -17,20 +9,17 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Login - MatsuSoftware</title>
-
-        <?php include("footerheader/head.php"); ?>
-
+        <title>Inicio Sesión - MatsuSoftware</title>
+        <?php require "views/head.php"; ?>
         <link href="css/login.css" type="text/css" rel="stylesheet">
-
-        <script src="login/jquery-3.3.1.min.js"></script>
-        <script src="login/main.js"></script>
-        <script src="register/main.js"></script>
+        <script src="controller/jquery.js"></script>
+        <script src="login/login.js"></script>
+        <script src="register/register.js"></script>
     </head>
 
     <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
+        <?php require "views/header.php"; ?>
 
         <!--CONTENT-->
         <div id="principal" class="content">
@@ -153,6 +142,6 @@
             </div>
         </div>
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
+        <?php require "views/footer.php"; ?>
     </body>
 </html>

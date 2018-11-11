@@ -1,16 +1,17 @@
+<?php
+    require 'controller/generalfunction.php';
+    session_start();
+    timeLogOut();
+    security(0);
+?>
+
 <!DOCTYPE html>
-
 <html lang="es">
-
     <head>
-
         <!-- Titulo -->
         <title>Gestion Videojuegos - MatsuSoftware</title>
-
-        <?php include("footerheader/head.php"); ?>
-
+        <?php require "views/head.php"; ?>
         <link href="css/gestionvideojuego.css" type="text/css" rel="stylesheet">
-
         <style>
             th{
                 border: 1px solid black;
@@ -29,10 +30,7 @@
 
     <body>
         <!--HEADER-->
-        <?php include("footerheader/header.php"); ?>
-
-        
-        
+        <?php require "views/header.php"; ?>
         <div class="content">
             <div class="content-inside">
 
@@ -113,10 +111,7 @@
                 </form>
             </div>
         </div>
-
         <!-- FOOTER -->
-        <?php include("footerheader/footer.php"); ?>
-
+        <?php require "views/footer.php"; ?>
     </body>
-
 </html>

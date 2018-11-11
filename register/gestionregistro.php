@@ -1,4 +1,6 @@
 <?php 
+    require '../controller/sendfunction.php';
+    require '../controller/querysfunction.php';
     require '../conexiondb/conexion.php';
 
     $nick = $_POST['nick'];
@@ -10,38 +12,31 @@
     $rol = 0;
     $request = 0;
 
-    $consultanick = $mysqli->query("SELECT * FROM user WHERE nick = '".$nick."'");
+    $datos = getUsersUsingNick($mysqli, $nick);
+    $datos = $datos->fetch_assoc();
 
-    if($consultanick->num_rows == 1){ 
-        $datos = $consultanick->fetch_assoc();
-        $_SESSION['usuario'] = $datos;
+    if($datos != null){ 
         echo json_encode(array('error' => true, 'tipo' => 'nick'));
         exit();
     }
 
-    $consultaemail = $mysqli->query("SELECT * FROM user WHERE email = '".$email."'");
+    $datos = getUsersUsingEmail($mysqli, $email);
+    $datos = $datos->fetch_assoc();
 
-    if($consultaemail->num_rows == 1){ 
-        $datos = $consultaemail->fetch_assoc();
-        $_SESSION['usuario'] = $datos;
+    if($datos != null){ 
         echo json_encode(array('error' => true, 'tipo' => 'email'));
         exit();
     }
     
     $contrasena = hash('sha256', $contrasena);
-    $insert = "INSERT INTO user(nick,email,contrasena,provincia,municipio,direccion,rol,request) VALUES ('".$nick."', '".$email."', '".$contrasena."','".$provincia."','".$municipio."','".$direccion."', '".$rol."', '".$request."')";
+    $insert = insertToUsers($mysqli, $nick, $email, $contrasena, $provincia, $municipio, $direccion, $rol, $request);
 
-    $asunto = "Te has registrado correctamente.";
-
-    $cabecera  = 'MIME-Version: 1.0' . "\r\n";
-    $cabecera .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    $cabecera .= 'From: MatsuSoftware <not-reply@matsusoftware.tk>' . "\r\n";
-
-    $mensaje = "Ya puedes acceder a tu cuenta de MatsuSoftware.";
-    if ($mysqli->query($insert)) {
-        mail($email, $asunto, $mensaje, $cabecera);
+    if($insert) {
+        sendEmailSignin($email);
         echo json_encode(array('error' => false));
     } else {
         echo json_encode(array('error' => true, 'tipo' => 'insertar'));
     }
+
+    $mysqli->close();
 ?>
