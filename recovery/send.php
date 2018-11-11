@@ -21,7 +21,7 @@
     $enviado = $salida['resultado'];
     
     if($enviado){
-        setRequest($mysqli, 0,$datos['id']);
+        setRequest($mysqli, 1, $datos['id']);
         setToken($mysqli, $token, $datos['id']);
         echo json_encode(array('error' => false));
     }else{

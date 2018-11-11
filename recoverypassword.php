@@ -4,11 +4,11 @@
 
     $id = $_GET['id'];
     $token = $_GET['token'];
-    $datos = getUsersUsingId($id);
+    $datos = getUsersUsingId($mysqli, $id);
     $datos = $datos->fetch_assoc();
 
-    if($datos['request'] == '1' && hash('sha256', $datos['token']) == $token){
-        setRequest($mysqli, 1, $id);
+    if($datos['request'] == 1 && hash('sha256', $datos['token']) == $token){
+        setRequest($mysqli, 0, $id);
         setToken($mysqli, '', $id);
     }else{
         header("Location: writeemail.php");

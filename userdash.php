@@ -1,25 +1,18 @@
 <?php
     require "conexiondb/conexion.php";
     require 'controller/generalfunction.php';
+    require 'controller/userfunction.php';
     session_start();
     timeLogOut();
     security(1);
     security(2);
 
-if($_SESSION['usuario']['rol'] == 0 && isset($_GET['id'])){
+    if($_SESSION['usuario']['rol'] == 0 && isset($_GET['id'])){
 
-    $id= $_GET['id'];
-    $consulta = "SELECT rol FROM user WHERE id = '".$id."'";
-    $resultado = $mysqli->query($consulta);
-    $datos = $resultado->fetch_assoc();
-
-    if($datos['rol'] != 2 && $datos['rol'] != 1 && $id=$_SESSION['usuario']['id']){
-        $consulta = "DELETE FROM user WHERE id='".$id."'";
-        $resultado = $mysqli->query($consulta);
-        session_destroy();
-        header("Location: login.php");
+        $id= $_GET['id'];
+        $idSesion = $_SESSION['usuario']['id'];
+        deleteUser($mysqli, 0, $id, $idSesion);
     }
-}
 ?>
 
 <!DOCTYPE html>
