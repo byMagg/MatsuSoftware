@@ -165,7 +165,16 @@ textarea {
     border-radius: 7px;
     font-family: 'Open Sans', sans-serif;
     padding-inline-start: 10px;
-    margin: 10px
+    margin: 10px;
+    width: 94%;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+select {
+    height: 28px;
 }
 
 .button {

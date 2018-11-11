@@ -1,4 +1,4 @@
-.content{
+.content {
     display: inline-flex;
     justify-content: center;
 }
@@ -10,25 +10,32 @@
 
 #cabecera {
     display: inline-flex;
-    position: absolute;
     align-items: center;
-    top: 70px;
-    left: 20px;
+    width: 100%;
 }
 
-#content{
+#content {
+    display: block;
+    height: 73vh;
+    width: 100%;
+}
+
+#form {
+    height: 73vh;
     display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: center;
 }
 
-input{
+input {
     height: 3vh;
     min-height: 18px;
     max-height: 24px;
     width: 90%;
 }
 
-select{ 
+select {
     width: 94%
 }
 
@@ -37,34 +44,35 @@ label {
     justify-content: left;
 }
 
-.button{
+.button {
     padding: 10px 20px;
 }
 
-form{
+form {
     display: inline-block;
     width: 66vw;
     max-width: 328px;
     text-align: center;
 }
 
-.error, .success{
+.error,
+.success {
     position: absolute;
     top: 50px;
     left: 0px;
-    padding: 10px 0 ;
-    border-radius:  0 0 5px 5px;
+    padding: 10px 0;
+    border-radius: 0 0 5px 5px;
     color: #fff;
     width: 100%;
     text-align: center;
     display: none;
 }
 
-.error{
+.error {
     background-color: red;
 }
 
-.success{
+.success {
     background-color: green;
 }
 
@@ -80,8 +88,16 @@ form{
     margin: 13px;
 }
 
-@media screen and (max-height: 700px){
-    #cabecera h1{
+@media screen and (max-height: 700px) {
+    #form {
+        height: 380px;
+    }
+
+    #cabecera {
+        width: 200px;
+    }
+
+    #cabecera h1 {
         width: 200px;
     }
 }

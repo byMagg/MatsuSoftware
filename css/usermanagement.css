@@ -23,6 +23,7 @@
     overflow: auto;
     table-layout: auto;
     height: 50vh;
+    display: table-caption;
 }
 
 #cabecera {
@@ -72,17 +73,9 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
-@media only screen and (max-height: 700px) {
-    #tabla>table {
-        display: table-caption;
-    }
-
-}
-
 @media only screen and (max-width: 768px) {
 
     #tabla>table {
-        display: table-caption;
         width: 80vw;
     }
 

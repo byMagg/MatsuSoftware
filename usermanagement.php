@@ -40,8 +40,6 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
         <?php require "views/header.php"; ?>        
         <!--CONTENT-->
         <div class="content">
-            
-            
             <div id="content" class="content-inside">
                 <div id="cabecera">
                     <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
