@@ -3,7 +3,6 @@
     justify-content: center;
 }
 
-
 #cabecera h1 {
     display: flex;
     align-items: center;
@@ -79,4 +78,10 @@ form{
     width: 24px;
     height: 24px;
     margin: 13px;
+}
+
+@media screen and (max-height: 700px){
+    #cabecera h1{
+        width: 200px;
+    }
 }

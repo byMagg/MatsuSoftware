@@ -21,5 +21,6 @@
             <!-- CSS -->
             <link href="css/headerfooter.css" type="text/css" rel="stylesheet">
             <link href="css/quitlogo.css" type="text/css" rel="stylesheet">
+
         ';
 ?>
