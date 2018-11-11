@@ -10,18 +10,19 @@
     width: 100%;
 }
 
-#tabla{
+#tabla {
     display: flex;
     justify-content: center;
 }
 
-#tabla > table{
+#tabla>table {
     margin: 20px 0;
     background: white;
     color: black;
     border-spacing: 0;
-    overflow: auto;   
+    overflow: auto;
     table-layout: auto;
+    height: 50vh;
 }
 
 #cabecera {
@@ -71,14 +72,21 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
+@media only screen and (max-height: 700px) {
+    #tabla>table {
+        display: table-caption;
+    }
+
+}
+
 @media only screen and (max-width: 768px) {
 
-    #tabla > table{
+    #tabla>table {
         display: table-caption;
         width: 80vw;
     }
 
-    #content{
+    #content {
         padding: 50px 0 100px 0;
     }
 
