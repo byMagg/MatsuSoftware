@@ -34,6 +34,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
         <title>Gestion de usuario - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/usermanagement.css" type="text/css" rel="stylesheet">
+        <script src="controller/verify.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -62,7 +63,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         <th></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
-                                    $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
+                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['id'].')"><img src="images/eliminar.png"></a></td>';
                                     $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
                                     $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'"><img src="images/grupo.png"></a></td>';
                                     $rolName = "Usuario";
@@ -93,7 +94,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         <th></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
-                                    $eliminar = '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'"><img src="images/eliminar.png"></a></td>';
+                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['id'].')"><img src="images/eliminar.png"></a></td>';
                                     $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
                                     $rolButton= '';
                                     $rolName = "Usuario";

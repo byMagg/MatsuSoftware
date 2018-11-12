@@ -22,6 +22,7 @@
         <title>Panel de control - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/userdash.css" type="text/css" rel="stylesheet">
+        <script src="controller/verify.js"></script>
     </head>            
     <body>
         <!--HEADER-->
@@ -39,8 +40,8 @@
                     <a href="modifyuser.php?id=<?php echo $_SESSION['usuario']['id'] ?>" class="button">Modificar perfil</a>
                 </div>
                 <div class="item">
-                    <a class="nohover" href="userdash.php?id=<?php echo $_SESSION['usuario']['id'] ?>"><img src="images/deleteuser.png" alt="Eliminar perfil"></a>
-                    <a href="userdash.php?id=<?php echo $_SESSION['usuario']['id'] ?>" class="button">Eliminar perfil</a>
+                    <a class="nohover" onclick="verifyDeleteUser(<?php echo $_SESSION['usuario']['id'] ?>)"><img src="images/deleteuser.png" alt="Eliminar perfil"></a>
+                    <a onclick="verifyDeleteUser(<?php echo $_SESSION['usuario']['id'] ?>)" class="button">Eliminar perfil</a>
                 </div>
             </div>
         </div>    
