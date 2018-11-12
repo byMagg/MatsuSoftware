@@ -12,7 +12,7 @@
         <!-- Titulo -->
         <title>Gestion de newsletter - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
-        <link href="css/usermanagement.css" type="text/css" rel="stylesheet">
+        <link href="css/newslettermanagement.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <!--HEADER-->
@@ -20,31 +20,73 @@
         <!--CONTENT-->
         <div class="content">
             
-            <div id="cabecera">
-            <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
-                <img id="user" src="images/newsletter.png" alt="">
-                <h1>GESTIÓN DE NEWSLETTER</h1>
-            </div>
-            <div id="content" class="content-inside">
             
-                <table id="tabla">
-                    <tr>
-                        <th>#</th>
-                        <th>Comentario</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
+            <div id="content" class="content-inside">
+                <div id="cabecera">
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
+                        <img id="user" src="images/newsletter.png" alt="">
+                        <h1>GESTIÓN DE NEWSLETTER</h1>
+                </div>
 
-                    <tr>
-                        <th>1</th>
-                        <th colspan = "3">Comentario 1</th>
-                        <th><img id="user" src="images/newsletter.png" alt=""></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
+                <div id="tabla">
+                    <table>
+                        <tr>
+                            <th id="id">#</th>
+                            <th>Comentario</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
 
-                </table>
+                        <tr>
+                            <td>1</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>4</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>5</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>6</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>7</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+
+                        <tr>
+                            <td>8</th>
+                            <td id="comentario">Tu pta madre manu</td>
+                            <td><img id="user" src="images/newsletter.png" alt=""></td>
+                        </tr>
+                    </table>
+                </div>    
             </div>
         </div>  
         <!-- FOOTER -->
