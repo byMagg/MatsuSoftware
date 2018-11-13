@@ -1,12 +1,15 @@
+<<<<<<< HEAD
 form {
     text-align: center;
     padding: 50px;
 }
 
+=======
+>>>>>>> 9e1e5d24747c6fbc1d3aa804774fc6f375cba0c4
 .content {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 #content {
@@ -15,9 +18,24 @@ form {
     width: 100%;
 }
 
-#tabla {
+#cabecera {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+}
+
+#cuadricula{
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+#lineavertical {
+    border: 1px solid rgb(0, 216, 72);
+    height: 55vh;
+    min-height: 350px;
+    margin: 0px 50px 0px 50px;
+    width: 0;
 }
 
 #tabla>table {
@@ -27,17 +45,15 @@ form {
     border-spacing: 0;
     overflow: auto;
     table-layout: auto;
-    height: 50vh;
+    text-align: center;
     display: table-caption;
 }
 
-#cabecera {
-    display: inline-flex;
-    align-items: center;
-    width: 100%;
+#comment{
+    min-width: 400px;
 }
 
-#user {
+#icon2 {
     width: 50px;
     height: 50px;
     margin: 0 10px;
@@ -49,6 +65,7 @@ form {
     margin: 13px;
 }
 
+<<<<<<< HEAD
 #comentario {
     min-width: 304px;
     text-align: center;
@@ -57,17 +74,40 @@ form {
 td {
     padding-inline-end: 10px;
     padding-inline-start: 10px;
-}
-
-.eliminar {
+=======
+.delete{
     display: flex;
     align-items: center;
+    width: 25px;
+    height: 25px;
 }
 
-.icono img {
-    position: relative;
-    top: 2px;
-    width: 20px;
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    height: 50px;
+    width: 125px;
+    margin: 0 auto;
+>>>>>>> 9e1e5d24747c6fbc1d3aa804774fc6f375cba0c4
+}
+
+textarea {
+    height: 10vh;
+    min-height: 58px;
+    max-height: 269px;
+    width: 278px;
+    max-width: 278px;
+    min-width: 150px;
+}
+
+form{
+    display: grid;
+    justify-content: center;
+}
+
+td {
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
 }
 
 tr:nth-child(even) {
@@ -76,4 +116,43 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background: #CCC
+<<<<<<< HEAD
+=======
+}
+
+/* MOVIL */
+@media only screen and (max-width: 1000px) {
+
+    #content {
+        padding: 50px 0 100px 0;
+    }
+
+    #cabecera h1 {
+        width: 56vw;
+        margin: auto;
+    }
+
+    #cuadricula{
+        display: block;
+    }
+    #tabla{
+        display: flex;
+        justify-content: center;
+    }
+
+    input,
+    textarea {
+        width: 72vw;
+        max-width: 312px;
+    }
+
+    #lineavertical {
+        border: 1px solid rgb(0, 216, 72);
+        height: 0px;
+        min-height: 0px;
+        min-width: 470px;
+        margin: 30px auto 30px auto;
+        width: 65vw;
+    }
+>>>>>>> 9e1e5d24747c6fbc1d3aa804774fc6f375cba0c4
 }
