@@ -58,6 +58,7 @@ iframe {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 #h1comentario {
@@ -86,4 +87,10 @@ iframe {
     top: 50px;
     justify-content: center;
     width: 100%;
+}
+
+#linea {
+    border: 1px solid rgb(0, 216, 72);
+    width: 90%;
+    margin: 50px auto;
 }
