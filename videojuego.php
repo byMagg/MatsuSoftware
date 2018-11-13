@@ -22,20 +22,17 @@
                         </div>
                     </div>
                     <div id="principal">
-                        <img src="images/paisaje.jpg" alt=""><h2>Precio:</h2><a class="button" href="#">Realizar compra</a>
-                    </div>
-                    <div id="secundario">
+                        <div><img src="images/paisaje.jpg" alt=""><h2>Precio:</h2><a class="button" href="#">Realizar compra</a></div>
                         <div id="descripcion">
                             <h3>Descripción</h3>
                             <p>Donec velit lectus, venenatis sed consequat sodales, tincidunt vel nunc. Aliquam et molestie lectus. Nulla non libero nulla. Integer eget lacinia nisl.</p>
                             <h3>Requisitos</h3>
                             <p>Donec velit lectus, venenatis sed consequat sodales, tincidunt vel nunc. Aliquam et molestie lectus. Nulla non libero nulla. Integer eget lacinia nisl.</p>
                         </div>
-                        <div>
-                            <iframe width="800" height="315" src="https://www.youtube.com/embed/GM7_we-jpfc?rel=0&autoplay=1&mute=1&loop=1&playlist=GM7_we-jpfc"></iframe>
-                        </div>
                     </div>
-                </div>
+                    
+                    <iframe width="800" height="315" src="https://www.youtube.com/embed/GM7_we-jpfc?rel=0&autoplay=1&mute=1&loop=1&playlist=GM7_we-jpfc"></iframe>
+                    </div>
                 <div id="linea"></div>
                 <div id="comentarios">
                         <div id="h1comentario"><h1>COMENTARIOS</h1></div>
