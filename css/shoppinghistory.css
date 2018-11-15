@@ -114,6 +114,7 @@ tr:nth-child(odd) {
 @media only screen and (max-width: 1000px) {
 
     #content {
+        height: 100%;
         padding: 100px 0 150px 0;
     }
 
