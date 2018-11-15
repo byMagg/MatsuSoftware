@@ -16,13 +16,12 @@
 }
 
 #tabla>table {
-    margin: 20px 0;
     background: white;
     color: black;
     border-spacing: 0;
     overflow: auto;
     table-layout: auto;
-    height: 50vh;
+    text-align: center;
     display: table-caption;
 }
 
