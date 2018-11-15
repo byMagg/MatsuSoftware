@@ -31,8 +31,7 @@
 iframe {
     border: 1px solid white;
     width: 90vw;
-    height: 50vh;
-
+    height: 40vh;
 }
 
 .button {
@@ -143,7 +142,6 @@ iframe {
     .info {
         align-items: center;
     }
-
 
     iframe {
         margin-top: 20px;
