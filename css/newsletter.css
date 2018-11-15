@@ -6,20 +6,16 @@
 
 #content {
     display: block;
-    height: 73vh;
     width: 100%;
 }
 
 #tabla {
-    display: grid;
-    max-width: 70%;
+    display: flex;
+    justify-content: center;
 }
 
 select {
     max-width: 200px;
-    align-content: center;
-    display: flex;
-    justify-content: center;
 }
 
 #tabla>table {
@@ -44,7 +40,7 @@ select {
 #cabecera h1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 td {
@@ -52,11 +48,15 @@ td {
     padding-inline-start: 10px;
 }
 
-.delete{
+.icono {
     display: flex;
     align-items: center;
     width: 25px;
     height: 25px;
+}
+
+.fecha {
+    text-align: right;
 }
 
 tr:nth-child(even) {
@@ -74,7 +74,7 @@ tr:nth-child(odd) {
     }
 
     #content {
-        padding: 50px 0 100px 0;
+        padding: 100px 0 150px 0;
     }
 
     #cabecera h1 {
