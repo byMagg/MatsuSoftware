@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Videojuego - MatsuSoftware</title>
+        <title>Merchandising - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/merchandising.css" type="text/css" rel="stylesheet">
     </head>
