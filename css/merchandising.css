@@ -28,13 +28,6 @@
     align-items: center;
 }
 
-iframe {
-    border: 1px solid white;
-    width: 90vw;
-    height: 50vh;
-
-}
-
 .button {
     padding: 10px 20px;
 }
@@ -138,15 +131,6 @@ iframe {
     #puntuacion {
         right: 0px;
         top: 335px;
-    }
-
-    .info {
-        align-items: center;
-    }
-
-
-    iframe {
-        margin-top: 20px;
     }
 
     .info {

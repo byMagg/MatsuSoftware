@@ -4,7 +4,7 @@
         <!-- Titulo -->
         <title>Videojuego - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
-        <link href="css/videojuego.css" type="text/css" rel="stylesheet">
+        <link href="css/merchandising.css" type="text/css" rel="stylesheet">
     </head>
 
     <body>
@@ -26,11 +26,8 @@
                         <div id="descripcion">
                             <h3>Descripción</h3>
                             <p>Donec velit lectus, venenatis sed consequat sodales, tincidunt vel nunc. Aliquam et molestie lectus. Nulla non libero nulla. Integer eget lacinia nisl.</p>
-                            <h3>Requisitos</h3>
-                            <p>Donec velit lectus, venenatis sed consequat sodales, tincidunt vel nunc. Aliquam et molestie lectus. Nulla non libero nulla. Integer eget lacinia nisl.</p>
                         </div>
                     </div>
-                    <iframe src="https://www.youtube.com/embed/GM7_we-jpfc?rel=0&autoplay=1&mute=1&loop=1&playlist=GM7_we-jpfc"></iframe>
                     </div>
                 <div id="linea"></div>
                 <div id="comentarios">
