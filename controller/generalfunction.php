@@ -5,7 +5,7 @@ function security($rol){
     if(isset($_SESSION['usuario'])){
         
         if($_SESSION['usuario']['rol'] == $rol){
-            header("Location: userdash.php");
+            header("Location: login.php");
         }
 
     }else{
