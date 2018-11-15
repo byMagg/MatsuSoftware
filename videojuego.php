@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     
-                    <iframe width="800" height="315" src="https://www.youtube.com/embed/GM7_we-jpfc?rel=0&autoplay=1&mute=1&loop=1&playlist=GM7_we-jpfc"></iframe>
+                    <iframe src="https://www.youtube.com/embed/GM7_we-jpfc?rel=0&autoplay=1&mute=1&loop=1&playlist=GM7_we-jpfc"></iframe>
                     </div>
                 <div id="linea"></div>
                 <div id="comentarios">
