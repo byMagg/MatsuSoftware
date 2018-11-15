@@ -34,7 +34,7 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                <a class="nohover" href="usermanagement.php"><img id="volver"src="images/volver.png" alt=""></a>
+                    <a class="nohover" href="usermanagement.php"><img id="volver"src="images/volver.png" alt=""></a>
                     <img id="user" src="images/user.png" alt="">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
@@ -59,6 +59,14 @@
 
                         <label class="etiqueta">E-mail*:<br/></label>
                         <input type="email" placeholder="Introduce tu e-mail" name="email" value= <?php echo '"'.$user["email"].'"'?> required>
+
+                        <?php 
+                        if($_SESSION['usuario']['id'] == $user["id"]){
+                           echo ' <label class="etiqueta">Contraseña (Rellenar solo si se desea cambiar):<br/></label>
+                                  <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="pass">
+                                ';
+                        }
+                        ?>
 
                         <label class="etiqueta">Provincia*:<br/></label>
                         <select name="provincia" required>

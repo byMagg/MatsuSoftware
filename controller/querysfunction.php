@@ -40,6 +40,11 @@ function setNewInformation($mysqli, $id, $nick, $email, $provincia, $municipio, 
     return $resultado;
 }
 
+function setNewInformationWithPassword($mysqli, $id, $nick, $email, $pass, $provincia, $municipio, $direccion){
+    $resultado = $mysqli->query("UPDATE user SET nick = '".$nick."', email = '".$email."', contrasena = '".$pass."', provincia = '".$provincia."', municipio= '".$municipio."', direccion = '".$direccion."' WHERE id = '".$id."' ");
+    return $resultado;
+}
+
 function insertToUsers($mysqli, $nick, $email, $contrasena, $provincia, $municipio, $direccion, $rol, $request){
     $resultado = $mysqli->query("INSERT INTO user(nick,email,contrasena,provincia,municipio,direccion,rol,request) VALUES ('".$nick."', '".$email."', '".$contrasena."','".$provincia."','".$municipio."','".$direccion."', '".$rol."', '".$request."')");
     return $resultado;

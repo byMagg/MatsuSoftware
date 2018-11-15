@@ -25,7 +25,11 @@
         exit();
     }
 
-    $datos = setNewInformation($mysqli, $id, $nick, $email, $provincia, $municipio, $direccion);
+    if(isset($_POST['pass']) && $_POST['pass'] != ''){
+        $datos = setNewInformationWithPassword($mysqli, $id, $nick, $email, hash('sha256', $_POST['pass']), $provincia, $municipio, $direccion);  
+    }else{
+        $datos = setNewInformation($mysqli, $id, $nick, $email, $provincia, $municipio, $direccion);
+    }
 
     if($datos){
         echo json_encode(array('error' => false));
