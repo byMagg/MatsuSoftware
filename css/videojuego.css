@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-#principal{
+#principal {
     display: flex;
 }
 
@@ -30,6 +30,9 @@
 
 iframe {
     border: 1px solid white;
+    width: 90vw;
+    height: 50vh;
+
 }
 
 .button {
@@ -100,4 +103,52 @@ iframe {
     border: 1px solid rgb(0, 216, 72);
     width: 90%;
     margin: 60px auto;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .content-inside {
+        padding: 50px 0 100px 0;
+    }
+
+    #cabecera {
+        width: 90%;
+    }
+
+    #principal {
+        display: flex;
+    }
+
+    .estrella {
+        margin: 0;
+    }
+
+    #content {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    #comentarios {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    #puntuacion {
+        right: -25px;
+        top: 230px;
+    }
+
+    .info img {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    iframe {
+        margin-top: 20px;
+    }
+
+    .info {
+        align-items: center;
+    }
 }

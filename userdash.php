@@ -32,8 +32,8 @@
             <div id="content" class="content-inside">
                 <a id="cerrar" class="nohover" href="login/logout.php"><img src="images/logout.png" alt=""></a>
                 <div class="item">
-                    <a class="nohover" href="#"><img src="images/shoppingcart.png" alt="Historial de compras"></a>
-                    <a href="#" class="button">Historial de compras</a>
+                    <a class="nohover" href="shoppinghistory.php"><img src="images/shoppingcart.png" alt="Historial de compras"></a>
+                    <a href="shoppinghistory.php" class="button">Historial de compras</a>
                 </div>
                 <div class="item">
                     <a class="nohover" href="modifyuser.php?id=<?php echo $_SESSION['usuario']['id'] ?>"><img src="images/confuser.png" alt="Modificar perfil"></a>
