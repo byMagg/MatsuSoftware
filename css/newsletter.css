@@ -1,0 +1,84 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    display: block;
+    height: 73vh;
+    width: 100%;
+}
+
+#tabla {
+    display: grid;
+    max-width: 70%;
+}
+
+select {
+    max-width: 200px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+#tabla>table {
+    margin: 20px 0;
+    background: white;
+    color: black;
+    border-spacing: 0;
+    overflow: auto;
+    table-layout: auto;
+    text-align: justify;
+    display: table-caption;
+    justify-content: center;
+}
+
+#cabecera {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#cabecera h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+td {
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+}
+
+.delete{
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+tr:nth-child(even) {
+    background: #FFF
+}
+
+tr:nth-child(odd) {
+    background: #CCC
+}
+
+@media only screen and (max-width: 768px) {
+
+    #tabla>table {
+        width: 80vw;
+    }
+
+    #content {
+        padding: 50px 0 100px 0;
+    }
+
+    #cabecera h1 {
+        width: 56vw;
+        margin: auto;
+    }
+}
