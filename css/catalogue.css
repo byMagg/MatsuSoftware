@@ -56,6 +56,10 @@ h1 {
         display: block;
     }
 
+    #linea {
+        height: 1000px;
+    }
+
     .item img {
         width: 10vw;
         height: 10vw;
