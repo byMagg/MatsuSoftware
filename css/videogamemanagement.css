@@ -13,7 +13,6 @@
 #cabecera {
     display: inline-flex;
     align-items: center;
-    width: 100%;
 }
 
 #cuadricula{
@@ -40,8 +39,8 @@
     display: table-caption;
 }
 
-#comment{
-    min-width: 400px;
+#title{
+    min-width: 200px;
 }
 
 #icon2 {
@@ -50,17 +49,31 @@
     margin: 0 10px;
 }
 
+label {
+    display: block;
+}
+
 #volver {
     width: 24px;
     height: 24px;
     margin: 13px;
 }
 
-.delete{
+.delete, .edit{
     display: flex;
     align-items: center;
     width: 25px;
     height: 25px;
+}
+
+.halfright{
+    width: 50%;
+    float: right;
+}
+
+.halfleft{
+    width: 50%;
+    float: left;
 }
 
 .button {
@@ -68,7 +81,15 @@
     padding: 10px 20px;
     height: 50px;
     width: 125px;
-    margin: 0 auto;
+}
+
+input {
+    height: 3vh;
+    min-height: 18px;
+    max-height: 24px;
+    width: 278px;
+    max-width: 278px;
+    min-width: 150px;
 }
 
 textarea {
@@ -81,7 +102,7 @@ textarea {
 }
 
 form{
-    display: grid;
+    display: table;
     justify-content: center;
 }
 
@@ -99,10 +120,11 @@ tr:nth-child(odd) {
 }
 
 /* MOVIL */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1345px) {
 
     #content {
         padding: 100px 0 150px 0;
+        height: 100%;
     }
 
     .content{
@@ -117,8 +139,8 @@ tr:nth-child(odd) {
     #cuadricula{
         display: block;
     }
-    #tabla{
-        display: flex;
+    #tabla, #form{
+        display: grid;
         justify-content: center;
     }
 
@@ -133,7 +155,20 @@ tr:nth-child(odd) {
         height: 0px;
         min-height: 0px;
         min-width: 470px;
-        margin: 30px auto 30px auto;
+        margin: 30px auto 0px auto;
         width: 65vw;
+    }
+
+    #tittle{
+        min-width: 0px;
+    }
+
+    .halfright, .halfleft{
+        width: 100%;
+        float: left;
+    }
+
+    form{
+        width: 50px;
     }
 }

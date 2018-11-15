@@ -103,6 +103,7 @@ tr:nth-child(odd) {
 
     #content {
         padding: 100px 0 150px 0;
+        height: 100%;
     }
 
     .content{
@@ -117,8 +118,8 @@ tr:nth-child(odd) {
     #cuadricula{
         display: block;
     }
-    #tabla{
-        display: flex;
+    #tabla, #form{
+        display: grid;
         justify-content: center;
     }
 
@@ -133,7 +134,7 @@ tr:nth-child(odd) {
         height: 0px;
         min-height: 0px;
         min-width: 470px;
-        margin: 30px auto 30px auto;
+        margin: 30px auto 0px auto;
         width: 65vw;
     }
 }
