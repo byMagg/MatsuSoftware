@@ -27,6 +27,7 @@
                 </div>
                 <div id="cuadricula">
                     <div id="tabla">
+                        <h1>Lista de newsletter:</h1>
                         <table>
                             <tr>
                                 <th id="id">#</th>
@@ -87,6 +88,7 @@
                     <div id="lineavertical"></div>
 
                     <div id="form">
+                        <h1>Añadir newsletter:</h1>
                         <form id="newslettermanagement" action="">
                             <label>Introduce el nuevo comentario:</label>
                             <textarea type="msg" name="msg" placeholder=" Introduce el comentario" required></textarea>

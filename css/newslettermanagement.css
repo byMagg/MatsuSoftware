@@ -30,6 +30,10 @@
     width: 0;
 }
 
+#tabla{
+    margin-top: 0px;
+}
+
 #tabla>table {
     margin: 20px 0;
     background: white;
