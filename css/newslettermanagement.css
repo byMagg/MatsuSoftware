@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+form {
+    text-align: center;
+    padding: 50px;
+}
+
+=======
+>>>>>>> 9e1e5d24747c6fbc1d3aa804774fc6f375cba0c4
 .content {
     display: flex;
     align-items: center;
@@ -57,6 +65,16 @@
     margin: 13px;
 }
 
+<<<<<<< HEAD
+#comentario {
+    min-width: 304px;
+    text-align: center;
+}
+
+td {
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+=======
 .delete{
     display: flex;
     align-items: center;
@@ -70,6 +88,7 @@
     height: 50px;
     width: 125px;
     margin: 0 auto;
+>>>>>>> 9e1e5d24747c6fbc1d3aa804774fc6f375cba0c4
 }
 
 textarea {
@@ -97,6 +116,8 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background: #CCC
+<<<<<<< HEAD
+=======
 }
 
 /* MOVIL */
@@ -133,4 +154,5 @@ tr:nth-child(odd) {
         margin: 30px auto 30px auto;
         width: 65vw;
     }
+>>>>>>> 9e1e5d24747c6fbc1d3aa804774fc6f375cba0c4
 }
