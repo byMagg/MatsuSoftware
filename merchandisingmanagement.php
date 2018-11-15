@@ -22,7 +22,7 @@
             <div id="content" class="content-inside">
                 <div id="cabecera">
                     <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
-                        <img id="icon2" src="images/newsletter.png" alt="">
+                        <img id="icon2" src="images/merchan.png" alt="">
                         <h1>GESTIÓN DE MERCHANDISING</h1>
                 </div>
                 <div id="cuadricula">
