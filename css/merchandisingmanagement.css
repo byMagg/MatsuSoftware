@@ -40,14 +40,25 @@
     display: table-caption;
 }
 
-#comment{
+#title{
     min-width: 400px;
+}
+
+#price{
+    min-width: 100px;
 }
 
 #icon2 {
     width: 50px;
     height: 50px;
     margin: 0 10px;
+}
+
+input {
+    height: 3vh;
+    min-height: 18px;
+    max-height: 24px;
+    width: 90%;
 }
 
 #volver {
@@ -71,12 +82,21 @@
     margin: 0 auto;
 }
 
+form input {
+    height: 2vh;
+    min-height: 30px;
+    max-height: 270px;
+    width: 280px;
+    max-width: 280px;
+    min-width: 150px;
+}
+
 textarea {
-    height: 10vh;
-    min-height: 58px;
-    max-height: 269px;
-    width: 278px;
-    max-width: 278px;
+    height: 4vh;
+    min-height: 55px;
+    max-height: 170px;
+    width: 280px;
+    max-width: 280px;
     min-width: 150px;
 }
 
@@ -117,8 +137,8 @@ tr:nth-child(odd) {
     #cuadricula{
         display: block;
     }
-    #tabla{
-        display: flex;
+    #tabla, #form{
+        display: grid;
         justify-content: center;
     }
 
@@ -133,7 +153,7 @@ tr:nth-child(odd) {
         height: 0px;
         min-height: 0px;
         min-width: 470px;
-        margin: 30px auto 30px auto;
+        margin: 30px auto 0px auto;
         width: 65vw;
     }
 }
