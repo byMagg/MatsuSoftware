@@ -123,6 +123,7 @@ tr:nth-child(odd) {
 
     #cuadricula{
         display: block;
+        padding-top: 40px;
     }
     #tabla, #form{
         display: grid;

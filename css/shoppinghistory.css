@@ -6,7 +6,6 @@
 
 #content {
     display: block;
-    height: 73vh;
     width: 100%;
 }
 
@@ -14,6 +13,8 @@
     display: inline-flex;
     align-items: center;
     width: 100%;
+    position: absolute;
+    top: 100px;
 }
 
 #cuadricula{
@@ -129,7 +130,9 @@ tr:nth-child(odd) {
 
     #cuadricula{
         display: block;
+        padding-top: 135px;
     }
+
     #tabla{
         display: flex;
         justify-content: center;
