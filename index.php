@@ -1,6 +1,3 @@
-<?php
-    $RUTA = dirname(__FILE__); 
-?>
 <!DOCTYPE html>
 <html lang="es">
     <head>

@@ -6,7 +6,6 @@
 
 #content {
     display: block;
-    height: 73vh;
     width: 100%;
 }
 
@@ -94,11 +93,11 @@ input {
 
 textarea {
     height: 10vh;
-    min-height: 58px;
-    max-height: 269px;
+    min-height: 10vh;
+    max-height: 10vh;
     width: 278px;
     max-width: 278px;
-    min-width: 150px;
+    min-width: 278px;
 }
 
 form{
@@ -138,6 +137,7 @@ tr:nth-child(odd) {
 
     #cuadricula{
         display: block;
+        padding-top: 40px;
     }
     #tabla, #form{
         display: grid;
