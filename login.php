@@ -34,7 +34,7 @@
                     <input type="text" placeholder="Introduce tu e-mail/nick" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="pass" required>
+                    <input type="password" pattern="[A-Za-z0-9_-]{4,20}" title="La contraseña debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." placeholder="Introduce tu contraseña" name="pass" required>
 
                     <div id="boton"><button class="button" type="submit">Iniciar Sesión</button></div>
                     
@@ -60,13 +60,13 @@
                     <h1>Registro</h1>
 
                     <label class="etiqueta">Nick*:<br/></label>
-                    <input type="text" placeholder="Introduce tu nick" name="nick" required>
+                    <input type="text" pattern="[A-Za-z0-9_-]{4,20}" title="El nick debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." placeholder="Introduce tu nick" name="nick" required>
 
                     <label class="etiqueta">E-mail*:<br/></label>
                     <input type="email" placeholder="Introduce tu e-mail" name="email" required>
 
                     <label class="etiqueta">Contraseña*:<br/></label>
-                    <input type="password" pattern="[A-Za-z0-9_-]{4,20}" placeholder="Introduce tu contraseña" name="contrasena" required>
+                    <input type="password" pattern="[A-Za-z0-9_-]{4,20}" title="La contraseña debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." placeholder="Introduce tu contraseña" name="contrasena" required>
 
                     <label class="etiqueta">Provincia*:<br/></label>
                     <select name="provincia" required>

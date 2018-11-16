@@ -45,9 +45,9 @@
                 <form id="recoverypassword" action="">
                     <input type="hidden" name="id" value= "<?php echo $id ?>" />
                     <label>Introduce tu nueva contraseña:</label>
-                    <input id="password" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password" placeholder="Introduce tu contraseña" required/>
+                    <input id="password" pattern="[A-Za-z0-9_-]{4,20}" title="La contraseña debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." type="password" name="password" placeholder="Introduce tu contraseña" required/>
                     <label>Introduce tu nueva contraseña de nuevo:</label>
-                    <input id="password2" pattern="[A-Za-z0-9_-]{4,20}" type="password" name="password2" placeholder="Introduce tu contraseña" required/>
+                    <input id="password2" pattern="[A-Za-z0-9_-]{4,20}" title="La contraseña debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." type="password" name="password2" placeholder="Introduce tu contraseña" required/>
                     <button class="button" type="submit">Recuperar contraseña</button>
                 </form>
             </div>

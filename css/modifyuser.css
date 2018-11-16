@@ -1,5 +1,6 @@
 .content {
-    display: inline-flex;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -12,11 +13,12 @@
     display: inline-flex;
     align-items: center;
     width: 100%;
+    position: absolute;
+    top: 100px;
 }
 
 #content {
     display: block;
-    height: 73vh;
     width: 100%;
 }
 
@@ -88,6 +90,14 @@ form {
     margin: 13px;
 }
 
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    height: 50px;
+    width: 125px;
+    margin: 0 auto;
+}
+
 @media screen and (max-height: 700px) {
     #form {
         height: 380px;
@@ -99,5 +109,9 @@ form {
 
     #cabecera h1 {
         width: 200px;
+    }
+
+    #cuadricula{
+        padding-top: 40px;
     }
 }
