@@ -30,7 +30,7 @@
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
-                <a id="cerrar" class="nohover" href="login/logout.php"><img src="images/logout.png" alt=""></a>
+                <a id="cerrar" class="nohover" href="login/logout.php"><img src="images/logout.png" alt="cerrar"></a>
                 <div class="item">
                     <a class="nohover" href="shoppinghistory.php"><img src="images/shoppingcart.png" alt="Historial de compras"></a>
                     <a href="shoppinghistory.php" class="button">Historial de compras</a>

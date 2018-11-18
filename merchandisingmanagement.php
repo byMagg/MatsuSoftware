@@ -21,9 +21,9 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
-                        <img id="icon2" src="images/merchan.png" alt="">
-                        <h1>GESTIÓN DE MERCHANDISING</h1>
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
+                    <img id="icon2" src="images/merchan.png" alt="merch">
+                    <h1>GESTIÓN DE MERCHANDISING</h1>
                 </div>
                 <div id="cuadricula">
                     <div id="tabla">
@@ -41,7 +41,7 @@
                                 <td>1</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
 
@@ -49,7 +49,7 @@
                                 <td>2</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
 
@@ -57,7 +57,7 @@
                                 <td>3</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
 
@@ -65,7 +65,7 @@
                                 <td>4</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
 
@@ -73,7 +73,7 @@
                                 <td>5</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
 
@@ -81,7 +81,7 @@
                                 <td>6</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
 
@@ -89,7 +89,7 @@
                                 <td>7</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
 
@@ -97,7 +97,7 @@
                                 <td>8</th>
                                 <td>lorem ipsum</td>
                                 <td>0.0</td>
-                                <td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>
+                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
                                 <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
                             </tr>
                         </table>
@@ -120,7 +120,7 @@
                             <label>Precio:</label>
                             <input type="text" pattern="[0-9]" name="price" placeholder=" Introduce el precio" required>
 
-                            <button class="button" type="submit">Enviar</button>
+                            <button class="button" type="submit">Añadir</button>
                         </form>
                     </div>
                 </div>

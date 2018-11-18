@@ -22,9 +22,9 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
-                        <img id="icon2" src="images/shoppingcart.png" alt="">
-                        <h1>HISTORIAL DE COMPRAS</h1>
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
+                    <img id="icon2" src="images/shoppingcart.png" alt="historial">
+                    <h1>HISTORIAL DE COMPRAS</h1>
                 </div>
                 <div id="cuadricula">
                     <select name="orden" required>

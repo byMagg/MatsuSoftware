@@ -21,9 +21,9 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
-                        <img id="icon2" src="images/newsletter.png" alt="">
-                        <h1>GESTIÓN DE NEWSLETTER</h1>
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
+                    <img id="icon2" src="images/newsletter.png" alt="newsletter">
+                    <h1>GESTIÓN DE NEWSLETTER</h1>
                 </div>
                 <div id="cuadricula">
                     <div id="tabla">
@@ -92,7 +92,7 @@
                         <form id="newslettermanagement" action="">
                             <label>Introduce el nuevo comentario:</label>
                             <textarea type="msg" name="msg" placeholder=" Introduce el comentario" required></textarea>
-                            <button class="button" type="submit">Enviar</button>
+                            <button class="button" type="submit">Añadir</button>
                         </form>
                     </div>
                 </div>

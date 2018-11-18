@@ -41,8 +41,8 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt=""></a>
-                    <img id="user" src="images/user.png" alt="">
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
+                    <img id="user" src="images/user.png" alt="usuario">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
                 <div id="tabla">
@@ -54,6 +54,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                             <th id="rol">Rol</th>
                     <?php
                         $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");
+                        
                         if ($resultado->num_rows != 0) {
                             if($_SESSION['usuario']['rol'] == 2){
                                 echo    '<th></th>

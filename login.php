@@ -137,7 +137,6 @@
                         <p>Registrándote aceptas nuestros</p>
                         <h4><a href="tyc.php">términos y condiciones</a></h4>
                     </div>
-
                 </form>
             </div>
         </div>
