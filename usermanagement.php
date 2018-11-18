@@ -13,18 +13,16 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
     $idSesion = $_SESSION['usuario']['id'];
     changerol($mysqli, $rol, $id, $idSesion);
 
-}else if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && !isset($_GET['rol'])){
+}else if(isset($_GET['id']) && !isset($_GET['rol'])){
 
     $id= $_GET['id'];
     $idSesion = $_SESSION['usuario']['id'];
-    deleteUser($mysqli, 2, $id, $idSesion);
+    $rol = $_SESSION['usuario']['rol'];
 
-}else if($_SESSION['usuario']['rol'] == 1 && isset($_GET['id']) && !isset($_GET['rol'])){
+    deleteUser($mysqli, $rol, $id, $idSesion);
 
-    $id= $_GET['id'];
-    $idSesion = $_SESSION['usuario']['id'];
-    deleteUser($mysqli, 1, $id, $idSesion);
 }
+
 ?>
 
 <!DOCTYPE html>

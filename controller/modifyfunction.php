@@ -9,7 +9,7 @@ function modifysecurity($mysqli, $id){
         $datos = $datos->fetch_assoc();
 
         if(($datos['rol'] == 1  && $_SESSION['usuario']['id'] != $id) || $datos['rol'] == 2){
-                header("Location: login.php");
+            header("Location: login.php");
         }
     }
 

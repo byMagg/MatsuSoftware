@@ -31,12 +31,10 @@ function timeLogOut(){
 function login(){
 
     if(isset($_SESSION['usuario'])){
-        if($_SESSION['usuario']['rol'] == 1){
+        if($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2){
             header("Location: admindash.php");
-        }else if($_SESSION['usuario']['rol'] == 0){
-            header("Location: userdash.php");
         }else{
-            header("Location: admindash.php");
+            header("Location: userdash.php");
         }
     }
 }

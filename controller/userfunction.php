@@ -6,20 +6,23 @@ function deleteUser($mysqli, $rol, $idBorrar, $idSesion){
     $datos = getUsersUsingId($mysqli, $idBorrar);
     $datos = $datos->fetch_assoc();
 
-    if($datos['rol'] != 2 && $datos['rol'] != 1){
-        if($rol == 0 && ($idBorrar != $idSesion)){
+    if($rol == 2 && $idSesion == $idBorrar)
+    {
+        header("Location: login.php");
+    }else if($rol == 1 && ($datos['rol'] == 1 || $datos['rol'] == 2))
+    {
+        header("Location: login.php");
+    }else if($rol == 0 && (($idSesion != $idBorrar && $datos['rol'] == 0) || $datos['rol'] == 2 || $datos['rol'] == 1))
+    {
+        header("Location: login.php");
+    }else{
+        deleteUsers($mysqli, $idBorrar);
+        if($rol == 0){
+            session_destroy();
             header("Location: login.php");
         }else{
-            deleteUsers($mysqli, $idBorrar);
-            if($rol == 0){
-                session_destroy();
-                header("Location: login.php");
-            }else{
-                header("Location: usermanagement.php");
-            }
+            header("Location: usermanagement.php");
         }
-    }else{
-        header("Location: login.php");
     }
 }
 
