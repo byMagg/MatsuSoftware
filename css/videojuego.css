@@ -30,8 +30,9 @@
 
 iframe {
     border: 1px solid white;
-    width: 90vw;
-    height: 40vh;
+    width: 60vw;
+    height: 350px;
+    max-width: 620px;
 }
 
 .button {
@@ -144,7 +145,13 @@ iframe {
     }
 
     iframe {
+        width: 90vw;
         margin-top: 20px;
+        max-width: 1000px;
+    }
+
+    #descripcion {
+        width: 90vw;
     }
 
     .info {
@@ -170,6 +177,10 @@ iframe {
         #seccion {
             display: grid;
             justify-content: center;
+        }
+
+        #descripcion {
+            margin: 0 auto;
         }
 
         #puntuacion {
