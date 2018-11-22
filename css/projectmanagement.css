@@ -43,6 +43,8 @@ input {
     color: black;
     border-spacing: 0;
     overflow: auto;
+    width: 90vw;
+    max-width: 477px;
     table-layout: auto;
     text-align: center;
     display: table-caption;
@@ -106,11 +108,22 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
+@media only screen and (max-height: 560px){
+    #content{
+        padding: 150px 0 150px 0;
+    }
+    @media only screen and (max-width: 768px){
+        #content{
+            padding: 135px 0 150px 0;
+        }
+    }
+}
+
 /* MOVIL */
 @media only screen and (max-width: 1000px) {
 
     #content {
-        padding: 100px 0 150px 0;
+        padding: 130px  0 150px 0;
         height: 100%;
     }
 
@@ -119,6 +132,7 @@ tr:nth-child(odd) {
     }
 
     #cabecera h1 {
+        font-size: 25px;
         width: 56vw;
         margin: auto;
     }
@@ -143,8 +157,7 @@ tr:nth-child(odd) {
         border: 1px solid rgb(0, 216, 72);
         height: 0px;
         min-height: 0px;
-        min-width: 470px;
-        margin: 30px auto 0px auto;
+        margin: 30px auto;
         width: 65vw;
     }
 }

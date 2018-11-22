@@ -37,6 +37,8 @@
     border-spacing: 0;
     overflow: auto;
     table-layout: auto;
+    width: 90vw;
+    max-width: 477px;
     text-align: center;
     display: table-caption;
 }
@@ -119,12 +121,24 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
+
+@media only screen and (max-height: 560px){
+    #content{
+        padding: 150px 0 150px 0;
+    }
+
+    @media only screen and (max-width: 768px){
+        #content{
+            padding: 135px 0 150px 0;
+        }
+    }
+}
 /* MOVIL */
 @media only screen and (max-width: 1000px) {
 
     #content {
         height: 100%;
-        padding: 100px 0 150px 0;
+        padding: 130px  0 150px 0;
     }
 
     .content{
@@ -133,6 +147,7 @@ tr:nth-child(odd) {
 
     #cabecera h1 {
         width: 56vw;
+        font-size: 25px;
         margin: auto;
     }
 
@@ -140,9 +155,12 @@ tr:nth-child(odd) {
         display: block;
         padding-top: 40px;
     }
+    
     #tabla, #form{
         display: grid;
         justify-content: center;
+        width: 90vw;
+        margin: 0 auto;
     }
 
     input,
@@ -155,8 +173,17 @@ tr:nth-child(odd) {
         border: 1px solid rgb(0, 216, 72);
         height: 0px;
         min-height: 0px;
-        min-width: 470px;
         margin: 30px auto 0px auto;
         width: 65vw;
+    }
+
+    @media only screen and (max-width: 340px){
+        #icon2{
+            margin: 0 4px;
+        }
+    
+        #cabecera h1{
+            margin: 0;
+        }
     }
 }

@@ -80,10 +80,11 @@ tr:nth-child(odd) {
     }
 
     #content {
-        padding: 50px 0 100px 0;
+        padding: 135px 0 150px 0;
     }
 
     #cabecera h1 {
+        font-size: 25px;
         width: 56vw;
         margin: auto;
     }
