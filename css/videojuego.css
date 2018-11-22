@@ -151,7 +151,7 @@ iframe {
         align-items: center;
     }
 
-    @media only screen and (max-width: 425px) {
+    @media only screen and (max-width: 800px) {
         #principal {
             display: block;
             padding-top: 100px;
