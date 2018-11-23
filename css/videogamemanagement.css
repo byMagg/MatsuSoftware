@@ -146,11 +146,6 @@ tr:nth-child(odd) {
         display: block;
     }
 
-    #cabecera h1 {
-        font-size: 25px;
-        width: 56vw;
-    }
-
     #cuadricula{
         display: block;
         padding-top: 40px;
