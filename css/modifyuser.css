@@ -20,6 +20,7 @@
 #content {
     display: block;
     width: 100%;
+    padding: 120px 0;
 }
 
 #form {
@@ -99,14 +100,6 @@ form {
 }
 
 @media only screen and (max-height: 777px) {
-
-    #cabecera {
-        width: 200px;
-    }
-
-    #cabecera h1 {
-        width: 200px;
-    }
 
     #cuadricula {
         padding-top: 40px;

@@ -1,0 +1,5 @@
+-Posicion de la puntuacion dando del videojuego como del merchandising.
+-Merchandising: Posicion del titulo/foto/descripcion... No centrado.
+-Linea verde de catalogo.
+-cambiar foto por pino cuando pase la foto.
+-Color de los titulos de TyC y Privacidad.

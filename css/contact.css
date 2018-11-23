@@ -10,7 +10,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    padding: 70px 50px 115px 50px;
+    padding: 160px 50px 115px 50px;
 }
 
 #content h1 {
@@ -104,7 +104,7 @@ h1 {
     #content {
         text-align: center;
         display: inline-block;
-        padding: 135px 0px 120px 0px;
+        padding: 160px 0px 115px 0px;
         width: 90vw;
         max-width: 345px;
     }

@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div id="principal">
-                        <div id="seccion"><img src="images/paisaje.jpg" alt=""><h2>Precio:</h2><a class="button" href="#">Realizar compra</a></div>
+                        <div id="seccion"><img src="images/paisaje.jpg" alt=""><h2>Precio: 90€</h2><a class="button" href="#">Realizar compra</a></div>
                         <div id="descripcion">
                             <h3>Descripción</h3>
                             <p>Donec velit lectus, venenatis sed consequat sodales, tincidunt vel nunc. Aliquam et molestie lectus. Nulla non libero nulla. Integer eget lacinia nisl.</p>

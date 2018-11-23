@@ -99,6 +99,10 @@ iframe {
     width: 100%;
 }
 
+.button{
+    text-align: center;
+}
+
 #linea {
     border: 1px solid rgb(0, 216, 72);
     width: 90%;
@@ -113,10 +117,7 @@ iframe {
 
     #cabecera {
         width: 90%;
-    }
-
-    #principal {
-        display: flex;
+        display: block;
     }
 
     .estrella {
@@ -136,6 +137,7 @@ iframe {
     }
 
     #puntuacion {
+        position: relative;
         right: 0px;
         top: 335px;
     }
@@ -146,7 +148,7 @@ iframe {
 
     iframe {
         width: 90vw;
-        margin-top: 20px;
+        margin-top: 150px;
         max-width: 1000px;
     }
 
@@ -159,9 +161,13 @@ iframe {
     }
 
     @media only screen and (max-width: 800px) {
+
         #principal {
             display: block;
-            padding-top: 100px;
+        }
+
+        #principal h2{
+            text-align: center;
         }
 
         #principal img {
@@ -179,13 +185,28 @@ iframe {
             justify-content: center;
         }
 
+        #cabecera{
+            display: block;
+        }
+
+        #cabecera h1{
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        #puntuacion{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            top: 300px;
+        }
+
         #descripcion {
             margin: 0 auto;
         }
 
-        #puntuacion {
-            right: 0px;
-            top: 80px;
+        .button{
+            margin-top: 150px;
         }
     }
 }
