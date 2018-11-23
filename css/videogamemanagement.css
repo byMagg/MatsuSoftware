@@ -149,7 +149,6 @@ tr:nth-child(odd) {
     #cabecera h1 {
         font-size: 25px;
         width: 56vw;
-        margin: auto;
     }
 
     #cuadricula{
