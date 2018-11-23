@@ -14,7 +14,7 @@
     align-items: center;
     width: 100%;
     position: absolute;
-    top: 100px;
+    top: 60px;
 }
 
 #content {
@@ -98,10 +98,7 @@ form {
     margin: 0 auto;
 }
 
-@media screen and (max-height: 700px) {
-    #form {
-        height: 380px;
-    }
+@media only screen and (max-height: 777px) {
 
     #cabecera {
         width: 200px;
@@ -111,7 +108,13 @@ form {
         width: 200px;
     }
 
-    #cuadricula{
+    #cuadricula {
         padding-top: 40px;
+    }
+
+    @media only screen and (max-width: 1065px) {
+        #content {
+            padding: 200px 0 120px 0;
+        }
     }
 }

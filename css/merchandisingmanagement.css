@@ -17,7 +17,7 @@
     top: 60px;
 }
 
-#cuadricula{
+#cuadricula {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,11 +43,11 @@
     display: table-caption;
 }
 
-#title{
+#title {
     min-width: 400px;
 }
 
-#price{
+#price {
     min-width: 100px;
 }
 
@@ -70,7 +70,7 @@ input {
     margin: 13px;
 }
 
-.delete{
+.delete {
     display: flex;
     align-items: center;
     width: 25px;
@@ -89,7 +89,7 @@ form input {
     height: 2vh;
     min-height: 30px;
     max-height: 270px;
-    width: 280px;
+    width: 270px;
     max-width: 280px;
     min-width: 150px;
 }
@@ -98,12 +98,11 @@ textarea {
     height: 10vh;
     min-height: 10vh;
     max-height: 10vh;
-    width: 278px;
+    width: 267px;
     max-width: 278px;
-    min-width: 278px;
 }
 
-form{
+form {
     display: grid;
     justify-content: center;
 }
@@ -122,26 +121,27 @@ tr:nth-child(odd) {
 }
 
 
-@media only screen and (max-height: 560px){
-    #content{
+@media only screen and (max-height: 560px) {
+    #content {
         padding: 150px 0 150px 0;
     }
 
-    @media only screen and (max-width: 768px){
-        #content{
+    @media only screen and (max-width: 768px) {
+        #content {
             padding: 135px 0 150px 0;
         }
     }
 }
+
 /* MOVIL */
 @media only screen and (max-width: 1000px) {
 
     #content {
         height: 100%;
-        padding: 130px  0 150px 0;
+        padding: 130px 0 150px 0;
     }
 
-    .content{
+    .content {
         display: block;
     }
 
@@ -151,22 +151,17 @@ tr:nth-child(odd) {
         margin: auto;
     }
 
-    #cuadricula{
+    #cuadricula {
         display: block;
         padding-top: 40px;
     }
-    
-    #tabla, #form{
+
+    #tabla,
+    #form {
         display: grid;
         justify-content: center;
         width: 90vw;
         margin: 0 auto;
-    }
-
-    input,
-    textarea {
-        width: 72vw;
-        max-width: 312px;
     }
 
     #lineavertical {
@@ -177,12 +172,12 @@ tr:nth-child(odd) {
         width: 65vw;
     }
 
-    @media only screen and (max-width: 340px){
-        #icon2{
+    @media only screen and (max-width: 340px) {
+        #icon2 {
             margin: 0 4px;
         }
-    
-        #cabecera h1{
+
+        #cabecera h1 {
             margin: 0;
         }
     }
