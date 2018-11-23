@@ -123,7 +123,6 @@
 
     #content {
         display: flex;
-        width: 90%;
     }
 
     #comentarios {
@@ -132,19 +131,43 @@
         display: block;
     }
 
+    .button{
+        margin-top: 140px;
+    }
+
+    #seccion{
+        display: grid;
+    }
+
     #puntuacion {
-        right: 0px;
+        left: 0;
         top: 335px;
+    }
+
+    #descripcion{
+        margin: 0;
     }
 
     .info {
         align-items: center;
     }
 
-    @media only screen and (max-width: 460px) {
+    @media only screen and (max-width: 586px) {
         #principal {
             display: block;
             padding-top: 100px;
+        }
+
+        #content{
+            padding-top: 50px;
+        }
+
+        #cabecera{
+            display: block;
+        }
+
+        #cabecera h1{
+            text-align: center;
         }
 
         #principal img {
@@ -163,8 +186,10 @@
         }
 
         #puntuacion {
-            right: 0px;
-            top: 80px;
+            position: relative;
+            top: 290px;
+            display: flex;
+            justify-content: center;
         }
     }
 }
