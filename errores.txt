@@ -1,2 +1,1 @@
--Linea verde de catalogo.
 -cambiar foto por pino cuando pase la foto.

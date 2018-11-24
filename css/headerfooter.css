@@ -2,6 +2,8 @@ html,
 body {
     background: #1D3147;
     margin: 0;
+    padding: 0;
+    width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     color: white;
