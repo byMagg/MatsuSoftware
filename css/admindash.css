@@ -31,7 +31,6 @@
     font-size: 14px;
 }
 
-
 #1,
 #2,
 #3 {
@@ -47,8 +46,8 @@
     position: absolute;
     top: 75px;
     left: 50px;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +55,8 @@
 
 #cerrar img {
     margin: 0 20px;
+    width: 100%;
+    height: 100%;
 }
 
 @media only screen and (max-width: 435px) {

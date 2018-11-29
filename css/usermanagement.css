@@ -7,7 +7,7 @@
 #content {
     display: block;
     width: 100%;
-    padding: 140px 0 150px 0;
+    padding: 160px 0 150px 0;
 }
 
 #tabla {
@@ -81,7 +81,7 @@ tr:nth-child(odd) {
     }
 
     #content {
-        padding: 135px 0 150px 0;
+        padding: 160px 0 150px 0;
     }
 
     #cabecera h1 {

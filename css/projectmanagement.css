@@ -7,6 +7,7 @@
 #content {
     display: block;
     width: 100%;
+    padding: 100px 0 120px 0;
 }
 
 #cabecera {
@@ -86,8 +87,6 @@ textarea {
     min-height: 10vh;
     max-height: 10vh;
     width: 278px;
-    max-width: 278px;
-    min-width: 278px;
 }
 
 form{
