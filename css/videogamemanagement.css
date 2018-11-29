@@ -73,6 +73,7 @@ label {
 .halfright{
     width: 50%;
     float: right;
+    display: grid;
 }
 
 .halfleft{

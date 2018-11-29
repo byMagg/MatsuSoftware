@@ -125,8 +125,8 @@
                                 <input type= "text" name="linktrailer" placeholder=" Introduce el link" />
                                 <label>Descripción:*</label>
                                 <textarea type="msg" name="msg" placeholder=" Introduce la descripcion" required></textarea>
+                                <button class="button" type="submit">Añadir</button>
                             </div>
-                            <button class="button" type="submit">Añadir</button>
                         </form>
                     </div>
                 </div>
