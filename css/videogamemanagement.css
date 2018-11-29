@@ -43,7 +43,7 @@
     display: table-caption;
 }
 
-#title{
+.title{
     min-width: 200px;
 }
 
@@ -174,10 +174,6 @@ tr:nth-child(odd) {
         min-height: 0px;
         margin: 30px auto;
         width: 65vw;
-    }
-
-    #tittle{
-        min-width: 0px;
     }
 
     .halfright, .halfleft{

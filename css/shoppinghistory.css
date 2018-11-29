@@ -112,14 +112,6 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
-@media only screen and (max-width: 730px){
-    
-    #tabla>table{
-        width: 90vw;
-    }
-
-}
-
 /* MOVIL */
 @media only screen and (max-width: 1000px) {
 
@@ -155,4 +147,19 @@ tr:nth-child(odd) {
         margin: 30px auto 30px auto;
         width: 65vw;
     }
+
+    @media only screen and (max-width: 730px){
+    
+        #tabla>table{
+            width: 90vw;
+        }
+
+        @media only screen and (max-width: 675px){
+            #content{
+                padding: 220px 0px 150px 0px;
+            }
+        }
+    
+    }
+    
 }

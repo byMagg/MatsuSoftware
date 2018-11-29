@@ -31,8 +31,8 @@
                         <table>
                             <tr>
                                 <th id="id">#</th>
-                                <th id="title">Título</th>
-                                <th id="title">Descripción</th>
+                                <th class="title">Título</th>
+                                <th class="title">Descripción</th>
                                 <th></th>
                                 <th></th>
                             </tr>

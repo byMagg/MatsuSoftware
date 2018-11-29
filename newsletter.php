@@ -20,7 +20,6 @@
 
                 <div id="cuadricula">                
                     <select name="orden" required>
-                        <option disabled selected>Ordenación</option>
                         <option value='asc'>Orden Ascendente</option>
                         <option value='desc'>Orden Descendente</option>
                     </select>
