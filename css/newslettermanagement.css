@@ -18,7 +18,7 @@
     top: 60px;
 }
 
-#cuadricula{
+#cuadricula {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,7 @@
     border: 1px solid rgb(0, 216, 72);
     height: 40vh;
     min-height: 300px;
+    max-height: 530px;
     margin: 0px 50px 0px 50px;
     width: 0;
 }
@@ -44,7 +45,7 @@
     display: table-caption;
 }
 
-#comment{
+#comment {
     min-width: 400px;
 }
 
@@ -60,7 +61,7 @@
     margin: 13px;
 }
 
-.delete{
+.delete {
     display: flex;
     align-items: center;
     width: 25px;
@@ -84,7 +85,7 @@ textarea {
     min-width: 278px;
 }
 
-form{
+form {
     display: grid;
     justify-content: center;
 }
@@ -102,13 +103,14 @@ tr:nth-child(odd) {
     background: #CCC
 }
 
-@media only screen and (max-height: 560px){
-    #content{
+@media only screen and (max-height: 560px) {
+    #content {
         padding: 150px 0 150px 0;
     }
-    @media only screen and (max-width: 768px){
-        #content{
-            padding: 135px 0 150px 0;
+
+    @media only screen and (max-width: 768px) {
+        #content {
+            padding: 135px 30px 150px 30px;
         }
     }
 }
@@ -117,11 +119,11 @@ tr:nth-child(odd) {
 @media only screen and (max-width: 1000px) {
 
     #content {
-        padding: 130px  0 150px 0;
+        padding: 130px 0 150px 0;
         height: 100%;
     }
 
-    .content{
+    .content {
         display: block;
     }
 
@@ -130,12 +132,13 @@ tr:nth-child(odd) {
         width: 56vw;
     }
 
-    #cuadricula{
+    #cuadricula {
         display: block;
         padding-top: 40px;
     }
 
-    #tabla, #form{
+    #tabla,
+    #form {
         display: grid;
         justify-content: center;
     }

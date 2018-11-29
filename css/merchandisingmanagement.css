@@ -27,7 +27,7 @@
     border: 1px solid rgb(0, 216, 72);
     height: 55vh;
     min-height: 350px;
-    margin: 0px 50px 0px 50px;
+    margin: 0 50px;
     width: 0;
 }
 
@@ -38,7 +38,7 @@
     overflow: auto;
     table-layout: auto;
     width: 90vw;
-    max-width: 477px;
+    max-width: 623px;
     text-align: center;
     display: table-caption;
 }
@@ -134,7 +134,7 @@ tr:nth-child(odd) {
 }
 
 /* MOVIL */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1160px) {
 
     #content {
         height: 100%;
