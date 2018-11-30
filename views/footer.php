@@ -1,7 +1,7 @@
 <?php
 
     echo   '<footer>
-                <div id="logofooter"><a class="nohover logo" href="index.php"><img src="images/pino.jpeg" alt="matsulogo"></a></div>
+                <div id="logofooter"><a class="nohover logo" href="index.php"><img src="images/pino.png" alt="matsulogo"></a></div>
 
                 <div id="linksfooter">
                     <ul>

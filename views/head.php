@@ -2,7 +2,7 @@
 
     echo '  
             <!-- Favicon -->
-            <link rel="icon" type="image/png" href="images/pino.jpeg"/>    
+            <link rel="icon" type="image/png" href="images/pino.png"/>    
 
             <!-- Meta -->
             <meta name="theme-color" content="#343F55"/>

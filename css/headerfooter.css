@@ -92,17 +92,15 @@ a:hover {
 #logofooter {
     position: absolute;
     height: 100px;
-    width: 19vw;
-    left: 60px;
+    width: 50px;
+    left: 50px;
     max-width: 75px;
     display: flex;
     align-items: center;
 }
 
 #logofooter img {
-    width: 95%;
-    border: 1px solid rgb(0, 216, 72);
-    border-radius: 50%;
+    width: 100%;
 }
 
 #linksfooter li {
@@ -112,7 +110,7 @@ a:hover {
 
 #linksfooter {
     position: absolute;
-    left: 155px;
+    left: 130px;
     height: 100px;
 }
 
@@ -253,11 +251,11 @@ select {
     }
 
     #linksfooter {
-        left: 120px;
+        left: 110px;
     }
 
     #logofooter {
-        left: 30px;
+        left: 40px;
     }
 }
 

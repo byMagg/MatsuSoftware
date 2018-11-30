@@ -9,7 +9,7 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Inicio Sesión - MatsuSoftware</title>
+        <title>Login - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/login.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>
@@ -28,7 +28,7 @@
                     <span>Datos de ingreso no válidos, inténtalo de nuevo.</span>
                 </div>
                 <form id="iniciosesion" action="">
-                    <h1>Inicio Sesión</h1>
+                    <h1>Login</h1>
 
                     <label class="etiqueta">E-mail/Nick*:<br/></label>
                     <input type="text" placeholder="Introduce tu e-mail/nick" name="email" required>
@@ -36,7 +36,7 @@
                     <label class="etiqueta">Contraseña*:<br/></label>
                     <input type="password" pattern="[A-Za-z0-9_-]{4,20}" title="La contraseña debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." placeholder="Introduce tu contraseña" name="pass" required>
 
-                    <div id="boton"><button class="button" type="submit">Iniciar Sesión</button></div>
+                    <div id="boton"><button class="button" type="submit">Login</button></div>
                     
                     <a id="olvidar" href="writeemail.php">¿Olvidaste la contraseña?</a>
                 </form>
