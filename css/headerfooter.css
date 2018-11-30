@@ -53,7 +53,6 @@ a {
 
 a:hover {
     border-bottom: 2px solid rgb(0, 216, 72);
-    transition: 0.3s;
 }
 
 #nav {
@@ -70,6 +69,7 @@ a:hover {
     justify-content: center;
     width: 90px;
     padding: 0 1vw;
+    transition: 0.3s;
 }
 
 #nav a:hover {
@@ -129,6 +129,11 @@ a:hover {
     height: 50px;
     z-index: 1001;
     text-align: center;
+    transition: transform 0.1s;
+}
+
+#login:hover{
+    transform: translateX(2px);
 }
 
 #login img {
