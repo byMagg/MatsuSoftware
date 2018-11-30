@@ -92,7 +92,7 @@
                         <form id="newslettermanagement" action="">
                             <label>Título*:</label>
                             <input type="text" name="tittle" placeholder=" Título" required/>
-                            <label>Link del videojuego*:</label>
+                            <label>Link del proyecto*:</label>
                             <input type="text" name="link" placeholder=" Link" required/>
                             <label>Descripción*:</label>
                             <textarea type="msg" name="msg" placeholder=" Introduce una descripcion" required></textarea>
