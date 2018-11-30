@@ -37,9 +37,10 @@
     flex-basis: calc(100% / 3);
 }
 
+#3,
 #4,
 #5 {
-    flex-basis: calc(100% / 2);
+    flex-basis: calc(100% / 3);
 }
 
 #cerrar {
@@ -76,11 +77,12 @@
     }
 
     .item {
-        width: 18vw;
+        width: 15vw;
     }
 
     .button {
         font-size: 1vw;
+        padding: 10px 12px;
     }
 
     @media only screen and (max-width: 1000px) {

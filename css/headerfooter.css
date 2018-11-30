@@ -46,6 +46,10 @@ footer {
     z-index: 1001;
 }
 
+#pino{
+    display: flex;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -100,7 +104,8 @@ a:hover {
 }
 
 #logofooter img {
-    width: 100%;
+    width: 75%;
+    margin: auto;
 }
 
 #linksfooter li {
