@@ -15,7 +15,7 @@
             <div class="content-inside">
                 <div id="content">
                     <div id="videojuegos">
-                        <div id="h1apps"><h1>SOFTWARE</h1></div>
+                        <div id="h1apps"><h1>VIDEOJUEGOS</h1></div>
                         <div class="item"><a class="nohover" href="videojuego.php"><img src="images/paisaje.jpg" alt=""></a><div><h2>TITULO</h2><h4>- Precio</h4></div></div>
                         <div class="item"><a class="nohover" href="videojuego.php"><img src="images/paisaje.jpg" alt=""></a><div><h2>TITULO</h2><h4>- Precio</h4></div></div>
                         <div class="item"><a class="nohover" href="videojuego.php"><img src="images/paisaje.jpg" alt=""></a><div><h2>TITULO</h2><h4>- Precio</h4></div></div>
