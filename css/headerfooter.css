@@ -46,8 +46,9 @@ footer {
     z-index: 1001;
 }
 
-#pino{
+#pino {
     display: flex;
+    height: 100px;
 }
 
 a {
@@ -135,7 +136,7 @@ a:hover {
     transition: transform 0.1s;
 }
 
-#login:hover{
+#login:hover {
     transform: translateX(2px);
 }
 
