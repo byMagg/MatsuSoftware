@@ -12,7 +12,7 @@
     border-radius: 50%;
 }
 
-.item h2{
+.item h2 {
     font-size: 16px;
 }
 
@@ -24,7 +24,7 @@
     justify-content: center;
 }
 
-#merchandising:before{
+#merchandising:before {
     content: "";
     border: 1px solid rgb(0, 216, 72);
     height: 95%;
@@ -51,7 +51,7 @@ h1 {
 
 @media only screen and (max-width: 1000px) {
 
-    .content-inside{
+    .content-inside {
         padding: 50px 0 100px 0;
     }
 
@@ -72,6 +72,14 @@ h1 {
     .item img {
         width: 10vw;
         height: 10vw;
+    }
+
+    @media only screen and (max-width: 300px) {
+
+        #h1merch,
+        #h1apps {
+            font-size: 7px;
+        }
     }
 
 }

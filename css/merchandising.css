@@ -98,7 +98,7 @@
     margin: 60px auto;
 }
 
-#seccion{
+#seccion {
     position: relative;
     bottom: 50px;
 }
@@ -131,11 +131,11 @@
         display: block;
     }
 
-    .button{
+    .button {
         margin-top: 140px;
     }
 
-    #seccion{
+    #seccion {
         display: grid;
     }
 
@@ -144,7 +144,7 @@
         top: 335px;
     }
 
-    #descripcion{
+    #descripcion {
         margin: 0;
     }
 
@@ -158,16 +158,21 @@
             padding-top: 100px;
         }
 
-        #content{
+        #content {
             padding-top: 50px;
         }
 
-        #cabecera{
+        #cabecera {
             display: block;
         }
 
-        #cabecera h1{
+        #cabecera h1 {
             text-align: center;
+        }
+
+        #descripcion {
+            width: 75vw;
+            text-align: justify;
         }
 
         #principal img {

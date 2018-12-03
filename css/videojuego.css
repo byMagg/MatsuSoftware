@@ -99,7 +99,7 @@ iframe {
     width: 100%;
 }
 
-.button{
+.button {
     text-align: center;
 }
 
@@ -166,12 +166,16 @@ iframe {
             display: block;
         }
 
-        #principal h2{
+        #principal h2 {
             text-align: center;
         }
 
         #principal img {
             margin: 0;
+        }
+
+        iframe {
+            margin-top: 20px;
         }
 
         .item {
@@ -185,16 +189,16 @@ iframe {
             justify-content: center;
         }
 
-        #cabecera{
+        #cabecera {
             display: block;
         }
 
-        #cabecera h1{
+        #cabecera h1 {
             margin: 20px auto;
             text-align: center;
         }
 
-        #puntuacion{
+        #puntuacion {
             position: relative;
             display: flex;
             justify-content: center;
@@ -202,10 +206,11 @@ iframe {
         }
 
         #descripcion {
+            text-align: justify;
             margin: 0 auto;
         }
 
-        .button{
+        .button {
             margin-top: 150px;
         }
     }
