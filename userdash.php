@@ -10,7 +10,7 @@
     if($_SESSION['usuario']['rol'] == 0 && isset($_GET['id'])){
 
         $id= $_GET['id'];
-        $idSesion = $_SESSION['usuario']['id'];
+        $idSesion = $_SESSION['usuario']['idUser'];
         deleteUser($mysqli, 0, $id, $idSesion);
     }
 ?>
@@ -36,12 +36,12 @@
                     <a href="shoppinghistory.php" class="button">Historial de compras</a>
                 </div>
                 <div class="item">
-                    <a class="nohover" href="modifyuser.php?id=<?php echo $_SESSION['usuario']['id'] ?>"><img src="images/confuser.png" alt="Modificar perfil"></a>
-                    <a href="modifyuser.php?id=<?php echo $_SESSION['usuario']['id'] ?>" class="button">Modificar perfil</a>
+                    <a class="nohover" href="modifyuser.php?id=<?php echo $_SESSION['usuario']['idUser'] ?>"><img src="images/confuser.png" alt="Modificar perfil"></a>
+                    <a href="modifyuser.php?id=<?php echo $_SESSION['usuario']['idUser'] ?>" class="button">Modificar perfil</a>
                 </div>
                 <div class="item">
-                    <a class="nohover" onclick="verifyDeleteUser(<?php echo $_SESSION['usuario']['id'] ?>)"><img src="images/deleteuser.png" alt="Eliminar perfil"></a>
-                    <a onclick="verifyDeleteUser(<?php echo $_SESSION['usuario']['id'] ?>)" class="button">Eliminar perfil</a>
+                    <a class="nohover" onclick="verifyDeleteUser(<?php echo $_SESSION['usuario']['idUser'] ?>)"><img src="images/deleteuser.png" alt="Eliminar perfil"></a>
+                    <a onclick="verifyDeleteUser(<?php echo $_SESSION['usuario']['idUser'] ?>)" class="button">Eliminar perfil</a>
                 </div>
             </div>
         </div>    

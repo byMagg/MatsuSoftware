@@ -8,7 +8,7 @@ function modifysecurity($mysqli, $id){
         $datos = getUsersUsingId($mysqli, $id);
         $datos = $datos->fetch_assoc();
 
-        if(($datos['rol'] == 1  && $_SESSION['usuario']['id'] != $id) || $datos['rol'] == 2){
+        if(($datos['rol'] == 1  && $_SESSION['usuario']['idUser'] != $id) || $datos['rol'] == 2){
             header("Location: login.php");
         }
     }
@@ -18,7 +18,7 @@ function modifysecurity($mysqli, $id){
         $datos = getUsersUsingId($mysqli, $id);
         $datos = $datos->fetch_assoc();
 
-        if(($datos['rol'] == 0  && $_SESSION['usuario']['id'] != $id) || $datos['rol'] == 1 || $datos['rol'] == 2){
+        if(($datos['rol'] == 0  && $_SESSION['usuario']['idUser'] != $id) || $datos['rol'] == 1 || $datos['rol'] == 2){
             header("Location: login.php");
         }
     }

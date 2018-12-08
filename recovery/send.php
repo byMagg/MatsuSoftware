@@ -14,15 +14,15 @@
     }
 
     $hora = date('H:i');
-    $token = $hora.$datos['id'];
+    $token = $hora.$datos['idUser'];
     $encrypt = hash('sha256', $token);
 
     $salida = sendEmailPasswordRecover($email, $encrypt, $datos);
     $enviado = $salida['resultado'];
     
     if($enviado){
-        setRequest($mysqli, 1, $datos['id']);
-        setToken($mysqli, $token, $datos['id']);
+        setRequest($mysqli, 1, $datos['idUser']);
+        setToken($mysqli, $token, $datos['idUser']);
         echo json_encode(array('error' => false));
     }else{
         echo json_encode(array('error' => true));

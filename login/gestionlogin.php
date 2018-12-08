@@ -11,9 +11,9 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     $isEmail = strpos($email, '@');
 
     if($isEmail){
-        $consulta = $mysqli->prepare("SELECT * FROM user WHERE email = ? AND contrasena = ?");
+        $consulta = $mysqli->prepare("SELECT * FROM user WHERE email = ? AND pass = ?");
     }else{     
-        $consulta = $mysqli->prepare("SELECT * FROM user WHERE nick = ? AND contrasena = ?");
+        $consulta = $mysqli->prepare("SELECT * FROM user WHERE nick = ? AND pass = ?");
     }
 
     if($consulta){

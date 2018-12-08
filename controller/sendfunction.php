@@ -9,7 +9,7 @@ function sendEmailPasswordRecover($email, $encrypt, $datos){
                 <title>Recuperar contraseña de MatsuSoftware</title>
                 </head>
                 <h1>RECUPERAR CONTRASEÑA DE MATSUSOFTWARE</h1>
-                <p><br>Para recuperar la contraseña, haga <a href="localhost/matsusoftware/recoverypassword.php?id='.$datos["id"].'&token='.$encrypt.'">click aqui.</a><br></p>
+                <p><br>Para recuperar la contraseña, haga <a href="localhost/matsusoftware/recoverypassword.php?id='.$datos["idUser"].'&token='.$encrypt.'">click aqui.</a><br></p>
                 </body>
                 </html>
                 ';

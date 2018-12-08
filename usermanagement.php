@@ -10,17 +10,16 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
 
     $id= $_GET['id'];
     $rol= $_GET['rol'];
-    $idSesion = $_SESSION['usuario']['id'];
+    $idSesion = $_SESSION['usuario']['idUser'];
     changerol($mysqli, $rol, $id, $idSesion);
 
 }else if(isset($_GET['id']) && !isset($_GET['rol'])){
 
     $id= $_GET['id'];
-    $idSesion = $_SESSION['usuario']['id'];
+    $idSesion = $_SESSION['usuario']['idUser'];
     $rol = $_SESSION['usuario']['rol'];
 
     deleteUser($mysqli, $rol, $id, $idSesion);
-
 }
 
 ?>
@@ -53,7 +52,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                             <th>Email</th>
                             <th id="rol">Rol</th>
                     <?php
-                        $resultado = $mysqli->query("SELECT id, email, nick, rol FROM user");
+                        $resultado = $mysqli->query("SELECT idUser, email, nick, rol FROM user");
                         
                         if ($resultado->num_rows != 0) {
                             if($_SESSION['usuario']['rol'] == 2){
@@ -62,9 +61,9 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         <th></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
-                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['id'].')"><img src="images/eliminar.png"></a></td>';
-                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
-                                    $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['id'].'&rol='.$user['rol'].'"><img src="images/grupo.png"></a></td>';
+                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png"></a></td>';
+                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['idUser'].'"><img src="images/lapiz.png"></a></td>';
+                                    $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['idUser'].'&rol='.$user['rol'].'"><img src="images/grupo.png"></a></td>';
                                     $rolName = "Usuario";
 
                                     if($user["rol"] == 1){
@@ -73,13 +72,13 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         $rolName = "Master"; 
                                     }
 
-                                    if($_SESSION['usuario']['id'] == $user['id']){
+                                    if($_SESSION['usuario']['idUser'] == $user['idUser']){
                                         $rolButton = "<td></td>";
                                         $eliminar = "<td></td>";
                                     }
 
                                     echo '<tr>
-                                                <td>'.$user["id"].'</td>
+                                                <td>'.$user["idUser"].'</td>
                                                 <td>'.$user["nick"].'</td>
                                                 <td>'.$user["email"].'</td>
                                                 <td>'.$rolName.'</td>
@@ -93,8 +92,8 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         <th></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
-                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['id'].')"><img src="images/eliminar.png"></a></td>';
-                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['id'].'"><img src="images/lapiz.png"></a></td>';
+                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png"></a></td>';
+                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['idUser'].'"><img src="images/lapiz.png"></a></td>';
                                     $rolButton= '';
                                     $rolName = "Usuario";
 
@@ -108,12 +107,12 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         $eliminar = "<td></td>";
                                     }
 
-                                    if($user['rol'] == 2 || ($user['rol'] == 1 && $user['id'] != $_SESSION['usuario']['id'])){
+                                    if($user['rol'] == 2 || ($user['rol'] == 1 && $user['idUser'] != $_SESSION['usuario']['idUser'])){
                                         $modificar = "<td></td>";
                                     }
 
                                     echo '<tr>
-                                                <td>'.$user["id"].'</td>
+                                                <td>'.$user["idUser"].'</td>
                                                 <td>'.$user["nick"].'</td>
                                                 <td>'.$user["email"].'</td>
                                                 <td>'.$rolName.'</td>
