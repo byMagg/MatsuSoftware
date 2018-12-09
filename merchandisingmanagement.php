@@ -131,7 +131,7 @@
                             <textarea name="description" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripción" required></textarea>
 
                             <label>Precio:</label>
-                            <input type="text" pattern="[0-9]{0,10}" name="price" placeholder=" Introduce el precio" required>
+                            <input type="text" pattern="[0-9.]{0,10}" name="price" placeholder=" Introduce el precio" required>
 
                             <button class="button" type="submit">Añadir</button>
                         </form>

@@ -122,7 +122,7 @@
                                 <label>Título:</label>
                                 <input type= "text" name="titulo" maxlength="45" title="El título debe de contener enter 0 y 45 carácteres." placeholder=" Introduce el título" required/>
                                 <label>Precio:</label>
-                                <input type= "text" name="price" placeholder=" Introduce el precio" pattern="[0-9]{0,10}" required/>
+                                <input type= "text" name="price" placeholder=" Introduce el precio" pattern="[0-9.]{0,10}" required/>
                                 <label>Requisitos del sistema:</label>
                                 <textarea type="msg" name="requisito" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce los requisitos" required></textarea>
                                 <label>Link de la foto:</label>
