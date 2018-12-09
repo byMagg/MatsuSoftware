@@ -121,17 +121,17 @@
                             <label>Título:</label>
                             <input type="text" name="titulo" maxlength="45" title="El título debe de contener enter 0 y 45 carácteres." placeholder=" Introduce el titulo" required>
 
-                            <label>Link de la imagen:</label>
-                            <input type="text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de la imagen" required>
-
-                            <label>Link de compra:</label>
-                            <input type= "text" name="linkpurchase" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de compra" required/>
+                            <label>Precio:</label>
+                            <input type="text" pattern="[0-9.]{0,10}" name="price" placeholder=" Introduce el precio" required>
 
                             <label>Descripción:</label>
                             <textarea name="description" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripción" required></textarea>
 
-                            <label>Precio:</label>
-                            <input type="text" pattern="[0-9.]{0,10}" name="price" placeholder=" Introduce el precio" required>
+                            <label>Link de compra:</label>
+                            <input type= "text" name="linkpurchase" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de compra" required/>
+
+                            <label>Link de foto:</label>
+                            <input type="text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de la imagen" required>
 
                             <button class="button" type="submit">Añadir</button>
                         </form>
