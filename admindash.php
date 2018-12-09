@@ -25,7 +25,7 @@
                 <div id="3" class="item"><a class="nohover" href="projectmanagement.php"><img src="images/stats.png" alt="Gestión de Proyectos"></a><a href="projectmanagement.php" class="button">Gestión de Proyectos</a></div>
                 <div id="4" class="item"><a class="nohover" href="videogamemanagement.php"><img src="images/games.png" alt="Gestión de Videojuegos"></a><a href="videogamemanagement.php" class="button">Gestión de Videojuegos</a></div>
                 <div id="5" class="item"><a class="nohover" href="merchandisingmanagement.php"><img src="images/merchan.png" alt="Gestión de Merchandising"></a><a href="merchandisingmanagement.php" class="button">Gestión de Merchandising</a></div>
-                <div id="6" class="item"><a class="nohover" href="commentmanagement.php"><img src="images/merchan.png" alt="Gestión de Comentarios"></a><a href="commentmanagement.php" class="button">Gestión de Comentarios</a></div>
+                <div id="6" class="item"><a class="nohover" href="commentmanagement.php"><img src="images/comment.png" alt="Gestión de Comentarios"></a><a href="commentmanagement.php" class="button">Gestión de Comentarios</a></div>
             </div>
         </div>
         <!-- FOOTER -->
