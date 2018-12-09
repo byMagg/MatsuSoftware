@@ -13,6 +13,8 @@
         <title>Gestion de merchandising - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/merchandisingmanagement.css" type="text/css" rel="stylesheet">
+        <script src="controller/jquery.js"></script>
+        <script src="merchandisingmanagement/addmerch.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -105,20 +107,28 @@
                     
                     <div id="lineavertical"></div>
 
+                    <div class="error general">
+                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+                    </div>
+                    
+                    <div class="success">
+                        <span>Merchandising registrado correctamente.</span>
+                    </div>
+
                     <div id="form">
                         <h1>Añadir merchandising:</h1>
                         <form id="merchandisingmanagement" action="">
                             <label>Título:</label>
-                            <input type="text" name="tit" maxlength="45" title="El título debe de contener enter 0 y 45 carácteres." placeholder=" Introduce el titulo" required>
+                            <input type="text" name="titulo" maxlength="45" title="El título debe de contener enter 0 y 45 carácteres." placeholder=" Introduce el titulo" required>
 
                             <label>Link de la imagen:</label>
-                            <input type="text" name="link" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de la imagen" required>
+                            <input type="text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de la imagen" required>
 
                             <label>Link de compra:</label>
                             <input type= "text" name="linkpurchase" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de compra" required/>
 
                             <label>Descripción:</label>
-                            <textarea name="desc" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripción" required></textarea>
+                            <textarea name="description" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripción" required></textarea>
 
                             <label>Precio:</label>
                             <input type="text" pattern="[0-9]{0,10}" name="price" placeholder=" Introduce el precio" required>
