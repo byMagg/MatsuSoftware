@@ -109,21 +109,21 @@
                         <h1>Añadir videojuego:</h1>
                         <form id="newslettermanagement" action="">
                             <div class="halfleft">
-                                <label>Título:*</label>
+                                <label>Título:</label>
                                 <input type= "text" name="titulo" placeholder=" Introduce el título" />
-                                <label>Precio:*</label>
+                                <label>Precio:</label>
                                 <input type= "text" name="price" placeholder=" Introduce el precio" pattern="[0-9]"/>
-                                <label>Requisitos del sistema:*</label>
+                                <label>Requisitos del sistema:</label>
                                 <textarea type="msg" name="msg" placeholder=" Introduce los requisitos" required></textarea>
-                                <label>Link de la foto:*</label>
+                                <label>Link de la foto:</label>
                                 <input type= "text" name="linkphoto" placeholder=" Introduce el link" />
                             </div>
                             <div class="halfright">
-                                <label>Link de compra:*</label>
+                                <label>Link de compra:</label>
                                 <input type= "text" name="linkpurchase" placeholder=" Introduce el link" />
-                                <label>Link del trailer:*</label>
+                                <label>Link del trailer:</label>
                                 <input type= "text" name="linktrailer" placeholder=" Introduce el link" />
-                                <label>Descripción:*</label>
+                                <label>Descripción:</label>
                                 <textarea type="msg" name="msg" placeholder=" Introduce la descripcion" required></textarea>
                                 <button class="button" type="submit">Añadir</button>
                             </div>

@@ -98,8 +98,10 @@ input {
 textarea {
     height: 10vh;
     min-height: 10vh;
+    min-width: 278px;
     max-height: 10vh;
-    width: 278px;
+    width: 267px;
+    max-width: 278px;
 }
 
 form{

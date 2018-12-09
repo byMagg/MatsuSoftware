@@ -114,6 +114,9 @@
                             <label>Link de la imagen:</label>
                             <input type="text" name="link" placeholder=" Introduce el link de la imagen" required>
 
+                            <label>Link de compra:</label>
+                            <input type= "text" name="linkpurchase" placeholder=" Introduce el link de compra" />
+
                             <label>Descripción:</label>
                             <textarea name="desc" placeholder=" Introduce la descripción" required></textarea>
 
