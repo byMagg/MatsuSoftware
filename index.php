@@ -10,6 +10,7 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
+        
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
