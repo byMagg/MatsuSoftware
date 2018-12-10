@@ -5,6 +5,13 @@
     session_start();
     timeLogOut();
     security(0);
+
+    if(isset($_GET['id']) && ($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2)){
+
+        $id= $_GET['id'];
+    
+        deleteProduct($mysqli, $id);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +23,7 @@
         <link href="css/videogamemanagement.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>
         <script src="videogamemanagement/addgame.js"></script>
+        <script src="controller/verify.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -48,8 +56,8 @@
                                             <td>".$product['idProduct']."</td>
                                             <td>".$product['title']."</td>
                                             <td>".$product['price']."</td>
-                                            <td><a class='icono nohover' href=''><img src='images/lapiz.png' alt='Modificar'></a></td>
-                                            <td><a class='icono nohover' href=''><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
+                                            <td><a class='icono nohover' href='modifyvideogame.php?id=".$product['idProduct']."'><img src='images/lapiz.png' alt='Modificar'></a></td>
+                                            <td><a class='icono nohover' onclick='verifyDeleteProductVideogame(".$product['idProduct'].")'><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
                                             </tr>";
                                     }
                                 }
@@ -76,13 +84,13 @@
                                 <label>Precio:</label>
                                 <input type= "text" name="price" placeholder=" Introduce el precio" pattern="[0-9.]{0,10}" required/>
                                 <label>Descripción:</label>
-                                <textarea type="msg" name="description" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripcion" required></textarea>
+                                <textarea type="msg" name="description" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripcion"  required></textarea>
                                 <label>Link de compra:</label>
                                 <input type= "text" name="linkpurchase" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link" required/>
                             </div>
                             <div class="halfright">
                                 <label>Link de la foto:</label>
-                                <input type= "text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link" required/>
+                                <input type= "text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link"  required/>
                                 <label>Link del trailer:</label>
                                 <input type= "text" name="linktrailer" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link" required/>
                                 <label>Requisitos del sistema:</label>

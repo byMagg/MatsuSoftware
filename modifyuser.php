@@ -23,7 +23,7 @@
         <!-- Titulo -->
         <title>Modificar usuario - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
-        <link href="css/modifyuser.css" type="text/css" rel="stylesheet">
+        <link href="css/modify.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>
         <script src="usermanagement/modify.js"></script>
     </head>

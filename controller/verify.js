@@ -3,7 +3,7 @@ function verifyDeleteAdmin(id){
     if(respuesta==true)
         window.location="usermanagement.php?id=" + id;
     else
-        window.location="login.php";
+        window.location="usermanagement.php";
 }
 
 function verifyDeleteUser(id){
@@ -12,4 +12,20 @@ function verifyDeleteUser(id){
         window.location="userdash.php?id=" + id;
     else
         window.location="login.php";
+}
+
+function verifyDeleteProductVideogame(id){
+    var respuesta=confirm("¿Desea eliminar el videojuego?");
+    if(respuesta==true)
+        window.location="videogamemanagement.php?id=" + id;
+    else
+        window.location="videogamemanagement.php";
+}
+
+function verifyDeleteProductMerchandising(id){
+    var respuesta=confirm("¿Desea eliminar el merchandising?");
+    if(respuesta==true)
+        window.location="merchandisingmanagement.php?id=" + id;
+    else
+        window.location="merchandisingmanagement.php";
 }

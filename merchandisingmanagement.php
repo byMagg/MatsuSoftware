@@ -5,6 +5,13 @@
     session_start();
     timeLogOut();
     security(0);
+
+    if(isset($_GET['id']) && ($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2)){
+
+        $id= $_GET['id'];
+    
+        deleteProduct($mysqli, $id);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +23,7 @@
         <link href="css/merchandisingmanagement.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>
         <script src="merchandisingmanagement/addmerch.js"></script>
+        <script src="controller/verify.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -48,8 +56,8 @@
                                             <td>".$product['idProduct']."</td>
                                             <td>".$product['title']."</td>
                                             <td>".$product['price']."</td>
-                                            <td><a class='icono nohover' href=''><img src='images/lapiz.png' alt='Modificar'></a></td>
-                                            <td><a class='icono nohover' href=''><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
+                                            <td><a class='icono nohover' href='modifymerchandising.php?id=".$product['idProduct']."'><img src='images/lapiz.png' alt='Modificar'></a></td>
+                                            <td><a class='icono nohover' onclick='verifyDeleteProductMerchandising(".$product['idProduct'].")'><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
                                             </tr>";
                                         }
                                 }

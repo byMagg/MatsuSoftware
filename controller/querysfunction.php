@@ -60,8 +60,23 @@ function insertToProduct($mysqli, $title, $descrip, $price, $sumRating, $numComm
     return $resultado;
 }
 
+function deleteProduct($mysqli, $id){
+    $resultado = $mysqli->query("DELETE FROM product WHERE idProduct='".$id."'");
+    return $resultado;
+}
+
+function setNewInformationToProduct($mysqli, $id, $title, $descrip, $price, $photoLink, $purchaseLink, $trailerLink, $requirements, $kind){
+    $resultado = $mysqli->query("UPDATE product SET title = '".$title."', descrip = '".$descrip."', price = '".$price."', photoLink= '".$photoLink."', purchaseLink = '".$purchaseLink."', trailerLink = '".$trailerLink."', requirements = '".$requirements."', kind = '".$kind."' WHERE idProduct = '".$id."' ");
+    return $resultado;
+}
+
 function getProduct($mysqli){
     $resultado = $mysqli->query("SELECT * FROM product");
+    return $resultado;
+}
+
+function getProductUsingId($mysqli, $id){
+    $resultado = $mysqli->query("SELECT * FROM product WHERE idProduct = $id");
     return $resultado;
 }
 

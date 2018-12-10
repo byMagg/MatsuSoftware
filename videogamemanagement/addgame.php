@@ -10,7 +10,7 @@
     $linktrailer = $_POST['linktrailer'];
     $description = $_POST['description'];
 
-    $insert = insertToProduct($mysqli, $titulo, $description, $price, 0, 0, $linkphoto, $linkpurchase, $linktrailer, $requisito, "game");
+    $insert = insertToProduct($mysqli, $titulo, $description, $price, 0, 0, $linkphoto, $linkpurchase, $linktrailer, $requisito, "game", NULL);
 
     if($insert) {
         echo json_encode(array('error' => false));
