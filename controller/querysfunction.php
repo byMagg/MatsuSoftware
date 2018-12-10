@@ -50,13 +50,24 @@ function insertToUsers($mysqli, $nick, $email, $contrasena, $provincia, $municip
     return $resultado;
 }
 
-function insertToProduct($mysqli, $title, $descrip, $price, $sumRating, $numComments, $photoLink, $purchaseLink, $trailerLink, $requirements, $category){
-    $resultado = $mysqli->query("INSERT INTO product(title,descrip,price,sumRating,numComments,photoLink,purchaseLink,trailerLink,requirements,category) VALUES ('".$title."', '".$descrip."', '".$price."','".$sumRating."','".$numComments."','".$photoLink."', '".$purchaseLink."', '".$trailerLink."', '".$requirements."', '".$category."')");
-    return $resultado;
-}
-
 function deleteUsers($mysqli, $id){
     $resultado = $mysqli->query("DELETE FROM user WHERE idUser='".$id."'");
     return $resultado;
 }
+
+function insertToProduct($mysqli, $title, $descrip, $price, $sumRating, $numComments, $photoLink, $purchaseLink, $trailerLink, $requirements, $category, $kind){
+    $resultado = $mysqli->query("INSERT INTO product(title,descrip,price,sumRating,numComments,photoLink,purchaseLink,trailerLink,requirements,category,kind) VALUES ('".$title."', '".$descrip."', '".$price."','".$sumRating."','".$numComments."','".$photoLink."', '".$purchaseLink."', '".$trailerLink."', '".$requirements."', '".$category."', '".$kind."')");
+    return $resultado;
+}
+
+function getProduct($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM product");
+    return $resultado;
+}
+
+function getCategory($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM category");
+    return $resultado;
+}
+
 ?>

@@ -1,6 +1,7 @@
 <?php
     require 'conexiondb/conexion.php';
     require 'controller/generalfunction.php';
+    require 'controller/querysfunction.php';
     session_start();
     timeLogOut();
     security(0);
@@ -39,69 +40,20 @@
                                 <th></th>
                             </tr>
 
-                            <tr>
-                                <td>1</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>2</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>4</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>5</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>6</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>7</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>8</th>
-                                <td>lorem ipsum</td>
-                                <td>0.0</td>
-                                <td><a class="icono nohover" href=""><img src="images/lapiz.png" alt="Modificar"></a></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
+                            <?php
+                                $resultado = getProduct($mysqli);
+                                while($product = $resultado->fetch_assoc()){
+                                    if($product['category'] == 'merchandising'){
+                                        echo "<tr>
+                                            <td>".$product['idProduct']."</td>
+                                            <td>".$product['title']."</td>
+                                            <td>".$product['price']."</td>
+                                            <td><a class='icono nohover' href=''><img src='images/lapiz.png' alt='Modificar'></a></td>
+                                            <td><a class='icono nohover' href=''><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
+                                            </tr>";
+                                        }
+                                }
+                            ?>  
                         </table>
                     </div> 
                     
@@ -133,6 +85,17 @@
                             <label>Link de foto:</label>
                             <input type="text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de la imagen" required>
 
+                            <label class="etiqueta">Categoria:<br/></label>
+                            <select name="kind" required>
+                                <option value='' disabled selected>Seleccione una categoria</option>
+                                <?php
+                                    $resultado = getCategory($mysqli);
+                                    while($cat = $resultado->fetch_assoc()){
+                                        echo "<option value='".$cat['kind']."'>".$cat['kind']."</option>";
+                                    }
+                                ?>
+                            </select>
+
                             <button class="button" type="submit">Añadir</button>
                         </form>
                     </div>
@@ -142,4 +105,5 @@
         <!-- FOOTER -->
         <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>

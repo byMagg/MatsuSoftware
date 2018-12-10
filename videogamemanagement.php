@@ -1,6 +1,7 @@
 <?php
     require 'conexiondb/conexion.php';
     require 'controller/generalfunction.php';
+    require 'controller/querysfunction.php';
     session_start();
     timeLogOut();
     security(0);
@@ -34,74 +35,25 @@
                             <tr>
                                 <th id="id">#</th>
                                 <th class="title">Título</th>
-                                <th class="title">Descripción</th>
+                                <th class="title">Precio</th>
                                 <th></th>
                                 <th></th>
                             </tr>
 
-                            <tr>
-                                <td>1</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>2</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>4</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>5</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>6</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>7</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>8</th>
-                                <td>lorem ipsum</td>
-                                <td>lorem ipsum</td>
-                                <td><img class="edit" src="images/lapiz.png" alt="Editar"></td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
+                            <?php
+                                $resultado = getProduct($mysqli);
+                                while($product = $resultado->fetch_assoc()){
+                                    if($product['category'] == 'game'){
+                                        echo "<tr>
+                                            <td>".$product['idProduct']."</td>
+                                            <td>".$product['title']."</td>
+                                            <td>".$product['price']."</td>
+                                            <td><a class='icono nohover' href=''><img src='images/lapiz.png' alt='Modificar'></a></td>
+                                            <td><a class='icono nohover' href=''><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
+                                            </tr>";
+                                    }
+                                }
+                            ?> 
                         </table>
                     </div> 
                     
@@ -145,4 +97,5 @@
         <!-- FOOTER -->
         <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>
