@@ -1,0 +1,112 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    display: block;
+    width: 100%;
+    padding: 130px 0 150px 0;
+}
+
+#cabecera {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+#cuadricula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tabla>table {
+    background: white;
+    color: black;
+    border-spacing: 0;
+    overflow: auto;
+    width: 90vw;
+    max-width: 477px;
+    table-layout: auto;
+    text-align: center;
+    display: table-caption;
+}
+
+#comment {
+    min-width: 400px;
+}
+
+#icon2 {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+#volver {
+    width: 24px;
+    height: 24px;
+    margin: 13px;
+}
+
+.delete {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+td {
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+}
+
+tr:nth-child(even) {
+    background: #FFF
+}
+
+tr:nth-child(odd) {
+    background: #CCC
+}
+
+@media only screen and (max-height: 560px) {
+    #content {
+        padding: 150px 0 150px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        #content {
+            padding: 135px 30px 150px 30px;
+        }
+    }
+}
+
+/* MOVIL */
+@media only screen and (max-width: 1000px) {
+
+    #content {
+        padding: 130px 0 150px 0;
+        height: 100%;
+    }
+
+    .content {
+        display: block;
+    }
+
+    #cabecera h1 {
+        font-size: 25px;
+        width: 56vw;
+    }
+
+    #cuadricula {
+        display: block;
+        padding-top: 40px;
+    }
+
+    #tabla{
+        display: grid;
+        justify-content: center;
+    }
+}
