@@ -30,19 +30,18 @@ function verifyDeleteProductMerchandising(id){
         window.location="merchandisingmanagement.php";
 }
 
-<<<<<<< HEAD
 function verifyDeleteNewsletter(id){
     var respuesta=confirm("¿Desea eliminar el newsletter?");
     if(respuesta==true)
         window.location="newslettermanagement.php?id=" + id;
     else
         window.location="newslettermanagement.php";
-=======
+}
+
 function verifyDeleteProject(id){
     var respuesta=confirm("¿Desea eliminar el proyecto?");
     if(respuesta==true)
         window.location="projectmanagement.php?id=" + id;
     else
         window.location="projectmanagement.php";
->>>>>>> 1007da96567e0c0d66d1cebc9402528fdb83103c
 }
