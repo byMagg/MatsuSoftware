@@ -1,9 +1,17 @@
 <?php
     require 'conexiondb/conexion.php';
     require 'controller/generalfunction.php';
+    require 'controller/querysfunction.php';
     session_start();
     timeLogOut();
     security(0);
+
+    if(isset($_GET['id']) && ($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2)){
+
+        $id= $_GET['id'];
+    
+        deleteProject($mysqli, $id);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +21,9 @@
         <title>Gestion de proyectos - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/projectmanagement.css" type="text/css" rel="stylesheet">
+        <script src="controller/jquery.js"></script>
+        <script src="projectmanagement/addproject.js"></script>
+        <script src="controller/verify.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -35,67 +46,38 @@
                                 <th></th>
                             </tr>
 
-                            <tr>
-                                <td>1</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>2</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>4</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>5</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>6</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>7</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>8</th>
-                                <td>lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
+                            <?php
+                                $resultado = getProjects($mysqli);
+                                while($product = $resultado->fetch_assoc()){
+                                    echo "<tr>
+                                        <td>".$product['idProject']."</td>
+                                        <td>".$product['title']."</td>
+                                        <td><a class='icono nohover' onclick='verifyDeleteProject(".$product['idProject'].")'><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
+                                        </tr>";
+                                }
+                            ?>
                         </table>
                     </div> 
                     
                     <div id="lineavertical"></div>
 
+                    <div class="error general">
+                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+                    </div>
+                    
+                    <div class="success">
+                        <span>Proyecto registrado correctamente.</span>
+                    </div>
+
                     <div id="form">
                         <h1>Añadir proyecto:</h1>
-                        <form id="newslettermanagement" action="">
+                        <form id="projectmanagement" action="">
                             <label>Título*:</label>
-                            <input type="text" name="tittle" placeholder=" Título" required/>
-                            <label>Link del proyecto*:</label>
-                            <input type="text" name="link" placeholder=" Link" required/>
+                            <input type="text" name="title" placeholder=" Título" required/>
+                            <label>Link de la foto*:</label>
+                            <input type="text" name="photoLink" placeholder=" Link de la foto" required/>
                             <label>Descripción*:</label>
-                            <textarea type="msg" name="msg" placeholder=" Introduce una descripcion" required></textarea>
+                            <textarea type="msg" name="descrip" placeholder=" Introduce una descripcion" required></textarea>
                             <button class="button" type="submit">Añadir</button>
                         </form>
                     </div>
@@ -105,4 +87,5 @@
         <!-- FOOTER -->
         <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>

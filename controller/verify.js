@@ -29,3 +29,11 @@ function verifyDeleteProductMerchandising(id){
     else
         window.location="merchandisingmanagement.php";
 }
+
+function verifyDeleteProject(id){
+    var respuesta=confirm("¿Desea eliminar el proyecto?");
+    if(respuesta==true)
+        window.location="projectmanagement.php?id=" + id;
+    else
+        window.location="projectmanagement.php";
+}

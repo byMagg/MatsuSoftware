@@ -60,8 +60,18 @@ function insertToProduct($mysqli, $title, $descrip, $price, $sumRating, $numComm
     return $resultado;
 }
 
+function insertToProject($mysqli, $title, $descrip, $photoLink){
+    $resultado = $mysqli->query("INSERT INTO project(title,photoLink,descrip) VALUES ('".$title."', '".$photoLink."', '".$descrip."')");
+    return $resultado;
+}
+
 function deleteProduct($mysqli, $id){
     $resultado = $mysqli->query("DELETE FROM product WHERE idProduct='".$id."'");
+    return $resultado;
+}
+
+function deleteProject($mysqli, $id){
+    $resultado = $mysqli->query("DELETE FROM project WHERE idProject='".$id."'");
     return $resultado;
 }
 
@@ -72,6 +82,11 @@ function setNewInformationToProduct($mysqli, $id, $title, $descrip, $price, $pho
 
 function getProduct($mysqli){
     $resultado = $mysqli->query("SELECT * FROM product");
+    return $resultado;
+}
+
+function getProjects($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM project");
     return $resultado;
 }
 
