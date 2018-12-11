@@ -55,6 +55,11 @@ function deleteUsers($mysqli, $id){
     return $resultado;
 }
 
+function getEmails($mysqli){
+    $resultado = $mysqli->query("SELECT email FROM user");
+    return $resultado;
+}
+
 function insertToProduct($mysqli, $title, $descrip, $price, $sumRating, $numComments, $photoLink, $purchaseLink, $trailerLink, $requirements, $category, $kind){
     $resultado = $mysqli->query("INSERT INTO product(title,descrip,price,sumRating,numComments,photoLink,purchaseLink,trailerLink,requirements,category,kind) VALUES ('".$title."', '".$descrip."', '".$price."','".$sumRating."','".$numComments."','".$photoLink."', '".$purchaseLink."', '".$trailerLink."', '".$requirements."', '".$category."', '".$kind."')");
     return $resultado;
@@ -82,6 +87,21 @@ function getProductUsingId($mysqli, $id){
 
 function getCategory($mysqli){
     $resultado = $mysqli->query("SELECT * FROM category");
+    return $resultado;
+}
+
+function insertToNewsletter($mysqli, $comment, $publishDate){
+    $resultado = $mysqli->query("INSERT INTO newsletter(comment, publishDate) VALUES ('".$comment."', '".$publishDate."')");
+    return $resultado;
+}
+
+function getNewsletter($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM newsletter");
+    return $resultado;
+}
+
+function deleteNewsletter($mysqli, $id){
+    $resultado = $mysqli->query("DELETE FROM newsletter WHERE idNewsletter='".$id."'");
     return $resultado;
 }
 

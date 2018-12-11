@@ -29,3 +29,11 @@ function verifyDeleteProductMerchandising(id){
     else
         window.location="merchandisingmanagement.php";
 }
+
+function verifyDeleteNewsletter(id){
+    var respuesta=confirm("¿Desea eliminar el newsletter?");
+    if(respuesta==true)
+        window.location="newslettermanagement.php?id=" + id;
+    else
+        window.location="newslettermanagement.php";
+}

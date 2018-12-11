@@ -70,4 +70,25 @@ function sendEmailContact($name, $surname, $email, $msg){
 
     return array('resultado' => mail($email, $asunto, $mensaje, $cabecera));
 }
+
+function sendEmailNews($email, $news){ 
+    $asunto = "Nuevo newsletter de MatsuSoftware";
+
+    $mensaje = '
+                <html>
+                <head>
+                <title>Nuevo newsletter de MatsuSoftware</title>
+                </head>
+                <h1>Nuevo newsletter de MatsuSoftware</h1>
+                <p><br>'.$news.'<br></p>
+                </body>
+                </html>
+                ';
+
+    $cabecera  = 'MIME-Version: 1.0' . "\r\n";
+    $cabecera .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $cabecera .= 'From: MatsuSoftware <not-reply@matsusoftware.tk>' . "\r\n";
+
+    return array('resultado' => mail($email, $asunto, $mensaje, $cabecera));
+}
 ?>
