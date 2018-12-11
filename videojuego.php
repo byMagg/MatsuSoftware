@@ -29,8 +29,8 @@
                             <h3>Requisitos</h3>
                             <p>Donec velit lectus, venenatis sed consequat sodales, tincidunt vel nunc. Aliquam et molestie lectus. Nulla non libero nulla. Integer eget lacinia nisl.</p>
                         </div>
-                    </div>
-                    <iframe src="https://www.youtube.com/embed/GM7_we-jpfc?rel=0&autoplay=1&mute=1&loop=1&playlist=GM7_we-jpfc"></iframe>
+                    </div id="video">
+                        <iframe src="https://www.youtube.com/embed/GM7_we-jpfc?rel=0&autoplay=1&mute=1&loop=1&playlist=GM7_we-jpfc"></iframe>
                     </div>
                 <div id="linea"></div>
                 <div id="comentarios">

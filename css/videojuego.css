@@ -1,5 +1,5 @@
 #content {
-    padding-top: 110px;
+    padding-top: 140px;
     display: inline-flex;
     width: 100%;
     justify-content: center;
@@ -30,9 +30,9 @@
 
 iframe {
     border: 1px solid white;
-    width: 60vw;
-    height: 350px;
-    max-width: 620px;
+    width: 40vw; 
+    height: 22.5vw; /* 100/56.25 = 560/315 = 1.778 */
+    background:black;  
 }
 
 .button {
@@ -117,7 +117,6 @@ iframe {
 
     #cabecera {
         width: 90%;
-        display: block;
     }
 
     .estrella {
@@ -130,16 +129,10 @@ iframe {
         width: 90%;
     }
 
-    #comentarios {
-        margin: 0 auto;
-        width: 90%;
-        display: block;
-    }
-
     #puntuacion {
-        position: relative;
-        right: 0px;
-        top: 335px;
+        position: absolute;
+        left: 0px;
+        top: 445px;
     }
 
     .info {
@@ -148,6 +141,7 @@ iframe {
 
     iframe {
         width: 90vw;
+        height: 50.625vw;
         margin-top: 150px;
         max-width: 1000px;
     }
@@ -189,20 +183,17 @@ iframe {
             justify-content: center;
         }
 
-        #cabecera {
-            display: block;
-        }
-
         #cabecera h1 {
             margin: 20px auto;
             text-align: center;
         }
 
         #puntuacion {
-            position: relative;
+            position: absolute;
             display: flex;
             justify-content: center;
-            top: 300px;
+            top: 400px;
+            width: 100%;
         }
 
         #descripcion {
@@ -212,6 +203,13 @@ iframe {
 
         .button {
             margin-top: 150px;
+        }
+        @media only screen and (max-width: 580px) {
+            #comentarios {
+                margin: 0 auto;
+                width: 90%;
+                display: block;
+            }
         }
     }
 }
