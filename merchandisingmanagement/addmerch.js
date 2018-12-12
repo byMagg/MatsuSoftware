@@ -14,7 +14,7 @@ jQuery(document).on('submit','#merchandisingmanagement',function(event){
         if(!respuesta.error){
             $('.success').slideDown('slow');
             setTimeout(function(){
-                $('.success').slideUp('slow');
+                location.href ="merchandisingmanagement.php";
             }, 3000);
         }else{
             $('.general').slideDown('slow');
