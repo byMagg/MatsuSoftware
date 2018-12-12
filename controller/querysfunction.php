@@ -110,6 +110,21 @@ function insertToNewsletter($mysqli, $comment, $publishDate){
     return $resultado;
 }
 
+function getCommentsNotValidated($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM comment WHERE validated = 0");
+    return $resultado;
+}
+
+function getUserOfComment($mysqli, $comment){
+    $resultado = $mysqli->query("SELECT user.nick FROM user inner join comment on user.idUser = comment.idUser WHERE idComment = $comment");
+    return $resultado;
+}
+
+function getProductOfComment($mysqli, $comment){
+    $resultado = $mysqli->query("SELECT product.title FROM product inner join comment on product.idProduct = comment.idProduct WHERE idComment = $comment");
+    return $resultado;
+}
+
 function getNewsletter($mysqli){
     $resultado = $mysqli->query("SELECT * FROM newsletter");
     return $resultado;
@@ -117,6 +132,27 @@ function getNewsletter($mysqli){
 
 function deleteNewsletter($mysqli, $id){
     $resultado = $mysqli->query("DELETE FROM newsletter WHERE idNewsletter='".$id."'");
+    return $resultado;
+}
+
+function rejectComment($mysqli, $id){
+    $resultado = $mysqli->query("DELETE FROM comment WHERE idComment='".$id."'");
+    return $resultado;
+}
+
+function validateComment($mysqli, $id){
+    $resultado = $mysqli->query("UPDATE comment SET validated = 1 WHERE idComment='".$id."'");
+    if($resultado){
+        $resultado1 = $mysqli->query("SELECT idProduct, sumRating, numComments FROM product inner join comment on product.idProduct = comment.idProduct where comment.idComment = $id");
+        $product = $resultado1->fetch_assoc();
+
+        $resultado2 = $mysqli->query("SELECT rating FROM comment WHERE idComment = $id");
+        $rating = $resultado1->fetch_assoc();
+
+        '".$kind."'
+
+        $resultado3 = $mysqli->query("UPDATE product SET rating='".$product['rating'] + $rating['rating']."', numComments='".$product['numComments'] + 1"' WHERE idProduct ='".$product['idProduct']"'");
+    }
     return $resultado;
 }
 

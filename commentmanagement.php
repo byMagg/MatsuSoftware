@@ -1,9 +1,23 @@
 <?php
     require 'conexiondb/conexion.php';
     require 'controller/generalfunction.php';
+    require 'controller/querysfunction.php';
     session_start();
     timeLogOut();
     security(0);
+
+    
+    if(isset($_GET['idComment']) && isset($_GET['validate']) && ($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2)){
+
+        $id= $_GET['idComment'];
+        $validate= $_GET['validate'];
+
+        if($validate == 0){
+            rejectComment($mysqli, $id);
+        }else{
+            validateComment($mysqli, $id);
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +27,7 @@
         <title>Gestion de comentarios - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/commentmanagement.css" type="text/css" rel="stylesheet">
+        <script src="controller/verify.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -32,56 +47,29 @@
                             <tr>
                                 <th id="id">#</th>
                                 <th id="comment">Comentario</th>
+                                <th id="product">Producto</th>
+                                <th id="user">Usuario</th>
+                                <th></th>
                                 <th></th>
                             </tr>
 
-                            <tr>
-                                <td>1</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>2</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>3</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>4</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>5</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>6</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>7</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
-
-                            <tr>
-                                <td>8</th>
-                                <td class="comentario">lorem ipsum</td>
-                                <td><img class="delete" src="images/eliminar.png" alt="Eliminar"></td>
-                            </tr>
+                            <?php
+                                $resultado = getCommentsNotValidated($mysqli);
+                                while($comment = $resultado->fetch_assoc()){
+                                    $resultado1 = getUserOfComment($mysqli, $comment['idComment']);
+                                    $user = $resultado1->fetch_assoc();
+                                    $resultado2 = getProductOfComment($mysqli, $comment['idComment']);
+                                    $product = $resultado2->fetch_assoc();
+                                    echo "<tr>
+                                        <td>".$comment['idComment']."</td>
+                                        <td>".$comment['opinion']."</td>
+                                        <td>".$product['title']."</td>
+                                        <td>".$user['nick']."</td>
+                                        <td><a class='icono nohover' onclick='verifyAcceptComment(".$comment['idComment'].")'><img class='validate' src='images/validate.png' alt='Validar'></a></td>
+                                        <td><a class='icono nohover' onclick='verifyDeleteComment(".$comment['idComment'].")'><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
+                                        </tr>";
+                                }
+                            ?>
                         </table>
                     </div> 
                     
@@ -91,4 +79,5 @@
         <!-- FOOTER -->
         <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>

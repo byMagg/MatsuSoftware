@@ -28,15 +28,23 @@
     color: black;
     border-spacing: 0;
     overflow: auto;
-    width: 90vw;
-    max-width: 477px;
+    width: 70vw;
+    /* max-width: 477px; */
     table-layout: auto;
     text-align: center;
-    display: table-caption;
+    display: inline-table;
 }
 
 #comment {
-    min-width: 400px;
+    min-width: 300px;
+}
+
+#product {
+    min-width: 200px;
+}
+
+#user {
+    min-width: 150px;
 }
 
 #icon2 {
@@ -52,6 +60,13 @@
 }
 
 .delete {
+    display: flex;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+}
+
+.validate {
     display: flex;
     align-items: center;
     width: 25px;

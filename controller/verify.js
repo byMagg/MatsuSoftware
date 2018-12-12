@@ -45,3 +45,19 @@ function verifyDeleteProject(id){
     else
         window.location="projectmanagement.php";
 }
+
+function verifyDeleteComment(id){
+    var respuesta=confirm("¿Desea eliminar el comentario?");
+    if(respuesta==true)
+        window.location="commentmanagement.php?idComment=" + id + "&validate=" + 0;
+    else
+        window.location="commentmanagement.php";
+}
+
+function verifyAcceptComment(id){
+    var respuesta=confirm("¿Desea validar el comentario?");
+    if(respuesta==true)
+        window.location="commentmanagement.php?idComment=" + id + "&validate=" + 1 ;
+    else
+        window.location="commentmanagement.php";
+}
