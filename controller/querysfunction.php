@@ -146,17 +146,27 @@ function rejectComment($mysqli, $id){
 }
 
 function validateComment($mysqli, $id){
-    $resultado = $mysqli->query("UPDATE comment SET validated = 1 WHERE idComment='".$id."'");
-    if($resultado){
-        $resultado1 = $mysqli->query("SELECT idProduct, sumRating, numComments FROM product inner join comment on product.idProduct = comment.idProduct where comment.idComment = $id");
-        $product = $resultado1->fetch_assoc();
+    $resultado = NULL;
 
-        $resultado2 = $mysqli->query("SELECT rating FROM comment WHERE idComment = $id");
-        $rating = $resultado1->fetch_assoc();
+    $resultado1 = $mysqli->query("SELECT product.idProduct, sumRating, numComments FROM product inner join comment on product.idProduct = comment.idProduct WHERE comment.idComment = $id");
+    $product = $resultado1->fetch_assoc();
 
-        '".$kind."'
+    $resultado2 = $mysqli->query("SELECT rating FROM comment WHERE idComment='".$id."'");
+    $rating = $resultado2->fetch_assoc();
 
-        $resultado3 = $mysqli->query("UPDATE product SET rating='".$product['rating'] + $rating['rating']."', numComments='".$product['numComments'] + 1"' WHERE idProduct ='".$product['idProduct']"'");
+    $resultado3 = $mysqli->query("SELECT validated FROM comment WHERE idComment='".$id."'");
+    $validated = $resultado3->fetch_assoc();
+
+    if($validated['validated'] == 0){
+        $sumRating = $product['sumRating'] + $rating['rating'];
+        $numComments = $product['numComments'] + 1;
+        $idProduct = $product['idProduct'];
+
+        $resultado4 = $mysqli->query("UPDATE product SET sumRating = '".$sumRating."', numComments = '".$numComments."' WHERE idProduct = '".$idProduct."'");
+
+        if($resultado4){
+            $resultado = $mysqli->query("UPDATE comment SET validated = 1 WHERE idComment='".$id."'");
+        }
     }
     return $resultado;
 }
