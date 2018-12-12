@@ -14,7 +14,7 @@ jQuery(document).on('submit','#newslettermanagement',function(event){
         if(!respuesta.error){
             $('.success').slideDown('slow');
             setTimeout(function(){
-                $('.success').slideUp('slow');
+                location.href ="newslettermanagement.php";
             }, 3000);
         }else{
             $('.general').slideDown('slow');

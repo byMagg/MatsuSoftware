@@ -131,7 +131,12 @@ function getNewsletter($mysqli){
 }
 
 function deleteNewsletter($mysqli, $id){
-    $resultado = $mysqli->query("DELETE FROM newsletter WHERE idNewsletter='".$id."'");
+    $resultado = $mysqli->query("DELETE FROM newsletter WHERE idNewsletter = $id");
+    return $resultado;
+}
+
+function getShoppinghistory($mysqli, $id, $orden){
+    $resultado = $mysqli->query("SELECT * FROM shoppinghistory WHERE idUser = $id ORDER BY purchaseDate $orden");
     return $resultado;
 }
 
