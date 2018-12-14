@@ -51,6 +51,9 @@ function insertToUsers($mysqli, $nick, $email, $contrasena, $provincia, $municip
 }
 
 function deleteUsers($mysqli, $id){
+    $resultado2 = $mysqli->query("DELETE FROM shoppinghistory WHERE idUser='".$id."'");
+    $resultado3 = $mysqli->query("DELETE FROM comment WHERE idUser='".$id."'");
+
     $resultado = $mysqli->query("DELETE FROM user WHERE idUser='".$id."'");
     return $resultado;
 }
@@ -71,6 +74,8 @@ function insertToProject($mysqli, $title, $descrip, $photoLink){
 }
 
 function deleteProduct($mysqli, $id){
+    $resultado2 = $mysqli->query("DELETE FROM comment WHERE idProduct='".$id."'");
+
     $resultado = $mysqli->query("DELETE FROM product WHERE idProduct='".$id."'");
     return $resultado;
 }

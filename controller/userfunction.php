@@ -16,7 +16,7 @@ function deleteUser($mysqli, $rol, $idBorrar, $idSesion){
     {
         header("Location: login.php");
     }else{
-        deleteUsers($mysqli, $idBorrar);
+        $res = deleteUsers($mysqli, $idBorrar);
         if($rol == 0){
             session_destroy();
             header("Location: login.php");
