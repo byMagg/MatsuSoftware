@@ -11,7 +11,7 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Modificar usuario - MatsuSoftware</title>
+        <title>Modificar videojuego - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/modify.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>

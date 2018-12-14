@@ -11,7 +11,7 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Modificar usuario - MatsuSoftware</title>
+        <title>Modificar merchandising - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/modify.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>
@@ -32,7 +32,7 @@
                     <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
                 </div>
                 <div class="success">
-                    <span>Videojuego modificado correctamente.</span>
+                    <span>Merchandising modificado correctamente.</span>
                 </div>
                 <div id="form">
                     <?php
@@ -60,11 +60,14 @@
 
                         <label class="etiqueta">Categoria:<br/></label>
                         <select name="kind" required>
-                            <option  value= <?php echo '"'.$product["kind"].'"'?> disabled selected> <?php echo $product["kind"] ?> </option>
                             <?php
                                 $resultado = getCategory($mysqli);
                                 while($cat = $resultado->fetch_assoc()){
-                                    echo "<option value='".$cat['kind']."'>".$cat['kind']."</option>";
+                                    if($cat['kind'] == $product["kind"]){
+                                        echo "<option value='".$cat['kind']."' selected>".$cat['kind']."</option>";
+                                    }else{
+                                        echo "<option value='".$cat['kind']."'>".$cat['kind']."</option>";
+                                    }
                                 }
                             ?>
                         </select>
