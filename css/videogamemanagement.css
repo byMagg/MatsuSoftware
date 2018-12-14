@@ -206,7 +206,13 @@ tr:nth-child(odd) {
         float: left;
     }
 
-    form{
-        width: 50px;
+    #form form{
+        display: inline-flex;
+    }
+
+    @media only screen and (max-width: 800px){
+        #form form{
+            display: grid;
+        }
     }
 }

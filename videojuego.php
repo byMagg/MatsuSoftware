@@ -17,8 +17,7 @@
                     <div id="cabecera">
                         <h1>TITULO</h1>
                         <div id="puntuacion">
-                                <div><h2>Puntuación</h2><h3>5/5</h3></div>
-                                <div class="estrella"><img src="images/estrella.png" alt="star"><img src="images/estrella.png" alt="star"><img src="images/estrella.png" alt="star"><img src="images/estrella.png" alt="star"><img src="images/estrella.png" alt="star"></div>
+                                <div><h2>Puntuación</h2><div class="estrella"><h3>5/5</h3><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""></div></div>  
                         </div>
                     </div>
                     <div id="principal">

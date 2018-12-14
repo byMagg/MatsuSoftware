@@ -1,5 +1,5 @@
 #content {
-    padding-top: 110px;
+    padding-top: 90px;
     display: inline-flex;
     width: 100%;
     justify-content: center;
@@ -29,7 +29,7 @@
 }
 
 .button {
-    padding: 10px 20px;
+    padding: 10px 50px;
 }
 
 .item {
@@ -49,6 +49,14 @@
 #puntuacion img {
     width: 20px;
     height: 20px;
+}
+
+#puntuacion h2{
+    margin: 0;
+}
+
+#puntuacion h3{
+    margin-right: 10px;
 }
 
 .estrella img {
@@ -98,11 +106,6 @@
     margin: 60px auto;
 }
 
-#seccion {
-    position: relative;
-    bottom: 50px;
-}
-
 @media only screen and (max-width: 1000px) {
 
     .content-inside {
@@ -132,7 +135,7 @@
     }
 
     .button {
-        margin-top: 140px;
+        margin-top: 130px;
     }
 
     #seccion {
@@ -141,11 +144,13 @@
 
     #puntuacion {
         left: 0;
-        top: 335px;
+        top: 370px;
     }
 
     #descripcion {
         margin: 0;
+        position: relative;
+        left: 10px;
     }
 
     .info {
@@ -155,7 +160,7 @@
     @media only screen and (max-width: 586px) {
         #principal {
             display: block;
-            padding-top: 100px;
+            padding-top: 50px;
         }
 
         #content {
@@ -176,7 +181,7 @@
         }
 
         #principal img {
-            margin: 0;
+            margin: 0 auto;
         }
 
         .item {
@@ -190,9 +195,13 @@
             justify-content: center;
         }
 
+        #seccion h2{
+            margin: 20px auto;
+        }
+
         #puntuacion {
             position: relative;
-            top: 290px;
+            top: 312px;
             display: flex;
             justify-content: center;
         }

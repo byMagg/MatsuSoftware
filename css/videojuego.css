@@ -58,6 +58,14 @@ iframe {
     height: 20px;
 }
 
+#puntuacion h2{
+    margin: 0;
+}
+
+#puntuacion h3{
+    margin-right: 10px;
+}
+
 .estrella img {
     width: 20px;
     height: 20px;
@@ -156,6 +164,10 @@ iframe {
 
     @media only screen and (max-width: 800px) {
 
+        #content{
+            padding-top: 100px;
+        }
+
         #principal {
             display: block;
         }
@@ -192,7 +204,7 @@ iframe {
             position: absolute;
             display: flex;
             justify-content: center;
-            top: 400px;
+            top: 375px;
             width: 100%;
         }
 
@@ -202,7 +214,7 @@ iframe {
         }
 
         .button {
-            margin-top: 150px;
+            margin-top: 110px;
         }
         @media only screen and (max-width: 580px) {
             #comentarios {

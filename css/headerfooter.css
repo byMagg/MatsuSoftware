@@ -98,7 +98,7 @@ a:hover {
     position: absolute;
     height: 100px;
     width: 50px;
-    left: 50px;
+    left: 42px;
     max-width: 75px;
     display: flex;
     align-items: center;
@@ -261,7 +261,7 @@ select {
     }
 
     #logofooter {
-        left: 40px;
+        left: 35px;
     }
 }
 
