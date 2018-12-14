@@ -24,7 +24,7 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
+                    <a class="nohover" href="merchandisingmanagement.php"><img id="volver"src="images/volver.png" alt="volver"></a>
                     <img id="user" src="images/merchan.png" alt="merch">
                     <h1>GESTIÓN DE MERCHANDISING</h1>
                 </div>
