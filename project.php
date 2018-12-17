@@ -1,3 +1,11 @@
+<?php
+    require 'conexiondb/conexion.php';
+    require 'controller/generalfunction.php';
+    require 'controller/querysfunction.php';
+    session_start();
+    timeLogOut();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -15,15 +23,20 @@
             <div class="content-inside">
                 <h1>PROYECTOS FUTUROS:</h1>
                 <div id="proyectos">
-                    <div class="item"><img src="images/paisaje.jpg" alt=""><h2>Lorem ipsum</h2><p>Fusce augue felis, bibendum in eleifend nec, egestas non justo. Nulla finibus interdum tortor. In hac habitasse platea dictumst. Aliquam erat volutpat. Integer sagittis sagittis ante eu convallis. In ipsum ante, sodales ac turpis in, laoreet tincidunt neque. Morbi hendrerit fermentum suscipit. Vestibulum et sem a libero viverra elementum. Sed ornare ante vel magna molestie porttitor.</p></div>
-                    <div class="linea"></div>
-                    <div class="item"><img src="images/paisaje.jpg" alt=""><h2>Lorem ipsum</h2><p>Fusce augue felis, bibendum in eleifend nec, egestas non justo. Nulla finibus interdum tortor. In hac habitasse platea dictumst. Aliquam erat volutpat. Integer sagittis sagittis ante eu convallis. In ipsum ante, sodales ac turpis in, laoreet tincidunt neque. Morbi hendrerit fermentum suscipit. Vestibulum et sem a libero viverra elementum. Sed ornare ante vel magna molestie porttitor.</p></div>
-                    <div class="linea"></div>
-                    <div class="item"><img src="images/paisaje.jpg" alt=""><h2>Lorem ipsum</h2><p>Fusce augue felis, bibendum in eleifend nec, egestas non justo. Nulla finibus interdum tortor. In hac habitasse platea dictumst. Aliquam erat volutpat. Integer sagittis sagittis ante eu convallis. In ipsum ante, sodales ac turpis in, laoreet tincidunt neque. Morbi hendrerit fermentum suscipit. Vestibulum et sem a libero viverra elementum. Sed ornare ante vel magna molestie porttitor.</p></div>
+                    <?php
+                        $resultado = getProjects($mysqli);
+                        while($project = $resultado->fetch_assoc()){
+                            echo "
+                            <div class='item'><img src=".$project['photoLink']." alt='Link de la foto'><h2>".$project['title']."</h2><p>".$project['descrip']."</p></div>
+                            <div class='linea'></div>
+                            ";
+                        }
+                    ?>
                 </div>
             </div>
         </div>
         <!-- FOOTER -->
         <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>
