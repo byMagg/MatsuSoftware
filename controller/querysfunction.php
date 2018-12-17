@@ -15,6 +15,16 @@ function getUsersUsingNick($mysqli, $nick){
     return $resultado;
 }
 
+function getVideogames($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'game'");
+    return $resultado;
+}
+
+function getMerchandising($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising'");
+    return $resultado;
+}
+
 function setRequest($mysqli, $request, $id){
     $resultado = $mysqli->query("UPDATE user SET request = ".$request." WHERE idUser = '".$id."'");
     return $resultado;
