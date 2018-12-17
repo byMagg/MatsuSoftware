@@ -47,7 +47,7 @@
                             </tr>
 
                             <?php
-                                $resultado = getNewsletter($mysqli);
+                                $resultado = getNewsletter($mysqli, "DESC");
                                 while($news = $resultado->fetch_assoc()){
                                     echo "<tr>
                                           <td>".$news['idNewsletter']."</td>

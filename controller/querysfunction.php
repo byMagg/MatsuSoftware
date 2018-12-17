@@ -140,8 +140,8 @@ function getProductOfComment($mysqli, $comment){
     return $resultado;
 }
 
-function getNewsletter($mysqli){
-    $resultado = $mysqli->query("SELECT * FROM newsletter");
+function getNewsletter($mysqli, $orden){
+    $resultado = $mysqli->query("SELECT * FROM newsletter ORDER BY publishDate $orden");
     return $resultado;
 }
 

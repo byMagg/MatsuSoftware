@@ -1,5 +1,15 @@
-<!DOCTYPE html>
+<?php
+    require 'conexiondb/conexion.php';
+    require 'controller/querysfunction.php';
 
+    if(isset($_GET['orden'])){
+        $resultado = getNewsletter($mysqli, $_GET['orden']);
+    }else{
+        $resultado = getNewsletter($mysqli, 'DESC');
+    }
+?>
+
+<!DOCTYPE html>
 <html lang="es">
     <head>
         <!-- Titulo -->
@@ -19,26 +29,27 @@
                 </div>
 
                 <div id="cuadricula">                
-                    <select name="orden" required>
-                        <option value='asc'>Orden Ascendente</option>
-                        <option value='desc'>Orden Descendente</option>
-                    </select>
-                </div>
+                    <form id="" action="">
+                        <label>Ordenación:</label>
+                        <select name="orden" required>
+                            <option value='DESC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'DESC') echo 'selected'; ?>>Más recientes primero</option>
+                            <option value='ASC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'ASC') echo 'selected'; ?>>Más antiguo primero</option>
+                        </select>
+                        <input type="submit" value="Actualizar"/>
+                    </form>
                 
-                <div id="tabla">
-                    <table>
-                        <tr>
-                            <td><img class="icono" src="images/paisaje.jpg" alt="Usuario"></td>
-                            <td><h4 class="fecha">18/11/2018</h4><p>Vestibulum commodo sed sem non pellentesque. In arcu metus, efficitur eu velit vel, imperdiet interdum magna. Praesent mollis arcu felis. Integer scelerisque tortor eu vulputate convallis. Morbi vestibulum viverra neque, a pulvinar elit dictum vel. Etiam elementum augue ac lacinia blandit. Donec sollicitudin tellus lacus, at ullamcorper tellus tempor vel. Nullam feugiat suscipit condimentum.</p></td>
-                        </tr>
-
-                        <tr>
-                            <td><img class="icono" src="images/paisaje.jpg" alt="Usuario"></td>
-                            <td><h4 class="fecha">18/11/2018</h4><p>Vestibulum commodo sed sem non pellentesque. In arcu metus, efficitur eu velit vel, imperdiet interdum magna. Praesent mollis arcu felis. Integer scelerisque tortor eu vulputate convallis. Morbi vestibulum viverra neque, a pulvinar elit dictum vel. Etiam elementum augue ac lacinia blandit. Donec sollicitudin tellus lacus, at ullamcorper tellus tempor vel. Nullam feugiat suscipit condimentum.</p></td>
-                        </tr>
-                    </table>
+                    <div id="tabla">
+                        <table>
+                            <?php
+                                while($news = $resultado->fetch_assoc()){
+                                    echo "<tr>
+                                          <td><h4 class='fecha'>".$news['publishDate']."</h4><p>".$news['comment']."</p></td>
+                                          </tr>";   
+                                }
+                            ?>
+                        </table>
+                    </div>
                 </div>
-
             </div>
         </div>
         <!-- FOOTER -->
