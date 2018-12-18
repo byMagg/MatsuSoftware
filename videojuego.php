@@ -58,7 +58,7 @@
                                     }
                                     echo '</div></div>';
                                 }else{
-                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""><img src="images/estrella.png" alt=""></div></div> ';
+                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""></div></div> ';
                                 }
                             ?>
                         </div>
