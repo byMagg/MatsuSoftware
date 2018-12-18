@@ -133,7 +133,7 @@ function getCategory($mysqli){
 }
 
 function insertToNewsletter($mysqli, $comment, $publishDate){
-    $resultado = $mysqli->query('INSERT INTO newsletter(comment, publishDate) VALUES ("'.$comment.'", "'.$publishDate.'")');
+    $resultado = $mysqli->query("INSERT INTO newsletter(comment, publishDate) VALUES ('".$comment."', '".$publishDate."')");
     return $resultado;
 }
 
