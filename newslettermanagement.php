@@ -73,7 +73,7 @@
                         <h1>Añadir newsletter:</h1>
                         <form id="newslettermanagement" action="">
                             <label>Introduce el nuevo comentario:</label>
-                            <textarea type="msg" name="msg" placeholder=" Introduce el comentario" required></textarea>
+                            <textarea type="msg" name="msg" max-length="498" placeholder=" Introduce el comentario" required></textarea>
                             <label><input type="checkbox" name="send" value="Yes">Enviár a través de correo a todos los usuarios</label>
                             <button class="button" type="submit">Añadir</button>
                         </form>
