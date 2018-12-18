@@ -163,7 +163,7 @@ function getShoppinghistory($mysqli, $id, $orden){
 }
 
 function setShoppinghistory($mysqli, $idUser, $title, $price, $purchaseDate){
-    $resultado = $mysqli->query("INSERT INTO shoppinghistory(idUser,title,price, purchasedate) VALUES ('".$idUser."', '".$title."', '".$price."', '".$purchaseDate."')");
+    $resultado = $mysqli->query("INSERT INTO shoppinghistory(idUser,title, price, purchasedate) VALUES ('".$idUser."', '".$title."', '".$price."', '".$purchaseDate."')");
     return $resultado;
 }
 

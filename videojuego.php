@@ -7,7 +7,7 @@
     timeLogOut();
 
     if(isset($_GET['id'])){
-        $resultado = getVideogamesUsingId($mysqli, $_GET['id']);
+        $resultado = getProductUsingId($mysqli, $_GET['id']);
         $resultado2 = getCommentsByProduct($mysqli, $_GET['id']);
 
         $videogame = $resultado->fetch_assoc();
