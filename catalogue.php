@@ -54,7 +54,7 @@
                                     ?>
                                 </select>
                                 <button class="button" type="submit">Actualizar</button>
-                            <form>
+                            </form>
                             <?php
                                 
                                 while($product = $merch->fetch_assoc()){
