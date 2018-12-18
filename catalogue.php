@@ -28,7 +28,7 @@
                                 $resultado = getVideogames($mysqli);
                                 while($product = $resultado->fetch_assoc()){
                                     echo "
-                                    <div class='item'><a class='nohover' href='videojuego.php?id='".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>- Precio: ".$product['price']." €</h4></div></div></a>
+                                    <div class='item'><a class='nohover' href='videojuego.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>- Precio: ".$product['price']." €</h4></div></div></a>
                                     ";
                                 }
                             ?>
@@ -39,7 +39,7 @@
                                 $resultado = getMerchandising($mysqli);
                                 while($product = $resultado->fetch_assoc()){
                                     echo "
-                                    <div class='item'><a class='nohover' href='merchandising.php?id='".$product['idProduct']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>- Precio: ".$product['price']." €</h4></div></div></a>
+                                    <div class='item'><a class='nohover' href='merchandising.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>- Precio: ".$product['price']." €</h4></div></div></a>
                                     ";
                                 }
                             ?>
@@ -50,4 +50,5 @@
         <!-- FOOTER -->
         <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>

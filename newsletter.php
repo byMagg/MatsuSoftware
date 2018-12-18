@@ -55,4 +55,5 @@
         <!-- FOOTER -->
         <?php require "views/footer.php"; ?>
     </body>
+    <?php $mysqli->close(); ?>
 </html>

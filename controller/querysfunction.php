@@ -20,6 +20,11 @@ function getVideogames($mysqli){
     return $resultado;
 }
 
+function getVideogamesUsingId($mysqli, $id){
+    $resultado = $mysqli->query("SELECT * FROM product WHERE idProduct = $id");
+    return $resultado;
+}
+
 function getMerchandising($mysqli){
     $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising'");
     return $resultado;
@@ -63,6 +68,7 @@ function insertToUsers($mysqli, $nick, $email, $contrasena, $provincia, $municip
 function deleteUsers($mysqli, $id){
     $resultado2 = $mysqli->query("DELETE FROM shoppinghistory WHERE idUser='".$id."'");
     $resultado3 = $mysqli->query("DELETE FROM comment WHERE idUser='".$id."'");
+    $resultado4 = $mysqli->query("DELETE FROM shoppingerelations WHERE idUser='".$id."'");
 
     $resultado = $mysqli->query("DELETE FROM user WHERE idUser='".$id."'");
     return $resultado;
@@ -85,6 +91,7 @@ function insertToProject($mysqli, $title, $descrip, $photoLink){
 
 function deleteProduct($mysqli, $id){
     $resultado2 = $mysqli->query("DELETE FROM comment WHERE idProduct='".$id."'");
+    $resultado3 = $mysqli->query("DELETE FROM shoppingerelations WHERE idProduct='".$id."'");
 
     $resultado = $mysqli->query("DELETE FROM product WHERE idProduct='".$id."'");
     return $resultado;
@@ -155,6 +162,16 @@ function getShoppinghistory($mysqli, $id, $orden){
     return $resultado;
 }
 
+function setShoppinghistory($mysqli, $idUser, $title, $price, $purchaseDate){
+    $resultado = $mysqli->query("INSERT INTO shoppinghistory(idUser,title,price, purchasedate) VALUES ('".$idUser."', '".$title."', '".$price."', '".$purchaseDate."')");
+    return $resultado;
+}
+
+function setShoppingrelations($mysqli, $idUser, $idProduct){
+    $resultado = $mysqli->query("INSERT INTO shoppingrelations(idUser, idProduct) VALUES ('".$idUser."', '".$idProduct."')");
+    return $resultado;
+}
+
 function rejectComment($mysqli, $id){
     $resultado = $mysqli->query("DELETE FROM comment WHERE idComment='".$id."'");
     return $resultado;
@@ -184,6 +201,60 @@ function validateComment($mysqli, $id){
         }
     }
     return $resultado;
+}
+
+function getCommentsByProduct($mysqli, $idProduct){
+    $resultado = $mysqli->query("SELECT * FROM comment WHERE idProduct = $idProduct AND validated = 1");
+    return $resultado;
+}
+
+function isBought($mysqli, $idUser, $idProduct){
+    $resultado = $mysqli->query("SELECT * FROM shoppingrelations WHERE idUser = $idUser AND idProduct = $idProduct");
+
+    if($resultado->num_rows == 1){
+        return TRUE;
+    }else{
+        return FALSE;
+    }
+}
+
+function isCommented($mysqli, $idUser, $idProduct){
+    $resultado = $mysqli->query("SELECT * FROM comment WHERE idUser = $idUser AND idProduct = $idProduct");
+
+    if($resultado->num_rows == 1){
+        return TRUE;
+    }else{
+        return FALSE;
+    }
+}
+
+function getComment($mysqli, $idUser, $idProduct){
+    $resultado = $mysqli->query("SELECT opinion, rating FROM comment WHERE idUser = $idUser AND idProduct = $idProduct");
+    return $resultado;
+}
+
+function addComment($mysqli, $idUser, $opinion, $rating, $validated, $idProduct){
+    $resultado = $mysqli->query("INSERT INTO comment(idUser, opinion, rating, validated, idProduct) VALUES ('".$idUser."', '".$opinion."', '".$rating."', '".$validated."', '".$idProduct."')");
+    return $resultado;
+}
+
+function modifyComment($mysqli, $idUser, $opinion, $rating, $validated, $idProduct){
+    $resultado = getComment($mysqli, $idUser, $idProduct);
+    $resultado = $resultado->fetch_assoc();
+    $oldRating = $resultado['rating'];
+
+    $resultado2 = getProductUsingId($mysqli, $idProduct);
+    $resultado2 = $resultado2->fetch_assoc();
+    $oldNumComments = $resultado2['numComments'];
+    $oldRatingProduct = $resultado2['sumRating'];
+
+    $oldRatingProduct = $oldRatingProduct - $oldRating;
+    $oldNumComments = $oldNumComments - 1;
+
+    $resultado3 = $mysqli->query("UPDATE product SET sumRating = '".$oldRatingProduct."', numComments = '".$oldNumComments."' WHERE idProduct = '".$idProduct."' ");
+
+    $resultado4 = $mysqli->query("UPDATE comment SET opinion = '".$opinion."', rating = '".$rating."', validated = '".$validated."' WHERE idProduct = '".$idProduct."' AND idUser = '".$idUser."' ");
+    return $resultado4;
 }
 
 ?>
