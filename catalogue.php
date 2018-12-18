@@ -1,9 +1,16 @@
 <?php
     require 'conexiondb/conexion.php';
-    require 'controller/generalfunction.php';
     require 'controller/querysfunction.php';
-    session_start();
-    timeLogOut();
+
+    if(isset($_GET['kind'])){
+        if($_GET['kind'] == "ALL"){
+            $merch = getMerchandising($mysqli, "ALL");
+        }else{
+            $merch = getMerchandising($mysqli, $_GET['kind']);
+        }
+    }else{
+        $merch = getMerchandising($mysqli, "ALL");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -28,18 +35,31 @@
                                 $resultado = getVideogames($mysqli);
                                 while($product = $resultado->fetch_assoc()){
                                     echo "
-                                    <div class='item'><a class='nohover' href='videojuego.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>- Precio: ".$product['price']." €</h4></div></div></a>
+                                    <div class='item'><a class='nohover' href='videojuego.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
                                     ";
                                 }
                             ?>
                     </div>
                     <div id="merchandising">
                         <div id="h1merch"><h1>MERCHANDISING</h1></div>
+                            <form id="kind" action="">
+                                <select name="kind" required>
+                                    <option value='' disabled selected>Seleccione una categoria</option>
+                                    <option value="ALL">Todo</option>
+                                    <?php
+                                        $resultado = getCategory($mysqli);
+                                        while($cat = $resultado->fetch_assoc()){
+                                            echo "<option value='".$cat['kind']."'>".$cat['kind']."</option>";
+                                        }
+                                    ?>
+                                </select>
+                                <button class="button" type="submit">Actualizar</button>
+                            <form>
                             <?php
-                                $resultado = getMerchandising($mysqli);
-                                while($product = $resultado->fetch_assoc()){
+                                
+                                while($product = $merch->fetch_assoc()){
                                     echo "
-                                    <div class='item'><a class='nohover' href='merchandising.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>- Precio: ".$product['price']." €</h4></div></div></a>
+                                    <div class='item'><a class='nohover' href='merchandising.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
                                     ";
                                 }
                             ?>

@@ -25,8 +25,13 @@ function getVideogamesUsingId($mysqli, $id){
     return $resultado;
 }
 
-function getMerchandising($mysqli){
-    $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising'");
+function getMerchandising($mysqli, $kind){
+    if($kind == "ALL"){
+        $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising'");
+    }else{
+        $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising' AND kind = '".$kind."'");
+    }
+    
     return $resultado;
 }
 
@@ -220,6 +225,16 @@ function isBought($mysqli, $idUser, $idProduct){
 
 function isCommented($mysqli, $idUser, $idProduct){
     $resultado = $mysqli->query("SELECT * FROM comment WHERE idUser = $idUser AND idProduct = $idProduct");
+
+    if($resultado->num_rows == 1){
+        return TRUE;
+    }else{
+        return FALSE;
+    }
+}
+
+function isCommentedValidated($mysqli, $idUser, $idProduct){
+    $resultado = $mysqli->query("SELECT * FROM comment WHERE idUser = $idUser AND idProduct = $idProduct AND validated = 1");
 
     if($resultado->num_rows == 1){
         return TRUE;

@@ -121,6 +121,9 @@
                                         ';   
                                 }else{
                                     echo'
+                                        <div class="error ac">
+                                            <span>No puedes añadir mas de un comentario.</span>
+                                        </div>
                                         <div class="error general">
                                             <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
                                         </div>

@@ -16,6 +16,11 @@ jQuery(document).on('submit','#addcomment',function(event){
                 setTimeout(function(){
                     $('.success').slideUp('slow');
                 }, 3000);
+            }else if(respuesta.tipo == 1){
+                $('.ac').slideDown('slow');
+                setTimeout(function(){
+                    $('.ac').slideUp('slow');
+                }, 3000);
             }else{
                 $('.general').slideDown('slow');
                 setTimeout(function(){

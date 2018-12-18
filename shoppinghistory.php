@@ -40,7 +40,7 @@
                             <option value='DESC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'DESC') echo 'selected'; ?>>Más recientes primero</option>
                             <option value='ASC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'ASC') echo 'selected'; ?>>Más antiguo primero</option>
                         </select>
-                        <input type="submit" value="Actualizar"/>
+                        <input class="button" type="submit" value="Actualizar"/>
                     </form>
 
                     <div id="tabla">

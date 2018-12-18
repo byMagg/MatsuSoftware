@@ -106,6 +106,9 @@
                                     $resultado3 = getComment($mysqli, $_SESSION['usuario']['idUser'], $_GET['id']);
                                     $comment = $resultado3->fetch_assoc();
                                     echo'
+                                        <div class="error ac">
+                                            <span>No podrás modificar hasta que te validen el comentario.</span>
+                                        </div>
                                         <div class="error general">
                                             <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
                                         </div>
@@ -124,6 +127,9 @@
                                         ';   
                                 }else{
                                     echo'
+                                        <div class="error ac">
+                                            <span>No puedes añadir mas de un comentario.</span>
+                                        </div>
                                         <div class="error general">
                                             <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
                                         </div>
