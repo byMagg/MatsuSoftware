@@ -6,7 +6,6 @@
     timeLogOut();
     security(0);
 
-    
     if(isset($_GET['idComment']) && isset($_GET['validate']) && ($_SESSION['usuario']['rol'] == 1 || $_SESSION['usuario']['rol'] == 2)){
 
         $id= $_GET['idComment'];

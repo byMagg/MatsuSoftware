@@ -44,19 +44,19 @@
                         <input type="hidden" name="id" value= <?php echo '"'.$product["idProduct"].'"'?>>
 
                         <label>Título:</label>
-                        <input type="text" name="titulo" maxlength="45" title="El título debe de contener enter 0 y 45 carácteres." placeholder=" Introduce el titulo" value= <?php echo '"'.$product["title"].'"'?> required>
+                        <input type="text" name="titulo" maxlength="50" title="El título debe de contener enter 1 y 50 carácteres." placeholder=" Introduce el titulo" value= <?php echo '"'.$product["title"].'"'?> required>
 
                         <label>Precio:</label>
-                        <input type="text" pattern="[0-9.]{0,10}" name="price" placeholder=" Introduce el precio" value= <?php echo '"'.$product["price"].'"'?> required>
+                        <input type="text" pattern="[0-9.]{0,10}" title="El título debe de contener enter 0 y 10 carácteres." name="price" placeholder=" Introduce el precio" value= <?php echo '"'.$product["price"].'"'?> required>
 
                         <label>Descripción:</label>
-                        <textarea name="description" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripción" required><?php echo $product["descrip"]?></textarea>
+                        <textarea name="description" maxlength="500" title="El texto debe de contener enter 1 y 500 carácteres." placeholder=" Introduce la descripción" required><?php echo $product["descrip"]?></textarea>
 
                         <label>Link de compra:</label>
-                        <input type= "text" name="linkpurchase" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de compra"  value= <?php echo '"'.$product["purchaseLink"].'"'?> required/>
+                        <input type= "text" name="linkpurchase" maxlength="1000" title="El link debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link de compra"  value= <?php echo '"'.$product["purchaseLink"].'"'?> required/>
 
                         <label>Link de foto:</label>
-                        <input type="text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de la imagen" value= <?php echo '"'.$product["photoLink"].'"'?> required>
+                        <input type="text" name="linkphoto" maxlength="1000" title="El link debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link de la imagen" value= <?php echo '"'.$product["photoLink"].'"'?> required>
 
                         <label class="etiqueta">Categoria:<br/></label>
                         <select name="kind" required>

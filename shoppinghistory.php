@@ -53,9 +53,9 @@
                             <?php
                                 while($info = $resultado->fetch_assoc()){
                                     echo "<tr>
-                                          <td>".$info['purchaseDate']."</td>
                                           <td>".$info['title']."</td>
                                           <td>".$info['price']."</td>
+                                          <td>".$info['purchaseDate']."</td>
                                           </tr>";
                                 }
                             ?>

@@ -73,11 +73,11 @@
                         <h1>Añadir proyecto:</h1>
                         <form id="projectmanagement" action="">
                             <label>Título*:</label>
-                            <input type="text" name="title" placeholder=" Título" required/>
+                            <input type="text" name="title" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder=" Introduce el título." required/>
                             <label>Link de la foto*:</label>
-                            <input type="text" name="photoLink" placeholder=" Link de la foto" required/>
+                            <input type="text" name="photoLink" maxlength="1000" title="Debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link de la foto." required/>
                             <label>Descripción*:</label>
-                            <textarea type="msg" name="descrip" placeholder=" Introduce una descripcion" required></textarea>
+                            <textarea type="msg" name="descrip" maxlength="500" title="Debe de contener enter 1 y 500 carácteres." placeholder=" Introduce una descripcion." required></textarea>
                             <button class="button" type="submit">Añadir</button>
                         </form>
                     </div>

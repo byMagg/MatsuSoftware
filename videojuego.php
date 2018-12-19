@@ -43,13 +43,13 @@
                                 $total = $videogame['numComments'];
 
                                 if($total != 0){
-                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>'.$sum/$total.'/5</h3>';
+                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>'.round($sum/$total,1).'/5</h3>';
                                     $stars = $sum/$total;
                                     for($i = 0; $i < 5; $i++){
                                         if($stars >= 1){
                                             echo '<img src="images/estrella.png" alt="">';
                                             $stars = $stars - 1;
-                                        }else if($stars != 0){
+                                        }else if($stars != 0 && $stars > 0.5){
                                             echo '<img src="images/mediaestrella.png" alt="">';
                                             $stars = $stars - 0.5;
                                         }else{
@@ -119,7 +119,7 @@
                                         <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                         <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
                                         <label>Modifica tu comentario:</label>
-                                        <textarea name="opinion" maxlength="498">'.$comment['opinion'].'</textarea>
+                                        <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres.">'.$comment['opinion'].'</textarea>
                                         <label>Modifica tu puntuación:</label>
                                         <input name ="rating" type="number" min="0" max="5" step=".5" value="'.$comment['rating'].'" />
                                         <button class="button" type="submit">Modificar</button>
@@ -140,7 +140,7 @@
                                         <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                         <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
                                         <label>Introduce tu comentario:</label>
-                                        <textarea name="opinion" maxlength="498" ></textarea>
+                                        <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." ></textarea>
                                         <label>Modifica tu puntuación:</label>
                                         <input name="rating" type="number" min="0" max="5" step=".5" />
                                         <button class="button" type="submit">Añadir</button>

@@ -43,19 +43,19 @@
                     <form id="modifyvideogame" action="">
                         <input type="hidden" name="id" value= <?php echo '"'.$product["idProduct"].'"'?>>
                         <label>Título:</label>
-                        <input type= "text" name="titulo" maxlength="45" title="El título debe de contener enter 0 y 45 carácteres." placeholder=" Introduce el título" value= <?php echo '"'.$product["title"].'"'?> required/>
+                        <input type= "text" name="titulo" maxlength="50" title="El título debe de contener enter 1 y 50 carácteres." placeholder=" Introduce el título" value= <?php echo '"'.$product["title"].'"'?> required/>
                         <label>Precio:</label>
-                        <input type= "text" name="price" placeholder=" Introduce el precio" pattern="[0-9.]{0,10}" value=<?php echo '"'.$product["price"].'"'?> required/>
+                        <input type= "text" pattern="[0-9.]{0,10}" title="El título debe de contener enter 0 y 10 carácteres." name="price" placeholder=" Introduce el precio" value=<?php echo '"'.$product["price"].'"'?> required/>
                         <label>Descripción:</label>
-                        <textarea type="msg" name="description" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripcion" required><?php echo $product["descrip"]?></textarea>
+                        <textarea type="msg" name="description" maxlength="500" title="El texto debe de contener enter 1 y 500 carácteres." placeholder=" Introduce la descripcion" required><?php echo $product["descrip"]?></textarea>
                         <label>Link de compra:</label>
-                        <input type= "text" name="linkpurchase" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link" value=<?php echo '"'.$product["purchaseLink"].'"'?> required/>
+                        <input type= "text" name="linkpurchase" maxlength="1000" title="El link debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link" value=<?php echo '"'.$product["purchaseLink"].'"'?> required/>
                         <label>Link de la foto:</label>
-                        <input type= "text" name="linkphoto" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link" value=<?php echo '"'.$product["photoLink"].'"'?> required/>
+                        <input type= "text" name="linkphoto" maxlength="1000" title="El link debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link" value=<?php echo '"'.$product["photoLink"].'"'?> required/>
                         <label>Link del trailer:</label>
-                        <input type= "text" name="linktrailer" maxlength="100" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link" value=<?php echo '"'.$product["trailerLink"].'"'?> required/>
+                        <input type= "text" name="linktrailer" maxlength="1000" title="El link debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link" value=<?php echo '"'.$product["trailerLink"].'"'?> required/>
                         <label>Requisitos del sistema:</label>
-                        <textarea type="msg" name="requisito" maxlength="500" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce los requisitos" required><?php echo $product["requirements"]?></textarea>
+                        <textarea type="msg" name="requisito" maxlength="500" title="El texto debe de contener enter 1 y 500 carácteres." placeholder=" Introduce los requisitos" required><?php echo $product["requirements"]?></textarea>
                         <button class="button" type="submit">Modificar</button>
                     </form>
                 </div>

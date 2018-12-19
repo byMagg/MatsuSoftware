@@ -79,19 +79,19 @@
                         <h1>Añadir merchandising:</h1>
                         <form id="merchandisingmanagement" action="">
                             <label>Título:</label>
-                            <input type="text" name="titulo" maxlength="48" title="El título debe de contener enter 0 y 45 carácteres." placeholder=" Introduce el titulo" required>
+                            <input type="text" name="titulo" maxlength="50" title="El título debe de contener enter 1 y 50 carácteres." placeholder=" Introduce el titulo" required>
 
                             <label>Precio:</label>
-                            <input type="text" pattern="[0-9.]{0,10}" name="price" placeholder=" Introduce el precio" required>
+                            <input type="text" pattern="[0-9.]{0,10}" title="El título debe de contener enter 0 y 10 carácteres." name="price" placeholder=" Introduce el precio" required>
 
                             <label>Descripción:</label>
-                            <textarea name="description" maxlength="498" title="El texto debe de contener enter 0 y 500 carácteres." placeholder=" Introduce la descripción" required></textarea>
+                            <textarea name="description" maxlength="500" title="El texto debe de contener enter 1 y 500 carácteres." placeholder=" Introduce la descripción" required></textarea>
 
                             <label>Link de compra:</label>
-                            <input type= "text" name="linkpurchase" maxlength="1000" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de compra" required/>
+                            <input type= "text" name="linkpurchase" maxlength="1000" title="El link debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link de compra" required/>
 
                             <label>Link de foto:</label>
-                            <input type="text" name="linkphoto" maxlength="1000" title="El link debe de contener enter 0 y 100 carácteres." placeholder=" Introduce el link de la imagen" required>
+                            <input type="text" name="linkphoto" maxlength="1000" title="El link debe de contener enter 1 y 1000 carácteres." placeholder=" Introduce el link de la imagen" required>
 
                             <label class="etiqueta">Categoria:<br/></label>
                             <select name="kind" required>
