@@ -29,7 +29,19 @@
     </head>
     <body>
         <!--HEADER-->
-        <?php require "views/header.php"; ?>        
+        <?php require "views/header.php"; ?>
+        <div class="error nick">
+            <span>Existe un usuario con este nick, pruebe con otro</span>
+        </div>
+        <div class="error email">
+            <span>Existe un usuario con este email, pruebe con otro</span>
+        </div>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+        </div>
+        <div class="success">
+            <span>Usuario modificado correctamente</span>
+        </div>
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -37,18 +49,6 @@
                     <a class="nohover" href="usermanagement.php"><img id="volver"src="images/volver.png" alt="volver"></a>
                     <img id="user" src="images/user.png" alt="modificar">
                     <h1>GESTIÓN DE USUARIOS</h1>
-                </div>
-                <div class="error nick">
-                    <span>Existe un usuario con este nick, pruebe con otro</span>
-                </div>
-                <div class="error email">
-                    <span>Existe un usuario con este email, pruebe con otro</span>
-                </div>
-                <div class="error general">
-                    <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
-                </div>
-                <div class="success">
-                    <span>Usuario modificado correctamente</span>
                 </div>
                 <div id="form">
                     <form id="modifyuserbyadmin" action="">

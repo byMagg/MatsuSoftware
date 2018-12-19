@@ -19,7 +19,12 @@
     </head>
     <body>
         <!--HEADER-->
-        <?php require "views/header.php"; ?>        
+        <?php require "views/header.php"; ?>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        <div class="success">
+            <span>Merchandising modificado correctamente.</span>
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -28,11 +33,6 @@
                     <img id="user" src="images/merchan.png" alt="merch">
                     <h1>GESTIÓN DE MERCHANDISING</h1>
                 </div>
-                <div class="error general">
-                    <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
-                </div>
-                <div class="success">
-                    <span>Merchandising modificado correctamente.</span>
                 </div>
                 <div id="form">
                     <?php
