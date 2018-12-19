@@ -13,7 +13,7 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Newsletter - MatsuSoftware</title>
+        <title>Newlester - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/newsletter.css" type="text/css" rel="stylesheet">
     </head>
@@ -25,7 +25,7 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <h1>NEWSLETTER:</h1>
+                    <h1>NEWLESTER:</h1>
                 </div>
 
                 <div id="cuadricula">                
@@ -35,7 +35,7 @@
                             <option value='DESC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'DESC') echo 'selected'; ?>>Más recientes primero</option>
                             <option value='ASC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'ASC') echo 'selected'; ?>>Más antiguo primero</option>
                         </select>
-                        <input type="submit" value="Actualizar"/>
+                        <button class="button">Actualizar</button>
                     </form>
                 
                     <div id="tabla">
