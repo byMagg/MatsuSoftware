@@ -120,6 +120,21 @@
                                     $resultado3 = getComment($mysqli, $_SESSION['usuario']['idUser'], $_GET['id']);
                                     $comment = $resultado3->fetch_assoc();
                                     echo'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                        <div class="error ac">
+                                            <span>No podrás modificar hasta que te validen el comentario</span>
+                                        </div>
+                                        <div class="error general">
+                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+                                        </div>
+                                        <div class="success">
+                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
+                                        </div>
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
+>>>>>>> e3bd7282607c88674946e3e8b0c76268cb4ba625
                                         <form id="modifycomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
@@ -137,6 +152,21 @@
                                         ';   
                                 }else{
                                     echo'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                        <div class="error ac">
+                                            <span>No puedes añadir mas de un comentario</span>
+                                        </div>
+                                        <div class="error general">
+                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+                                        </div>
+                                        <div class="success">
+                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
+                                        </div>
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
+>>>>>>> e3bd7282607c88674946e3e8b0c76268cb4ba625
                                         <form id="addcomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
