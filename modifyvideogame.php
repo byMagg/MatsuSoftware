@@ -19,7 +19,13 @@
     </head>
     <body>
         <!--HEADER-->
-        <?php require "views/header.php"; ?>        
+        <?php require "views/header.php"; ?>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        <div class="success">
+            <span>Videojuego modificado correctamente.</span>
+        </div>   
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -27,12 +33,6 @@
                     <a class="nohover" href="videogamemanagement.php"><img id="volver" src="images/volver.png" alt="volver"></a>
                     <img id="user" src="images/games.png" alt="videojuego">
                     <h1>GESTIÓN DE VIDEOJUEGOS</h1>
-                </div>
-                <div class="error general">
-                    <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
-                </div>
-                <div class="success">
-                    <span>Videojuego modificado correctamente.</span>
                 </div>
                 <div id="form">
                     <?php

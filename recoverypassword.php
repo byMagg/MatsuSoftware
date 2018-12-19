@@ -28,20 +28,20 @@
     </head>
     <body>
         <!--HEADER-->
-        <?php require "views/header.php"; ?>         
+        <?php require "views/header.php"; ?>
+        <div class="success">
+            <span>Contraseña cambiada correctamente.</span>
+        </div>
+        <div class="error password">
+            <span>Error, las contraseñas no coinciden, inténtelo de nuevo.</span>
+        </div>
+        <div class="error">
+            <span>Error, inténtelo de nuevo.</span>
+        </div>     
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
             <h1>RECUPERACIÓN DE CONTRASEÑA:</h1>
-                <div class="success">
-                    <span>Contraseña cambiada correctamente.</span>
-                </div>
-                <div class="error password">
-                    <span>Error, las contraseñas no coinciden, inténtelo de nuevo.</span>
-                </div>
-                <div class="error">
-                    <span>Error, inténtelo de nuevo.</span>
-                </div>
                 <form id="recoverypassword" action="">
                     <input type="hidden" name="id" value= "<?php echo $id ?>" />
                     <label>Introduce tu nueva contraseña:</label>

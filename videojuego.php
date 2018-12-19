@@ -32,6 +32,22 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
+        <!--ARREGLAR-->
+        <div class="error ac">
+            <span>No podrás modificar hasta que te validen el comentario.</span>
+        </div>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        <div class="success">
+            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado.</span>
+        <div class="error ac">
+            <span>No puedes añadir mas de un comentario.</span>
+        </div>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        </div>
         <!--CONTENT-->
         <div class="content">
             <div class="content-inside">
@@ -107,6 +123,7 @@
                                     $resultado3 = getComment($mysqli, $_SESSION['usuario']['idUser'], $_GET['id']);
                                     $comment = $resultado3->fetch_assoc();
                                     echo'
+<<<<<<< HEAD
                                         <div class="error ac">
                                             <span>No podrás modificar hasta que te validen el comentario</span>
                                         </div>
@@ -116,6 +133,8 @@
                                         <div class="success">
                                             <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
                                         </div>
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                                         <form id="modifycomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
@@ -139,6 +158,7 @@
                                         ';   
                                 }else{
                                     echo'
+<<<<<<< HEAD
                                         <div class="error ac">
                                             <span>No puedes añadir mas de un comentario</span>
                                         </div>
@@ -148,6 +168,8 @@
                                         <div class="success">
                                             <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
                                         </div>
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                                         <form id="addcomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
@@ -167,7 +189,8 @@
                                 $user = $resultado4->fetch_assoc();
                                 echo'
                                     <div class="item">
-                                        <div class="info"><img src="images/user.png" alt=""><div><h2>'.$user['nick'].'</h2><h4>'.$comment['opinion'].'</h4></div></div>
+                                        <img src="images/user.png" alt="">
+                                        <div class="info"><div><h2>'.$user['nick'].'</h2><h4>'.$comment['opinion'].'</h4></div></div>
                                         <div class="estrella">
                                     ';
                                     $stars = $comment['rating'];

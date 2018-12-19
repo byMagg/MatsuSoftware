@@ -29,7 +29,19 @@
     </head>
     <body>
         <!--HEADER-->
-        <?php require "views/header.php"; ?>        
+        <?php require "views/header.php"; ?>
+        <div class="error nick">
+            <span>Existe un usuario con este nick, pruebe con otro.</span>
+        </div>
+        <div class="error email">
+            <span>Existe un usuario con este email, pruebe con otro.</span>
+        </div>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        <div class="success">
+            <span>Usuario modificado correctamente.</span>
+        </div>
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -38,6 +50,7 @@
                     <img id="user" src="images/user.png" alt="modificar">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
+<<<<<<< HEAD
                 <div class="error nick">
                     <span>Existe un usuario con este nick, pruebe con otro</span>
                 </div>
@@ -50,6 +63,8 @@
                 <div class="success">
                     <span>Usuario modificado correctamente</span>
                 </div>
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                 <div id="form">
                     <form id="modifyuserbyadmin" action="">
                     <label class="etiqueta">Nick*:<br/></label>

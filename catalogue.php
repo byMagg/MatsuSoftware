@@ -58,7 +58,6 @@
                                 <button class="button" type="submit">Actualizar</button>
                             </form>
                             <?php
-                                
                                 while($product = $merch->fetch_assoc()){
                                     echo "
                                     <div class='item'><a class='nohover' href='merchandising.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>

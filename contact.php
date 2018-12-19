@@ -13,15 +13,24 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
+        <div class="success">
+            <span>Mensaje enviado correctamente.</span>
+        </div>
+        <div class="error">
+            <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo.</span>
+        </div>
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
+<<<<<<< HEAD
                 <div class="success">
                     <span>Mensaje enviado correctamente</span>
                 </div>
                 <div class="error">
                     <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo</span>
                 </div>
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                 <form id="formulario" action="">
                     <h1>CONTACTO:</h1>
                     <label>Nombre*:<br/></label>

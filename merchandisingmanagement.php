@@ -27,8 +27,15 @@
     </head>
     <body>
         <!--HEADER-->
-        <?php require "views/header.php"; ?>   
-        <!--CONTENT-->
+        <?php require "views/header.php"; ?>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        
+        <div class="success">
+            <span>Merchandising registrado correctamente.</span>
+        </div>
+<!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
@@ -67,6 +74,7 @@
                     
                     <div id="lineavertical"></div>
 
+<<<<<<< HEAD
                     <div class="error general">
                         <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
                     </div>
@@ -75,6 +83,8 @@
                         <span>Merchandising registrado correctamente</span>
                     </div>
 
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                     <div id="form">
                         <h1>Añadir merchandising:</h1>
                         <form id="merchandisingmanagement" action="">
