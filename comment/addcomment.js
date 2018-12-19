@@ -14,7 +14,10 @@ jQuery(document).on('submit','#addcomment',function(event){
             if(!respuesta.error){
                 $('.send').slideDown('slow');
                 setTimeout(function(){
-                    $('.send').slideUp('slow');
+                    if((respuesta.category).localeCompare("game") == 0)
+                        location.href ="videojuego.php?id=" + respuesta.id;
+                    else
+                        location.href ="merchandising.php?id=" + respuesta.id;
                 }, 3000);
             }else if(respuesta.tipo == 1){
                 $('.ac').slideDown('slow');

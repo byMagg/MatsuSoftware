@@ -117,30 +117,30 @@
                                     $comment = $resultado3->fetch_assoc();
                                     echo'
                                         <form id="modifycomment" action="">
-                                        <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
-                                        <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                        <label>Modifica tu comentario:</label>
-                                        <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." placeholder=" Introduce el comentario.">'.$comment['opinion'].'</textarea>
-                                        <label>Modifica tu puntuación:</label>
-                                        <input type="number" name ="rating" min="0" max="5" step=".5" value="'.$comment['rating'].'" />
-                                        <button class="button" type="submit">Modificar</button>
+                                            <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
+                                            <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
+                                            <label>Modifica tu comentario:</label>
+                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." placeholder=" Introduce el comentario.">'.$comment['opinion'].'</textarea>
+                                            <label>Modifica tu puntuación:</label>
+                                            <input type="number" name ="rating" min="0" max="5" step=".5" value="'.$comment['rating'].'" />
+                                            <button class="button" type="submit">Modificar</button>
                                         </form>
                                         <form id="detelecomment" action="">
-                                        <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
-                                        <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                        <button class="button" type="submit">Eliminar</button>
+                                            <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
+                                            <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
+                                            <button class="button" type="submit">Eliminar</button>
                                         </form>
                                         ';   
                                 }else{
                                     echo'
                                         <form id="addcomment" action="">
-                                        <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
-                                        <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                        <label>Introduce tu comentario:</label>
-                                        <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." placeholder=" Introduce el comentario."></textarea>
-                                        <label>Modifica tu puntuación:</label>
-                                        <input type="number" name="rating" min="0" max="5" step=".5" />
-                                        <button class="button" type="submit">Añadir</button>
+                                            <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
+                                            <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
+                                            <label>Introduce tu comentario:</label>
+                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." placeholder=" Introduce el comentario."></textarea>
+                                            <label>Modifica tu puntuación:</label>
+                                            <input type="number" name="rating" min="0" max="5" step=".5" />
+                                            <button class="button" type="submit">Añadir</button>
                                         </form>
                                         '; 
                                 }

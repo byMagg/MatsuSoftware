@@ -5,6 +5,9 @@ require '../controller/querysfunction.php';
 $idUser = $_POST['idUser'];
 $idProduct = $_POST['idProduct'];
 
+$product = getProductUsingId($mysqli, $idProduct); 
+$product = $product->fetch_assoc();
+
 $resultado = isCommentedValidated($mysqli, $idUser, $idProduct);
 
 if(!$resultado){
@@ -12,9 +15,7 @@ if(!$resultado){
 }else{
     
     $comment = getComment($mysqli, $idUser, $idProduct);
-    $product = getProductUsingId($mysqli, $idProduct); 
     $comment = $comment->fetch_assoc();
-    $product = $product->fetch_assoc();
 
     $sumRating = $product['sumRating'] - $comment['rating'];
     $numComments = $product['numComments'] - 1;
@@ -25,7 +26,7 @@ if(!$resultado){
 }
 
 if($resultadofinal){
-    echo json_encode(array('error' => false));
+    echo json_encode(array('error' => false, 'id' => $idProduct, 'category' => $product['category']));
 }else{
     echo json_encode(array('error' => true));
 }
