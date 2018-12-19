@@ -46,8 +46,8 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="usermanagement.php"><img id="volver"src="images/volver.png" alt="volver"></a>
-                    <img id="user" src="images/user.png" alt="modificar">
+                    <a class="nohover" href="usermanagement.php"><img id="volver"src="images/volver.png" alt="Volver"></a>
+                    <img id="user" src="images/user.png" alt="Gestión de usuarios">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
                 <div id="form">

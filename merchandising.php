@@ -60,25 +60,25 @@
                                     $stars = $sum/$total;
                                     for($i = 0; $i < 5; $i++){
                                         if($stars >= 1){
-                                            echo '<img src="images/estrella.png" alt="">';
+                                            echo '<img src="images/estrella.png" alt="Estrella completa">';
                                             $stars = $stars - 1;
                                         }else if($stars != 0 && $stars > 0.5){
-                                            echo '<img src="images/mediaestrella.png" alt="">';
+                                            echo '<img src="images/mediaestrella.png" alt="Media estrella">';
                                             $stars = $stars - 0.5;
                                         }else{
-                                            echo '<img src="images/noestrella.png" alt="">';
+                                            echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
                                     echo '</div></div>';
                                 }else{
-                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""><img src="images/noestrella.png" alt=""></div></div> ';
+                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"></div></div> ';
                                 }
                             ?>
                         </div>
                     </div>
                     <div id="principal">
                         <div id="seccion">
-                            <img src="<?php echo $merchandising['photoLink']; ?>" alt="">
+                            <img src="<?php echo $merchandising['photoLink']; ?>" alt="Foto del merchandising">
                             <h2>Precio: <?php echo $merchandising['price']; ?>€</h2>
                             <?php
                                 if(isset($_SESSION['usuario'])){
@@ -152,19 +152,19 @@
                                 $user = $resultado4->fetch_assoc();
                                 echo'
                                     <div class="item">
-                                        <div class="info"><img src="images/user.png" alt=""><div><h2>'.$user['nick'].'</h2><h4>'.$comment['opinion'].'</h4></div></div>
+                                        <div class="info"><img src="images/user.png" alt="Foto de perfil"><div><h2>'.$user['nick'].'</h2><h4>'.$comment['opinion'].'</h4></div></div>
                                         <div class="estrella">
                                     ';
                                     $stars = $comment['rating'];
                                     for($i = 0; $i < 5; $i++){
                                         if($stars >= 1){
-                                            echo '<img src="images/estrella.png" alt="">';
+                                            echo '<img src="images/estrella.png" alt="Estella completa">';
                                             $stars = $stars - 1;
                                         }else if($stars != 0){
-                                            echo '<img src="images/mediaestrella.png" alt="">';
+                                            echo '<img src="images/mediaestrella.png" alt="Media estrella">';
                                             $stars = $stars - 0.5;
                                         }else{
-                                            echo '<img src="images/noestrella.png" alt="">';
+                                            echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
                                     echo'</div>';

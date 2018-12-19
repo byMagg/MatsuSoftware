@@ -29,8 +29,8 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
-                    <img id="icon2" src="images/shoppingcart.png" alt="historial">
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="Volver"></a>
+                    <img id="icon2" src="images/shoppingcart.png" alt="Historial de compras">
                     <h1>HISTORIAL DE COMPRAS</h1>
                 </div>
                 <div id="cuadricula">

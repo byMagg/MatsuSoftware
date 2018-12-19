@@ -40,8 +40,8 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
-                    <img id="icon2" src="images/games.png" alt="videojuego">
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="Volver"></a>
+                    <img id="icon2" src="images/games.png" alt="Gestión de videojuegos">
                     <h1>GESTIÓN DE VIDEOJUEGOS</h1>
                 </div>
                 <div id="cuadricula">

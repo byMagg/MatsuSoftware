@@ -40,8 +40,8 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
-                    <img id="user" src="images/user.png" alt="usuario">
+                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="Volver"></a>
+                    <img id="user" src="images/user.png" alt="Gestión de usuarios">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
                 <div id="tabla">
@@ -61,9 +61,9 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         <th></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
-                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png"></a></td>';
-                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['idUser'].'"><img src="images/lapiz.png"></a></td>';
-                                    $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['idUser'].'&rol='.$user['rol'].'"><img src="images/grupo.png"></a></td>';
+                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png" alt="Eliminar"></a></td>';
+                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['idUser'].'"><img src="images/lapiz.png" alt="Modificar"></a></td>';
+                                    $rolButton= '<td><a class="icono nohover" href="usermanagement.php?id='.$user['idUser'].'&rol='.$user['rol'].'"><img src="images/grupo.png" alt="Cambiar rol"></a></td>';
                                     $rolName = "Usuario";
 
                                     if($user["rol"] == 1){
@@ -92,8 +92,8 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         <th></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
-                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png"></a></td>';
-                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['idUser'].'"><img src="images/lapiz.png"></a></td>';
+                                    $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png" alt="Eliminar"></a></td>';
+                                    $modificar = '<td><a class="icono nohover" href="modifyuser.php?id='.$user['idUser'].'"><img src="images/lapiz.png" alt="Cambiar rol"></a></td>';
                                     $rolButton= '';
                                     $rolName = "Usuario";
 

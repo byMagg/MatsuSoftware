@@ -36,7 +36,7 @@
                                 $resultado = getVideogames($mysqli);
                                 while($product = $resultado->fetch_assoc()){
                                     echo "
-                                    <div class='item'><a class='nohover' href='videojuego.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
+                                    <div class='item'><a class='nohover' href='videojuego.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto del videojuego'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
                                     ";
                                 }
                             ?>  
@@ -60,7 +60,7 @@
                             <?php
                                 while($product = $merch->fetch_assoc()){
                                     echo "
-                                    <div class='item'><a class='nohover' href='merchandising.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
+                                    <div class='item'><a class='nohover' href='merchandising.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto del merchandising'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
                                     ";
                                 }
                             ?>
