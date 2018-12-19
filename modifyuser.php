@@ -50,20 +50,35 @@
                     <img id="user" src="images/user.png" alt="modificar">
                     <h1>GESTIÓN DE USUARIOS</h1>
                 </div>
+<<<<<<< HEAD
+                <div class="error nick">
+                    <span>Existe un usuario con este nick, pruebe con otro</span>
+                </div>
+                <div class="error email">
+                    <span>Existe un usuario con este email, pruebe con otro</span>
+                </div>
+                <div class="error general">
+                    <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+                </div>
+                <div class="success">
+                    <span>Usuario modificado correctamente</span>
+                </div>
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                 <div id="form">
                     <form id="modifyuserbyadmin" action="">
                     <label class="etiqueta">Nick*:<br/></label>
                         <input type="hidden" name="id" value= <?php echo '"'.$user["idUser"].'"'?>>
 
-                        <input type="text" name="nick" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder="Introduce tu nick"  value= <?php echo '"'.$user["nick"].'"'?> required>
+                        <input type="text" name="nick" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder=" Introduce tu nick"  value= <?php echo '"'.$user["nick"].'"'?> required>
 
                         <label class="etiqueta">E-mail*:<br/></label>
-                        <input type="email" name="email" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder="Introduce tu e-mail" value= <?php echo '"'.$user["email"].'"'?> required>
+                        <input type="email" name="email" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder=" Introduce tu e-mail" value= <?php echo '"'.$user["email"].'"'?> required>
 
                         <?php 
                         if($_SESSION['usuario']['idUser'] == $user["idUser"]){
                            echo ' <label class="etiqueta">Contraseña (Rellenar solo si se desea cambiar):<br/></label>
-                                  <input type="password" pattern="[A-Za-z0-9_-]{4,20}" title="La contraseña debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." placeholder="Introduce tu contraseña" name="pass">
+                                  <input type="password" pattern="[A-Za-z0-9_-]{4,20}" title="La contraseña debe de contener enter 4 y 20 carácteres, y puede contener letras mayúsculas, minúsculas, números, _ y -." placeholder=" Introduce tu contraseña" name="pass">
                                 ';
                         }
                         ?>
@@ -126,10 +141,10 @@
                         </select>
                         
                         <label class="etiqueta">Municipio*:<br/></label>
-                        <input type="text" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder="Introduce tu municipio" name="municipio" value= <?php echo '"'.$user["city"].'"'?> required>
+                        <input type="text" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder=" Introduce tu municipio" name="municipio" value= <?php echo '"'.$user["city"].'"'?> required>
 
                         <label class="etiqueta">Dirección*:<br/></label>
-                        <input type="text" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder="Introduce tu dirección" name="direccion" value= <?php echo '"'.$user["direction"].'"'?> required>
+                        <input type="text" maxlength="50" title="Debe de contener enter 1 y 50 carácteres." placeholder=" Introduce tu dirección" name="direccion" value= <?php echo '"'.$user["direction"].'"'?> required>
                     
                         <button class="button" type="submit">Modificar</button>
                     </form>

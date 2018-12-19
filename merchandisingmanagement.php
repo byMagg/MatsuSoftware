@@ -39,7 +39,7 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <a class="nohover" href="admindash.php"><img id="volver"src="images/volver.png" alt="volver"></a>
+                    <a class="nohover" href="admindash.php"><img id="volver" src="images/volver.png" alt="volver"></a>
                     <img id="icon2" src="images/merchan.png" alt="merch">
                     <h1>GESTIÓN DE MERCHANDISING</h1>
                 </div>
@@ -74,6 +74,17 @@
                     
                     <div id="lineavertical"></div>
 
+<<<<<<< HEAD
+                    <div class="error general">
+                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+                    </div>
+                    
+                    <div class="success">
+                        <span>Merchandising registrado correctamente</span>
+                    </div>
+
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                     <div id="form">
                         <h1>Añadir merchandising:</h1>
                         <form id="merchandisingmanagement" action="">

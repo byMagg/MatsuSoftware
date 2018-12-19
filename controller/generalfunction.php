@@ -16,7 +16,7 @@ function security($rol){
 function timeLogOut(){
 
     if(isset($_SESSION['tiempo']) ) {
-        $inactivo = 600;
+        $inactivo = 900;
         $vida_session = time() - $_SESSION['tiempo'];
 
         if($vida_session > $inactivo)

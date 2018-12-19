@@ -19,7 +19,7 @@
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-                <a id="cerrar" class="nohover" href="login/logout.php"><img src="images/logout.png" alt=""></a>
+                <a id="cerrar" class="nohover" href="login/logout.php"><img src="images/logout.png" alt=""></a><h4>Bienvenido, <?php echo $_SESSION['usuario']['nick']?></h4>
                 <div id="1" class="item"><a class="nohover" href="usermanagement.php"><img src="images/user.png" alt="Gestión de Usuarios"></a><a href="usermanagement.php" class="button">Gestión de Usuarios</a></div>
                 <div id="2" class="item"><a class="nohover" href="newslettermanagement.php"><img src="images/newsletter.png" alt="Gestion de NewsLetter"></a><a href="newslettermanagement.php" class="button">Gestión de Newsletter</a></div>
                 <div id="3" class="item"><a class="nohover" href="projectmanagement.php"><img src="images/stats.png" alt="Gestión de Proyectos"></a><a href="projectmanagement.php" class="button">Gestión de Proyectos</a></div>

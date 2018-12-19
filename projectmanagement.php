@@ -68,6 +68,17 @@
                     
                     <div id="lineavertical"></div>
 
+<<<<<<< HEAD
+                    <div class="error general">
+                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+                    </div>
+                    
+                    <div class="success">
+                        <span>Proyecto registrado correctamente</span>
+                    </div>
+
+=======
+>>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
                     <div id="form">
                         <h1>Añadir proyecto:</h1>
                         <form id="projectmanagement" action="">

@@ -68,7 +68,7 @@ function sendEmailContact($name, $surname, $email, $msg){
     $cabecera .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     $cabecera .= 'From: MatsuSoftware <not-reply@matsusoftware.tk>' . "\r\n";
 
-    return array('resultado' => mail($email, $asunto, $mensaje, $cabecera));
+    return array('resultado' => mail($para, $asunto, $mensaje, $cabecera));
 }
 
 function sendEmailNews($email, $news){ 
