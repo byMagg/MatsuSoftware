@@ -31,6 +31,7 @@
                 <div id="content">
                     <div id="videojuegos">
                         <div id="h1apps"><h1>VIDEOJUEGOS</h1></div>
+                        <div class="separator"></div>
                             <?php
                                 $resultado = getVideogames($mysqli);
                                 while($product = $resultado->fetch_assoc()){
@@ -38,11 +39,12 @@
                                     <div class='item'><a class='nohover' href='videojuego.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto'><div><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
                                     ";
                                 }
-                            ?>
+                            ?>  
                     </div>
+                    <div id="linea"></div>
                     <div id="merchandising">
                         <div id="h1merch"><h1>MERCHANDISING</h1></div>
-                            <form id="kind" action="">
+                            <form id="kind" class="separator" action="">
                                 <select name="kind" required>
                                     <option value='' disabled selected>Seleccione una categoria</option>
                                     <option value="ALL">Todo</option>
