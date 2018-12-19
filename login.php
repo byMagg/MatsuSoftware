@@ -20,7 +20,18 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
-
+        <div class="error nick">
+            <span>Existe un usuario con este nick, pruebe con otro.</span>
+        </div>
+        <div class="error email">
+            <span>Existe un usuario con este email, pruebe con otro.</span>
+        </div>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        <div class="success">
+            <span>Usuario registrado correctamente, inicie sesión para continuar.</span>
+        </div>
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
@@ -43,18 +54,6 @@
 
                 <div id="separator"></div>
 
-                <div class="error nick">
-                    <span>Existe un usuario con este nick, pruebe con otro.</span>
-                </div>
-                <div class="error email">
-                    <span>Existe un usuario con este email, pruebe con otro.</span>
-                </div>
-                <div class="error general">
-                    <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
-                </div>
-                <div class="success">
-                    <span>Usuario registrado correctamente, inicie sesión para continuar.</span>
-                </div>
                 <form id="registro" action="">
 
                     <h1>Registro</h1>

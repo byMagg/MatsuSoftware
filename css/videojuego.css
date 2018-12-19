@@ -41,7 +41,7 @@ iframe {
 
 .item {
     display: inline-flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
@@ -79,12 +79,28 @@ iframe {
     padding-bottom: 50px;
 }
 
-#h1comentario {
+#h1comentario, #divcomment {
     grid-column: 1 / span 2;
+}
+
+#divcomment{
+    grid-column: 1 / span 2;
+    justify-content: center;
+    display: flex;
 }
 
 .info {
     display: flex;
+    width: 50vw;
+}
+
+form{
+    display: inline-grid;
+    justify-items: center;
+}
+
+input{
+    width: 50px;
 }
 
 .estrella {
@@ -119,26 +135,6 @@ iframe {
 
 #error label {
     justify-content: center;
-}
-
-.error, .success{
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    padding: 10px 0 ;
-    border-radius:  0 0 5px 5px;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    display: none;
-}
-
-.error{
-    background-color: red;
-}
-
-.success{
-    background-color: green;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -31,6 +31,15 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        <div class="success">
+            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado.</span>
+        </div>
+        <div class="error ac">
+            <span>No puedes añadir mas de un comentario.</span>
+        </div>
         <!--CONTENT-->
         <div class="content">
             <div class="content-inside">
@@ -103,12 +112,6 @@
                                     $resultado3 = getComment($mysqli, $_SESSION['usuario']['idUser'], $_GET['id']);
                                     $comment = $resultado3->fetch_assoc();
                                     echo'
-                                        <div class="error general">
-                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
-                                        </div>
-                                        <div class="success">
-                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado.</span>
-                                        </div>
                                         <form id="modifycomment" action="">
                                         <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                         <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
@@ -121,15 +124,6 @@
                                         ';   
                                 }else{
                                     echo'
-                                        <div class="error ac">
-                                            <span>No puedes añadir mas de un comentario.</span>
-                                        </div>
-                                        <div class="error general">
-                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
-                                        </div>
-                                        <div class="success">
-                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado.</span>
-                                        </div>
                                         <form id="addcomment" action="">
                                         <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                         <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />

@@ -28,11 +28,10 @@
     color: black;
     border-spacing: 0;
     overflow: auto;
-    width: 70vw;
-    /* max-width: 477px; */
+    width: 90vw;
     table-layout: auto;
     text-align: center;
-    display: inline-table;
+    display: table-caption;
 }
 
 #comment {

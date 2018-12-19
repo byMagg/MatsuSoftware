@@ -28,6 +28,15 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>   
+
+        <div class="error general">
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+        </div>
+        
+        <div class="success">
+            <span>Videojuego registrado correctamente.</span>
+        </div>
+
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -66,14 +75,6 @@
                     </div> 
                     
                     <div id="lineavertical"></div>
-
-                    <div class="error general">
-                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
-                    </div>
-                    
-                    <div class="success">
-                        <span>Videojuego registrado correctamente.</span>
-                    </div>
 
                     <div id="form">
                         <h1>Añadir videojuego:</h1>

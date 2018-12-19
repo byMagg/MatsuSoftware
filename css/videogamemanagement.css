@@ -7,6 +7,7 @@
 #content {
     display: block;
     width: 100%;
+    padding: 150px 0px 150px 0px;
 }
 
 #cabecera {
@@ -31,7 +32,7 @@
     width: 0;
 }
 
-#tabla>table {
+#tabla > table {
     background: white;
     color: black;
     border-spacing: 0;
@@ -122,26 +123,6 @@ tr:nth-child(odd) {
 
 #error label {
     justify-content: center;
-}
-
-.error, .success{
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    padding: 10px 0 ;
-    border-radius:  0 0 5px 5px;
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    display: none;
-}
-
-.error{
-    background-color: red;
-}
-
-.success{
-    background-color: green;
 }
 
 @media only screen and (max-height: 560px){
