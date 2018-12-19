@@ -12,13 +12,13 @@
         <!--HEADER-->
         <?php require "views/header.php"; ?>  
         <div class="success">
-            <span>Siga los pasos del mensaje que se ha enviado a su correo.</span>
+            <span>Siga los pasos del mensaje que se ha enviado a su correo</span>
         </div>
         <div class="error general">
-            <span>Error, inténtelo de nuevo.</span>
+            <span>Error, inténtelo de nuevo</span>
         </div>
         <div class="error email">
-            <span>Error, no existe una cuenta con este correo, inténtelo de nuevo.</span>
+            <span>Error, no existe una cuenta con este correo, inténtelo de nuevo</span>
         </div>       
         <!--CONTENT-->
         <div class="content">

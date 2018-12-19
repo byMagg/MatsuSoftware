@@ -30,13 +30,13 @@
         <!--HEADER-->
         <?php require "views/header.php"; ?>
         <div class="success">
-            <span>Contraseña cambiada correctamente.</span>
+            <span>Contraseña cambiada correctamente</span>
         </div>
         <div class="error password">
-            <span>Error, las contraseñas no coinciden, inténtelo de nuevo.</span>
+            <span>Error, las contraseñas no coinciden, inténtelo de nuevo</span>
         </div>
         <div class="error">
-            <span>Error, inténtelo de nuevo.</span>
+            <span>Error, inténtelo de nuevo</span>
         </div>     
         <!--CONTENT-->
         <div class="content">

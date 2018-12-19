@@ -14,9 +14,9 @@ jQuery(document).on('submit','#deletecomment',function(event){
         .done(function(respuesta){
             console.log(respuesta);
             if(!respuesta.error){
-                $('.success').slideDown('slow');
+                $('.delete').slideDown('slow');
                 setTimeout(function(){
-                    $('.success').slideUp('slow');
+                    $('.delete').slideUp('slow');
                 }, 3000);
             }else{
                 $('.general').slideDown('slow');

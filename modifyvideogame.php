@@ -21,10 +21,10 @@
         <!--HEADER-->
         <?php require "views/header.php"; ?>
         <div class="error general">
-            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
         </div>
         <div class="success">
-            <span>Videojuego modificado correctamente.</span>
+            <span>Videojuego modificado correctamente</span>
         </div>   
         <!--CONTENT-->
         <div class="content">

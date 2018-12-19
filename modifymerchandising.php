@@ -25,6 +25,7 @@
         </div>
         <div class="success">
             <span>Merchandising modificado correctamente.</span>
+        </div>
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">
@@ -32,7 +33,6 @@
                     <a class="nohover" href="merchandisingmanagement.php"><img id="volver"src="images/volver.png" alt="volver"></a>
                     <img id="user" src="images/merchan.png" alt="merch">
                     <h1>GESTIÓN DE MERCHANDISING</h1>
-                </div>
                 </div>
                 <div id="form">
                     <?php

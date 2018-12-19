@@ -12,9 +12,9 @@ jQuery(document).on('submit','#modifycomment',function(event){
         .done(function(respuesta){
             console.log(respuesta);
             if(!respuesta.error){
-                $('.success').slideDown('slow');
+                $('.send').slideDown('slow');
                 setTimeout(function(){
-                    $('.success').slideUp('slow');
+                    $('.send').slideUp('slow');
                 }, 3000);
             }else if(respuesta.tipo == 1){
                 $('.ac').slideDown('slow');
