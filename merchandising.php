@@ -26,6 +26,7 @@
         <script src="controller/jquery.js"></script>
         <script src="comment/addcomment.js"></script>
         <script src="comment/modifycomment.js"></script>
+        <script src="comment/deletecomment.js"></script>
     </head>
 
     <body>
@@ -103,11 +104,14 @@
                                     $resultado3 = getComment($mysqli, $_SESSION['usuario']['idUser'], $_GET['id']);
                                     $comment = $resultado3->fetch_assoc();
                                     echo'
+                                        <div class="error ac">
+                                            <span>No puedes añadir mas de un comentario</span>
+                                        </div>
                                         <div class="error general">
-                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
                                         </div>
                                         <div class="success">
-                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado.</span>
+                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
                                         </div>
                                         <form id="modifycomment" action="">
                                         <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
@@ -118,17 +122,28 @@
                                         <input type="number" name ="rating" min="0" max="5" step=".5" value="'.$comment['rating'].'" />
                                         <button class="button" type="submit">Modificar</button>
                                         </form>
+                                        <div class="error general">
+                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+                                        </div>
+                                        <div class="success">
+                                            <span>El comentario ha sido eliminado correctamente</span>
+                                        </div>
+                                        <form id="detelecomment" action="">
+                                        <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
+                                        <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
+                                        <button class="button" type="submit">Eliminar</button>
+                                        </form>
                                         ';   
                                 }else{
                                     echo'
                                         <div class="error ac">
-                                            <span>No puedes añadir mas de un comentario.</span>
+                                            <span>No puedes añadir mas de un comentario</span>
                                         </div>
                                         <div class="error general">
-                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+                                            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
                                         </div>
                                         <div class="success">
-                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado.</span>
+                                            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
                                         </div>
                                         <form id="addcomment" action="">
                                         <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />

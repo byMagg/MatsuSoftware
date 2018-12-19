@@ -62,11 +62,11 @@
                     <div id="lineavertical"></div>
 
                     <div class="error general">
-                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde.</span>
+                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
                     </div>
                     
                     <div class="success">
-                        <span>Proyecto registrado correctamente.</span>
+                        <span>Proyecto registrado correctamente</span>
                     </div>
 
                     <div id="form">

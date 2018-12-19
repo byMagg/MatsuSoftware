@@ -200,6 +200,11 @@ function setNewInformationToProduct($mysqli, $id, $title, $descrip, $price, $pho
     return $resultado;
 }
 
+function setNewRatingInformationToProduct($mysqli, $idProduct, $numComments, $sumRating){
+    $resultado = $mysqli->query("UPDATE product SET numComments = '".$numComments."', sumRating = '".$sumRating."' WHERE idProduct = '".$idProduct."' ");
+    return $resultado;
+}
+
 function setShoppinghistory($mysqli, $idUser, $title, $price, $purchaseDate){
     $title = replace($title);
     $resultado = $mysqli->query("INSERT INTO shoppinghistory(idUser,title, price, purchasedate) VALUES ('".$idUser."', '".$title."', '".$price."', '".$purchaseDate."')");
@@ -251,7 +256,7 @@ function addComment($mysqli, $idUser, $opinion, $rating, $validated, $idProduct)
 //**********************************************************************DELETE*********************************************************************//
 function deleteUsers($mysqli, $id){
     $resultado2 = $mysqli->query("DELETE FROM shoppinghistory WHERE idUser='".$id."'");
-    $resultado3 = $mysqli->query("DELETE FROM comment WHERE idUser='".$id."'");
+    $resultado3 = deleteCommentsWrittenByUser($mysqli, $id);
     $resultado4 = $mysqli->query("DELETE FROM shoppingrelations WHERE idUser='".$id."'");
 
     $resultado = $mysqli->query("DELETE FROM user WHERE idUser='".$id."'");
@@ -260,7 +265,7 @@ function deleteUsers($mysqli, $id){
 
 function deleteProduct($mysqli, $id){
     $resultado2 = $mysqli->query("DELETE FROM comment WHERE idProduct='".$id."'");
-    $resultado3 = $mysqli->query("DELETE FROM shoppingerelations WHERE idProduct='".$id."'");
+    $resultado3 = $mysqli->query("DELETE FROM shoppingrelations WHERE idProduct='".$id."'");
 
     $resultado = $mysqli->query("DELETE FROM product WHERE idProduct='".$id."'");
     return $resultado;
@@ -275,6 +280,29 @@ function deleteNewsletter($mysqli, $id){
     $resultado = $mysqli->query("DELETE FROM newsletter WHERE idNewsletter = $id");
     return $resultado;
 }
+
+function deleteCommentsWrittenByUser($mysqli, $id){
+    $resultado1 = $mysqli->query("SELECT * FROM comment WHERE idUser = $id");
+
+    while($comment = $resultado1->fetch_assoc()){
+        $resultado2 = $mysqli->query("SELECT * FROM product WHERE idProduct = ".$comment['idProduct']."");
+        $product = $resultado2->fetch_assoc();
+
+        $rating = $product['sumRating'] - $comment['rating'];
+        $numComments = $product['numComments'] - 1;
+
+        $resultado3 = $mysqli->query("UPDATE product SET sumRating = ".$rating.", numComments = ".$numComments." WHERE idProduct = ".$comment['idProduct']."");
+        $resultado4 = $mysqli->query("DELETE FROM comment WHERE idComment = ".$comment['idComment']."");
+    }
+
+    return TRUE;
+}
+
+function deleteComment($mysqli, $idUser, $idProduct){
+    $resultado = $mysqli->query("DELETE FROM comment WHERE idUser='".$idUser."' AND idProduct ='".$idProduct."'");
+    return $resultado;
+}
+
 
 //**********************************************************************ISELSE*********************************************************************//
 function isBought($mysqli, $idUser, $idProduct){
