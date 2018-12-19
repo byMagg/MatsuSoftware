@@ -66,21 +66,7 @@
                     </div> 
                     
                     <div id="lineavertical"></div>
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    <div class="error general">
-                        <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
-                    </div>
                     
-                    <div class="success">
-                        <span>Newsletter registrado correctamente</span>
-                    </div>
-
-=======
->>>>>>> 92dfcc83c0d277469ce4e292ab8285d6abb99939
->>>>>>> e3bd7282607c88674946e3e8b0c76268cb4ba625
                     <div id="form">
                         <h1>Añadir newsletter:</h1>
                         <form id="newslettermanagement" action="">

@@ -22,14 +22,6 @@
         <!--CONTENT-->
         <div id="principal" class="content">
             <div id="content" class="content-inside">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                <div class="success">
-                    <span>Mensaje enviado correctamente</span>
-                </div>
-                <div class="error">
-
 
                 <form id="formulario" action="">
                     <h1>CONTACTO:</h1>
