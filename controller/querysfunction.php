@@ -252,7 +252,7 @@ function addComment($mysqli, $idUser, $opinion, $rating, $validated, $idProduct)
 function deleteUsers($mysqli, $id){
     $resultado2 = $mysqli->query("DELETE FROM shoppinghistory WHERE idUser='".$id."'");
     $resultado3 = $mysqli->query("DELETE FROM comment WHERE idUser='".$id."'");
-    $resultado4 = $mysqli->query("DELETE FROM shoppingerelations WHERE idUser='".$id."'");
+    $resultado4 = $mysqli->query("DELETE FROM shoppingrelations WHERE idUser='".$id."'");
 
     $resultado = $mysqli->query("DELETE FROM user WHERE idUser='".$id."'");
     return $resultado;

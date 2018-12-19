@@ -17,10 +17,10 @@
         <div id="principal" class="content">
             <div id="content" class="content-inside">
                 <div class="success">
-                    <span>Mensaje enviado correctamente.</span>
+                    <span>Mensaje enviado correctamente</span>
                 </div>
                 <div class="error">
-                    <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo.</span>
+                    <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo</span>
                 </div>
                 <form id="formulario" action="">
                     <h1>CONTACTO:</h1>
