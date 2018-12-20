@@ -51,7 +51,11 @@
                                     <?php
                                         $resultado = getCategory($mysqli);
                                         while($cat = $resultado->fetch_assoc()){
-                                            echo "<option value='".$cat['kind']."'>".$cat['kind']."</option>";
+                                            if(isset($_GET['kind']) && $cat['kind'] == $_GET['kind']){
+                                                echo "<option value='".$cat['kind']."' selected>".$cat['kind']."</option>";
+                                            }else{
+                                                echo "<option value='".$cat['kind']."'>".$cat['kind']."</option>";
+                                            }
                                         }
                                     ?>
                                 </select>
