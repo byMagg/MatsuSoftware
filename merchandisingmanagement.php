@@ -28,11 +28,13 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
-        <div class="error general">
-            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
-        </div>
-        <div class="success">
-            <span>Merchandising registrado correctamente</span>
+        <div class="popup">
+            <div class="error general">
+                <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+            </div>
+            <div class="success">
+                <span>Merchandising registrado correctamente</span>
+            </div>
         </div>
         <!--CONTENT-->
         <div class="content">

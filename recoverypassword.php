@@ -29,15 +29,18 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
-        <div class="success">
-            <span>Contraseña cambiada correctamente</span>
-        </div>
-        <div class="error password">
-            <span>Error, las contraseñas no coinciden, inténtelo de nuevo</span>
-        </div>
-        <div class="error">
-            <span>Error, inténtelo de nuevo</span>
-        </div>     
+
+        <div class="popup">
+            <div class="success">
+                <span>Contraseña cambiada correctamente</span>
+            </div>
+            <div class="error password">
+                <span>Error, las contraseñas no coinciden, inténtelo de nuevo</span>
+            </div>
+            <div class="error">
+                <span>Error, inténtelo de nuevo</span>
+            </div>
+        </div>   
         <!--CONTENT-->
         <div class="content">
             <div id="content" class="content-inside">

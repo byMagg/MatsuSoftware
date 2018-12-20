@@ -13,11 +13,13 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
-        <div class="success">
-            <span>Mensaje enviado correctamente</span>
-        </div>
-        <div class="error">
-            <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo</span>
+        <div class="popup">
+            <div class="success">
+                <span>Mensaje enviado correctamente</span>
+            </div>
+            <div class="error">
+                <span>Error, el mensaje no se ha podido enviar, inténtalo de nuevo</span>
+            </div>
         </div>
         <!--CONTENT-->
         <div id="principal" class="content">

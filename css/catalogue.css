@@ -1,9 +1,10 @@
 .item {
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
-    width: 100%;
+    width: 70%;
     height: 130px;
+    margin: 0 auto;
 }
 
 .item img {
@@ -17,7 +18,12 @@
 .item a{
     display: inline-flex;
     align-items: center;
-    width: 200px;
+    width: 100%;
+    justify-content: center;
+}
+
+.info{
+    width: 100px;
 }
 
 .item h2 {
@@ -33,9 +39,6 @@
     align-content: start;
 }
 
-.separator{
-    height: 100px;
-}
 
 .button{
     padding: 5px 20px;
@@ -72,8 +75,9 @@ h1 {
 }
 
 .separator{
-    display: grid;
-    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    height: 100px;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -87,16 +91,24 @@ h1 {
         font-size: 9px;
     }
 
+    #kind{
+        display: table;
+        justify-items: center;
+    }
+
     #videojuegos,
     #merchandising {
         display: block;
     }
 
-
     @media only screen and (max-width: 768px) {
         .item img {
             width: 10vw;
             height: 10vw;
+        }
+
+        #kind{
+            display: grid;
         }
     }
 

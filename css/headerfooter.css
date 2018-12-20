@@ -199,11 +199,15 @@ select {
     border: 1px solid #CCD7D3;
 }
 
-.error, .success{
-    position: sticky;
-    position: -webkit-sticky;
+.popup{
     top: 0;
-    padding: 10px 0 ;
+    position: sticky;
+    z-index: 1001;
+}
+
+.error, .success{
+    position: absolute;
+    padding: 10px 0;
     border-radius:  0 0 5px 5px;
     color: #fff;
     width: 100%;

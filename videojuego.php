@@ -33,18 +33,21 @@
         <!--HEADER-->
         <?php require "views/header.php"; ?>
         <!--ARREGLAR-->
-        <div class="error general">
-            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+        <div class="popup">
+            <div class="error general">
+                <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+            </div>
+            <div class="success send">
+                <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
+            </div>
+            <div class="error ac">
+                <span>No puedes añadir mas de un comentario</span>
+            </div>
+            <div class="success delete">
+                <span>El comentario ha sido eliminado correctamente</span>
+            </div>
         </div>
-        <div class="success send">
-            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
-        </div>
-        <div class="error ac">
-            <span>No puedes añadir mas de un comentario</span>
-        </div>
-        <div class="success delete">
-            <span>El comentario ha sido eliminado correctamente</span>
-        </div>
+        
         <!--CONTENT-->
         <div class="content">
             <div class="content-inside">
@@ -129,7 +132,7 @@
                                             <input name ="rating" type="number" min="0" max="5" step=".5" value="'.$comment['rating'].'" />
                                             <button class="button" type="submit">Modificar</button>
                                         </form>
-                                            <form id="deletecomment" action="">
+                                        <form id="deletecomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
                                             <button class="button" type="submit">Eliminar</button>

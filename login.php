@@ -20,20 +20,22 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
-        <div class="error nick">
-            <span>Existe un usuario con este nick, pruebe con otro</span>
-        </div>
-        <div class="error email">
-            <span>Existe un usuario con este email, pruebe con otro</span>
-        </div>
-        <div class="error general">
-            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
-        </div>
-        <div class="success">
-            <span>Usuario registrado correctamente, inicie sesión para continuar</span>
-        </div>
-        <div class="error inicio">
-            <span>Datos de ingreso no válidos, inténtalo de nuevo</span>
+        <div class="popup">
+            <div class="error nick">
+                <span>Existe un usuario con este nick, pruebe con otro</span>
+            </div>
+            <div class="error email">
+                <span>Existe un usuario con este email, pruebe con otro</span>
+            </div>
+            <div class="error general">
+                <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+            </div>
+            <div class="success">
+                <span>Usuario registrado correctamente, inicie sesión para continuar</span>
+            </div>
+            <div class="error inicio">
+                <span>Datos de ingreso no válidos, inténtalo de nuevo</span>
+            </div>
         </div>
         <!--CONTENT-->
         <div id="principal" class="content">

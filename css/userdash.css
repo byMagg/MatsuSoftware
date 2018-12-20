@@ -18,6 +18,13 @@
     width: 29vw;
 }
 
+h4{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
 .item img {
     padding-bottom: 30px;
     width: 50%;

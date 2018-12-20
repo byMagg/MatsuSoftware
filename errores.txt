@@ -1,0 +1,17 @@
+ERRORES CSS:
+
+-Videojuego y merchandising: pues el texto de iniciar sesion para comprar o comentar mas adaptado, pon elk video algo mas pequeño para que pueda entrar mas la descripcion y los requisitos, los comentarios pues que vayan de dos en dos, y si te vas al red dead, si ves los comentarios... jeje, ya entiendes. Registrate y compra un producto para que te salte el formulario de comentario y lo adaptas en tamaño y todo lo demas igual.
+
+-Proyectos futuros: Todo bien, solo poner de 3 en 3.
+
+-gestion de newslester (jeje): Pues a ver, si te das cuenta, cuantos mas comentarios hay, mas abajo se va el formulario para añadir, intenta ponerlo arriba fijo, o la tabla mas ancha y asi no se va tan tan para abajo.
+-Los demas gestiones: Si aplicamos lo que hemos comentado antes a los demas gestiones, pasrá igual, asi que lo que hagas para arreglar el de newsletter para que se quede bien, los demas aplicaselo tambien porque el dia que haya muchos proyectos o muchos juegos, se irá igualmente a la mierda el formulario.
+
+-Modificar videojuego y modificar merchandising: El tamaño de los textarea y el boton colocar bieen.
+
+-Gestion de comentarios: Pues metete y lo sabrás jajajaja.
+
+-Historias de compra: La posicion del boton y que siga un estandar de tamaño y tal.
+
+-Historias de compra: La posicion del titulo, esta echamos mas adelante.
+-Todas las paginas de los dash que tienen tabla: Cuando emtes muchos valores, se chocan las tablas con el footer y el titulo de arriba.

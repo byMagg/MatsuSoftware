@@ -32,17 +32,19 @@
     <body>
         <!--HEADER-->
         <?php require "views/header.php"; ?>
-        <div class="error general">
-            <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
-        </div>
-        <div class="success send">
-            <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
-        </div>
-        <div class="error ac">
-            <span>No puedes añadir mas de un comentario</span>
-        </div>
-        <div class="success delete">
-            <span>El comentario ha sido eliminado correctamente</span>
+        <div class="popup">
+            <div class="error general">
+                <span>Ha ocurrido un error, inténtalo de nuevo mas tarde</span>
+            </div>
+            <div class="success send">
+                <span>El comentario se ha enviado a revisión, aparecerá una ver revisado</span>
+            </div>
+            <div class="error ac">
+                <span>No puedes añadir mas de un comentario</span>
+            </div>
+            <div class="success delete">
+                <span>El comentario ha sido eliminado correctamente</span>
+            </div>
         </div>
         <!--CONTENT-->
         <div class="content">

@@ -86,7 +86,6 @@ iframe {
 #divcomment{
     grid-column: 1 / span 2;
     justify-content: center;
-    display: flex;
 }
 
 .info {
@@ -123,8 +122,12 @@ input{
     width: 100%;
 }
 
+#divcomment{
+    display: grid;
+}
+
 .button {
-    text-align: center;
+    margin: 5px;
 }
 
 #linea {
@@ -135,6 +138,10 @@ input{
 
 #error label {
     justify-content: center;
+}
+
+#deletecomment{
+    align-content: end;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -184,6 +191,10 @@ input{
 
     @media only screen and (max-width: 800px) {
 
+        #h1comentario{
+            text-align: center;
+        }
+
         #content{
             padding-top: 100px;
         }
@@ -194,6 +205,7 @@ input{
 
         #principal h2 {
             text-align: center;
+            margin-bottom: 110px;
         }
 
         #principal img {
@@ -233,9 +245,6 @@ input{
             margin: 0 auto;
         }
 
-        .button {
-            margin-top: 110px;
-        }
         @media only screen and (max-width: 580px) {
             #comentarios {
                 margin: 0 auto;
