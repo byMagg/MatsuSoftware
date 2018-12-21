@@ -118,20 +118,25 @@
                                     $resultado3 = getComment($mysqli, $_SESSION['usuario']['idUser'], $_GET['id']);
                                     $comment = $resultado3->fetch_assoc();
                                     echo'
-                                        <form id="modifycomment" action="">
-                                            <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
-                                            <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                            <label>Modifica tu comentario:</label>
-                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." placeholder=" Introduce el comentario.">'.$comment['opinion'].'</textarea>
-                                            <label>Modifica tu puntuación:</label>
-                                            <input type="number" name ="rating" min="0" max="5" step=".5" value="'.$comment['rating'].'" />
-                                            <button class="button" type="submit">Modificar</button>
-                                        </form>
+                                    <form id="modifycomment" action="">
+                                    <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
+                                    <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
+                                    <div><label>Modifica tu comentario:</label>
+                                    <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres.">'.$comment['opinion'].'</textarea></div>
+                                   
+                                    <div><label>Modifica tu puntuación:</label>
+                                    <input name ="rating" type="number" min="0" max="5" step=".5" value="'.$comment['rating'].'" /></div>
+                                    
+                                    <div id="botonesform">
+                                        <button class="button" type="submit">Modificar</button>
                                         <form id="deletecomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
                                             <button class="button" type="submit">Eliminar</button>
                                         </form>
+                                    </div>
+                                    
+                                </form>
                                         ';   
                                 }else{
                                     echo'

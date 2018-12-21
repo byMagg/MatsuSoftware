@@ -13,14 +13,13 @@
 #principal img {
     width: 200px;
     height: 200px;
-    margin-right: 30px;
     border: 1px solid rgb(0, 216, 72);
     border-radius: 50%;
 }
 
 #descripcion {
     width: 250px;
-    margin-right: 30px;
+    margin: 0 30px;
 }
 
 #secundario {
@@ -43,6 +42,12 @@ iframe {
     display: inline-flex;
     justify-content: left;
     align-items: center;
+    margin: 20px 0;
+}
+
+.item h4{
+    overflow: auto;
+    height: 100px;
 }
 
 .item img {
@@ -98,20 +103,25 @@ form{
     justify-items: center;
 }
 
+#descripcion p {
+    overflow-y: auto;
+    max-height: 155px;
+}
+
 input{
     width: 50px;
 }
 
 .estrella {
-    margin: 30px;
     display: flex;
     align-items: center;
 }
 
 #puntuacion {
     position: absolute;
-    display: flex;
-    right: 5vw;
+    display: grid;
+    right: 50px;
+    top: 10px;
 }
 
 #cabecera {
@@ -122,12 +132,29 @@ input{
     width: 100%;
 }
 
-#divcomment{
-    display: grid;
+#divcomment form{
+    display: table;
+    margin: 0 auto;
 }
 
-.button {
+#botonesform{
+    display: block;
+}
+
+#botonesform button{
     margin: 5px;
+}
+
+#divcomment input{
+    margin: 15px auto;
+}
+
+#divcomment div{
+    display: inline-grid;
+}
+
+#seccion{
+    width: 202px;
 }
 
 #linea {
@@ -142,6 +169,23 @@ input{
 
 #deletecomment{
     align-content: end;
+}
+
+@media only screen and (max-width: 1400px) {
+    #comentarios {
+        margin: 0 auto;
+        width: 90%;
+        display: block;
+    }
+
+    .item {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .info{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -167,7 +211,7 @@ input{
     #puntuacion {
         position: absolute;
         left: 0px;
-        top: 445px;
+        top: 482px;
     }
 
     .info {
@@ -190,6 +234,11 @@ input{
     }
 
     @media only screen and (max-width: 800px) {
+
+        #divcomment form{
+            display: grid;
+            justify-content: center;
+        }
 
         #h1comentario{
             text-align: center;
@@ -216,15 +265,10 @@ input{
             margin-top: 20px;
         }
 
-        .item {
-            width: 230px;
-            margin: 0 auto;
-            display: block;
-        }
-
         #seccion {
             display: grid;
             justify-content: center;
+            margin: 0 auto;
         }
 
         #cabecera h1 {
@@ -234,7 +278,6 @@ input{
 
         #puntuacion {
             position: absolute;
-            display: flex;
             justify-content: center;
             top: 375px;
             width: 100%;
@@ -243,14 +286,6 @@ input{
         #descripcion {
             text-align: justify;
             margin: 0 auto;
-        }
-
-        @media only screen and (max-width: 580px) {
-            #comentarios {
-                margin: 0 auto;
-                width: 90%;
-                display: block;
-            }
         }
     }
 }

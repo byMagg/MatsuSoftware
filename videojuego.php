@@ -22,7 +22,7 @@
         <!-- Titulo -->
         <title>Videojuego - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
-        <link href="css/videojuego.css" type="text/css" rel="stylesheet">
+        <link href="css/videogame.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>
         <script src="comment/addcomment.js"></script>
         <script src="comment/modifycomment.js"></script>
@@ -60,7 +60,7 @@
                                 $total = $videogame['numComments'];
 
                                 if($total != 0){
-                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>'.round($sum/$total,1).'/5</h3>';
+                                    echo '<h2>Puntuación</h2><div class="estrella"><h3>'.round($sum/$total,1).'/5</h3>';
                                     $stars = $sum/$total;
                                     for($i = 0; $i < 5; $i++){
                                         if($stars >= 1){
@@ -73,9 +73,9 @@
                                             echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
-                                    echo '</div></div>';
+                                    echo '</div>';
                                 }else{
-                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"></div></div> ';
+                                    echo '<h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"></div> ';
                                 }
                             ?>
                         </div>
@@ -97,7 +97,7 @@
                                         </form>
                                         ';
                                 }else{
-                                    echo '<h2 class="msgcpurchase">Debes iniciar sesión para poder comprar.</h2>';
+                                    echo '<h3 class="msgcpurchase">Debes iniciar sesión para poder comprar.</h3>';
                                 }
                             ?>
                         </div>
@@ -126,17 +126,23 @@
                                         <form id="modifycomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                            <label>Modifica tu comentario:</label>
-                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres.">'.$comment['opinion'].'</textarea>
-                                            <label>Modifica tu puntuación:</label>
-                                            <input name ="rating" type="number" min="0" max="5" step=".5" value="'.$comment['rating'].'" />
-                                            <button class="button" type="submit">Modificar</button>
+                                            <div><label>Modifica tu comentario:</label>
+                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres.">'.$comment['opinion'].'</textarea></div>
+                                           
+                                            <div><label>Modifica tu puntuación:</label>
+                                            <input name ="rating" type="number" min="0" max="5" step=".5" value="'.$comment['rating'].'" /></div>
+                                            
+                                            <div id="botonesform">
+                                                <button class="button" type="submit">Modificar</button>
+                                                <form id="deletecomment" action="">
+                                                    <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
+                                                    <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
+                                                    <button class="button" type="submit">Eliminar</button>
+                                                </form>
+                                            </div>
+                                            
                                         </form>
-                                        <form id="deletecomment" action="">
-                                            <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
-                                            <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                            <button class="button" type="submit">Eliminar</button>
-                                        </form>
+                                        
                                         ';   
                                 }else{
                                     echo'
@@ -159,8 +165,7 @@
                                 $user = $resultado4->fetch_assoc();
                                 echo'
                                     <div class="item">
-                                        <img src="images/user.png" alt="Foto de perfil">
-                                        <div class="info"><div><h2>'.$user['nick'].'</h2><h4>'.$comment['opinion'].'</h4></div></div>
+                                        <div class="info"><img src="images/user.png" alt="Foto de perfil"><div><h2>'.$user['nick'].'</h2><h4>'.$comment['opinion'].'</h4></div></div>
                                         <div class="estrella">
                                     ';
                                     $stars = $comment['rating'];
