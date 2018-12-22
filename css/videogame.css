@@ -1,5 +1,5 @@
 #content {
-    padding-top: 100px;
+    padding-top: 112px;
     display: inline-flex;
     width: 100%;
     justify-content: center;
@@ -42,7 +42,7 @@ iframe {
     display: inline-flex;
     justify-content: left;
     align-items: center;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 .item h4{
@@ -183,7 +183,7 @@ input{
     }
 
     .item {
-        margin: 0 auto;
+        margin: 40px auto;
     }
 }
 
