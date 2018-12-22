@@ -7,7 +7,4 @@ ERRORES CSS:
 
 -Gestion de comentarios: Pues metete y lo sabrás jajajaja.
 
--Historias de compra: La posicion del boton y que siga un estandar de tamaño y tal.
-
--Historias de compra: La posicion del titulo, esta echamos mas adelante.
 -Todas las paginas de los dash que tienen tabla: Cuando emtes muchos valores, se chocan las tablas con el footer y el titulo de arriba.
