@@ -27,8 +27,8 @@
                         $resultado = getProjects($mysqli);
                         while($project = $resultado->fetch_assoc()){
                             echo "
-                            <div class='item'><img src=".$project['photoLink']." alt='Foto del proyecto'><h2>".$project['title']."</h2><p>".$project['descrip']."</p></div>
-                            <div class='linea'></div>
+                            <div class='item'><img src=".$project['photoLink']." alt='Foto del proyecto'><h3>".$project['title']."</h3><p>".$project['descrip']."</p><div class='linea'></div></div>
+                            
                             ";
                         }
                     ?>

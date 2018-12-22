@@ -164,9 +164,9 @@
                                 $resultado4 = getUsersUsingId($mysqli, $comment['idUser']);
                                 $user = $resultado4->fetch_assoc();
                                 echo'
-                                    <div class="item">
-                                        <div class="info"><img src="images/user.png" alt="Foto de perfil"><div><h2>'.$user['nick'].'</h2><h4>'.$comment['opinion'].'</h4></div></div>
-                                        <div class="estrella">
+                                    <div class="item"><div class="info"><img src="images/user.png" alt="Foto de perfil">
+                                    <h2>'.$user['nick'].'</h2>
+                                    <div class="estrella">
                                     ';
                                     $stars = $comment['rating'];
                                     for($i = 0; $i < 5; $i++){
@@ -180,8 +180,7 @@
                                             echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
-                                    echo'</div>';
-                                echo'</div>';
+                                    echo'</div></div><h4>'.$comment['opinion'].'</h4></div>';
                             }
                         ?>
                 </div>

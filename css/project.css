@@ -1,8 +1,9 @@
 #proyectos {
-    display: inline-flex;
+    display: grid;
     justify-content: center;
     width: 100%;
     text-align: center;
+    grid-template-columns: auto auto auto;
 }
 
 #proyectos img {
@@ -16,6 +17,10 @@
 
 #proyectos p {
     text-align: justify;
+    overflow-y: auto;
+    max-height: 250px;
+    word-wrap: break-word;
+    padding: 0 15px;
 }
 
 .item {
