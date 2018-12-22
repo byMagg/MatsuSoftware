@@ -105,15 +105,11 @@
                         <div id="descripcion">
                             
                             <h3>Descripción</h3>
-                            <div id="descrip">
-                                <p><?php echo $videogame['descrip']; ?></p>
-                            </div>
+                            <p><?php echo $videogame['descrip']; ?></p>
                             <button onclick="showmore('descrip')">Ver más</button>
                             
                             <h3>Requisitos</h3>
-                            <div>
-                                <p id="requisitos"><?php echo $videogame['requirements']; ?></p>
-                            </div>
+                            <p id="requisitos"><?php echo $videogame['requirements']; ?></p>
                             <button onclick="showmore('requisitos')">Ver más</button>
                         </div>
                     </div id="video">
@@ -189,7 +185,8 @@
                                             echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
-                                    echo'</div></div><h4>'.$comment['opinion'].'</h4></div>';
+                                    echo'</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
+                                    <button onclick=showmore('.$comment["idUser"].')>Ver más</button></div>';
                             }
                         ?>
                 </div>

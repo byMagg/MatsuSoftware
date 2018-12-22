@@ -102,6 +102,7 @@
                         <div id="descripcion">
                             <h3>Descripción</h3>
                             <p><?php echo $merchandising['descrip']; ?></p>
+                            <button onclick="showmore('descrip')">Ver más</button>
                         </div>
                     </div>
                 </div>
@@ -174,7 +175,8 @@
                                             echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
-                                    echo'</div></div><h4>'.$comment['opinion'].'</h4></div>';
+                                    echo'</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
+                                    <button onclick=showmore('.$comment["idUser"].')>Ver más</button></div>';
                             }
                         ?>
                 </div>

@@ -46,8 +46,8 @@ iframe {
 }
 
 .item h4{
-    overflow-x: auto;
-    max-height: 100px;
+    overflow: hidden;
+    max-height: 150px;
     word-wrap: break-word;
     max-width: 60vw;
 }
@@ -109,7 +109,7 @@ form{
 
 #descripcion p {
     overflow: hidden;
-    max-height: 100px;
+    max-height: 150px;
 }
 
 input{
