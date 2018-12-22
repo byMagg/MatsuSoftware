@@ -5,6 +5,8 @@
 
     $email = $_POST['email'];
 
+    $email = strtolower($email);
+
     $consulta = getUsersUsingEmail($mysqli, $email);
     $datos = $consulta->fetch_assoc();
     
