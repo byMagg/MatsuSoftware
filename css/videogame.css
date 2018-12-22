@@ -108,8 +108,8 @@ form{
 }
 
 #descripcion p {
-    overflow-y: auto;
-    max-height: 155px;
+    overflow: hidden;
+    max-height: 100px;
 }
 
 input{

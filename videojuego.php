@@ -27,6 +27,7 @@
         <script src="comment/addcomment.js"></script>
         <script src="comment/modifycomment.js"></script>
         <script src="comment/deletecomment.js"></script>
+        <script src="showmore/showmore.js"></script>
     </head>
 
     <body>
@@ -102,10 +103,18 @@
                             ?>
                         </div>
                         <div id="descripcion">
+                            
                             <h3>Descripción</h3>
-                            <p><?php echo $videogame['descrip']; ?></p>
+                            <div id="descrip">
+                                <p><?php echo $videogame['descrip']; ?></p>
+                            </div>
+                            <button onclick="showmore('descrip')">Ver más</button>
+                            
                             <h3>Requisitos</h3>
-                            <p><?php echo $videogame['requirements']; ?></p>
+                            <div>
+                                <p id="requisitos"><?php echo $videogame['requirements']; ?></p>
+                            </div>
+                            <button onclick="showmore('requisitos')">Ver más</button>
                         </div>
                     </div id="video">
                         <iframe src="https://youtube.com/embed/<?php echo $videogame['trailerLink']; ?>"></iframe>
