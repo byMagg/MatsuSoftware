@@ -12,6 +12,9 @@
     $rol = 0;
     $request = 0;
 
+    $nick = strtolower($nick);
+    $email = strtolower($email);
+
     $datos = getUsersUsingNick($mysqli, $nick);
     $datos = $datos->fetch_assoc();
 

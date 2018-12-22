@@ -9,6 +9,8 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     $email = $mysqli->real_escape_string($_POST['email']);
     $pass = $mysqli->real_escape_string($_POST['pass']);
     $isEmail = strpos($email, '@');
+    
+    $email = strtolower($email);
 
     if($isEmail){
         $consulta = $mysqli->prepare("SELECT * FROM user WHERE email = ? AND pass = ?");
