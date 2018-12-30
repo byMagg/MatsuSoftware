@@ -27,6 +27,7 @@
         <script src="comment/addcomment.js"></script>
         <script src="comment/modifycomment.js"></script>
         <script src="comment/deletecomment.js"></script>
+        <script src="showmore/showmore.js"></script>
     </head>
 
     <body>
@@ -102,7 +103,7 @@
                         <div id="descripcion">
                             <h3>Descripción</h3>
                             <p><?php echo $merchandising['descrip']; ?></p>
-                            <button onclick="showmore('descrip')">Ver más</button>
+                            <button onclick="showmore('descrip','150px')">Ver más</button>
                         </div>
                     </div>
                 </div>
@@ -176,7 +177,7 @@
                                         }
                                     }
                                     echo'</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
-                                    <button onclick=showmore('.$comment["idUser"].')>Ver más</button></div>';
+                                    <button onclick=showmore('.$comment["idUser"].', "150px")>Ver más</button></div>';
                             }
                         ?>
                 </div>

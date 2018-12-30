@@ -81,7 +81,7 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                                 <td>'.$user["idUser"].'</td>
                                                 <td>'.$user["nick"].'</td>
                                                 <td>'.$user["email"].'</td>
-                                                <td>'.$rolName.'</td>
+                                                <td>'.$rolName.'
                                                 '.$rolButton.'
                                                 '.$modificar.'
                                                 '.$eliminar.'

@@ -23,13 +23,25 @@
     justify-content: center;
 }
 
-#lineavertical {
+#tabla p {
+    overflow: hidden;
+    max-height: 50px;
+}
+
+#form, #tabla{
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#lineavertical{
     border: 1px solid rgb(0, 216, 72);
-    height: 40vh;
-    min-height: 300px;
-    max-height: 530px;
-    margin: 0px 50px 0px 50px;
-    width: 0;
+    position: absolute;
+    height: 60%;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 #tabla>table {
@@ -37,11 +49,12 @@
     color: black;
     border-spacing: 0;
     overflow: auto;
-    width: 90vw;
-    max-width: 477px;
+    width: 40vw;
+    max-width: 568px;
     table-layout: auto;
     text-align: center;
     display: table-caption;
+    height: 60vh;
 }
 
 #comment {
@@ -86,7 +99,7 @@ textarea {
 
 form {
     display: grid;
-    justify-content: center;
+    justify-items: center;
 }
 
 td {

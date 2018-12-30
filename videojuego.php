@@ -106,11 +106,11 @@
                             
                             <h3>Descripción</h3>
                             <p><?php echo $videogame['descrip']; ?></p>
-                            <button onclick="showmore('descrip')">Ver más</button>
+                            <button onclick="showmore('descrip','150px')">Ver más</button>
                             
                             <h3>Requisitos</h3>
                             <p id="requisitos"><?php echo $videogame['requirements']; ?></p>
-                            <button onclick="showmore('requisitos')">Ver más</button>
+                            <button onclick="showmore('requisitos','150px')">Ver más</button>
                         </div>
                     </div id="video">
                         <iframe src="https://youtube.com/embed/<?php echo $videogame['trailerLink']; ?>"></iframe>
@@ -186,7 +186,7 @@
                                         }
                                     }
                                     echo'</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
-                                    <button onclick=showmore('.$comment["idUser"].')>Ver más</button></div>';
+                                    <button onclick=showmore('.$comment["idUser"].', "150px")>Ver más</button></div>';
                             }
                         ?>
                 </div>

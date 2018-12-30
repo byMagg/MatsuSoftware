@@ -28,7 +28,6 @@ input {
 #cuadricula{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #lineavertical {

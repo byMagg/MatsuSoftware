@@ -1,11 +1,9 @@
-function showmore(id) {
+function showmore(id, tam) {
     console.log(id);
     var x = document.getElementById(id);
-    var altura = "150px";
-
 
     if (x.style.maxHeight == "2000px") {
-      x.style.maxHeight = altura;
+      x.style.maxHeight = tam;
     } else {
       x.style.maxHeight = "2000px";
     }

@@ -23,6 +23,13 @@
     table-layout: auto;
     text-align: center;
     display: table-caption;
+    height: 60vh;
+    width: 67vw;
+    max-width: 558px;
+}
+
+.finalcolumna{
+    padding-right: 10px;
 }
 
 #cabecera {

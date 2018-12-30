@@ -24,6 +24,7 @@
         <script src="controller/jquery.js"></script>
         <script src="newslettermanagement/addnewsletter.js"></script>
         <script src="controller/verify.js"></script>
+        <script src="showmore/showmore.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -52,6 +53,7 @@
                                 <th id="id">#</th>
                                 <th id="comment">Comentario</th>
                                 <th></th>
+                                <th></th>
                             </tr>
 
                             <?php
@@ -59,7 +61,8 @@
                                 while($news = $resultado->fetch_assoc()){
                                     echo "<tr>
                                           <td>".$news['idNewsletter']."</td>
-                                          <td>".$news['comment']."</td>
+                                          <td><p id=".$news['idNewsletter'].">".$news['comment']."</p></td>
+                                          <td><button onclick=showmore(".$news['idNewsletter'].",'50px')>Ver más</button></td>
                                           <td><a class='icono nohover' onclick='verifyDeleteNewsletter(".$news['idNewsletter'].")'><img class='delete' src='images/eliminar.png' alt='Eliminar'></a></td>
                                           </tr>";   
                                 }
