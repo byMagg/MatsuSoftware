@@ -185,8 +185,9 @@
                                             echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
-                                    echo'</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
-                                    <button onclick=showmore('.$comment["idUser"].', 150px)>Ver más</button></div>';
+                                    echo
+                                    '</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
+                                    <button onclick="showmore('.$comment["idUser"].', 150px)">Ver más</button></div>';
                             }
                         ?>
                 </div>

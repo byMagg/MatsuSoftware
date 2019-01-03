@@ -21,7 +21,7 @@
     <head>
         <!-- Titulo -->
         <title>Merchandising - MatsuSoftware</title>
-        <?php require "views/head.php"; ?>
+        <?php require "views/head.php";?>
         <link href="css/merchandising.css" type="text/css" rel="stylesheet">
         <script src="controller/jquery.js"></script>
         <script src="comment/addcomment.js"></script>
@@ -138,10 +138,7 @@
                                     <div id="botonesform">
                                             <button class="button" type="submit" form="modifycomment">Modificar</button>
                                             <button class="button" type="submit" form="deletecomment">Eliminar</button>
-                                    </div>
-                                    
-                                
-                                        ';   
+                                    </div>';   
                                 }else{
                                     echo'
                                         <form id="addcomment" action="">
@@ -178,8 +175,9 @@
                                             echo '<img src="images/noestrella.png" alt="No estrella">';
                                         }
                                     }
-                                    echo'</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
-                                    <button onclick=showmore('.$comment["idUser"].',150px)>Ver más</button></div>';
+                                    echo
+                                    "</div></div><h4 id=".$comment['idUser'].">".$comment['opinion']."</h4>
+                                    <button onclick=showmore('".$comment['idUser']."', 150px)>Ver más</button></div>";
                             }
                         ?>
                 </div>
