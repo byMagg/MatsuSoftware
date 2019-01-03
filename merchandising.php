@@ -176,8 +176,9 @@
                                         }
                                     }
                                     echo
-                                    "</div></div><h4 id=".$comment['idUser'].">".$comment['opinion']."</h4>
-                                    <button onclick=showmore('".$comment['idUser']."', 150px)>Ver más</button></div>";
+                                    "</div></div>
+                                    <h4 id=".$comment['idComment'].">".$comment['opinion']."</h4>
+                                    <button onclick=showmore(".$comment['idComment'].",'120px')>Ver más</button></div>";
                             }
                         ?>
                 </div>
