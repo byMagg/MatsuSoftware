@@ -118,6 +118,10 @@ form{
     word-break: break-all;
 }
 
+#requisitos{
+    max-height: 100px;
+}
+
 input{
     width: 50px;
 }
@@ -147,6 +151,16 @@ input{
 
 #botonesform{
     display: block;
+    margin: 0 auto;
+    width: 208px;
+}
+
+textarea {
+    min-height: 58px;
+    max-height: 58px;
+    width: 200px;
+    max-width: 1000px;
+    min-width: 200px;
 }
 
 #botonesform button{
@@ -157,7 +171,7 @@ input{
     margin: 15px auto;
 }
 
-#divcomment div{
+#modifycomment div{
     display: inline-grid;
 }
 

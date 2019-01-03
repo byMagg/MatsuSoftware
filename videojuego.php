@@ -105,12 +105,12 @@
                         <div id="descripcion">
                             
                             <h3>Descripción</h3>
-                            <p><?php echo $videogame['descrip']; ?></p>
+                            <p id="descrip"><?php echo $videogame['descrip']; ?></p>
                             <button onclick="showmore('descrip','150px')">Ver más</button>
                             
                             <h3>Requisitos</h3>
                             <p id="requisitos"><?php echo $videogame['requirements']; ?></p>
-                            <button onclick="showmore('requisitos','150px')">Ver más</button>
+                            <button onclick="showmore('requisitos','100px')">Ver más</button>
                         </div>
                     </div id="video">
                         <iframe src="https://youtube.com/embed/<?php echo $videogame['trailerLink']; ?>"></iframe>
