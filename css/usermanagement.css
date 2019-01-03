@@ -11,8 +11,10 @@
 }
 
 #tabla {
-    display: flex;
+    display: grid;
     justify-content: center;
+    align-content: center;
+    text-align: center;
 }
 
 #tabla>table {
@@ -24,12 +26,6 @@
     text-align: center;
     display: table-caption;
     max-height: 60vh;
-    width: 67vw;
-    max-width: 558px;
-}
-
-.finalcolumna{
-    padding-right: 10px;
 }
 
 #cabecera {
