@@ -2,14 +2,22 @@
     require 'conexiondb/conexion.php';
     require 'controller/querysfunction.php';
 
+    if(isset($_GET['pagMerchandising'])){
+        $pagM = $_GET['pagMerchandising'];
+    }else{
+        $pagM = 1;
+    }
+
     if(isset($_GET['kind'])){
         if($_GET['kind'] == "ALL"){
-            $merch = getMerchandising($mysqli, "ALL");
+            $merch = getMerchandisingPag($mysqli, "ALL", $pagM);
         }else{
-            $merch = getMerchandising($mysqli, $_GET['kind']);
+            $merch = getMerchandisingPag($mysqli, $_GET['kind'], $pagM);
         }
+        $kind = $_GET['kind'];
     }else{
-        $merch = getMerchandising($mysqli, "ALL");
+        $merch = getMerchandisingPag($mysqli, "ALL", $pagM);
+        $kind = 'ALL';
     }
 ?>
 
@@ -33,11 +41,34 @@
                         <div id="h1apps"><h1>VIDEOJUEGOS</h1></div>
                         <div class="separator"></div>
                             <?php
-                                $resultado = getVideogames($mysqli);
+                                if(isset($_GET['pagVideojuego'])){
+                                    $pagV = $_GET['pagVideojuego'];
+                                }else{
+                                    $pagV = 1;
+                                }
+
+                                $resultado = getVideogamesPag($mysqli, $pagV);
+
                                 while($product = $resultado->fetch_assoc()){
                                     echo "
                                     <div class='item'><a class='nohover' href='videojuego.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto del videojuego'><div class='info'><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
                                     ";
+                                }
+                                
+                                $maxV = getVideogamesTotal($mysqli);
+                                
+                                if($pagV - 1 > 0){
+                                ?>
+                                    <a class="nohover" href="catalogue.php?pagVideojuego=<?php echo $pagV-1 ?>"><button class="button"><</button></a>
+                                <?php
+                                }
+
+                                echo '<p>'.$pagV.'</p>';
+
+                                if($pagV*6 < $maxV){
+                                ?>
+                                    <a class="nohover" href="catalogue.php?pagVideojuego=<?php echo $pagV+1 ?>"><button class="button">></button></a>     
+                                <?php
                                 }
                             ?>  
                     </div>
@@ -66,6 +97,22 @@
                                     echo "
                                     <div class='item'><a class='nohover' href='merchandising.php?id=".$product['idProduct']."'><img src='".$product['photoLink']."' alt='Foto del merchandising'><div class='info'><h2>".$product['title']."</h2><h4>".$product['price']." €</h4></div></div></a>
                                     ";
+                                }
+
+                                $maxM = getMerchandisingTotal($mysqli, $kind);
+                                
+                                if($pagM - 1 > 0){
+                                ?>
+                                    <a class="nohover" href="catalogue.php?pagMerchandising=<?php echo $pagM-1 ?>&kind=<?php echo $kind ?>"><button class="button"><</button></a>
+                                <?php
+                                }
+
+                                echo '<p>'.$pagM.'</p>';
+
+                                if($pagM*6 < $maxM){
+                                ?>
+                                    <a class="nohover" href="catalogue.php?pagMerchandising=<?php echo $pagM+1 ?>&kind=<?php echo $kind ?>"><button class="button">></button></a>     
+                                <?php
                                 }
                             ?>
                     </div>

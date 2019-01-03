@@ -77,6 +77,18 @@ function getVideogames($mysqli){
     return $resultado;
 }
 
+function getVideogamesPag($mysqli, $pag){
+    $num = ($pag-1) *6;
+    $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'game' LIMIT $num, 6");
+    return $resultado;
+}
+
+function getVideogamesTotal($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'game'");
+    $resultado = $resultado->num_rows;
+    return $resultado;
+}
+
 function getVideogamesUsingId($mysqli, $id){
     $resultado = $mysqli->query("SELECT * FROM product WHERE idProduct = $id");
     return $resultado;
@@ -89,6 +101,28 @@ function getMerchandising($mysqli, $kind){
         $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising' AND kind = '".$kind."'");
     }
     
+    return $resultado;
+}
+
+function getMerchandisingPag($mysqli, $kind, $pag){
+    $num = ($pag-1) *6;
+    if($kind == "ALL"){
+        $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising' LIMIT $num, 6");
+    }else{
+        $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising' AND kind = '".$kind."' LIMIT $num, 6");
+    }
+    
+    return $resultado;
+}
+
+function getMerchandisingTotal($mysqli, $kind){
+    if($kind == "ALL"){
+        $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising'");
+    }else{
+        $resultado = $mysqli->query("SELECT * FROM product WHERE category = 'merchandising' AND kind = '".$kind."'");
+    }
+    
+    $resultado = $resultado->num_rows;
     return $resultado;
 }
 

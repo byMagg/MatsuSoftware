@@ -8,3 +8,4 @@ ERRORES CSS:
     -Botones: Mira, el boton de actualizar del newsletter no tiene el mismo tamaño que el de catalogo.
     -Imagenes: lo que comentaste que ponerle una foto de fondo blanco a las fotos de los merchandising y videojuegos.
     -Ver mas: Independientemente de que se muestre en mensajes que se impriman enteros ya, haz que todos los botones sean funcionales, por ej, en los comentarios o en la descripcion no van, en los requisitos si va (Ya se que lo sabes :P)
+    -Catalogo: Arreglar orden de los botones de paginación.
