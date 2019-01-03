@@ -58,7 +58,7 @@
                     </div>
                     <div id="principal">
                         <div id="seccion">
-                            <img src="<?php echo $videogame['photoLink']; ?>" alt="Foto del videojuego">
+                            <img id="foto" src="<?php echo $videogame['photoLink']; ?>" alt="Foto del videojuego">
                             <h2>Precio: <?php echo $videogame['price']; ?>€</h2>
                             <div id="puntuacion">
                                 <?php 

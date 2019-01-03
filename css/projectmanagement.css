@@ -28,6 +28,7 @@ input {
 #cuadricula{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #lineavertical {
@@ -88,9 +89,22 @@ textarea {
     width: 278px;
 }
 
+#tabla, #form{
+    display: grid;
+    width: 50%;
+    margin: 0 50px;
+}
+
 form{
     display: grid;
-    justify-content: center;
+}
+
+#form{
+    justify-content: left;
+}
+
+#tabla{
+    justify-content: right;
 }
 
 td {

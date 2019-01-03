@@ -1,11 +1,11 @@
 ERRORES CSS:
     -Tablas: Espacios en blanco.
-    -Gestion de newsletter: Espacios demasiados grandes entre las lineas y el formlario y la tabla, ponlos como los otros.
-    -Gestion de proyectos: Centrar la tabla, ¿No está muy arriba? (No me mates).
-    -Gestion de videojuegos: Uff, a ver, xDDDDDD, ¿no ves algo raro?, la linea muy arriba, como muy descuadrado ¿no?
-    -Modificar videojuego: Mira, vete a otro, por ejemplo el contact, y mirate el css y pon el textarea que este limitado al mismo tamaño, me explico, peudes hacerlo lo grande o pequeño que quieras, vete al contact y copia el max-height, el min etc... del textarea.
-    -Modificar merchandising: Igual que arriba.
-    -Botones: Mira, el boton de actualizar del newsletter no tiene el mismo tamaño que el de catalogo.
-    -Imagenes: lo que comentaste que ponerle una foto de fondo blanco a las fotos de los merchandising y videojuegos.
+    //-Gestion de newsletter: Espacios demasiados grandes entre las lineas y el formlario y la tabla, ponlos como los otros.
+    //-Gestion de proyectos: Centrar la tabla, ¿No está muy arriba? (No me mates).
+    //-Gestion de videojuegos: Uff, a ver, xDDDDDD, ¿no ves algo raro?, la linea muy arriba, como muy descuadrado ¿no?
+    //-Modificar videojuego: Mira, vete a otro, por ejemplo el contact, y mirate el css y pon el textarea que este limitado al mismo tamaño, me explico, peudes hacerlo lo grande o pequeño que quieras, vete al contact y copia el max-height, el min etc... del textarea.
+    //-Modificar merchandising: Igual que arriba.
+    //-Botones: Mira, el boton de actualizar del newsletter no tiene el mismo tamaño que el de catalogo.
+    //-Imagenes: lo que comentaste que ponerle una foto de fondo blanco a las fotos de los merchandising y videojuegos.
     -Ver mas: Independientemente de que se muestre en mensajes que se impriman enteros ya, haz que todos los botones sean funcionales, por ej, en los comentarios o en la descripcion no van, en los requisitos si va (Ya se que lo sabes :P)
-    -Catalogo: Arreglar orden de los botones de paginación.
+    //-Catalogo: Arreglar orden de los botones de paginación.

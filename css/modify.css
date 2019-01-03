@@ -20,11 +20,10 @@
 #content {
     display: block;
     width: 100%;
-    padding: 120px 0;
+    padding: 150px 0;
 }
 
 #form {
-    height: 73vh;
     display: flex;
     width: 100%;
     align-items: center;
@@ -38,9 +37,13 @@ input {
     width: 90%;
 }
 
-textarea{
-    min-height: 18px;
+textarea {
+    height: 10vh;
+    min-height: 58px;
+    max-height: 269px;
     width: 90%;
+    max-width: 90%;
+    min-width: 90%;
 }
 
 select {

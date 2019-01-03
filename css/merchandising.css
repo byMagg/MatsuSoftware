@@ -40,6 +40,10 @@
     max-width: 60vw;
 }
 
+#foto{
+    background: white;
+}
+
 .item img {
     margin: 10px;
     width: 100px;

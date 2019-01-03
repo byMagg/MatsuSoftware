@@ -56,7 +56,7 @@
                     </div>
                     <div id="principal">
                         <div id="seccion">
-                            <img src="<?php echo $merchandising['photoLink']; ?>" alt="Foto del merchandising">
+                            <img id="foto" src="<?php echo $merchandising['photoLink']; ?>" alt="Foto del merchandising">
                             <h2>Precio: <?php echo $merchandising['price']; ?>€</h2>
                             <div id="puntuacion">
                                 <?php 

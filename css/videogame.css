@@ -34,6 +34,10 @@ iframe {
     background:black;  
 }
 
+#foto{
+    background: white;
+}
+
 .button {
     padding: 10px 20px;
 }

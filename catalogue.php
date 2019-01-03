@@ -56,20 +56,28 @@
                                 }
                                 
                                 $maxV = getVideogamesTotal($mysqli);
+
+                                echo "<div class='paginacion'>";
                                 
                                 if($pagV - 1 > 0){
                                 ?>
-                                    <a class="nohover" href="catalogue.php?pagVideojuego=<?php echo $pagV-1 ?>"><button class="button"><</button></a>
+                                    <a class="nohover button" href="catalogue.php?pagVideojuego=<?php echo $pagV-1 ?>"><</a>
                                 <?php
+                                }else{
+                                    echo "<a class='hidden button'></a>";
                                 }
 
-                                echo '<p>'.$pagV.'</p>';
+                                echo $pagV;
 
                                 if($pagV*6 < $maxV){
                                 ?>
-                                    <a class="nohover" href="catalogue.php?pagVideojuego=<?php echo $pagV+1 ?>"><button class="button">></button></a>     
+                                    <a class="nohover button" href="catalogue.php?pagVideojuego=<?php echo $pagV+1 ?>">></a>     
                                 <?php
+                                }else{
+                                    echo "<a class='hidden button'></a>";
                                 }
+
+                                echo "</div>";
                             ?>  
                     </div>
                     <div id="linea"></div>
@@ -100,20 +108,28 @@
                                 }
 
                                 $maxM = getMerchandisingTotal($mysqli, $kind);
+
+                                echo "<div class='paginacion'>";
                                 
                                 if($pagM - 1 > 0){
                                 ?>
-                                    <a class="nohover" href="catalogue.php?pagMerchandising=<?php echo $pagM-1 ?>&kind=<?php echo $kind ?>"><button class="button"><</button></a>
+                                    <a class="nohover button" href="catalogue.php?pagMerchandising=<?php echo $pagM-1 ?>&kind=<?php echo $kind ?>"><</a>
                                 <?php
+                                }else{
+                                    echo "<a class='hidden button'></a>";
                                 }
 
-                                echo '<p>'.$pagM.'</p>';
+                                echo $pagM;
 
                                 if($pagM*6 < $maxM){
                                 ?>
-                                    <a class="nohover" href="catalogue.php?pagMerchandising=<?php echo $pagM+1 ?>&kind=<?php echo $kind ?>"><button class="button">></button></a>     
+                                    <a class="nohover button" href="catalogue.php?pagMerchandising=<?php echo $pagM+1 ?>&kind=<?php echo $kind ?>">></a>     
                                 <?php
+                                }else{
+                                    echo "<a class='hidden button'></a>";
                                 }
+
+                                echo "</div>";
                             ?>
                     </div>
                 </div>

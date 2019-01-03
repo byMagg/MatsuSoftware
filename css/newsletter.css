@@ -39,6 +39,10 @@ select {
     top: 60px;
 }
 
+.button{
+    padding: 5px 20px;
+}
+
 td {
     padding-inline-end: 10px;
     padding-inline-start: 10px;
