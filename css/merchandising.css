@@ -49,6 +49,7 @@
 }
 
 #puntuacion img {
+    border: none;
     width: 20px;
     height: 20px;
 }
@@ -109,10 +110,7 @@ input{
 }
 
 #puntuacion {
-    position: absolute;
     display: grid;
-    right: 50px;
-    top: 10px;
 }
 
 #cabecera {
@@ -145,6 +143,7 @@ input{
 }
 
 #seccion{
+    justify-items: center;
     width: 202px;
 }
 
@@ -190,14 +189,8 @@ input{
 
     #content {
         display: block;
-        margin: 0 auto 150px auto;
+        margin: 0 auto;
         width: 90%;
-    }
-
-    #puntuacion {
-        position: absolute;
-        left: 0px;
-        top: 482px;
     }
 
     .info {
@@ -231,31 +224,18 @@ input{
             display: block;
         }
 
-        #principal h2 {
-            text-align: center;
-            margin-bottom: 110px;
-        }
-
         #principal img {
             margin: 0;
         }
 
         #seccion {
             display: grid;
-            justify-content: center;
             margin: 0 auto;
         }
 
         #cabecera h1 {
             margin: 20px auto;
             text-align: center;
-        }
-
-        #puntuacion {
-            position: absolute;
-            justify-content: center;
-            top: 375px;
-            width: 100%;
         }
 
         #descripcion {

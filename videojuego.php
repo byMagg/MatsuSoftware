@@ -55,36 +55,36 @@
                 <div id="content">
                     <div id="cabecera">
                         <h1><?php echo $videogame['title']; ?></h1>
-                        <div id="puntuacion">
-                            <?php 
-                                $sum = $videogame['sumRating'];
-                                $total = $videogame['numComments'];
-
-                                if($total != 0){
-                                    echo '<h2>Puntuación</h2><div class="estrella"><h3>'.round($sum/$total,1).'/5</h3>';
-                                    $stars = $sum/$total;
-                                    for($i = 0; $i < 5; $i++){
-                                        if($stars >= 1){
-                                            echo '<img src="images/estrella.png" alt="Estrella completa">';
-                                            $stars = $stars - 1;
-                                        }else if($stars != 0 && $stars > 0.5){
-                                            echo '<img src="images/mediaestrella.png" alt="Media estrella">';
-                                            $stars = $stars - 0.5;
-                                        }else{
-                                            echo '<img src="images/noestrella.png" alt="No estrella">';
-                                        }
-                                    }
-                                    echo '</div>';
-                                }else{
-                                    echo '<h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"></div> ';
-                                }
-                            ?>
-                        </div>
                     </div>
                     <div id="principal">
                         <div id="seccion">
                             <img src="<?php echo $videogame['photoLink']; ?>" alt="Foto del videojuego">
                             <h2>Precio: <?php echo $videogame['price']; ?>€</h2>
+                            <div id="puntuacion">
+                                <?php 
+                                    $sum = $videogame['sumRating'];
+                                    $total = $videogame['numComments'];
+
+                                    if($total != 0){
+                                        echo '<h2>Puntuación</h2><div class="estrella"><h3>'.round($sum/$total,1).'/5</h3>';
+                                        $stars = $sum/$total;
+                                        for($i = 0; $i < 5; $i++){
+                                            if($stars >= 1){
+                                                echo '<img src="images/estrella.png" alt="Estrella completa">';
+                                                $stars = $stars - 1;
+                                            }else if($stars != 0 && $stars > 0.5){
+                                                echo '<img src="images/mediaestrella.png" alt="Media estrella">';
+                                                $stars = $stars - 0.5;
+                                            }else{
+                                                echo '<img src="images/noestrella.png" alt="No estrella">';
+                                            }
+                                        }
+                                        echo '</div>';
+                                    }else{
+                                        echo '<h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"></div> ';
+                                    }
+                                ?>
+                            </div>
                             <?php
                                 if(isset($_SESSION['usuario'])){
                                     echo'

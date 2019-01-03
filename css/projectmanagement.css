@@ -37,17 +37,17 @@ input {
     margin: 0px 50px 0px 50px;
     width: 0;
 }
-
 #tabla>table {
     background: white;
     color: black;
     border-spacing: 0;
     overflow: auto;
-    width: 90vw;
+    width: 40vw;
     max-width: 477px;
     table-layout: auto;
     text-align: center;
     display: table-caption;
+    max-height: 60vh;
 }
 
 #title{

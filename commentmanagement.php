@@ -27,6 +27,7 @@
         <?php require "views/head.php"; ?>
         <link href="css/commentmanagement.css" type="text/css" rel="stylesheet">
         <script src="controller/verify.js"></script>
+        <script src="showmore/showmore.js"></script>
     </head>
     <body>
         <!--HEADER-->
@@ -46,6 +47,7 @@
                             <tr>
                                 <th id="id">#</th>
                                 <th id="comment">Comentario</th>
+                                <th></th>
                                 <th id="product">Producto</th>
                                 <th id="user">Usuario</th>
                                 <th></th>
@@ -61,7 +63,8 @@
                                     $product = $resultado2->fetch_assoc();
                                     echo "<tr>
                                         <td>".$comment['idComment']."</td>
-                                        <td>".$comment['opinion']."</td>
+                                        <td><p id=".$comment['idComment'].">".$comment['opinion']."</p></td>
+                                        <td><button onclick=showmore(".$comment['idComment'].",'50px')>Ver más</button></td>
                                         <td>".$product['title']."</td>
                                         <td>".$user['nick']."</td>
                                         <td><a class='icono nohover' onclick='verifyAcceptComment(".$comment['idComment'].")'><img class='validate' src='images/validate.png' alt='Validar'></a></td>

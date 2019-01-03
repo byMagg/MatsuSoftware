@@ -54,7 +54,7 @@
     table-layout: auto;
     text-align: center;
     display: table-caption;
-    height: 60vh;
+    max-height: 60vh;
 }
 
 #comment {
@@ -153,20 +153,20 @@ tr:nth-child(odd) {
         padding-top: 40px;
     }
 
+    #tabla>table{
+        width: 90vw;
+    }
+
     #tabla,
     #form {
         display: grid;
         justify-content: center;
-    }
-
-    input,
-    textarea {
-        width: 72vw;
-        max-width: 312px;
+        width: 100%;
     }
 
     #lineavertical {
         border: 1px solid rgb(0, 216, 72);
+        position: relative;
         height: 0px;
         min-height: 0px;
         margin: 30px auto 0px auto;

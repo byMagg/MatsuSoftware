@@ -31,16 +31,18 @@
     width: 0;
 }
 
-#tabla > table {
+
+#tabla>table {
     background: white;
     color: black;
     border-spacing: 0;
     overflow: auto;
+    width: 40vw;
+    max-width: 568px;
     table-layout: auto;
-    width: 90vw;
-    max-width: 524px;
     text-align: center;
     display: table-caption;
+    max-height: 60vh;
 }
 
 .title{
@@ -164,6 +166,10 @@ tr:nth-child(odd) {
         justify-content: center;
         width: 90vw;
         margin: 0 auto;
+    }
+
+    #table>table{
+        width: 90vw;
     }
 
     input,

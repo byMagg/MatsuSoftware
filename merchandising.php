@@ -53,36 +53,36 @@
                 <div id="content">
                     <div id="cabecera">
                         <h1><?php echo $merchandising['title']; ?></h1>
-                        <div id="puntuacion">
-                            <?php 
-                                $sum = $merchandising['sumRating'];
-                                $total = $merchandising['numComments'];
-
-                                if($total != 0){
-                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>'.round($sum/$total,1).'/5</h3>';
-                                    $stars = $sum/$total;
-                                    for($i = 0; $i < 5; $i++){
-                                        if($stars >= 1){
-                                            echo '<img src="images/estrella.png" alt="Estrella completa">';
-                                            $stars = $stars - 1;
-                                        }else if($stars != 0 && $stars > 0.5){
-                                            echo '<img src="images/mediaestrella.png" alt="Media estrella">';
-                                            $stars = $stars - 0.5;
-                                        }else{
-                                            echo '<img src="images/noestrella.png" alt="No estrella">';
-                                        }
-                                    }
-                                    echo '</div></div>';
-                                }else{
-                                    echo '<div><h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"></div></div> ';
-                                }
-                            ?>
-                        </div>
                     </div>
                     <div id="principal">
                         <div id="seccion">
                             <img src="<?php echo $merchandising['photoLink']; ?>" alt="Foto del merchandising">
                             <h2>Precio: <?php echo $merchandising['price']; ?>€</h2>
+                            <div id="puntuacion">
+                                <?php 
+                                    $sum = $merchandising['sumRating'];
+                                    $total = $merchandising['numComments'];
+
+                                    if($total != 0){
+                                        echo '<div><h2>Puntuación</h2><div class="estrella"><h3>'.round($sum/$total,1).'/5</h3>';
+                                        $stars = $sum/$total;
+                                        for($i = 0; $i < 5; $i++){
+                                            if($stars >= 1){
+                                                echo '<img src="images/estrella.png" alt="Estrella completa">';
+                                                $stars = $stars - 1;
+                                            }else if($stars != 0 && $stars > 0.5){
+                                                echo '<img src="images/mediaestrella.png" alt="Media estrella">';
+                                                $stars = $stars - 0.5;
+                                            }else{
+                                                echo '<img src="images/noestrella.png" alt="No estrella">';
+                                            }
+                                        }
+                                        echo '</div></div>';
+                                    }else{
+                                        echo '<div><h2>Puntuación</h2><div class="estrella"><h3>0/5</h3><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"><img src="images/noestrella.png" alt="No estrella"></div></div> ';
+                                    }
+                                ?>
+                            </div>
                             <?php
                                 if(isset($_SESSION['usuario'])){
                                     echo'
@@ -102,7 +102,7 @@
                         </div>
                         <div id="descripcion">
                             <h3>Descripción</h3>
-                            <p><?php echo $merchandising['descrip']; ?></p>
+                            <p id="descrip"><?php echo $merchandising['descrip']; ?></p>
                             <button onclick="showmore('descrip','150px')">Ver más</button>
                         </div>
                     </div>

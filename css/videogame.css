@@ -61,6 +61,7 @@ iframe {
 }
 
 #puntuacion img {
+    border: none;
     width: 20px;
     height: 20px;
 }
@@ -122,10 +123,8 @@ input{
 }
 
 #puntuacion {
-    position: absolute;
     display: grid;
-    right: 50px;
-    top: 10px;
+    margin: 20px 0;
 }
 
 #cabecera {
@@ -158,6 +157,7 @@ input{
 }
 
 #seccion{
+    justify-items: center;
     width: 202px;
 }
 
@@ -207,12 +207,6 @@ input{
         width: 90%;
     }
 
-    #puntuacion {
-        position: absolute;
-        left: 0px;
-        top: 482px;
-    }
-
     .info {
         align-items: center;
     }
@@ -251,11 +245,6 @@ input{
             display: block;
         }
 
-        #principal h2 {
-            text-align: center;
-            margin-bottom: 110px;
-        }
-
         #principal img {
             margin: 0;
         }
@@ -273,13 +262,6 @@ input{
         #cabecera h1 {
             margin: 20px auto;
             text-align: center;
-        }
-
-        #puntuacion {
-            position: absolute;
-            justify-content: center;
-            top: 375px;
-            width: 100%;
         }
 
         #descripcion {

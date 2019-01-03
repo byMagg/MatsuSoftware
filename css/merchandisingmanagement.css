@@ -37,13 +37,13 @@
     color: black;
     border-spacing: 0;
     overflow: auto;
+    width: 40vw;
+    max-width: 632px;
     table-layout: auto;
-    width: 90vw;
-    max-width: 623px;
     text-align: center;
     display: table-caption;
+    max-height: 60vh;
 }
-
 #title {
     min-width: 400px;
 }
@@ -138,6 +138,10 @@ tr:nth-child(odd) {
 
 /* MOVIL */
 @media only screen and (max-width: 1160px) {
+
+    #tabla>table {
+        width: 90vw;
+    }
 
     #content {
         height: 100%;

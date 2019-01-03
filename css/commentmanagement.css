@@ -23,15 +23,25 @@
     justify-content: center;
     align-items: center;
 }
+
 #tabla>table {
     background: white;
     color: black;
     border-spacing: 0;
     overflow: auto;
     width: 90vw;
+    max-width: 893px;
     table-layout: auto;
     text-align: center;
     display: table-caption;
+    max-height: 60vh;
+}
+
+p{
+    word-wrap: break-word;
+    max-width: 300px;
+    max-height: 50px;
+    overflow: hidden;
 }
 
 #comment {

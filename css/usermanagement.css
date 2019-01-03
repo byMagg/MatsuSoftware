@@ -23,7 +23,7 @@
     table-layout: auto;
     text-align: center;
     display: table-caption;
-    height: 60vh;
+    max-height: 60vh;
     width: 67vw;
     max-width: 558px;
 }

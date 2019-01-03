@@ -1,5 +1,3 @@
 ERRORES CSS:
 
--Gestion de comentarios: Pues metete y lo sabrás jajajaja.
-
--Todas las paginas de los dash que tienen tabla: Cuando emtes muchos valores, se chocan las tablas con el footer y el titulo de arriba.
+E SETA
