@@ -38,6 +38,11 @@ input {
     width: 90%;
 }
 
+textarea{
+    min-height: 18px;
+    width: 90%;
+}
+
 select {
     width: 94%
 }

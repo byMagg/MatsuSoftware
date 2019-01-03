@@ -154,11 +154,12 @@
                                         <form id="addcomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                            <label>Introduce tu comentario:</label>
-                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." ></textarea>
+                                            <div><label>Introduce tu comentario:</label>
+                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." ></textarea></div>
+                                            <div>
                                             <label>Modifica tu puntuación:</label>
                                             <input name="rating" type="number" min="0" max="5" step=".5" />
-                                            <button class="button" type="submit">Añadir</button>
+                                            <button class="button" type="submit">Añadir</button></div>
                                         </form>
                                         '; 
                                 }
