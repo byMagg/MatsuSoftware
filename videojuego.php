@@ -136,18 +136,17 @@
                                            
                                             <div><label>Modifica tu puntuación:</label>
                                             <input name ="rating" type="number" min="0" max="5" step=".5" value="'.$comment['rating'].'" /></div>
-                                            
-                                            <div id="botonesform">
-                                                <button class="button" type="submit">Modificar</button>
-                                                <form id="deletecomment" action="">
-                                                    <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
-                                                    <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                                    <button class="button" type="submit">Eliminar</button>
-                                                </form>
-                                            </div>
-                                            
                                         </form>
-                                        
+
+                                        <form id="deletecomment" action="">
+                                            <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
+                                            <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />     
+                                        </form>
+
+                                        <div id="botonesform">
+                                            <button class="button" type="submit" form="modifycomment">Modificar</button>
+                                            <button class="button" type="submit" form="deletecomment">Eliminar</button>
+                                        </div>
                                         ';   
                                 }else{
                                     echo'
@@ -187,7 +186,7 @@
                                         }
                                     }
                                     echo'</div></div><h4 id='.$comment["idUser"].'>'.$comment["opinion"].'</h4>
-                                    <button onclick=showmore('.$comment["idUser"].', "150px")>Ver más</button></div>';
+                                    <button onclick=showmore('.$comment["idUser"].', 150px)>Ver más</button></div>';
                             }
                         ?>
                 </div>
