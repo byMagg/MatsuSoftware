@@ -20,3 +20,4 @@ ERRORES CSS:
     -Tablas, bueno, pues ya lo sabes.
     -¿Puedes poner un poco de espacio entre el boton de ver mas de los comentarios, y el comentario en si?¿o ponerlo directamente debajo?
     -Ponerle una apariencia mas bonita al boton de ver mas (Te dejo un ejemplo en el boton de ver mas de descripcion de videojuegos).
+    -Arreglar tablas en movil
