@@ -72,7 +72,7 @@
                                             if($stars >= 1){
                                                 echo '<img src="images/estrella.png" alt="Estrella completa">';
                                                 $stars = $stars - 1;
-                                            }else if($stars != 0 && $stars > 0.5){
+                                            }else if($stars != 0 && $stars >= 0.5){
                                                 echo '<img src="images/mediaestrella.png" alt="Media estrella">';
                                                 $stars = $stars - 0.5;
                                             }else{
@@ -106,7 +106,7 @@
                             
                             <h3>Descripción</h3>
                             <p id="descrip"><?php echo $videogame['descrip']; ?></p>
-                            <button onclick="showmore('descrip','150px')">Ver más</button>
+                            <button class='button' onclick="showmore('descrip','150px')">Ver más</button>
                             
                             <h3>Requisitos</h3>
                             <p id="requisitos"><?php echo $videogame['requirements']; ?></p>

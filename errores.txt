@@ -10,3 +10,13 @@ ERRORES CSS:
     //-Ver mas: Independientemente de que se muestre en mensajes que se impriman enteros ya, haz que todos los botones sean funcionales, por ej, en los comentarios o en la descripcion no van, en los requisitos si va (Ya se que lo sabes :P)
     //-Catalogo: Arreglar orden de los botones de paginación.
     -Productos: Modificar comentarios y añadir
+
+/* 04/01/2019 */
+    -En el gestion videojuego sigue estando el mismo error, y lo has puesto como arreglado... emm what?
+    -Los botones del catalogo eta bien, pero cuando no hay ningún boton para ir para la izquierda o derecha, se sigue mostrando, creo recordar que en php lo pusimos para que no lo mostrara.
+        Vale, veo que le añadiste unos else, y veo que si los quitas se vuelve loco el boton, ya veo.
+        Vale, lo he tocado yo, te gusta como se queda? Quitandole la clase button a los else, no se queda el redonder ese raro.
+    -Veo que te has añadido el de los comentarios, que tiene un orden raro el formulario. Vale, entoncecs no te comento nada.
+    -Tablas, bueno, pues ya lo sabes.
+    -¿Puedes poner un poco de espacio entre el boton de ver mas de los comentarios, y el comentario en si?¿o ponerlo directamente debajo?
+    -Ponerle una apariencia mas bonita al boton de ver mas (Te dejo un ejemplo en el boton de ver mas de descripcion de videojuegos).

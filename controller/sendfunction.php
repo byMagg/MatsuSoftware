@@ -46,7 +46,7 @@ function sendEmailSignin($email){
 }
 
 function sendEmailContact($name, $surname, $email, $msg){
-    $para='alexgarohotmailcom@gmail.com';
+    $para='matsusoftwaretest@gmail.com';
 
     $asunto = 'Mensaje de '.$name.' '.$surname;
 

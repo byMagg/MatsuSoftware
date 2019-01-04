@@ -70,7 +70,7 @@
                                             if($stars >= 1){
                                                 echo '<img src="images/estrella.png" alt="Estrella completa">';
                                                 $stars = $stars - 1;
-                                            }else if($stars != 0 && $stars > 0.5){
+                                            }else if($stars != 0 && $stars >= 0.5){
                                                 echo '<img src="images/mediaestrella.png" alt="Media estrella">';
                                                 $stars = $stars - 0.5;
                                             }else{
