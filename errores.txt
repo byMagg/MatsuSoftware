@@ -12,6 +12,7 @@ ERRORES CSS:
     -Productos: Modificar comentarios y añadir
 
 /* 04/01/2019 */
+-----ALEX TE RECUERDO QUE TU GUSTO ES UN POCO NEFASTO, DEJA DE DAR CONSEJOS----
     -En el gestion videojuego sigue estando el mismo error, y lo has puesto como arreglado... emm what?
     -Los botones del catalogo eta bien, pero cuando no hay ningún boton para ir para la izquierda o derecha, se sigue mostrando, creo recordar que en php lo pusimos para que no lo mostrara.
         Vale, veo que le añadiste unos else, y veo que si los quitas se vuelve loco el boton, ya veo.
