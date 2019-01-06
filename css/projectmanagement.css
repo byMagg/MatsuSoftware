@@ -28,7 +28,7 @@ input {
 #cuadricula{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
 #lineavertical {
@@ -38,17 +38,19 @@ input {
     margin: 0px 50px 0px 50px;
     width: 0;
 }
-#tabla>table {
-    background: white;
-    color: black;
-    border-spacing: 0;
+
+#tabla{
+    width: 100%;
+    justify-items: center;
     overflow: auto;
-    width: 40vw;
-    max-width: 477px;
-    table-layout: auto;
+    max-height: 40vh;
     text-align: center;
-    display: table-caption;
-    max-height: 60vh;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0;
+    color: black; 
 }
 
 #title{
@@ -89,10 +91,11 @@ textarea {
     width: 278px;
 }
 
-#tabla, #form{
+#izquierda, #form{
     display: grid;
-    width: 50%;
-    margin: 0 50px;
+    align-content: center;
+    width: 40%;
+    height: 50vh;
 }
 
 form{
@@ -158,10 +161,15 @@ tr:nth-child(odd) {
         padding-top: 40px;
     }
 
-    #tabla, #form{
+    #izquierda,
+    #form {
+        margin: 0 auto;
         display: grid;
         justify-content: center;
+        width: 90%;
     }
+
+
 
     input,
     textarea {

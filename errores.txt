@@ -1,5 +1,5 @@
 ERRORES CSS:
-    -Tablas: Espacios en blanco.
+    -Tablas: Espacios en blanco. casi arreglado faltan merchandising y comentarios
     //-Gestion de newsletter: Espacios demasiados grandes entre las lineas y el formlario y la tabla, ponlos como los otros.
     //-Gestion de proyectos: Centrar la tabla, ¿No está muy arriba? (No me mates).
     //-Gestion de videojuegos: Uff, a ver, xDDDDDD, ¿no ves algo raro?, la linea muy arriba, como muy descuadrado ¿no?

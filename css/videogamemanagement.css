@@ -31,18 +31,18 @@
     width: 0;
 }
 
-
-#tabla>table {
-    background: white;
-    color: black;
-    border-spacing: 0;
+#tabla{
+    width: 100%;
+    justify-items: center;
     overflow: auto;
-    width: 40vw;
-    max-width: 568px;
-    table-layout: auto;
+    max-height: 40vh;
     text-align: center;
-    display: table-caption;
-    max-height: 60vh;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0;
+    color: black; 
 }
 
 .title{
@@ -57,6 +57,13 @@
 
 label {
     display: block;
+}
+
+#izquierda, #form{
+    display: grid;
+    align-content: center;
+    width: 40%;
+    height: 50vh;
 }
 
 #volver {
@@ -160,16 +167,16 @@ tr:nth-child(odd) {
         display: block;
         padding-top: 40px;
     }
-    
-    #tabla, #form{
-        display: grid;
-        justify-content: center;
-        width: 90vw;
-        margin: 0 auto;
-    }
 
-    #table>table{
-        width: 90vw;
+    #form{
+        justify-content: center;
+    }
+    
+    #izquierda,
+    #form {
+        margin: 0 auto;
+        display: grid;
+        width: 90%;
     }
 
     input,

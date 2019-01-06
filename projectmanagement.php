@@ -45,8 +45,10 @@
                     <h1>GESTIÓN DE PROYECTOS</h1>
                 </div>
                 <div id="cuadricula">
+                   
+                <div id="izquierda">
+                <h1>Lista de proyectos:</h1>
                     <div id="tabla">
-                        <h1>Lista de proyectos:</h1>
                         <table>
                             <tr>
                                 <th id="id">#</th>
@@ -65,7 +67,8 @@
                                 }
                             ?>
                         </table>
-                    </div> 
+                    </div>
+                </div> 
                     
                     <div id="lineavertical"></div>
 
