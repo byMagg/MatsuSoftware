@@ -15,8 +15,12 @@
     width: 90vw;
     justify-content: center;
     overflow: auto;
-    height: 40vh;
+    max-height: 60vh;
     text-align: center;
+}
+
+.boton{
+    width: 10px;
 }
 
 table{

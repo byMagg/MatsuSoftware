@@ -57,9 +57,9 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                         if ($resultado->num_rows != 0) {
                             if($_SESSION['usuario']['rol'] == 2){
                                 echo    '
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
+                                        <th class="boton"></th>
+                                        <th class="boton"></th>
+                                        <th class="boton"></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
                                     $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png" alt="Eliminar"></a></td>';
@@ -89,8 +89,9 @@ if($_SESSION['usuario']['rol'] == 2 && isset($_GET['id']) && isset($_GET['rol'])
                                         </tr>';
                                 }
                             }else if($_SESSION['usuario']['rol'] == 1){
-                                echo '<th></th>
-                                        <th></th>
+                                echo '  
+                                        <th class="boton"></th>
+                                        <th class="boton"></th>
                                         </tr>';
                                 while ($user = $resultado->fetch_assoc()) {
                                     $eliminar = '<td><a class="icono nohover" onclick="verifyDeleteAdmin('.$user['idUser'].')"><img src="images/eliminar.png" alt="Eliminar"></a></td>';
