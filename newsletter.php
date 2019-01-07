@@ -13,7 +13,7 @@
 <html lang="es">
     <head>
         <!-- Titulo -->
-        <title>Newlester - MatsuSoftware</title>
+        <title>Newsletter - MatsuSoftware</title>
         <?php require "views/head.php"; ?>
         <link href="css/newsletter.css" type="text/css" rel="stylesheet">
     </head>
@@ -25,7 +25,7 @@
         <div class="content">
             <div id="content" class="content-inside">
                 <div id="cabecera">
-                    <h1>NEWLESTER:</h1>
+                    <h1>NEWSLETTER:</h1>
                 </div>
 
                 <div id="cuadricula">                

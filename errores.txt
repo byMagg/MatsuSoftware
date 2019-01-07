@@ -26,4 +26,4 @@ ERRORES CSS:
     //-En el catalogo, mira la paginacion de merchandising, vete a la pagina dos, vez qu el conjunto de boton y nuevo se va apra arriba porque no estan los 6 elementos? a ver si se puede quejar fijo abajo
     //-Formulario de añadir comentario, orden raro.
     //-Espacio entre los comentarios y el boton de ver mas.
-    -Merchandising: el articulo de la derecha arriba, el precio se esconde con el titulo del titulo del de abajo.
+    //-Merchandising: el articulo de la derecha arriba, el precio se esconde con el titulo del titulo del de abajo.

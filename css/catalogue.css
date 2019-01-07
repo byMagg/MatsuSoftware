@@ -54,6 +54,9 @@
 
 .item h2 {
     font-size: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 
 #videojuegos,
@@ -112,13 +115,8 @@ h1 {
     }
 
     #paginacionIzquierda , #paginacionDerecha{
-        top: 980px;
+        top: 1020px;
     }    
-
-    #h1merch,
-    #h1apps {
-        font-size: 9px;
-    }
 
     #kind{
         display: table;
@@ -139,6 +137,15 @@ h1 {
         #kind{
             display: grid;
         }
+
+        #h1merch,
+        #h1apps {
+            font-size: 9px;
+        }
+
+        #paginacionIzquierda , #paginacionDerecha{
+            top: 975px;
+        }    
     }
 
     @media only screen and (max-width: 400px) {

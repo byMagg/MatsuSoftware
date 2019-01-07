@@ -47,7 +47,7 @@
                 <div id="parrafo">
                     <h3>Información:</h3>    
                     <p><img src="images/avatar.png" alt="Nombre"> MatsuSoftware</p>
-                    <p><img src="images/correo.png" alt="Correo"> mastufotware@gmail.com</p>
+                    <p><img src="images/correo.png" alt="Correo"> matsusoftware@gmail.com</p>
                     <p><img src="images/tef.png" alt="Teléfono"> +666666666</p>
                     <p><img src="images/direccion.png" alt="Dirección"> Sillicon Valley</p>
                 </div>
