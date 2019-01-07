@@ -127,8 +127,10 @@ form {
     justify-content: center;
 }
 
-#form{
-    justify-content: left;
+#form {
+	justify-content: left;
+	position: relative;
+	left: 15px;
 }
 
 #tabla{
