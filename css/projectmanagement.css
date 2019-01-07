@@ -140,7 +140,7 @@ tr:nth-child(odd) {
 }
 
 /* MOVIL */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1240px) {
 
     #content {
         padding: 130px  0 150px 0;
@@ -169,7 +169,9 @@ tr:nth-child(odd) {
         width: 90%;
     }
 
-
+    #tabla{
+        width: 90vw;
+    }
 
     input,
     textarea {

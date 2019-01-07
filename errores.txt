@@ -21,9 +21,9 @@ ERRORES CSS:
 
 /* 07/01/2019 */
 -----BUENO, YO TE DOY CONSEJO, LUEGO APLICA LO QUE QUIERAS----- 8========================3
-    -MODO MOVIL: Mira la diferencia de distancia entre la linea verde entre gestion newsletter y gestion proyectos, juntalo mejor
-    -MODO MOVIL: Mira gestion de videojuegos, te ha tenido que faltar algun div o algo.
-    -En el catalogo, mira la paginacion de merchandising, vete a la pagina dos, vez qu el conjunto de boton y nuevo se va apra arriba porque no estan los 6 elementos? a ver si se puede quejar fijo abajo
-    -Formulario de añadir comentario, orden raro.
-    -Espacio entre los comentarios y el boton de ver mas.
+    //-MODO MOVIL: Mira la diferencia de distancia entre la linea verde entre gestion newsletter y gestion proyectos, juntalo mejor
+    //-MODO MOVIL: Mira gestion de videojuegos, te ha tenido que faltar algun div o algo.
+    //-En el catalogo, mira la paginacion de merchandising, vete a la pagina dos, vez qu el conjunto de boton y nuevo se va apra arriba porque no estan los 6 elementos? a ver si se puede quejar fijo abajo
+    //-Formulario de añadir comentario, orden raro.
+    //-Espacio entre los comentarios y el boton de ver mas.
     -Merchandising: el articulo de la derecha arriba, el precio se esconde con el titulo del titulo del de abajo.

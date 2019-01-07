@@ -16,7 +16,7 @@
     background: white;
 }
 
-.paginacion a{
+#paginacionIzquierda a, #paginacionDerecha a{
     margin: 0 20px;
     width: 10px;
 }
@@ -31,13 +31,22 @@
     border: none;
 }
 
-.paginacion{
+#paginacionIzquierda{
+    right: 25%;
+}
+
+#paginacionDerecha{
+    left: 25%;
+}
+
+#paginacionIzquierda , #paginacionDerecha{
     margin: 30px 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-column: 1 / span 2;
+    position: absolute;
+    top: 600px;
 }
 
 .item a{

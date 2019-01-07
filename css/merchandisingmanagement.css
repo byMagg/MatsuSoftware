@@ -189,6 +189,10 @@ tr:nth-child(odd) {
         padding-top: 40px;
     }
 
+    #tabla{
+        width: 90vw;
+    }
+
     #izquierda,
     #form {
         display: grid;

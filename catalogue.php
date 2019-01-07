@@ -57,7 +57,7 @@
                                 
                                 $maxV = getVideogamesTotal($mysqli);
 
-                                echo "<div class='paginacion'>";
+                                echo "<div id='paginacionIzquierda'>";
                                 
                                 if($pagV - 1 > 0){
                                 ?>
@@ -109,7 +109,7 @@
 
                                 $maxM = getMerchandisingTotal($mysqli, $kind);
 
-                                echo "<div class='paginacion'>";
+                                echo "<div id='paginacionDerecha'>";
                                 
                                 if($pagM - 1 > 0){
                                 ?>

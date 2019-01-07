@@ -38,7 +38,7 @@
     align-content: center;
     width: 40%;
     max-height: 50vh;
-    margin: 0 3vw;
+    margin: 0 80px;
 }
 
 #form{
@@ -146,7 +146,7 @@ tr:nth-child(odd) {
 }
 
 /* MOVIL */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1420px) {
 
     #content {
         padding: 130px 0 150px 0;
@@ -165,10 +165,6 @@ tr:nth-child(odd) {
     #cuadricula {
         display: block;
         padding-top: 40px;
-    }
-
-    tbody{
-        width: 90vw;
     }
 
     #izquierda,
