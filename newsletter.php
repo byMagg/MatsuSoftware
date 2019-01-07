@@ -30,12 +30,17 @@
 
                 <div id="cuadricula">                
                     <form id="" action="">
+                    
                         <label>Ordenación:</label>
-                        <select name="orden" required>
-                            <option value='DESC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'DESC') echo 'selected'; ?>>Más recientes primero</option>
-                            <option value='ASC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'ASC') echo 'selected'; ?>>Más antiguo primero</option>
-                        </select>
-                        <button class="button">Actualizar</button>
+                        <div>
+                            <select name="orden" required>
+                                <option value='DESC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'DESC') echo 'selected'; ?>>Más recientes primero</option>
+                                <option value='ASC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'ASC') echo 'selected'; ?>>Más antiguo primero</option>
+                            </select>
+                            <button class="button">Actualizar</button>
+                        </div>
+                        
+                        
                     </form>
                 
                     <div id="tabla">

@@ -34,7 +34,6 @@ table{
     color: black; 
 }
 
-
 #cabecera {
     display: inline-flex;
     align-items: center;
@@ -62,6 +61,10 @@ td {
     border-radius: 50%;
 }
 
+form div{
+    display: block;
+}
+
 .fecha {
     text-align: right;
 }
@@ -80,8 +83,11 @@ tr:nth-child(odd) {
 
 @media only screen and (max-width: 768px) {
 
-    #tabla>table {
-        width: 80vw;
+    @media only screen and (max-width: 340px) {
+        
+        select {
+            max-width: 150px;
+        }
     }
 
     #content {
