@@ -106,11 +106,12 @@
                             
                             <h3>Descripción</h3>
                             <p id="descrip"><?php echo $videogame['descrip']; ?></p>
-                            <button class='button' onclick="showmore('descrip','150px')">Ver más</button>
+                            <a class="subrayado" onclick="showmore('descrip','150px')">Ver más</a>
                             
                             <h3>Requisitos</h3>
                             <p id="requisitos"><?php echo $videogame['requirements']; ?></p>
-                            <button class='button' onclick="showmore('requisitos','100px')">Ver más</button>
+                            <a class="subrayado" onclick="showmore('requisitos','100px')">Ver más</a>
+
                         </div>
                     </div id="video">
                         <iframe src="https://youtube.com/embed/<?php echo $videogame['trailerLink']; ?>"></iframe>
@@ -153,13 +154,16 @@
                                         <form id="addcomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                            <div><label>Introduce tu comentario:</label>
-                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." ></textarea></div>
                                             <div>
-                                            <label>Modifica tu puntuación:</label>
-                                            <input name="rating" type="number" min="0" max="5" step=".5" />
-                                            <button class="button" type="submit">Añadir</button></div>
+                                                <label>Introduce tu comentario:</label>
+                                                <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." ></textarea>
+                                            </div>
+                                            <div>
+                                                <label>Modifica tu puntuación:</label>
+                                                <input name="rating" type="number" min="0" max="5" step=".5" />
+                                            </div>
                                         </form>
+                                        <button class="button" type="submit" form="addcomment">Añadir</button>
                                         '; 
                                 }
                             ?>
@@ -187,8 +191,8 @@
                                     }
                                     echo
                                     "</div></div>
-                                    <h4 id=".$comment['idComment'].">".$comment['opinion']."</h4>
-                                    <button class='button' onclick=showmore(".$comment['idComment'].",'120px')>Ver más</button></div>";
+                                    <h4 id=".$comment['idComment'].">".$comment['opinion']."<a class='subrayado' onclick=showmore(".$comment['idComment'].",'120px')>Ver más</a></h4>
+                                    </div>";
                             }
                         ?>
                 </div>

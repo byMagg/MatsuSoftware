@@ -103,7 +103,7 @@
                         <div id="descripcion">
                             <h3>Descripción</h3>
                             <p id="descrip"><?php echo $merchandising['descrip']; ?></p>
-                            <button class='button' onclick="showmore('descrip','150px')">Ver más</button>
+                            <a class="subrayado" onclick="showmore('descrip','150px')">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -141,15 +141,19 @@
                                     </div>';   
                                 }else{
                                     echo'
-                                        <form id="addcomment" action="">
+                                            <form id="addcomment" action="">
                                             <input type="hidden" name="idUser" value="'.$_SESSION['usuario']['idUser'].'" />
                                             <input type="hidden" name="idProduct" value="'.$_GET["id"].'" />
-                                            <label>Introduce tu comentario:</label>
-                                            <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." placeholder=" Introduce el comentario."></textarea>
-                                            <label>Modifica tu puntuación:</label>
-                                            <input type="number" name="rating" min="0" max="5" step=".5" />
-                                            <button class="button" type="submit">Añadir</button>
-                                        </form>
+                                            <div>
+                                                <label>Introduce tu comentario:</label>
+                                                <textarea name="opinion" max-length="500" title="Máximo: 500 caracteres." ></textarea>
+                                            </div>
+                                            <div>
+                                                <label>Modifica tu puntuación:</label>
+                                                <input name="rating" type="number" min="0" max="5" step=".5" />
+                                            </div>
+                                            </form>
+                                        <button class="button" type="submit" form="addcomment">Añadir</button>
                                         '; 
                                 }
                             ?>
@@ -177,8 +181,8 @@
                                     }
                                     echo
                                     "</div></div>
-                                    <h4 id=".$comment['idComment'].">".$comment['opinion']."</h4>
-                                    <button class='button' onclick=showmore(".$comment['idComment'].",'120px')>Ver más</button></div>";
+                                    <h4 id=".$comment['idComment'].">".$comment['opinion']."<a class='subrayado' onclick=showmore(".$comment['idComment'].",'120px')>Ver más</a></h4>
+                                    </div>";
                             }
                         ?>
                 </div>

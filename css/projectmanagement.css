@@ -35,7 +35,7 @@ input {
     border: 1px solid rgb(0, 216, 72);
     height: 55vh;
     min-height: 350px;
-    margin: 0px 50px 0px 50px;
+    margin: 0 80px;
     width: 0;
 }
 

@@ -45,8 +45,9 @@
                     <h1>GESTIÓN DE MERCHANDISING</h1>
                 </div>
                 <div id="cuadricula">
+                    <div id="izquierda">
+                    <h1>Lista de merchandising:</h1>
                     <div id="tabla">
-                        <h1>Lista de merchandising:</h1>
                         <table>
                             <tr>
                                 <th id="id">#</th>
@@ -72,6 +73,7 @@
                             ?>  
                         </table>
                     </div> 
+                    </div>
                     
                     <div id="lineavertical"></div>
 

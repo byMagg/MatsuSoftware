@@ -85,7 +85,8 @@
 
 #divcomment{
     grid-column: 1 / span 2;
-    justify-content: center;
+    justify-items: center;
+    display: grid;
 }
 
 .info {
@@ -132,6 +133,13 @@ input{
 
 #botonesform{
     display: block;
+    margin: 0 auto;
+    width: 208px;
+}
+
+.subrayado:hover{
+    color: rgb(0, 216, 72);
+    cursor: pointer;
 }
 
 #botonesform button{
@@ -142,7 +150,7 @@ input{
     margin: 15px auto;
 }
 
-#divcomment div{
+#modifycomment div, #addcomment div{
     display: inline-grid;
 }
 

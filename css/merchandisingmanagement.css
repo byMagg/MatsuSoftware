@@ -32,18 +32,38 @@
     width: 0;
 }
 
-#tabla>table {
-    background: white;
-    color: black;
-    border-spacing: 0;
-    overflow: auto;
-    width: 40vw;
-    max-width: 632px;
-    table-layout: auto;
+#form h1{
     text-align: center;
-    display: table-caption;
-    max-height: 60vh;
 }
+
+#tabla p {
+    overflow: hidden;
+    max-height: 50px;
+    word-break: break-all;
+}
+
+#izquierda, #form{
+    display: grid;
+    align-content: center;
+    width: 40%;
+    max-height: 90vh;
+    margin: 0 3vw;
+}
+
+#tabla{
+    width: 100%;
+    justify-items: center;
+    overflow: auto;
+    max-height: 40vh;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    border-spacing: 0;
+    color: black; 
+}
+
 #title {
     min-width: 400px;
 }
@@ -107,6 +127,14 @@ form {
     justify-content: center;
 }
 
+#form{
+    justify-content: left;
+}
+
+#tabla{
+    justify-content: right;
+}
+
 td {
     padding-inline-end: 10px;
     padding-inline-start: 10px;
@@ -139,9 +167,6 @@ tr:nth-child(odd) {
 /* MOVIL */
 @media only screen and (max-width: 1160px) {
 
-    #tabla>table {
-        width: 90vw;
-    }
 
     #content {
         height: 100%;
@@ -162,19 +187,20 @@ tr:nth-child(odd) {
         padding-top: 40px;
     }
 
-    #tabla,
+    #izquierda,
     #form {
         display: grid;
         justify-content: center;
         width: 90vw;
         margin: 0 auto;
+        height: 100%;
     }
 
     #lineavertical {
         border: 1px solid rgb(0, 216, 72);
         height: 0px;
         min-height: 0px;
-        margin: 30px auto 0px auto;
+        margin: 55px auto;
         width: 65vw;
     }
 

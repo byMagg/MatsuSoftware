@@ -159,6 +159,10 @@ a:hover {
     margin-right: 10px;
 }
 
+.subrayado{
+    text-decoration: underline;
+}
+
 #rrssfooter img {
     width: 30px;
 }
@@ -168,6 +172,7 @@ a:hover {
 }
 
 .nohover:hover {
+    background: none;
     border: 0;
 }
 

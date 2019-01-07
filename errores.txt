@@ -1,5 +1,5 @@
 ERRORES CSS:
-    -Tablas: Espacios en blanco. casi arreglado faltan merchandising y comentarios
+    //-Tablas: Espacios en blanco. casi arreglado faltan merchandising y comentarios
     //-Gestion de newsletter: Espacios demasiados grandes entre las lineas y el formlario y la tabla, ponlos como los otros.
     //-Gestion de proyectos: Centrar la tabla, ¿No está muy arriba? (No me mates).
     //-Gestion de videojuegos: Uff, a ver, xDDDDDD, ¿no ves algo raro?, la linea muy arriba, como muy descuadrado ¿no?
@@ -9,19 +9,14 @@ ERRORES CSS:
     //-Imagenes: lo que comentaste que ponerle una foto de fondo blanco a las fotos de los merchandising y videojuegos.
     //-Ver mas: Independientemente de que se muestre en mensajes que se impriman enteros ya, haz que todos los botones sean funcionales, por ej, en los comentarios o en la descripcion no van, en los requisitos si va (Ya se que lo sabes :P)
     //-Catalogo: Arreglar orden de los botones de paginación.
-    -Productos: Modificar comentarios y añadir
+    //-Productos: Modificar comentarios y añadir
 
 /* 04/01/2019 */
 *    -----ALEX TE RECUERDO QUE TU GUSTO ES UN POCO NEFASTO, DEJA DE DAR CONSEJOS----
-*        -En el gestion videojuego sigue estando el mismo error, y lo has puesto como arreglado... emm what?
-*        -Los botones del catalogo eta bien, pero cuando no hay ningún boton para ir para la izquierda o derecha, se sigue mostrando, creo recordar que en php lo pusimos para que no lo mostrara.
-*            Vale, veo que le añadiste unos else, y veo que si los quitas se vuelve loco el boton, ya veo.
-*            Vale, lo he tocado yo, te gusta como se queda? Quitandole la clase button a los else, no se queda el redonder ese raro.
-*        -Veo que te has añadido el de los comentarios, que tiene un orden raro el formulario. Vale, entoncecs no te comento nada.
-*        -Tablas, bueno, pues ya lo sabes.
-*        -¿Puedes poner un poco de espacio entre el boton de ver mas de los comentarios, y el comentario en si?¿o ponerlo directamente debajo?
-*        -Ponerle una apariencia mas bonita al boton de ver mas (Te dejo un ejemplo en el boton de ver mas de descripcion de videojuegos).
-*        -Arreglar tablas en movil
+*        //-En el gestion videojuego sigue estando el mismo error, y lo has puesto como arreglado... emm what?
+*        //-¿Puedes poner un poco de espacio entre el boton de ver mas de los comentarios, y el comentario en si?¿o ponerlo directamente debajo?
+*        En las tablas no lo he puesto//-Ponerle una apariencia mas bonita al boton de ver mas (Te dejo un ejemplo en el boton de ver mas de descripcion de videojuegos).
+*        //-Arreglar tablas en movil
 */
 
 /* 07/01/2019 */
