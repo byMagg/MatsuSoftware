@@ -103,7 +103,7 @@
                         <div id="descripcion">
                             <h3>Descripción</h3>
                             <p id="descrip"><?php echo $merchandising['descrip']; ?></p>
-                            <button onclick="showmore('descrip','150px')">Ver más</button>
+                            <button class='button' onclick="showmore('descrip','150px')">Ver más</button>
                         </div>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
                                     echo
                                     "</div></div>
                                     <h4 id=".$comment['idComment'].">".$comment['opinion']."</h4>
-                                    <button onclick=showmore(".$comment['idComment'].",'120px')>Ver más</button></div>";
+                                    <button class='button' onclick=showmore(".$comment['idComment'].",'120px')>Ver más</button></div>";
                             }
                         ?>
                 </div>

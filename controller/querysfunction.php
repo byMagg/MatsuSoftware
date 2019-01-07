@@ -136,6 +136,12 @@ function getProjects($mysqli){
     return $resultado;
 }
 
+function getProjectsTotal($mysqli){
+    $resultado = $mysqli->query("SELECT * FROM project");
+    $resultado = $resultado->num_rows;
+    return $resultado;
+}
+
 function getProductUsingId($mysqli, $id){
     $resultado = $mysqli->query("SELECT * FROM product WHERE idProduct = $id");
     return $resultado;
