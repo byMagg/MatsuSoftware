@@ -64,7 +64,7 @@
                                     <a class="nohover button" href="catalogue.php?pagVideojuego=<?php echo $pagV-1 ?>"><</a>
                                 <?php
                                 }else{
-                                    echo "<a class='hidden'></a>";
+                                    echo "<a class='hidden button nohover'></a>";
                                 }
 
                                 echo $pagV;
@@ -74,7 +74,7 @@
                                     <a class="nohover button" href="catalogue.php?pagVideojuego=<?php echo $pagV+1 ?>">></a>     
                                 <?php
                                 }else{
-                                    echo "<a class='hidden'></a>";
+                                    echo "<a class='hidden button nohover'></a>";
                                 }
 
                                 echo "</div>";
@@ -116,7 +116,7 @@
                                     <a class="nohover button" href="catalogue.php?pagMerchandising=<?php echo $pagM-1 ?>&kind=<?php echo $kind ?>"><</a>
                                 <?php
                                 }else{
-                                    echo "<a class='hidden'></a>";
+                                    echo "<a class='hidden button nohover'></a>";
                                 }
 
                                 echo $pagM;
@@ -126,7 +126,7 @@
                                     <a class="nohover button" href="catalogue.php?pagMerchandising=<?php echo $pagM+1 ?>&kind=<?php echo $kind ?>">></a>     
                                 <?php
                                 }else{
-                                    echo "<a class='hidden'></a>";
+                                    echo "<a class='hidden button nohover'></a>";
                                 }
 
                                 echo "</div>";
