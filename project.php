@@ -25,11 +25,17 @@
                 <div id="proyectos">
                     <?php
                         $resultado = getProjects($mysqli);
+                        $i = 1;
                         while($project = $resultado->fetch_assoc()){
                             echo "
-                            <div class='item'><img src=".$project['photoLink']." alt='Foto del proyecto'><h3>".$project['title']."</h3><p>".$project['descrip']."</p><div class='linea'></div></div>
-                            
+                            <div class='item'><img src=".$project['photoLink']." alt='Foto del proyecto'><h3>".$project['title']."</h3><p>".$project['descrip']."</p>
                             ";
+                            if($i != getProjectsTotal($mysqli)){
+                                echo "<div class='linea'></div></div>";
+                            }else{
+                                echo "</div>";
+                            }
+                            $i = $i + 1;
                         }
                     ?>
                 </div>
