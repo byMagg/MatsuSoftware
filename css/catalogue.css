@@ -31,22 +31,14 @@
     border: none;
 }
 
-#paginacionIzquierda{
-    right: 25%;
-}
-
-#paginacionDerecha{
-    left: 25%;
-}
-
 #paginacionIzquierda , #paginacionDerecha{
-    margin: 30px 0;
-    width: 100%;
+    margin:  0;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 600px;
+    top: 620px;
 }
 
 .item a{
@@ -73,7 +65,6 @@
     align-content: start;
 }
 
-
 .button{
     padding: 5px 20px;
     margin: 0 auto;
@@ -90,7 +81,7 @@
 #content {
     display: flex;
     justify-content: center;
-    padding: 20px 0 80px 0;
+    padding: 20px 0 120px 0;
     position: relative;
 }
 
@@ -119,6 +110,10 @@ h1 {
     .content-inside {
         padding: 50px 0 100px 0;
     }
+
+    #paginacionIzquierda , #paginacionDerecha{
+        top: 980px;
+    }    
 
     #h1merch,
     #h1apps {
