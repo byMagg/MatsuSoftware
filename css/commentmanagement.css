@@ -7,7 +7,7 @@
 #content {
     display: block;
     width: 100%;
-    padding: 130px 0 150px 0;
+    padding: 0px 0 150px 0;
 }
 
 #cabecera {
@@ -19,7 +19,7 @@
 }
 
 #cuadricula {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -113,7 +113,7 @@ tr:nth-child(odd) {
 @media only screen and (max-width: 1000px) {
 
     #content {
-        padding: 130px 0 150px 0;
+        padding: 160px 0 150px 0;
         height: 100%;
     }
 
@@ -128,10 +128,7 @@ tr:nth-child(odd) {
 
     #cuadricula {
         padding-top: 40px;
+        margin: 0 15px;
     }
 
-    #tabla{
-        display: grid;
-        justify-content: center;
-    }
 }

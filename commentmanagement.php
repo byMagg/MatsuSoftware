@@ -41,8 +41,9 @@
                     <h1>GESTIÓN DE COMENTARIOS</h1>
                 </div>
                 <div id="cuadricula">
+                <h1>Lista de comentarios:</h1>
                     <div id="tabla">
-                        <h1>Lista de comentarios:</h1>
+                        
                         <table>
                             <tr>
                                 <th id="id">#</th>

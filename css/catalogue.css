@@ -137,7 +137,19 @@ h1 {
         }
     }
 
-    @media only screen and (max-width: 300px) {
+    @media only screen and (max-width: 400px) {
+
+        select{
+            width: 140px;
+        }
+
+        .item{
+            margin-left: 10px;
+        }
+
+        .item h2 {
+            font-size: 14px;
+        }
 
         #h1merch,
         #h1apps {

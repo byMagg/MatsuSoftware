@@ -27,7 +27,7 @@ h4{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 100px 50px 150px 50px;
+    padding: 135px 50px 150px 50px;
 }
 
 .button {
@@ -75,6 +75,10 @@ h4{
 @media only screen and (max-width: 435px) {
     #content {
         display: inline-grid;
+    }
+
+    #cerrar{
+        left: 40px;
     }
 
     .button {

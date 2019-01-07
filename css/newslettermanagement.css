@@ -23,6 +23,10 @@
     justify-content: center;
 }
 
+#form h1{
+    text-align: center;
+}
+
 #tabla p {
     overflow: hidden;
     max-height: 50px;
