@@ -64,10 +64,11 @@ h4{
     @media only screen and (max-width: 768px) {
         #content {
             display: block;
+            padding: 140px 0;
         }
 
         .item {
-            width: 35vw;
+            width: 300px;
         }
 
         .item a {
@@ -81,7 +82,12 @@ h4{
         }
 
         .item img {
-            width: 35vw;
             padding-bottom: 0;
+        }
+
+        @media only screen and (max-width: 400px) {
+            #cerrar{
+                left: 30px;
+            }
         }
 }
