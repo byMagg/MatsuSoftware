@@ -34,16 +34,19 @@
                     <h1>HISTORIAL DE COMPRAS</h1>
                 </div>
                 <div id="cuadricula">
-                    <form id="" action="">
-                        <div>
-                            <label>Ordenación:</label>
-                            <select name="orden" required>
-                                <option value='DESC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'DESC') echo 'selected'; ?>>Más recientes primero</option>
-                                <option value='ASC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'ASC') echo 'selected'; ?>>Más antiguo primero</option>
-                            </select>
-                        </div>
-                        <input class="button" type="submit" value="Actualizar"/>
-                    </form>
+                <form id="" action="">
+                    
+                    <label>Ordenación:</label>
+                    <div>
+                        <select name="orden" required>
+                            <option value='DESC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'DESC') echo 'selected'; ?>>Más recientes primero</option>
+                            <option value='ASC' <?php if(isset($_GET['orden']) && $_GET['orden'] == 'ASC') echo 'selected'; ?>>Más antiguo primero</option>
+                        </select>
+                        <button class="button">Actualizar</button>
+                    </div>
+                    
+                    
+                </form>
 
                     <div id="tabla">
                         <table>
