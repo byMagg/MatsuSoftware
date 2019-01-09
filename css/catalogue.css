@@ -138,6 +138,10 @@ h1 {
             display: grid;
         }
 
+        .item{
+            width: 100%;
+        }
+
         #h1merch,
         #h1apps {
             font-size: 9px;
@@ -156,10 +160,6 @@ h1 {
 
         .info {
             width: 72px;
-        }
-
-        .item{
-            margin-left: 10px;
         }
 
         .item h2 {
