@@ -27,3 +27,8 @@ ERRORES CSS:
     //-Formulario de añadir comentario, orden raro.
     //-Espacio entre los comentarios y el boton de ver mas.
     //-Merchandising: el articulo de la derecha arriba, el precio se esconde con el titulo del titulo del de abajo.
+
+/* 09/01/2018 */
+    -MODO MOVIL: Mira la diferencia de distancia entre la linea verde entre gestion newsletter y gestion proyectos, juntalo mejor
+    -Merchandising: el articulo de la derecha arriba, el precio se esconde con el titulo del titulo del de abajo.
+    -Mira videojuego management, esta centrado, verdad?, vete ahora a newsletter, proyectos y merchandising, ves algo raro?
