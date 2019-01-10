@@ -48,8 +48,13 @@
     justify-content: center;
 }
 
+.item a:hover{
+    transition: 0.2s;
+    background: rgb(68, 78, 99);
+}
+
 .info{
-    width: 100px;
+    width: 12vw;
 }
 
 .item h2 {
@@ -57,6 +62,12 @@
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    margin: 0;
+    height: 50px;
+}
+
+.item h4 {
+    margin: 0;
 }
 
 #videojuegos,
@@ -150,6 +161,12 @@ h1 {
         #paginacionIzquierda , #paginacionDerecha{
             top: 975px;
         }    
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .info{
+            width: 20vw;
+        }
     }
 
     @media only screen and (max-width: 400px) {

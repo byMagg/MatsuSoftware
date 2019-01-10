@@ -12,7 +12,6 @@ ERRORES CSS:
     //-Productos: Modificar comentarios y añadir
 
 /* 04/01/2019 */
-*    -----ALEX TE RECUERDO QUE TU GUSTO ES UN POCO NEFASTO, DEJA DE DAR CONSEJOS----
 *        //-En el gestion videojuego sigue estando el mismo error, y lo has puesto como arreglado... emm what?
 *        //-¿Puedes poner un poco de espacio entre el boton de ver mas de los comentarios, y el comentario en si?¿o ponerlo directamente debajo?
 *        En las tablas no lo he puesto//-Ponerle una apariencia mas bonita al boton de ver mas (Te dejo un ejemplo en el boton de ver mas de descripcion de videojuegos).
@@ -20,7 +19,6 @@ ERRORES CSS:
 */
 
 /* 07/01/2019 
-*   -----BUENO, YO TE DOY CONSEJO, LUEGO APLICA LO QUE QUIERAS----- 8========================3
 *    //-MODO MOVIL: Mira la diferencia de distancia entre la linea verde entre gestion newsletter y gestion proyectos, juntalo mejor*
 *    //-MODO MOVIL: Mira gestion de videojuegos, te ha tenido que faltar algun div o algo.
 *    //-En el catalogo, mira la paginacion de merchandising, vete a la pagina dos, vez qu el conjunto de boton y nuevo se va apra arriba porque no estan los 6 elementos? a ver si se puede quejar fijo abajo
