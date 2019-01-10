@@ -46,7 +46,6 @@
     display: grid;
     align-content: center;
     width: 40%;
-    max-height: 90vh;
     margin: 0 3vw;
 }
 
@@ -169,6 +168,9 @@ tr:nth-child(odd) {
 /* MOVIL */
 @media only screen and (max-width: 1160px) {
 
+    form{
+        left: 0;
+    }
 
     #content {
         height: 100%;
