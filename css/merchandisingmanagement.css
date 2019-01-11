@@ -50,7 +50,7 @@
 }
 
 #tabla{
-    width: 100%;
+    width: 40vw;
     justify-items: center;
     overflow: auto;
     max-height: 40vh;
