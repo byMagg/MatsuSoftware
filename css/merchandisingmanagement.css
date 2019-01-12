@@ -168,7 +168,7 @@ tr:nth-child(odd) {
 /* MOVIL */
 @media only screen and (max-width: 1160px) {
 
-    form{
+    #form{
         left: 0;
     }
 

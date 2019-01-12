@@ -184,6 +184,10 @@ textarea {
     display: inline-grid;
 }
 
+.msgcomment{
+    margin: 10px;
+}
+
 #seccion{
     justify-items: center;
     width: 202px;

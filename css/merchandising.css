@@ -105,6 +105,10 @@ form{
     max-height: 150px;
 }
 
+.msgcomment{
+    margin: 10px;
+}
+
 input{
     width: 50px;
 }
