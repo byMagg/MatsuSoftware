@@ -2,7 +2,6 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    width: 70%;
     height: 130px;
     margin: 0 auto;
 }
@@ -44,6 +43,7 @@
 .item a{
     display: inline-flex;
     align-items: center;
+    height: 100%;
     width: 100%;
     justify-content: center;
 }
